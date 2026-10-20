@@ -233,7 +233,8 @@ class App : Application(), MessengerServiceApp {
     }
 
     private fun initCrashlytics() {
-        FirebaseApp.initializeApp(this)
+        // Returns null when the build has no google-services.json
+        if (FirebaseApp.initializeApp(this) == null) return
         if (BuildConfig.DEBUG || !isAnalyticEnable) {
             FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(false)
         }

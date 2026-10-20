@@ -44,6 +44,11 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
+
+    // auth_strings.xml is decrypted from app_manager/auth_strings.xml.gpg in release CI
+    if (!file("src/main/res/values/auth_strings.xml").exists()) {
+        sourceSets["main"].res.srcDir("src/authDefaults/res")
+    }
 }
 
 dependencies {

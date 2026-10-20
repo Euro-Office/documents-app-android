@@ -357,7 +357,10 @@ dependencies {
     implementation(libs.jackson.databind)
 }
 
-apply(plugin = "com.google.gms.google-services")
+// google-services.json is a release secret; debug builds without it skip Firebase config
+if (file("google-services.json").exists()) {
+    apply(plugin = "com.google.gms.google-services")
+}
 
 //tasks.register("copySamples") {
 //    println("Copy samples")

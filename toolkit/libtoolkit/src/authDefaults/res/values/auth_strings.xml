@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Placeholders for builds without the decrypted secrets (src/main/res/values/auth_strings.xml).
+     Social logins using these ids do not work in such builds. -->
+<resources>
+    <string name="account_type" translatable="false">eu.eurooffice.documents.dev.account</string>
+    <string name="account_auth_type" translatable="false">eu.eurooffice.documents.dev.token</string>
+    <string name="facebook_id" translatable="false">0</string>
+    <string name="facebook_secret" translatable="false">0</string>
+    <string name="facebook_id_sheme" translatable="false">fb0</string>
+    <string name="facebook_host" translatable="false">authorize</string>
+</resources>
