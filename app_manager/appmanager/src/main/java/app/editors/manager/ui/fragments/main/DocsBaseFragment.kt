@@ -15,6 +15,7 @@ import android.view.MenuItem
 import android.view.View
 import androidx.activity.result.contract.ActivityResultContracts.StartActivityForResult
 import androidx.appcompat.widget.SearchView
+import androidx.core.content.IntentCompat
 import androidx.core.net.toUri
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
@@ -154,6 +155,11 @@ abstract class DocsBaseFragment : ListFragment(), DocsBaseView, BaseAdapter.OnIt
         when (resultCode) {
             Activity.RESULT_OK -> {
                 removeCommonDialog()
+                // Copies saved in the editor ("save a copy", old formats saved as new ones) go into the current folder
+                val copies = data?.let { IntentCompat.getParcelableArrayListExtra(it, EditorsContract.EXTRA_SAVED_FILES, Uri::class.java) }
+                if (!copies.isNullOrEmpty()) {
+                    presenter.upload(null, copies)
+                }
                 val uri = data?.data ?: return
                 if (data.getBooleanExtra(EXTRA_IS_MODIFIED, false)) {
                     presenter.updateDocument(uri = uri)

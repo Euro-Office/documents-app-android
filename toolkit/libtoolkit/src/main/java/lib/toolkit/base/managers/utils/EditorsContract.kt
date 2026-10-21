@@ -26,6 +26,8 @@ object EditorsContract {
     const val SHARE_CLASSNAME = "app.editors.manager.ui.activities.main.ShareActivity"
 
     const val EXTRA_IS_MODIFIED = "EXTRA_IS_MODIFIED"
+    /** Copies of the document the editor saved (ArrayList<Uri>), to add to the document's folder. */
+    const val EXTRA_SAVED_FILES = "EXTRA_SAVED_FILES"
     const val EXTRA_IS_REFRESH = "EXTRA_IS_REFRESH"
     const val EXTRA_IS_SEND_FORM = "EXTRA_IS_SEND_FORM"
     const val EXTRA_FILL_SESSION = "EXTRA_FILL_SESSION"
