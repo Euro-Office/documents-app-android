@@ -345,6 +345,17 @@ abstract class DocsBaseFragment : ListFragment(), DocsBaseView, BaseAdapter.OnIt
         )
     }
 
+    override fun onOpenCoEditing(uri: Uri, extension: String, editorConfig: String, editType: EditType) {
+        (activity as? IMainActivity)?.showEditors(
+            uri = uri,
+            extension = extension,
+            editType = editType,
+            access = Access.None,
+            onResultListener = ::onEditorActivityResult,
+            editorConfig = editorConfig
+        )
+    }
+
     override fun onOpenLocalFile(uri: Uri, extension: String, editType: EditType, access: Access) {
         when (getExtension(extension)) {
             StringUtils.Extension.DOC,

@@ -12,6 +12,11 @@ import java.io.Serializable
 object EditorsContract {
 
     const val KEY_HELP_URL = "KEY_HELP_URL"
+    /**
+     * The editor configuration (JSON: document, editorConfig, documentServerUrl, token) for
+     * co-editing through a Document Server; with a file (the intent's data) the editors open it
+     * first and then join the session (Nextcloud with the Euro-Office connector).
+     */
     const val KEY_DOC_SERVER = "KEY_DOC_SERVER"
     const val KEY_EDIT_TYPE = "KEY_EDIT_TYPE"
     const val KEY_EDIT_ACCESS = "KEY_EDIT_ACCESS"

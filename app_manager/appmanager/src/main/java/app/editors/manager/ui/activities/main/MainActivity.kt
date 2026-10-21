@@ -92,12 +92,14 @@ interface IMainActivity {
         drawable: Int? = null,
         drawablePadding: Int? = null
     )
+    /** [editorConfig]: co-editing the copy at [uri] through a Document Server (EditorsContract.KEY_DOC_SERVER). */
     fun showEditors(
         uri: Uri,
         extension: String,
         editType: EditType,
         access: Access,
-        onResultListener: ((Int, Intent?) -> Unit)? = null
+        onResultListener: ((Int, Intent?) -> Unit)? = null,
+        editorConfig: String? = null
     )
     fun showEditors(
         data: String,
@@ -686,12 +688,24 @@ class MainActivity : BaseAppActivity(), MainActivityView, BaseBottomDialog.OnBot
         access: Access,
         onResultListener: ((Int, Intent?) -> Unit)?
     ) {
+        showEditors(uri, extension, editType, access, onResultListener, editorConfig = null)
+    }
+
+    override fun showEditors(
+        uri: Uri,
+        extension: String,
+        editType: EditType,
+        access: Access,
+        onResultListener: ((Int, Intent?) -> Unit)?,
+        editorConfig: String?
+    ) {
         val intent = EditorsUtils.getLocalEditorIntent(
             context = this,
             uri = uri,
             extension = extension,
             editType = editType,
-            access = access
+            access = access,
+            editorConfig = editorConfig
         )
 
         if (intent == null) {

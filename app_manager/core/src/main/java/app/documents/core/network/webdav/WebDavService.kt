@@ -76,4 +76,16 @@ interface WebDavService {
     @GET
     suspend fun suspendDownload(@Url path: String): Response<ResponseBody>
 
+    /** Properties of one file, such as Nextcloud's file id (oc:fileid). */
+    @ConverterFactory.Xml
+    @Headers("Depth: 0")
+    @HTTP(method = "PROPFIND", hasBody = true)
+    suspend fun properties(@Url path: String, @Body body: RequestBody): Response<ResponseBody>
+
+    /** An OCS request of Nextcloud (JSON). */
+    @ConverterFactory.Xml
+    @Headers("OCS-APIRequest: true", "Accept: application/json")
+    @GET
+    suspend fun ocs(@Url path: String): Response<ResponseBody>
+
 }

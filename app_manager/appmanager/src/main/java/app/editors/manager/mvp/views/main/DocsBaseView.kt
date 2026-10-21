@@ -174,6 +174,10 @@ interface DocsBaseView : BaseViewExt {
     @StateStrategyType(OneExecutionStateStrategy::class)
     fun onOpenDocumentServer(file: CloudFile, info: String, type: EditType)
 
+    /** Opens the copy of a file ([uri]) to be co-edited through a Document Server ([editorConfig]). */
+    @StateStrategyType(OneExecutionStateStrategy::class)
+    fun onOpenCoEditing(uri: Uri, extension: String, editorConfig: String, editType: EditType)
+
     @StateStrategyType(OneExecutionStateStrategy::class)
     fun onOpenLocalFile(
         file: CloudFile,

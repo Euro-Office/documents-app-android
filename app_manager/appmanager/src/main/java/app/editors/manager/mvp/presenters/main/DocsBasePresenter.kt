@@ -309,7 +309,12 @@ abstract class DocsBasePresenter<V : DocsBaseView, FP : BaseFileProvider> : MvpP
                 viewState.onOpenDocumentServer(result.cloudFile, result.info, result.editType)
             }
             is FileOpenResult.OpenLocally -> {
-                openFileFromPortal(result.file, result.fileId, result.editType, result.access)
+                val config = result.editorConfig
+                if (config != null) {
+                    viewState.onOpenCoEditing(Uri.fromFile(result.file), StringUtils.getExtensionFromPath(result.file.absolutePath), config, result.editType)
+                } else {
+                    openFileFromPortal(result.file, result.fileId, result.editType, result.access)
+                }
             }
             is FileOpenResult.OpenCloudMedia -> {
                 viewState.onFileMedia(getListMedia(result.media), false)

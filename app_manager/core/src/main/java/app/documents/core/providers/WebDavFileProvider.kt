@@ -44,6 +44,8 @@ import lib.toolkit.base.managers.utils.StringUtils.getEncodedString
 import lib.toolkit.base.managers.utils.StringUtils.getExtension
 import lib.toolkit.base.managers.utils.StringUtils.getExtensionFromPath
 import lib.toolkit.base.managers.utils.StringUtils.getNameWithoutExtension
+import okhttp3.MediaType.Companion.toMediaType
+import okhttp3.RequestBody.Companion.toRequestBody
 import okhttp3.ResponseBody
 import retrofit2.HttpException
 import retrofit2.Response
@@ -62,6 +64,10 @@ class WebDavFileProvider @Inject constructor(
 ) : BaseFileProvider {
 
     companion object {
+        private const val NEXTCLOUD_DAV = "/remote.php/dav/files/"
+        private const val FILE_ID_REQUEST = "<?xml version=\"1.0\"?><d:propfind xmlns:d=\"DAV:\" xmlns:oc=\"http://owncloud.org/ns\">" +
+            "<d:prop><oc:fileid/></d:prop></d:propfind>"
+        private val FILE_ID = Regex("<oc:fileid>(\\d+)</oc:fileid>")
         private const val TOTAL_PROGRESS = 100
         private const val PATH_TEMPLATES = "templates/"
         private val PATH_DOWNLOAD = Environment.getExternalStorageDirectory().absolutePath + "/${BuildConfig.ROOT_FOLDER}"
@@ -81,13 +87,34 @@ class WebDavFileProvider @Inject constructor(
                 FileOpenResult.OpenLocally(
                     file = suspendGetCachedFile(context, cloudFile, ""),
                     fileId = cloudFile.id,
-                    editType = editType
+                    editType = editType,
+                    editorConfig = if (editType is EditType.View) null else editorConfig(cloudFile.id)
                 )
             )
         }
             .flowOn(Dispatchers.IO)
             .asResult()
     }
+
+    /**
+     * Nextcloud with the Euro-Office connector: the editor configuration for co-editing the file
+     * through its Document Server; null for other servers, or if the connector can't give one.
+     */
+    private suspend fun editorConfig(href: String): String? = runCatching {
+        if (!href.contains(NEXTCLOUD_DAV)) return null
+        val properties = webDavService.properties(
+            href,
+            FILE_ID_REQUEST.toRequestBody("application/xml".toMediaType())
+        )
+        val fileId = properties.body()?.string()?.let { FILE_ID.find(it)?.groupValues?.get(1) } ?: return null
+        val root = href.substringBefore(NEXTCLOUD_DAV)
+        val response = webDavService.ocs("$root/ocs/v2.php/apps/eurooffice/api/v1/config/$fileId?format=json")
+        if (!response.isSuccessful) return null
+        val json = org.json.JSONObject(response.body()?.string().orEmpty())
+        // OCS wraps the data, the connector's JSONResponse may not
+        val config = json.optJSONObject("ocs")?.optJSONObject("data") ?: json
+        config.takeIf { it.has("document") && it.has("documentServerUrl") && !it.has("error") }?.toString()
+    }.getOrNull()
 
     override fun getFiles(id: String?, filter: Map<String, String>?): Observable<Explorer> {
         return Observable.fromCallable { id?.let { webDavService.propfind(it).execute() } }
