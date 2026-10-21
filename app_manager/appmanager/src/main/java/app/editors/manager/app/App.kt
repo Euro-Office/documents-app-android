@@ -91,9 +91,11 @@ class App : Application(), MessengerServiceApp {
         }
 
     private var _loginComponent: LoginComponent? = null
+    // Without a portal when no login prepared one (WebDAV and Nextcloud logins don't)
     val loginComponent: LoginComponent
-        get() = checkNotNull(_loginComponent) {
-            "LoginComponent component can't be null"
+        get() = _loginComponent ?: run {
+            refreshLoginComponent(null)
+            checkNotNull(_loginComponent)
         }
 
     private var _messengerServiceComponent: MessengerServiceComponent? = null
