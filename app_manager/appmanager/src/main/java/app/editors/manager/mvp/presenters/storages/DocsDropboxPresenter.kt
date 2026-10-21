@@ -12,7 +12,7 @@ import app.documents.core.network.manager.models.explorer.Item
 import app.documents.core.providers.DropboxFileProvider
 import app.editors.manager.R
 import app.editors.manager.app.App
-import app.editors.manager.managers.utils.FirebaseUtils
+import lib.toolkit.base.managers.utils.CrashLog
 import app.editors.manager.managers.works.BaseDownloadWork
 import app.editors.manager.managers.works.BaseStorageUploadWork
 import app.editors.manager.managers.works.dropbox.DownloadWork
@@ -149,7 +149,7 @@ class DocsDropboxPresenter : BaseStorageDocsPresenter<BaseStorageDocsView, Dropb
                             getItemsById(DropboxUtils.DROPBOX_ROOT)
                         }
                         is NetworkResult.Error -> {
-                            FirebaseUtils.addCrash(result.exception)
+                            CrashLog.note(result.exception)
                             viewState.onAuthorization()
                         }
                         is NetworkResult.Loading -> Unit

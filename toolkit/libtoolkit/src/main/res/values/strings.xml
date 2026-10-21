@@ -22,4 +22,12 @@
         <item quantity="other">%d groups</item>
     </plurals>
 
+    <!-- Crash reports (CrashLog) -->
+    <string name="crash_log_title">The app stopped unexpectedly</string>
+    <string name="crash_log_message">A report of what happened was saved on this device. Do you want to send it to help fix the problem? You can choose the app to send it with and see what it contains.</string>
+    <string name="crash_log_send">Send report</string>
+    <string name="crash_log_discard">Delete</string>
+    <string name="crash_log_later">Later</string>
+    <string name="crash_log_subject">Crash report</string>
+
 </resources>

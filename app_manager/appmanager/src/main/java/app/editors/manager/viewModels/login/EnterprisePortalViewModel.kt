@@ -11,7 +11,6 @@ import app.documents.core.model.cloud.Scheme
 import app.editors.manager.BuildConfig
 import app.editors.manager.R
 import app.editors.manager.app.App
-import app.editors.manager.managers.utils.FirebaseUtils
 import app.editors.manager.viewModels.base.BaseViewModel
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
@@ -122,11 +121,6 @@ class EnterprisePortalViewModel : BaseViewModel() {
     }
 
     private fun onError(portal: String, exception: Throwable) {
-        FirebaseUtils.addAnalyticsCheckPortal(
-            portal,
-            FirebaseUtils.AnalyticsKeys.FAILED,
-            "Error: " + exception.message
-        )
         _portalStateLiveData.value = EnterprisePortalState.Error(R.string.errors_sign_in_splash_error)
     }
 

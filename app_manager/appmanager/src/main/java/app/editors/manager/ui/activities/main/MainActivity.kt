@@ -1,5 +1,6 @@
 package app.editors.manager.ui.activities.main
 
+import lib.toolkit.base.managers.utils.CrashLog
 import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Context
@@ -222,6 +223,8 @@ class MainActivity : BaseAppActivity(), MainActivityView, BaseBottomDialog.OnBot
         viewBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(viewBinding.root)
         init(savedInstanceState)
+        // Reports of earlier crashes, to send or delete
+        CrashLog.offerReports(this)
     }
 
     override fun onStart() {

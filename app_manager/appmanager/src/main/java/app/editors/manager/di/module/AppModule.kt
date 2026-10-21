@@ -5,17 +5,15 @@ import app.documents.core.model.cloud.CloudAccount
 import app.documents.core.providers.DropboxFileProvider
 import app.documents.core.providers.GoogleDriveFileProvider
 import app.documents.core.providers.OneDriveFileProvider
-import app.documents.core.utils.FirebaseTool
+import app.documents.core.utils.CoauthoringChecker
 import app.editors.manager.managers.providers.DropboxStorageHelper
 import app.editors.manager.managers.providers.GoogleDriveStorageHelper
 import app.editors.manager.managers.providers.OneDriveStorageHelper
 import app.editors.manager.managers.tools.FilterManager
-import app.editors.manager.managers.utils.FirebaseUtils
+import app.editors.manager.managers.utils.AppConfig
 import dagger.Module
 import dagger.Provides
-import kotlinx.coroutines.suspendCancellableCoroutine
 import javax.inject.Singleton
-import kotlin.coroutines.resume
 
 @Module
 object AppModule {
@@ -46,11 +44,11 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideFirebaseTool(
+    fun provideCoauthoringChecker(
         context: Context,
         cloudAccount: CloudAccount?
-    ): FirebaseTool {
-        return object : FirebaseTool {
+    ): CoauthoringChecker {
+        return object : CoauthoringChecker {
 
             private var _isCoauthoring: Boolean? = null
 
@@ -65,21 +63,9 @@ object AppModule {
                 return checkSdkVersion(sdkVersion)
             }
 
-            private suspend fun checkSdkVersion(webSdkVersion: String?): Boolean {
-                return suspendCancellableCoroutine { continuation ->
-                    if (webSdkVersion == null) {
-                        continuation.resume(false)
-                        return@suspendCancellableCoroutine
-                    }
-                    FirebaseUtils.checkSdkVersion(
-                        context = context,
-                        webSdk = webSdkVersion,
-                        onResult = { enabled ->
-                            _isCoauthoring = enabled
-                            continuation.resume(enabled)
-                        }
-                    )
-                }
+            private fun checkSdkVersion(webSdkVersion: String?): Boolean {
+                if (webSdkVersion == null) return false
+                return AppConfig.isCoauthoring(context, webSdkVersion).also { _isCoauthoring = it }
             }
         }
     }

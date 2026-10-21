@@ -5,7 +5,7 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.net.Uri
 import app.editors.manager.R
-import app.editors.manager.managers.utils.FirebaseUtils.addCrash
+import lib.toolkit.base.managers.utils.CrashLog
 import javax.inject.Inject
 import javax.inject.Singleton
 import androidx.core.net.toUri
@@ -117,7 +117,7 @@ class DownloadReceiver @Inject constructor() : BaseReceiver<Intent?>() {
                 }
             }
         } catch (e: RuntimeException) {
-            addCrash(e)
+            CrashLog.note(e)
         }
     }
 

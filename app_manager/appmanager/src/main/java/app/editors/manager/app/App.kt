@@ -26,7 +26,6 @@ import app.documents.core.providers.RoomProvider
 import app.documents.core.providers.WebDavFileProvider
 import app.documents.shared.di.MessengerServiceApp
 import app.documents.shared.di.MessengerServiceComponent
-import app.editors.manager.BuildConfig
 import app.editors.manager.di.component.AppComponent
 import app.editors.manager.di.component.DaggerAppComponent
 import app.editors.manager.di.component.DaggerDropboxComponent
@@ -37,8 +36,7 @@ import app.editors.manager.di.component.GoogleDriveComponent
 import app.editors.manager.di.component.OneDriveComponent
 import app.editors.manager.managers.utils.GoogleUtils
 import app.editors.manager.managers.utils.KeyStoreUtils
-import com.google.firebase.FirebaseApp
-import com.google.firebase.crashlytics.FirebaseCrashlytics
+import lib.toolkit.base.managers.utils.CrashLog
 import lib.toolkit.base.managers.utils.ActivitiesUtils
 import java.util.Locale
 
@@ -67,12 +65,6 @@ class App : Application(), MessengerServiceApp {
     var needPasscodeToUnlock: Boolean = false
 
     var showPersonalPortalMigration: Boolean = true
-
-    var isAnalyticEnable = true
-        set(value) {
-            field = value
-            initCrashlytics()
-        }
 
     private var _appComponent: AppComponent? = null
     val appComponent: AppComponent
@@ -209,8 +201,8 @@ class App : Application(), MessengerServiceApp {
                 WebView.setDataDirectorySuffix("cacheWebView")
             }
         }
-        isAnalyticEnable = appComponent.preference.isAnalyticEnable
-        initCrashlytics()
+        // Crash reports stay on the device until the user sends them
+        CrashLog.install(this)
         KeyStoreUtils.init()
     }
 
@@ -230,14 +222,6 @@ class App : Application(), MessengerServiceApp {
         refreshGoogleDriveInstance()
         refreshOneDriveInstance()
         RequestsCollector.setDeveloperMode(appComponent.preference.developMode)
-    }
-
-    private fun initCrashlytics() {
-        // Returns null when the build has no google-services.json
-        if (FirebaseApp.initializeApp(this) == null) return
-        if (BuildConfig.DEBUG || !isAnalyticEnable) {
-            FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(false)
-        }
     }
 
 }

@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import app.editors.manager.managers.utils.FirebaseUtils;
+import lib.toolkit.base.managers.utils.CrashLog;
 import lib.toolkit.base.managers.utils.StringUtils;
 
 public class SmsReceiver extends BaseReceiver<String> {
@@ -40,7 +40,6 @@ public class SmsReceiver extends BaseReceiver<String> {
 
                         // Check sms on contains code
                         // "Код: 895835\nOnlyOffice"
-                        FirebaseUtils.addCrash("From: " + msgFrom + "; Body: " + msgBody);
                         final String code = getCodeFromSms(msgBody);
                         if (!code.isEmpty() && code.length() == SMS_CODE_LENGTH) {
                             if (mOnReceiveListener !=  null) {
@@ -52,7 +51,7 @@ public class SmsReceiver extends BaseReceiver<String> {
             }
         } catch (RuntimeException e) {
             // No need handle
-            FirebaseUtils.addCrash(e);
+            CrashLog.note(e);
         }
     }
 

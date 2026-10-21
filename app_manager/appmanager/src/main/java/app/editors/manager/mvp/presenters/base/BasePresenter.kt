@@ -8,7 +8,7 @@ import app.documents.core.network.common.contracts.ApiContract
 import app.documents.core.network.common.exceptions.NoConnectivityException
 import app.editors.manager.R
 import app.editors.manager.managers.tools.PreferenceTool
-import app.editors.manager.managers.utils.FirebaseUtils
+import lib.toolkit.base.managers.utils.CrashLog
 import app.editors.manager.mvp.models.states.OperationsState
 import app.editors.manager.mvp.views.base.BaseView
 import app.editors.manager.mvp.views.base.BaseViewExt
@@ -101,7 +101,7 @@ abstract class BasePresenter<View : BaseView> : MvpPresenter<View>() {
                     errorMessage = jsonObject.getJSONObject(KEY_ERROR_INFO).getString(KEY_ERROR_INFO_MESSAGE)
                 } catch (e: JSONException) {
                     Log.e(TAG, "onErrorHandle()", e)
-                    FirebaseUtils.addCrash(e)
+                    CrashLog.note(e)
                 }
             }
         }
@@ -185,8 +185,8 @@ abstract class BasePresenter<View : BaseView> : MvpPresenter<View>() {
                 viewState.onError(context.getString(R.string.errors_connection_error))
             }
             else -> {
-                FirebaseUtils.addCrash(BasePresenter::class.java.simpleName + " - method - onFailureHandle()")
-                FirebaseUtils.addCrash(error)
+                CrashLog.note(BasePresenter::class.java.simpleName + " - method - onFailureHandle()")
+                CrashLog.note(error)
                 viewState.onError(context.getString(R.string.errors_unknown_error))
             }
         }

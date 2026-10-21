@@ -10,7 +10,6 @@ import java.util.Properties
 
 plugins {
     id("com.android.application")
-    id("com.google.firebase.crashlytics")
     id("kotlinx-serialization")
     kotlin("android")
     kotlin("kapt")
@@ -147,7 +146,6 @@ android {
 
         debug {
             isMinifyEnabled = false
-            extra["enableCrashlytics"] = false
             ndk {
                 if (System.getProperty("os.arch") == "aarch64") {
                     abiFilters.add("arm64-v8a")
@@ -269,12 +267,6 @@ dependencies {
         println("ℹ️ Build mode without editors")
     }
 
-    // Firebase
-    implementation(libs.firebase.crashlytics)
-    implementation(libs.firebase.core)
-    implementation(libs.firebase.messaging)
-    implementation(libs.firebase.config)
-
     // Google libs
     implementation(libs.google.playReview)
     implementation(libs.google.playServiceAuth)
@@ -355,11 +347,6 @@ dependencies {
     implementation(libs.jackson)
     implementation(libs.jackson.annotations)
     implementation(libs.jackson.databind)
-}
-
-// google-services.json is a release secret; debug builds without it skip Firebase config
-if (file("google-services.json").exists()) {
-    apply(plugin = "com.google.gms.google-services")
 }
 
 //tasks.register("copySamples") {

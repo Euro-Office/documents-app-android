@@ -34,7 +34,6 @@ class PreferenceTool @Inject constructor(val context: Context) {
         private const val KEY_32 = "KEY_32"
         private const val KEY_WIFI_STATE = "KEY_WIFI_STATE"
         private const val KEY_SCREEN_ON_STATE = "KEY_SCREEN_ON_STATE"
-        private const val KEY_ANALYTIC = "KEY_ANALYTIC"
         private const val KEY_STORAGE_ACCESS = "KEY_STORAGE_ACCESS"
         private const val KEY_PASSCODE = "KEY_PASSCODE"
         private const val KEY_TIMESTAMP = "KEY_TIMESTAMP"
@@ -126,12 +125,6 @@ class PreferenceTool @Inject constructor(val context: Context) {
 
     val keepScreenOn: Boolean
         get() = sharedPreferences.getBoolean(KEY_SCREEN_ON_STATE, false)
-
-    var isAnalyticEnable: Boolean
-        get() = sharedPreferences.getBoolean(KEY_ANALYTIC, true)
-        set(isEnable) {
-            sharedPreferences.edit().putBoolean(KEY_ANALYTIC, isEnable).apply()
-        }
 
     var isShowStorageAccess: Boolean
         get() = sharedPreferences.getBoolean(KEY_STORAGE_ACCESS, true)

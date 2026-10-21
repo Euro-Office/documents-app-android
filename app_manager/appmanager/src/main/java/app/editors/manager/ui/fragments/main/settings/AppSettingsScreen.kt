@@ -95,7 +95,6 @@ fun AppSettingsScreenHost(
                     settingsState = settingsState.value,
                     onWifiState = viewModel::setWifiState,
                     onScreenOnState = viewModel::setScreenOnState,
-                    onAnalytics = viewModel::setAnalytic,
                     onCacheClear = viewModel::clearCache,
                     onThemeClick = { navController.navigate(AppSettingsScreen.Theme.route) },
                     onPasscodeClick = { navController.navigate(AppSettingsScreen.Passcode.route) },
@@ -185,7 +184,6 @@ private fun AppSettingsScreen(
     onLocaleClick: () -> Unit,
     onWifiState: (Boolean) -> Unit,
     onScreenOnState: (Boolean) -> Unit,
-    onAnalytics: (Boolean) -> Unit,
     onCacheClear: () -> Unit,
     onFontsClick: () -> Unit,
     onHelpAndFeedbackClick: () -> Unit,
@@ -195,14 +193,6 @@ private fun AppSettingsScreen(
 
     Surface(color = MaterialTheme.colors.background, modifier = Modifier.fillMaxSize()) {
         Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
-            AppHeaderItem(title = R.string.app_settings_analytic_title)
-            AppSwitchItem(
-                title = R.string.app_settings_analytic,
-                checked = settingsState.analytics,
-                onCheck = onAnalytics,
-                dividerVisible = false
-            )
-            AppDivider()
             AppHeaderItem(title = R.string.setting_title_wifi)
             AppSwitchItem(
                 title = R.string.setting_wifi,
@@ -290,14 +280,12 @@ private fun AppSettingsScreenPreview() {
             settingsState = AppSettingsState(
                 cache = 100000L,
                 themeMode = AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM,
-                analytics = false,
                 wifi = true,
                 passcodeEnabled = true
             ),
             onThemeClick = {},
             onWifiState = {},
             onScreenOnState = {},
-            onAnalytics = {},
             onPasscodeClick = {},
             onLocaleClick = {},
             onHelpAndFeedbackClick = {},

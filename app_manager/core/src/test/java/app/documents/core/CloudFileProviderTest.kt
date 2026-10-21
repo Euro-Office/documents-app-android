@@ -8,7 +8,7 @@ import app.documents.core.network.manager.ManagerService
 import app.documents.core.network.manager.models.request.RequestFavorites
 import app.documents.core.network.room.RoomService
 import app.documents.core.providers.CloudFileProvider
-import app.documents.core.utils.FirebaseTool
+import app.documents.core.utils.CoauthoringChecker
 import io.mockk.MockKAnnotations
 import io.mockk.every
 import io.mockk.impl.annotations.InjectMockKs
@@ -36,7 +36,7 @@ class CloudFileProviderTest {
     @MockK(relaxed = true)
     private lateinit var accountRepository: AccountRepository
     @MockK(relaxed = true)
-    private lateinit var firebaseTool: FirebaseTool
+    private lateinit var coauthoringChecker: CoauthoringChecker
 
     @InjectMockKs
     private lateinit var cloudFileProvider: CloudFileProvider

@@ -87,8 +87,6 @@ dependencies {
     implementation(libs.androidDocumentFile)
 
 
-    // Firebase
-    implementation(libs.firebase.messaging)
 
     // Google
     implementation(libs.google.material)

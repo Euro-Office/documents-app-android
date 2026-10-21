@@ -5,7 +5,7 @@ import android.content.Intent
 import android.content.IntentFilter
 import app.documents.core.network.manager.models.explorer.CloudFile
 import app.editors.manager.R
-import app.editors.manager.managers.utils.FirebaseUtils.addCrash
+import lib.toolkit.base.managers.utils.CrashLog
 import lib.toolkit.base.managers.utils.getSerializableExt
 
 open class UploadReceiver : BaseReceiver<Intent?>() {
@@ -111,7 +111,7 @@ open class UploadReceiver : BaseReceiver<Intent?>() {
                 }
             }
         } catch (e: RuntimeException) {
-            addCrash(e)
+            CrashLog.note(e)
         }
     }
 
