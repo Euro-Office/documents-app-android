@@ -26,6 +26,7 @@ import app.documents.core.providers.RoomProvider
 import app.documents.core.providers.WebDavFileProvider
 import app.documents.shared.di.MessengerServiceApp
 import app.documents.shared.di.MessengerServiceComponent
+import app.editors.manager.BuildConfig
 import app.editors.manager.di.component.AppComponent
 import app.editors.manager.di.component.DaggerAppComponent
 import app.editors.manager.di.component.DaggerDropboxComponent
@@ -37,7 +38,6 @@ import app.editors.manager.di.component.OneDriveComponent
 import app.editors.manager.managers.utils.GoogleUtils
 import app.editors.manager.managers.utils.KeyStoreUtils
 import lib.toolkit.base.managers.utils.CrashLog
-import lib.toolkit.base.managers.utils.ActivitiesUtils
 import java.util.Locale
 
 class App : Application(), MessengerServiceApp {
@@ -110,9 +110,6 @@ class App : Application(), MessengerServiceApp {
 
     private fun accountsMigrate() {
         refreshLoginComponent(null)
-        if (ActivitiesUtils.isPackageExist(this, "com.onlyoffice.projects")) {
-            appComponent.accountHelper.copyData()
-        }
         appComponent.migrationHelper.migrate()
         _loginComponent = null
     }
@@ -199,7 +196,7 @@ class App : Application(), MessengerServiceApp {
          For Android Pie is a separate directory for the process with WebView
          */
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
-            if (getProcess() == "com.onlyoffice.documents:WebViewerActivity") {
+            if (getProcess() == "${BuildConfig.APPLICATION_ID}:WebViewerActivity") {
                 WebView.setDataDirectorySuffix("cacheWebView")
             }
         }

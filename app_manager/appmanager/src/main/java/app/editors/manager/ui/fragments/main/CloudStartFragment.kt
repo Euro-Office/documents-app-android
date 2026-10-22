@@ -7,20 +7,24 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
+import app.documents.core.model.cloud.WebdavProvider
 import app.editors.manager.R
 import app.editors.manager.databinding.FragmentCloudLayoutBinding
-import app.editors.manager.mvp.presenters.login.OnlyOfficeCloudPresenter
-import app.editors.manager.mvp.views.login.OnlyOfficeCloudView
+import app.editors.manager.managers.utils.AppConfig
+import app.editors.manager.mvp.presenters.login.CloudStartPresenter
+import app.editors.manager.mvp.views.login.CloudStartView
 import app.editors.manager.ui.activities.login.SignInActivity
+import app.editors.manager.ui.activities.login.WebDavLoginActivity
 import app.editors.manager.ui.activities.main.CloudsActivity
 import app.editors.manager.ui.activities.main.IMainActivity
 import app.editors.manager.ui.fragments.base.BaseAppFragment
 import moxy.presenter.InjectPresenter
 
-class OnlyOfficeCloudFragment : BaseAppFragment(), OnlyOfficeCloudView {
+class CloudStartFragment : BaseAppFragment(), CloudStartView {
 
     @InjectPresenter
-    lateinit var presenter: OnlyOfficeCloudPresenter
+    lateinit var presenter: CloudStartPresenter
 
     private var viewBinding: FragmentCloudLayoutBinding? = null
     private var mainActivity: IMainActivity? = null
@@ -73,13 +77,31 @@ class OnlyOfficeCloudFragment : BaseAppFragment(), OnlyOfficeCloudView {
             R.string.cloud_accounts_title else R.string.fragment_clouds_title))
         mainActivity?.showNavigationButton(false)
         mainActivity?.showActionButton(false)
+        if (AppConfig.isNextcloudOnly) initNextcloud()
         initListeners()
+    }
+
+    private fun initNextcloud() {
+        viewBinding?.let { binding ->
+            binding.titleTextView.setText(R.string.storage_select_next_cloud)
+            binding.titleTextView.setCompoundDrawablesRelativeWithIntrinsicBounds(
+                R.drawable.ic_storage_nextcloud, 0, 0, 0
+            )
+            binding.descriptionTextView.setText(R.string.cloud_nextcloud_description)
+            binding.startButton.setText(R.string.cloud_connect_nextcloud)
+            binding.otherStorageButton.isVisible = false
+        }
+        presenter.checkHasAccounts()
     }
 
     private fun initListeners() {
         viewBinding?.let {
             it.startButton.setOnClickListener {
-                SignInActivity.showPortalCreate(requireContext())
+                if (AppConfig.isNextcloudOnly) {
+                    WebDavLoginActivity.show(requireActivity(), WebdavProvider.NextCloud, null)
+                } else {
+                    SignInActivity.showPortalCreate(requireContext())
+                }
             }
             it.otherStorageButton.setOnClickListener {
                 presenter.getAccounts()
@@ -95,14 +117,18 @@ class OnlyOfficeCloudFragment : BaseAppFragment(), OnlyOfficeCloudView {
         }
     }
 
+    override fun showAccountsButton(isVisible: Boolean) {
+        viewBinding?.otherStorageButton?.isVisible = isVisible
+    }
+
     override fun onError(message: String?) {}
 
     companion object {
-        val TAG = OnlyOfficeCloudFragment::class.java.simpleName
+        val TAG = CloudStartFragment::class.java.simpleName
         private const val KEY_PROFILE = "KEY_PROFILE"
 
-        fun newInstance(isProfile: Boolean): OnlyOfficeCloudFragment =
-            OnlyOfficeCloudFragment().apply {
+        fun newInstance(isProfile: Boolean): CloudStartFragment =
+            CloudStartFragment().apply {
                 arguments = Bundle(1).apply {
                     putBoolean(KEY_PROFILE, isProfile)
                 }

@@ -5,7 +5,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 
-val ColorPrimary = Color(0xFF3880BE)
+val ColorPrimary = Color(0xFF0082C9)
 val ColorOnPrimary = Color.White
 val ColorSecondary = Color(0xFFF77F00)
 val ColorOnSecondary = Color.White
@@ -16,7 +16,7 @@ val ColorOnSurface = Color.Black
 val ColorError = Color(0xFFED0A34)
 val ColorOnError = Color.White
 
-val NightColorPrimary = Color(0xFF3E9CF0)
+val NightColorPrimary = Color(0xFF00A2F5)
 val NightColorOnPrimary = Color.White
 val NightColorSecondary = Color(0xFFFFB05C)
 val NightColorOnSecondary = Color.White

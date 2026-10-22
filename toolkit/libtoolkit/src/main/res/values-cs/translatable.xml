@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="chooser_email_client">Zvolte e-mailového klienta…</string>
-    <string name="about_email_subject">Zpětná vazba k aplikaci Dokumenty ONLYOFFICE pro Android</string>
+    <string name="about_email_subject">Zpětná vazba k aplikaci Dokumenty Euro-Office pro Android</string>
     <string name="about_feedback">Zpětná vazba a podpora</string>
     <string name="text_hint_required">Požadováno</string>
     <string name="export_send_copy">Odeslat kopii</string>

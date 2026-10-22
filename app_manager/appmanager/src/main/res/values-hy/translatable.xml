@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">ՓԱՍՏԱԹՂԹԵՐ</string>
-    <string name="app_name_full">ONLYOFFICE Documents</string>
+    <string name="app_name_full">Euro-Office Documents</string>
 
     <!-- ======================================================================================= -->
     <!-- Permissions -->
@@ -16,15 +16,15 @@
     <string name="app_versions_cancel">Ավելի ուշ</string>
     <string name="app_versions_without_release_accept">Տեղադրեք պաշտոնական հավելվածը</string>
     <string name="app_versions_without_release_info">
-        Շնորհակալություն բետա փորձարկման համար: ONLYOFFICE Documents 3.0-ն այժմ թողարկված է, և բետա տարբերակն այլևս չի աջակցվում: Անցեք պաշտոնական հավելվածին՝ հետագա թարմացումներ ստանալու համար:
+        Շնորհակալություն բետա փորձարկման համար: Euro-Office Documents 3.0-ն այժմ թողարկված է, և բետա տարբերակն այլևս չի աջակցվում: Անցեք պաշտոնական հավելվածին՝ հետագա թարմացումներ ստանալու համար:
     </string>
     <string name="app_versions_update_accept">Թարմացնել պաշտոնական հավելվածը</string>
     <string name="app_versions_update_info">
-        Շնորհակալություն բետա փորձարկման համար: ONLYOFFICE Documents 3.0-ն այժմ թողարկված է, և բետա տարբերակն այլևս չի աջակցվում: Խնդրում ենք անցնել պաշտոնական հավելվածին՝ հետագա թարմացումներ ստանալու համար:
+        Շնորհակալություն բետա փորձարկման համար: Euro-Office Documents 3.0-ն այժմ թողարկված է, և բետա տարբերակն այլևս չի աջակցվում: Խնդրում ենք անցնել պաշտոնական հավելվածին՝ հետագա թարմացումներ ստանալու համար:
     </string>
     <string name="app_versions_actual_release_accept">Բացել պաշտոնական հավելվածը</string>
     <string name="app_versions_actual_release_info">
-        Շնորհակալություն բետա փորձարկման համար: ONLYOFFICE Documents 3.0-ն այժմ թողարկված է, և բետա տարբերակն այլևս չի աջակցվում: Խնդրում ենք անցնել պաշտոնական հավելվածին:
+        Շնորհակալություն բետա փորձարկման համար: Euro-Office Documents 3.0-ն այժմ թողարկված է, և բետա տարբերակն այլևս չի աջակցվում: Խնդրում ենք անցնել պաշտոնական հավելվածին:
     </string>
 
     <!-- ======================================================================================= -->
@@ -39,7 +39,7 @@
     <string name="about_terms">Օգտագործման պայմանները</string>
     <string name="about_policy">Գաղտնիության քաղաքականություն</string>
     <string name="about_license">Լիցենզային պայմանագիր</string>
-    <string name="about_website">ONLYOFFICE կայք</string>
+    <string name="about_website">Euro-Office կայք</string>
 
     <!-- ======================================================================================= -->
     <!-- Common errors -->
@@ -79,7 +79,7 @@
     <!-- Login -->
     <string name="login_api_init_error">Ինիթ սխալ</string>
     <string name="login_api_init_portal_error">Պորտալի անվան շարահյուսական սխալ</string>
-    <string name="login_api_portal_name">Պորտալի սխալ անվանումը։ Օրինակ՝ example.onlyoffice.com</string>
+    <string name="login_api_portal_name">Պորտալի սխալ անվանումը։ Օրինակ՝ cloud.example.com</string>
     <string name="login_api_portal_name_length">Պորտալի անվանումը պետք է բաղկացած լինի առնվազն 6 նիշից</string>
     <string name="login_api_portal_name_content">Պորտալի անվանումը պետք է բաղկացած լինի A–Z, a–z, 0–9</string>
 
@@ -93,7 +93,7 @@
     <!-- Portal pager -->
     <string name="login_pager_enterprise">ՊՈՐՏԱԼ</string>
     <string name="login_pager_personal">ԱՆՁՆԱԿԱՆ</string>
-    <string name="login_pager_title">Միացնել ONLYOFFICE ամպը</string>
+    <string name="login_pager_title">Միացնել Euro-Office ամպը</string>
 
     <!-- Portal enterprise-->
     <string name="login_enterprise_edit_hint">Պորտալի հասցե</string>
@@ -109,7 +109,7 @@
     <string name="login_enterprise_single_sign_button_login">Մուտք գործել %1$s-ով</string>
     <string name="login_enterprise_single_sign_button_login_default">Մեկական մուտք</string>
     <string name="login_enterprise_info">
-        ONLYOFFICE պորտալը թույլ է տալիս ֆայլեր պահել ամպի մեջ, կիսել այն գործընկերների հետ և համատեղ խմբագրել իրական ժամանակում:
+        Euro-Office պորտալը թույլ է տալիս ֆայլեր պահել ամպի մեջ, կիսել այն գործընկերների հետ և համատեղ խմբագրել իրական ժամանակում:
     </string>
     <string name="login_not_authorization_info">Չհաջողվեց մուտք գործել %1$s %2$s-ում</string>
     <string name="login_not_authorization_info_token">Նիստի ժամանակն ավարտվել է</string>
@@ -129,7 +129,7 @@
     <string name="login_personal_signup_edit_info">Հաստատման հղումը կուղարկվի այս հասցեով</string>
     <string name="login_personal_signup_dialog_info">Հաստատման հղումն ուղարկվել է %1$s էլ.փոստին\nՇարունակելուց առաջ հետևեք փոստի հղմանը</string>
     <string name="login_personal_info">
-        Միացրեք ONLYOFFICE Personal-ը՝ ֆայլերт ամպում պահելու համար
+        Միացրեք Euro-Office Personal-ը՝ ֆայլերт ամպում պահելու համար
     </string>
     <string name="login_web_dav_title">Միացեք %1$s-ին</string>
 
@@ -212,7 +212,7 @@
     <string name="dialogs_question_personal_confirm_link_title">Հաստատել էլ․հասցեն</string>
     <string name="dialogs_question_personal_confirm_cancel">ՓՈՐՁԵԼ ԿՐԿԻՆ</string>
     <string name="dialogs_question_personal_confirm_accept">ՇԱՐՈՒՆԱԿԵԼ</string>
-    <string name="dialogs_question_rate_first_info">Ձեզ դու՞ր է գալիս ONLYOFFICE Documents-ի օգտագործումը:</string>
+    <string name="dialogs_question_rate_first_info">Ձեզ դու՞ր է գալիս Euro-Office Documents-ի օգտագործումը:</string>
     <string name="dialogs_question_rate_second_info">Դեմ չե՞ք լինի գնահատել հավելվածը Google Play-ում:</string>
     <string name="dialogs_question_delete_all_title">Ջնջե՞լ բոլոր տարրերը։</string>
 
@@ -258,7 +258,7 @@
     <string name="fragment_clouds_title">Ամպեր</string>
     <string name="fragment_clouds_portal_title">Միացնել պորտալին</string>
     <string name="fragment_clouds_storage_title">Միացնել պահեստին</string>
-    <string name="fragment_clouds_onlyoffice_item">ONLYOFFICE</string>
+    <string name="fragment_clouds_eurooffice_item">Euro-Office</string>
     <string name="fragment_recent_title">Վերջերս</string>
     <string name="fragment_on_device_title">Սարքի վրա</string>
     <string name="fragment_profile_title">Պրոֆիլ</string>
@@ -504,7 +504,7 @@
 
     <!-- ======================================================================================= -->
     <!-- Managers load -->
-    <string name="download_manager_title">ONLYOFFICE ներբեռնումներ</string>
+    <string name="download_manager_title">Euro-Office ներբեռնումներ</string>
     <string name="download_manager_progress_title">Ներբեռնումն ընթացքի մեջ է</string>
     <string name="download_manager_archiving_progress">Արխիվի ստեղծում</string>
     <string name="download_manager_complete">Ներբեռնումն ավարտված է</string>
@@ -588,7 +588,7 @@
     <string name="cloud_account_description">Համագործակցեք անվտանգ միջավայրում և միացրեք երրորդ կողմի պահեստները</string>
     <string name="cloud_account_start_button">Սկսել</string>
     <string name="cloud_account_other_storages_button">Այլ պահեստներ</string>
-    <string name="cloud_only_office_description">Պահպանեք փաստաթղթերը ամպի մեջ և համագործակցեք դրանց շուրջ</string>
+    <string name="cloud_eurooffice_description">Պահպանեք փաստաթղթերը ամպի մեջ և համագործակցեք դրանց շուրջ</string>
     <string name="cloud_accounts_title">Հաշիվներ</string>
     <string name="error_long_file_name">Ֆայլի անունը չափազանց երկար է</string>
     <string name="dialog_remove_account_title">Ջնջել սարքից</string>
@@ -848,7 +848,7 @@
     <string name="dialogs_question_delete_all_fonts">Ջնջե՞լ բոլոր տառատեսակները:</string>
     <string name="dialogs_question_delete_font">Ջնջե՞լ այս տառատեսակը:</string>
     <string name="dialogs_warning_title">Զգուշացում</string>
-    <string name="dialogs_warning_only_pdf_form_message">Ֆայլը չի կարող տեղափոխվել այս սենյակ: Խնդրում ենք փորձել տեղափոխել ONLYOFFICE PDF ձևը:</string>
+    <string name="dialogs_warning_only_pdf_form_message">Ֆայլը չի կարող տեղափոխվել այս սենյակ: Խնդրում ենք փորձել տեղափոխել Euro-Office PDF ձևը:</string>
     <string name="dialogs_warning_pinned_room_limit">Դուք չեք կարող 10-ից ավելի սենյակ ամրացնել վերևում: Ապամրացրեք որոշները, որոնք ներկայումս ամրացված են:</string>
     <string name="dialogs_warning_fill_forms_room_create">Մի քանի ֆայլերի և թղթապանակների վրա հիմնված ստեղծումը հասանելի չէ այս տեսակի սենյակների համար: Նման սենյակ ստեղծելու համար անցեք Սենյակներ բաժին կամ օգտագործեք PDF ձևերից մեկը։</string>
     <string name="toolbar_menu_view">Դիտել</string>
@@ -890,8 +890,8 @@
     <string name="share_user_type_room_admin">Սենյակի ադմին</string>
     <string name="share_access_room_manager">Սենյալի մենեջեր</string>
     <string name="personal_portal_end_button">Ստեղծել անվճար հաշիվ</string>
-    <string name="personal_portal_end_title">ONLYOFFICE Personal-ը վերջացնում է աշխատանքը</string>
-    <string name="personal_portal_end_text">ONLYOFFICE Personal-ը կդադարեցվի 2024 թվականի սեպտեմբերի 1-ին:\nԽորհուրդ ենք տալիս տեղափոխվել անվճար ONLYOFFICE DocSpace Cloud:</string>
+    <string name="personal_portal_end_title">Euro-Office Personal-ը վերջացնում է աշխատանքը</string>
+    <string name="personal_portal_end_text">Euro-Office Personal-ը կդադարեցվի 2024 թվականի սեպտեմբերի 1-ին:\nԽորհուրդ ենք տալիս տեղափոխվել անվճար Euro-Office DocSpace Cloud:</string>
     <string name="rooms_upload_pdf_from_docspace">Վերբեռնեք PDF ձևը DocSpace-ից</string>
     <string name="rooms_upload_pdf_from_device">Վերբեռնեք PDF ձևը սարքից</string>
     <string name="rooms_fill_in_as_title">Լրացնել որպես՝</string>
@@ -1037,7 +1037,7 @@
     <string name="list_context_upload_to_cloud">Վերբեռնել ամպի մեջ</string>
     <string name="list_context_version_history">Ցուցադրել տարբերակի պատմությունը</string>
     <string name="on_boarding_collaborate_header">Համագործակցեք ձեր թիմի հետ</string>
-    <string name="on_boarding_collaborate_info">Օնլայն ռեժիմում օգտագործեք ONLYOFFICE-ի իրական ժամանակի համատեղ խմբագրման հնարավորությունները՝ ձեր պորտալի անդամների հետ փաստաթղթերի վրա համատեղ աշխատելու, փաստաթղթեր կիսվելու և ընդհանուր պահեստային թղթապանակներ ստեղծելու համար:</string>
+    <string name="on_boarding_collaborate_info">Օնլայն ռեժիմում օգտագործեք Euro-Office-ի իրական ժամանակի համատեղ խմբագրման հնարավորությունները՝ ձեր պորտալի անդամների հետ փաստաթղթերի վրա համատեղ աշխատելու, փաստաթղթեր կիսվելու և ընդհանուր պահեստային թղթապանակներ ստեղծելու համար:</string>
     <string name="on_boarding_edit_header">Աշխատեք գրասենյակային ֆայլերի հետ</string>
     <string name="on_boarding_edit_info">Ստեղծեք և խմբագրեք փաստաթղթեր մեր համապարփակ գործիքագոտու միջոցով՝ աշխատեք տեքստային փաստաթղթերի բարդ օբյեկտների հետ, կատարեք ընդարձակ հաշվարկներ աղյուսակներում, ստեղծեք ապշեցուցիչ ներկայացումներ և դիտեք PDF ֆայլերը՝ առանց ձևաչափման կորստի:</string>
     <string name="on_boarding_finish_button">Սկսել</string>
@@ -1046,7 +1046,7 @@
     <string name="on_boarding_third_party_header">Երրորդ կողմի պահեստ</string>
     <string name="on_boarding_third_party_info">Միացրեք երրորդ կողմի պահեստային համակարգեր, ինչպիսիք են Nextcloud-ը, ownCloud-ը, Dropbox-ը և այլն, որոնք օգտագործում են WebDAV պրոտոկոլը:</string>
     <string name="on_boarding_welcome_header">Սկսում ենք</string>
-    <string name="on_boarding_welcome_info">Բարի գալուստ ONLYOFFICE բջջային խմբագրման փաթեթ! Սեղմեք՝ հավելվածի մասին ավելին իմանալու համար:</string>
+    <string name="on_boarding_welcome_info">Բարի գալուստ Euro-Office բջջային խմբագրման փաթեթ! Սեղմեք՝ հավելվածի մասին ավելին իմանալու համար:</string>
     <string name="operation_disable_custom_filter">Հատուկ ֆիլտրը ընտրված ֆայլի համար անջատված է</string>
     <string name="operation_enable_custom_filter">Հատուկ ֆիլտրը ընտրված ֆայլի համար  միացված է</string>
     <string name="placeholder_connection_button">Վերաբեռնել</string>

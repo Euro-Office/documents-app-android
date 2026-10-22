@@ -13,6 +13,12 @@ object AppConfig {
     /** Google Drive as a storage. */
     const val isGoogleDriveEnabled = false
 
+    /**
+     * Nextcloud is the only cloud the app offers. The other clouds (portals, ownCloud, kDrive,
+     * OneDrive, Dropbox, Google Drive, WebDAV) stay in the code but are not shown.
+     */
+    const val isNextcloudOnly = true
+
     /** The terms of service and the privacy policy. */
     fun servicesUrls(context: Context): Array<String> =
         arrayOf(context.getString(R.string.app_url_terms), context.getString(R.string.app_url_policy))

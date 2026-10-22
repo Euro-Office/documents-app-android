@@ -45,7 +45,7 @@ import app.editors.manager.ui.fragments.main.DocsOnDeviceFragment
 import app.editors.manager.ui.fragments.main.DocsRecentFragment
 import app.editors.manager.ui.fragments.main.DocsWebDavFragment
 import app.editors.manager.ui.fragments.main.MainPagerFragment
-import app.editors.manager.ui.fragments.main.OnlyOfficeCloudFragment
+import app.editors.manager.ui.fragments.main.CloudStartFragment
 import app.editors.manager.ui.fragments.main.settings.AppSettingsFragment
 import app.editors.manager.ui.fragments.storages.DocsDropboxFragment
 import app.editors.manager.ui.fragments.storages.DocsGoogleDriveFragment
@@ -448,7 +448,7 @@ class MainActivity : BaseAppActivity(), MainActivityView, BaseBottomDialog.OnBot
         presenter.clear()
         FragmentUtils.showFragment(
             supportFragmentManager,
-            OnlyOfficeCloudFragment.newInstance(false),
+            CloudStartFragment.newInstance(false),
             R.id.frame_container
         )
     }
@@ -580,7 +580,7 @@ class MainActivity : BaseAppActivity(), MainActivityView, BaseBottomDialog.OnBot
         if (accountOnline == null) {
             FragmentUtils.showFragment(
                 supportFragmentManager,
-                OnlyOfficeCloudFragment.newInstance(false),
+                CloudStartFragment.newInstance(false),
                 R.id.frame_container
             )
             checkVPNConnection()
@@ -601,7 +601,7 @@ class MainActivity : BaseAppActivity(), MainActivityView, BaseBottomDialog.OnBot
                     return
                 }
 
-                else -> OnlyOfficeCloudFragment.newInstance(false)
+                else -> CloudStartFragment.newInstance(false)
             }
             FragmentUtils.showFragment(
                 supportFragmentManager,

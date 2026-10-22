@@ -2,7 +2,6 @@ package app.editors.manager.di.component
 
 import android.content.Context
 import app.documents.core.account.AccountPreferences
-import app.documents.core.account.AddAccountHelper
 import app.documents.core.database.datasource.CloudDataSource
 import app.documents.core.database.datasource.RecentDataSource
 import app.documents.core.database.migration.MigrationHelper
@@ -42,7 +41,7 @@ import app.editors.manager.mvp.presenters.login.EnterpriseCreateLoginPresenter
 import app.editors.manager.mvp.presenters.login.EnterpriseLoginPresenter
 import app.editors.manager.mvp.presenters.login.EnterpriseSSOPresenter
 import app.editors.manager.mvp.presenters.login.EnterpriseSmsPresenter
-import app.editors.manager.mvp.presenters.login.OnlyOfficeCloudPresenter
+import app.editors.manager.mvp.presenters.login.CloudStartPresenter
 import app.editors.manager.mvp.presenters.login.PasswordRecoveryPresenter
 import app.editors.manager.mvp.presenters.login.PersonalLoginPresenter
 import app.editors.manager.mvp.presenters.login.PersonalSignUpPresenter
@@ -141,7 +140,6 @@ interface AppComponent : MessengerServiceDependencies {
     val cloudDataSource: CloudDataSource
     val recentDataSource: RecentDataSource
 
-    val accountHelper: AddAccountHelper
     val migrationHelper: MigrationHelper
     val roomOrderHelper: RoomOrderHelper
 
@@ -176,7 +174,7 @@ interface AppComponent : MessengerServiceDependencies {
     fun inject(personalPortalFragment: PersonalPortalFragment?)
     fun inject(webDavInterceptor: WebDavInterceptor?)
     fun inject(passwordRecoveryPresenter: PasswordRecoveryPresenter)
-    fun inject(onlyOfficeCloudPresenter: OnlyOfficeCloudPresenter)
+    fun inject(cloudStartPresenter: CloudStartPresenter)
     fun inject(cloudsFragment: CloudsFragment)
     fun inject(webDavLoginActivity: WebDavLoginActivity)
     fun inject(DocsDropboxFragment: DocsDropboxFragment)
@@ -185,7 +183,7 @@ interface AppComponent : MessengerServiceDependencies {
     * Main
     * */
     fun inject(mainActivityPresenter: MainActivityPresenter?)
-    fun inject(onlyOfficePresenter: DocsCloudPresenter?)
+    fun inject(docsCloudPresenter: DocsCloudPresenter?)
     fun inject(webDavPresenter: DocsWebDavPresenter?)
     fun inject(docsOnDevicePresenter: DocsOnDevicePresenter?)
     fun inject(operationDialogFragment: OperationDialogFragment)

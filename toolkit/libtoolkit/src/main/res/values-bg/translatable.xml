@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="chooser_email_client">Изберете имейл клиент …</string>
-    <string name="about_email_subject">ONLYOFFICE Документи Android Обратна връзка</string>
+    <string name="about_email_subject">Euro-Office Документи Android Обратна връзка</string>
     <string name="about_feedback">Обратна връзка и поддръжка</string>
     <string name="text_hint_required">Длъжен</string>
     <string name="export_send_copy">Изпрати копие</string>

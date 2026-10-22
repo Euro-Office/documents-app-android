@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Dokumenty</string>
-    <string name="app_name_full">Dokumenty ONLYOFFICE</string>
+    <string name="app_name_full">Dokumenty Euro-Office</string>
 
     <!-- ======================================================================================= -->
     <!-- Permissions -->
@@ -11,15 +11,15 @@
     <string name="app_versions_cancel">Později</string>
     <string name="app_versions_without_release_accept">Instalovat oficiální aplikaci</string>
     <string name="app_versions_without_release_info">
-        Děkujeme za účast na beta testování! Byla vydána verze 3.0 aplikace Dokumenty ONLYOFFICE. Beta verze již není nadále podporována. Abyste měli přístup k dalším aktualizacím, začněte používat oficiální aplikaci.
+        Děkujeme za účast na beta testování! Byla vydána verze 3.0 aplikace Dokumenty Euro-Office. Beta verze již není nadále podporována. Abyste měli přístup k dalším aktualizacím, začněte používat oficiální aplikaci.
     </string>
     <string name="app_versions_update_accept">Aktualizovat oficiální aplikaci</string>
     <string name="app_versions_update_info">
-        Děkujeme za účast na beta testování! Byla vydána verze 3.0 aplikace Dokumenty ONLYOFFICE. Beta verze již není nadále podporována. Abyste měli přístup k dalším aktualizacím, začněte používat oficiální aplikaci.
+        Děkujeme za účast na beta testování! Byla vydána verze 3.0 aplikace Dokumenty Euro-Office. Beta verze již není nadále podporována. Abyste měli přístup k dalším aktualizacím, začněte používat oficiální aplikaci.
     </string>
     <string name="app_versions_actual_release_accept">Otevřít oficiální aplikaci</string>
     <string name="app_versions_actual_release_info">
-        Děkujeme za účast na beta testování! Byla vydána verze 3.0 aplikace Dokumenty ONLYOFFICE. Beta verze již není nadále podporována. Začněte používat oficiální aplikaci.
+        Děkujeme za účast na beta testování! Byla vydána verze 3.0 aplikace Dokumenty Euro-Office. Beta verze již není nadále podporována. Začněte používat oficiální aplikaci.
     </string>
 
     <!-- ======================================================================================= -->
@@ -33,7 +33,7 @@
     <string name="about_terms">Podmínky použití</string>
     <string name="about_policy">Zásady ochrany osobních údajů</string>
     <string name="about_license">Licenční smlouva</string>
-    <string name="about_website">Webové stránky ONLYOFFICE</string>
+    <string name="about_website">Webové stránky Euro-Office</string>
 
     <!-- ======================================================================================= -->
     <!-- Common errors -->
@@ -65,7 +65,7 @@
     <!-- Login -->
     <string name="login_api_init_error">Chyba inicializace</string>
     <string name="login_api_init_portal_error">Chyba v syntaxi názvu portálu</string>
-    <string name="login_api_portal_name">Nesprávný název portálu. Příklad: example.onlyoffice.com</string>
+    <string name="login_api_portal_name">Nesprávný název portálu. Příklad: cloud.example.com</string>
     <string name="login_api_portal_name_length">Název portálu musí obsahovat alespoň 6 znaků</string>
     <string name="login_api_portal_name_content">Název portálu může obsahovat znaky A–Z, a–z, 0–9</string>
 
@@ -78,7 +78,7 @@
     <!-- Portal pager -->
     <string name="login_pager_enterprise">PORTÁL</string>
     <string name="login_pager_personal">OSOBNÍ</string>
-    <string name="login_pager_title">Připojení ke cloudu ONLYOFFICE</string>
+    <string name="login_pager_title">Připojení ke cloudu Euro-Office</string>
 
     <!-- Portal enterprise-->
     <string name="login_enterprise_edit_hint">Adresa portálu</string>
@@ -92,7 +92,7 @@
     <string name="login_enterprise_signin_button">PŘIHLÁSIT SE</string>
     <string name="login_enterprise_single_sign_button">Jednotné přihlašování</string>
     <string name="login_enterprise_info">
-        ONLYOFFICE umožňuje ukládat soubory do cloudu, sdílet je s kolegy a společně dokumenty upravovat v reálném čase.
+        Euro-Office umožňuje ukládat soubory do cloudu, sdílet je s kolegy a společně dokumenty upravovat v reálném čase.
     </string>
     <string name="login_not_authorization_info">V %2$s se nepodařilo přihlásit se do %1$s</string>
     <string name="login_not_authorization_button">ZKUSIT ZNOVU</string>
@@ -106,7 +106,7 @@
     <string name="login_personal_signup_edit_info">Potvrzovací odkaz bude zaslán na tuto adresu</string>
     <string name="login_personal_signup_dialog_info">Potvrzovací odkaz byl zaslán na e-mail %1$s\nNež budete pokračovat, přejděte na odkaz v e-mailu</string>
     <string name="login_personal_info">
-        Abyste mohli ukládat soubory do cloudu, připojte se k osobnímu portálu ONLYOFFICE
+        Abyste mohli ukládat soubory do cloudu, připojte se k osobnímu portálu Euro-Office
     </string>
     <string name="login_web_dav_title">Připojit k %1$s</string>
 
@@ -188,7 +188,7 @@
     <string name="dialogs_question_personal_confirm_link_title">Potvrdit e-mail</string>
     <string name="dialogs_question_personal_confirm_cancel">ZKUSIT ZNOVU</string>
     <string name="dialogs_question_personal_confirm_accept">POKRAČOVAT</string>
-    <string name="dialogs_question_rate_first_info">Líbí se vám aplikace Dokumenty ONLYOFFICE?</string>
+    <string name="dialogs_question_rate_first_info">Líbí se vám aplikace Dokumenty Euro-Office?</string>
     <string name="dialogs_question_rate_second_info">Věnujte prosím chvilku hodnocení aplikace na Google Play.</string>
 
     <!-- Edit -->
@@ -218,7 +218,7 @@
     <string name="fragment_clouds_title">Cloudy</string>
     <string name="fragment_clouds_portal_title">Připojení k portálu</string>
     <string name="fragment_clouds_storage_title">Připojení k úložišti</string>
-    <string name="fragment_clouds_onlyoffice_item">ONLYOFFICE</string>
+    <string name="fragment_clouds_eurooffice_item">Euro-Office</string>
     <string name="fragment_recent_title">Nedávné</string>
     <string name="fragment_on_device_title">Na zařízení</string>
     <string name="fragment_profile_title">Profil</string>
@@ -412,7 +412,7 @@
 
     <!-- ======================================================================================= -->
     <!-- Managers load -->
-    <string name="download_manager_title">Stažené položky ONLYOFFICE</string>
+    <string name="download_manager_title">Stažené položky Euro-Office</string>
     <string name="download_manager_progress_title">Probíhá stahování</string>
     <string name="download_manager_complete">Stahování bylo dokončeno</string>
     <string name="download_manager_error">Chyba stahování</string>
@@ -479,7 +479,7 @@
     <string name="cloud_account_description">Spolupracujte v bezpečném prostředí a připojujte úložiště třetích stran</string>
     <string name="cloud_account_start_button">Začínáme</string>
     <string name="cloud_account_other_storages_button">Ostatní úložiště</string>
-    <string name="cloud_only_office_description">Ukládejte dokumenty v cloudu a spolupracujte na nich</string>
+    <string name="cloud_eurooffice_description">Ukládejte dokumenty v cloudu a spolupracujte na nich</string>
     <string name="cloud_accounts_title">Účty</string>
     <string name="error_long_file_name">Název souboru je příliš dlouhý</string>
     <string name="dialog_remove_account_description">Uživatel s %1$s z portálu %2$s bude odhlášen a odebrán ze seznamu účtů. \n\nProsím, mějte na paměti: pro přihlášení je třeba zadat adresu portálu, emailovou adresu a heslo. Všechny vaše soubory budou v bezpečí.</string>
@@ -822,12 +822,12 @@
     <string name="room_storage_reconnect">Znovu připojte úložiště</string>
     <string name="room_storage_not_availabale">Obsah složky třetí strany není k dispozici. Zkuste účet znovu připojit.</string>
     <string name="personal_portal_end_button">Založte si účet zdarma</string>
-    <string name="personal_portal_end_title">ONLYOFFICE Personal končí</string>
-    <string name="personal_portal_end_text">Služba ONLYOFFICE Personal bude ukončena 1. září 2024.\nDoporučujeme vám přejít na bezplatnou službu ONLYOFFICE DocSpace.</string>
+    <string name="personal_portal_end_title">Euro-Office Personal končí</string>
+    <string name="personal_portal_end_text">Služba Euro-Office Personal bude ukončena 1. září 2024.\nDoporučujeme vám přejít na bezplatnou službu Euro-Office DocSpace.</string>
     <string name="dialogs_question_delete_all_fonts">Smazat všechna písma?</string>
     <string name="dialogs_question_delete_font">Smazat toto písmo?</string>
     <string name="dialogs_warning_title">Upozornění</string>
-    <string name="dialogs_warning_only_pdf_form_message">Soubor nelze přesunout do této místnosti. Zkuste prosím přesunout formulář ONLYOFFICE PDF.</string>
+    <string name="dialogs_warning_only_pdf_form_message">Soubor nelze přesunout do této místnosti. Zkuste prosím přesunout formulář Euro-Office PDF.</string>
     <string name="dialogs_warning_pinned_room_limit">Na začátek nelze připnout více než 10 místností. Zrušte připnutí některých místností, které jsou aktuálně připnuté.</string>
     <string name="dialogs_warning_fill_forms_room_create">Vytvoření na základě několika souborů a složek není pro tento typ místnosti k dispozici. Chcete-li takovou místnost vytvořit, přejděte do sekce Místnosti nebo použijte některý z PDF formulářů.</string>
     <string name="toolbar_menu_view">Zobrazení na adrese</string>
@@ -1018,7 +1018,7 @@
     <string name="list_context_upload_to_cloud">Nahrávání do cloudu</string>
     <string name="list_context_version_history">Zobrazit historii verzí</string>
     <string name="on_boarding_collaborate_header">Spolupracujte se svým týmem</string>
-    <string name="on_boarding_collaborate_info">V online režimu můžete využívat funkce společné editace v reálném čase v aplikaci ONLYOFFICE a pracovat na dokumentech společně s členy portálu, sdílet dokumenty a vytvářet společné složky pro ukládání.</string>
+    <string name="on_boarding_collaborate_info">V online režimu můžete využívat funkce společné editace v reálném čase v aplikaci Euro-Office a pracovat na dokumentech společně s členy portálu, sdílet dokumenty a vytvářet společné složky pro ukládání.</string>
     <string name="on_boarding_edit_header">Práce s kancelářskými soubory</string>
     <string name="on_boarding_edit_info">Vytvářejte a upravujte dokumenty pomocí našeho komplexního panelu nástrojů: pracujte se složitými objekty v textových dokumentech, provádějte rozsáhlé výpočty v tabulkách, vytvářejte úžasné prezentace a prohlížejte soubory PDF bez ztráty formátování.</string>
     <string name="on_boarding_finish_button">Začínáme</string>
@@ -1027,7 +1027,7 @@
     <string name="on_boarding_third_party_header">Úložiště třetích stran</string>
     <string name="on_boarding_third_party_info">Připojení úložišť třetích stran, jako jsou Nextcloud, ownCloud, Dropbox a další, která používají protokol WebDAV.</string>
     <string name="on_boarding_welcome_header">Začínáme</string>
-    <string name="on_boarding_welcome_info">Vítejte v mobilní editační sadě ONLYOFFICE! Přejeďte prstem a dozvíte se více o aplikaci.</string>
+    <string name="on_boarding_welcome_info">Vítejte v mobilní editační sadě Euro-Office! Přejeďte prstem a dozvíte se více o aplikaci.</string>
     <string name="operation_disable_custom_filter">Vlastní filtr pro vybraný soubor zakázán</string>
     <string name="operation_enable_custom_filter">Vlastní filtr pro vybraný soubor povolen</string>
     <string name="placeholder_connection_button">Znovu načíst</string>

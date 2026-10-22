@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Newly added translations (v9.0.0 - 2025-06-09) -->
-    <string name="about_email_subject">Android ප්‍රතිපෝෂණ සඳහා ONLYOFFICE ලේඛන</string>
+    <string name="about_email_subject">Android ප්‍රතිපෝෂණ සඳහා Euro-Office ලේඛන</string>
     <string name="about_feedback">ප්‍රතිපෝෂණ සහ සහාය</string>
     <string name="chooser_email_client">ඊමේල් සේවාදායකයා තෝරන්න…</string>
     <string name="common_accept">පිළිගන්න</string>

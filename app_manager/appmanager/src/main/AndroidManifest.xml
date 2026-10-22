@@ -3,8 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:installLocation="internalOnly">
 
-    <!--    <permission android:name="com.onlyoffice.documents.ACCOUNTS" />-->
-
     <uses-permission android:name="${applicationId}.permission.WRITE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -23,16 +21,6 @@
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
 
     <uses-permission android:name="com.google.android.gms.permission.AD_ID" tools:node="remove"/>
-
-    <queries>
-        <provider
-            android:authorities="com.onlyoffice.projects.accounts"
-            tools:ignore="ExportedContentProvider" />
-    </queries>
-
-    <queries>
-        <package android:name="com.onlyoffice.projects" />
-    </queries>
 
     <uses-feature
         android:name="android.hardware.telephony"
@@ -307,7 +295,7 @@
 
         <provider
             android:name=".managers.tools.AccountContentProvider"
-            android:authorities="com.onlyoffice.accounts"
+            android:authorities="${applicationId}.accounts"
             android:enabled="false"
             android:exported="false" />
 

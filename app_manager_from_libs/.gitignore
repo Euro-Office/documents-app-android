@@ -1,7 +1,7 @@
 *.iml
 *.aar
 
-Onlyoffice-keystore.properties
+eurooffice-keystore.properties
 
 .gradle
 /local.properties

@@ -8,11 +8,10 @@
 
     <item android:drawable="@color/colorBackground"/>
 
-    <item>
-
-        <bitmap android:src="@drawable/image_onlyoffice_text"
-            android:gravity="center"/>
-
-    </item>
+    <item
+        android:width="96dp"
+        android:height="96dp"
+        android:drawable="@drawable/image_eurooffice_logo"
+        android:gravity="center" />
 
 </layer-list>

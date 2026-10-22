@@ -18,7 +18,7 @@ plugins {
 val withEditors: Boolean = project.findProperty("withEditors")?.toString()?.toBoolean() ?: true
 val isBuildingBundle = gradle.startParameter.taskNames.any { it.lowercase().contains("bundle") }
 
-val appId = "com.onlyoffice.documents"
+val appId = "eu.eurooffice.documents"
 // Names the APK files
 val appName = "euro-office-documents"
 
@@ -68,13 +68,13 @@ android {
         versionCode = 707
         versionName = "9.3.1"
         multiDexEnabled = true
-        applicationId = "com.onlyoffice.documents"
+        applicationId = "eu.eurooffice.documents"
 
         vectorDrawables {
             useSupportLibrary = true
         }
 
-        val keystoreProperties = getKeystore("Onlyoffice-keystore.properties")
+        val keystoreProperties = getKeystore("eurooffice-keystore.properties")
 
         manifestPlaceholders["facebookId"] = keystoreProperties["FACEBOOK_APP_ID"] as String? ?: ""
         manifestPlaceholders["dropboxKey"] = keystoreProperties["DROP_BOX_COM_CLIENT_ID"] as? String ?: ""
@@ -120,9 +120,9 @@ android {
     }
 
     signingConfigs {
-        create("onlyoffice") {
+        create("eurooffice") {
             // The release key: from the environment (CI: EO_KEYSTORE_FILE, EO_KEYSTORE_PASSWORD,
-            // EO_KEY_ALIAS, EO_KEY_PASSWORD), else from Onlyoffice-keystore.properties
+            // EO_KEY_ALIAS, EO_KEY_PASSWORD), else from eurooffice-keystore.properties
             val keystoreFile = System.getenv("EO_KEYSTORE_FILE")
             if (keystoreFile != null) {
                 storeFile = file(keystoreFile)
@@ -130,7 +130,7 @@ android {
                 keyAlias = System.getenv("EO_KEY_ALIAS")
                 keyPassword = System.getenv("EO_KEY_PASSWORD")
             } else {
-                val keystoreProperties = getKeystore("Onlyoffice-keystore.properties")
+                val keystoreProperties = getKeystore("eurooffice-keystore.properties")
                 keyAlias = keystoreProperties["keyAlias"] as String
                 keyPassword = keystoreProperties["keyPassword"] as String
                 storeFile = file(keystoreProperties["storeFile"] ?: "")
@@ -145,7 +145,7 @@ android {
             isShrinkResources = true
             proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro")
 
-            signingConfig = signingConfigs.getByName("onlyoffice")
+            signingConfig = signingConfigs.getByName("eurooffice")
             ndk {
                 abiFilters.addAll(arrayOf("armeabi-v7a", "arm64-v8a", "x86", "x86_64"))
             }

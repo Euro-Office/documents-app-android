@@ -8,11 +8,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import app.documents.core.model.cloud.WebdavProvider
 import app.editors.manager.R
 import app.editors.manager.app.App
 import app.editors.manager.app.accountOnline
 import app.editors.manager.databinding.ActivityPortalsBinding
 import app.editors.manager.managers.tools.PreferenceTool
+import app.editors.manager.managers.utils.AppConfig
 import app.editors.manager.ui.activities.base.BaseAppActivity
 import app.editors.manager.ui.activities.main.OnBoardingActivity
 import app.editors.manager.ui.fragments.login.EnterprisePortalFragment
@@ -134,6 +136,14 @@ class PortalsActivity : BaseAppActivity(), View.OnClickListener {
     }
 
     private fun showActivities(savedInstanceState: Bundle?) {
+        if (AppConfig.isNextcloudOnly) {
+            // No portal login: adding an account (e.g. from the system settings) connects a Nextcloud
+            if (savedInstanceState == null) {
+                WebDavLoginActivity.show(this, WebdavProvider.NextCloud, null)
+            }
+            finish()
+            return
+        }
         if (savedInstanceState == null) {
             showFragment(EnterprisePortalFragment.newInstance(), null)
         }

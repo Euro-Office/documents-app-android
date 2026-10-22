@@ -15,6 +15,7 @@ import app.documents.core.migration.CloudAccountWithTokenAndPassword
 import app.documents.core.migration.OldCloudAccount
 import app.documents.core.migration.toCloudAccountWithTokenAndPassword
 import app.documents.core.model.cloud.CloudAccount
+import app.editors.manager.BuildConfig
 import app.editors.manager.app.App
 import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.json.Json
@@ -25,7 +26,7 @@ class AccountContentProvider : ContentProvider() {
 
     companion object {
 
-        private const val AUTHORITY = "com.onlyoffice.accounts"
+        private const val AUTHORITY = BuildConfig.APPLICATION_ID + ".accounts"
         private const val PATH = "accounts"
         private const val TIME = "time"
 

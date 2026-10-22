@@ -1,18 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Euro-Office logo (Material Symbols "description") in the safe zone of an adaptive icon. -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="108dp"
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
-  <path
-      android:pathData="M50.87,76.39L30.29,66.73C28.57,65.91 28.57,64.59 30.29,63.77L37.52,60.37L50.87,66.62C52.58,67.44 55.42,67.44 57.13,66.62L70.48,60.37L77.71,63.77C79.43,64.59 79.43,65.91 77.71,66.73L57.13,76.39C55.42,77.2 52.58,77.2 50.87,76.39Z"
-      android:fillColor="#E36539"
-      android:fillType="evenOdd"/>
-  <path
-      android:pathData="M50.87,64.54L30.29,54.87C28.57,54.06 28.57,52.74 30.29,51.92L37.27,48.62L50.87,54.98C52.58,55.79 55.42,55.79 57.13,54.98L70.73,48.62L77.71,51.92C79.43,52.74 79.43,54.06 77.71,54.87L57.13,64.54C55.42,65.35 52.58,65.35 50.87,64.54Z"
-      android:fillColor="#8BB725"
-      android:fillType="evenOdd"/>
-  <path
-      android:pathData="M50.87,52.89L30.29,43.23C28.57,42.41 28.57,41.09 30.29,40.27L50.87,30.61C52.58,29.8 55.42,29.8 57.13,30.61L77.71,40.27C79.43,41.09 79.43,42.41 77.71,43.23L57.13,52.89C55.42,53.7 52.58,53.7 50.87,52.89Z"
-      android:fillColor="#60C2E8"
-      android:fillType="evenOdd"/>
+  <group
+      android:scaleX="0.06"
+      android:scaleY="0.06"
+      android:translateX="25.2"
+      android:translateY="82.8">
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M320,-240h320v-80H320v80Zm0,-160h320v-80H320v80ZM240,-80q-33,0 -56.5,-23.5T160,-160v-640q0,-33 23.5,-56.5T240,-880h320l240,240v480q0,33 -23.5,56.5T720,-80H240Zm280,-520v-200H240v640h480v-440H520ZM240,-800v200,-200 640,-640Z" />
+  </group>
 </vector>

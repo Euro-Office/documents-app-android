@@ -1,7 +1,7 @@
 <resources>
     <string name="dialogs_edit_forbidden_symbols">Non usare questi simboli\u0020</string>
     <string name="chooser_email_client">Seleziona il client di posta elettronica…</string>
-    <string name="about_email_subject">ONLYOFFICE Documents Android Feedback</string>
+    <string name="about_email_subject">Euro-Office Documents Android Feedback</string>
     <string name="about_feedback">Feedback e supporto</string>
     <string name="text_hint_required">Richiesta</string>
     <string name="export_send_copy">Invia una copia</string>

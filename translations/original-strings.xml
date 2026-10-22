@@ -4,15 +4,15 @@
 
     <!-- Module: appmanager - 960 strings -->
     <string name="app_name">Documents</string>
-    <string name="app_name_full">ONLYOFFICE Documents</string>
+    <string name="app_name_full">Euro-Office Documents</string>
     <string name="app_versions_title">Version 3.0 released</string>
     <string name="app_versions_cancel">Later</string>
     <string name="app_versions_without_release_accept">Install official app</string>
-    <string name="app_versions_without_release_info">Thanks for beta testing! ONLYOFFICE Documents 3.0 is now released, and beta version is no longer supported. Switch to the official app to receive further updates.</string>
+    <string name="app_versions_without_release_info">Thanks for beta testing! Euro-Office Documents 3.0 is now released, and beta version is no longer supported. Switch to the official app to receive further updates.</string>
     <string name="app_versions_update_accept">Update official app</string>
-    <string name="app_versions_update_info">Thanks for beta testing! ONLYOFFICE Documents 3.0 is now released, and beta version is no longer supported. Please switch to official app to receive further updates.</string>
+    <string name="app_versions_update_info">Thanks for beta testing! Euro-Office Documents 3.0 is now released, and beta version is no longer supported. Please switch to official app to receive further updates.</string>
     <string name="app_versions_actual_release_accept">Open official app</string>
-    <string name="app_versions_actual_release_info">Thanks for beta testing! ONLYOFFICE Documents 3.0 is now released, and beta version is no longer supported. Please switch to the official app.</string>
+    <string name="app_versions_actual_release_info">Thanks for beta testing! Euro-Office Documents 3.0 is now released, and beta version is no longer supported. Please switch to the official app.</string>
     <string name="snackbar_copied">Copied</string>
     <string name="snackbar_undo">UNDO</string>
     <string name="about_title">About</string>
@@ -20,7 +20,7 @@
     <string name="about_terms">Terms of use</string>
     <string name="about_policy">Privacy policy</string>
     <string name="about_license">License agreement</string>
-    <string name="about_website">ONLYOFFICE website</string>
+    <string name="about_website">Euro-Office website</string>
     <string name="errors_unknown_error">Connection error. Try again later.</string>
     <string name="errors_ssl_error">SSL handshake error</string>
     <string name="errors_connection_error">Check the internet connection</string>
@@ -55,7 +55,7 @@
     <string name="errors_sign_in_ldap_checkbox">Sign in as LDAP User</string>
     <string name="login_api_init_error">Init error</string>
     <string name="login_api_init_portal_error">Portal name syntax error</string>
-    <string name="login_api_portal_name">Wrong portal name. Example: example.onlyoffice.com</string>
+    <string name="login_api_portal_name">Wrong portal name. Example: cloud.example.com</string>
     <string name="login_api_portal_name_length">Portal name must consist of at least 6 characters</string>
     <string name="login_api_portal_name_content">Portal name must consist of A–Z, a–z, 0–9</string>
     <string name="login_retry">Retry connect</string>
@@ -63,7 +63,7 @@
     <string name="login_accounts_select_add">Add account</string>
     <string name="login_pager_enterprise">PORTAL</string>
     <string name="login_pager_personal">PERSONAL</string>
-    <string name="login_pager_title">Connect ONLYOFFICE cloud</string>
+    <string name="login_pager_title">Connect Euro-Office cloud</string>
     <string name="login_enterprise_edit_hint">Portal address</string>
     <string name="login_enterprise_button_next">NEXT</string>
     <string name="login_enterprise_edit_error_hint">Enter valid address</string>
@@ -76,7 +76,7 @@
     <string name="login_enterprise_single_sign_button">Single Sign-on</string>
     <string name="login_enterprise_single_sign_button_login">Login by %1$s</string>
     <string name="login_enterprise_single_sign_button_login_default">Single Sign-on</string>
-    <string name="login_enterprise_info">ONLYOFFICE portal allows to save files in the cloud, share it with co-workers and co-edit in real time.</string>
+    <string name="login_enterprise_info">Euro-Office portal allows to save files in the cloud, share it with co-workers and co-edit in real time.</string>
     <string name="login_not_authorization_info">Could not sign in to %1$s at %2$s</string>
     <string name="login_not_authorization_info_token">Session time is over</string>
     <string name="login_not_authorization_button">TRY AGAIN</string>
@@ -93,7 +93,7 @@
     <string name="login_personal_signup_title">Sign up to personal portal</string>
     <string name="login_personal_signup_edit_info">Confirmation link will be sent to this address</string>
     <string name="login_personal_signup_dialog_info">Confirmation link sent to email %1$s\nFollow link in mail before you continue</string>
-    <string name="login_personal_info">Connect ONLYOFFICE Personal to save files in the cloud</string>
+    <string name="login_personal_info">Connect Euro-Office Personal to save files in the cloud</string>
     <string name="login_web_dav_title">Connect to %1$s</string>
     <string name="login_create_portal_title">Create portal for organization</string>
     <string name="login_create_portal_address_hint">Portal address</string>
@@ -154,13 +154,13 @@
     <string name="dialogs_question_personal_confirm_link_title">Confirm email</string>
     <string name="dialogs_question_personal_confirm_cancel">TRY AGAIN</string>
     <string name="dialogs_question_personal_confirm_accept">CONTINUE</string>
-    <string name="dialogs_question_rate_first_info">Do you enjoy using ONLYOFFICE Documents?</string>
+    <string name="dialogs_question_rate_first_info">Do you enjoy using Euro-Office Documents?</string>
     <string name="dialogs_question_rate_second_info">Would you mind rating the app on Google Play?</string>
     <string name="dialogs_question_delete_all_title">Delete all items?</string>
     <string name="dialogs_question_delete_all_fonts">Delete all fonts?</string>
     <string name="dialogs_question_delete_font">Delete this font?</string>
     <string name="dialogs_warning_title">Warning</string>
-    <string name="dialogs_warning_only_pdf_form_message">The file cannot be moved to this room. Please try to move the ONLYOFFICE PDF form.</string>
+    <string name="dialogs_warning_only_pdf_form_message">The file cannot be moved to this room. Please try to move the Euro-Office PDF form.</string>
     <string name="dialogs_warning_pinned_room_limit">You can’t pin more than 10 rooms to the top. Unpin some that are currently pinned.</string>
     <string name="dialogs_warning_fill_forms_room_create">Creation based on several files and folders is not available for this type of room. To create such a room, go to the Rooms section or use one of the PDF forms.</string>
     <string name="dialogs_warning_room_space_quota_exceed">Room space quota exceeded (%s).</string>
@@ -183,7 +183,7 @@
     <string name="fragment_clouds_title">Clouds</string>
     <string name="fragment_clouds_portal_title">Connect to portal</string>
     <string name="fragment_clouds_storage_title">Connect to storage</string>
-    <string name="fragment_clouds_onlyoffice_item">ONLYOFFICE</string>
+    <string name="fragment_clouds_eurooffice_item">Euro-Office</string>
     <string name="fragment_recent_title">Recent</string>
     <string name="fragment_on_device_title">On Device</string>
     <string name="fragment_profile_title">Profile</string>
@@ -448,7 +448,7 @@
     <string name="trash_snackbar_move_button">RESTORE</string>
     <string name="trash_popup_move">Restore to</string>
     <string name="trash_popup_delete">Delete forever</string>
-    <string name="download_manager_title">ONLYOFFICE downloads</string>
+    <string name="download_manager_title">Euro-Office downloads</string>
     <string name="download_manager_progress_title">Download in progress</string>
     <string name="download_manager_archiving_progress">Creating archive</string>
     <string name="download_manager_complete">Download complete</string>
@@ -498,13 +498,13 @@
     <string name="on_boarding_next_button">NEXT</string>
     <string name="on_boarding_finish_button">Get Started</string>
     <string name="on_boarding_welcome_header">Getting started</string>
-    <string name="on_boarding_welcome_info">Welcome to ONLYOFFICE mobile editing suite! Swipe to learn more about the app.</string>
+    <string name="on_boarding_welcome_info">Welcome to Euro-Office mobile editing suite! Swipe to learn more about the app.</string>
     <string name="on_boarding_edit_header">Work with office files</string>
     <string name="on_boarding_edit_info">Create and edit documents with our comprehensive toolbar: work with complex objects in text documents, perform extensive calculations in spreadsheets, create stunning presentations and view PDF files with no formatting loss.</string>
     <string name="on_boarding_locally_header">Edit documents locally</string>
     <string name="on_boarding_locally_info">Work with documents offline. Created files can later be uploaded to online portal and then accessed from any other device.</string>
     <string name="on_boarding_collaborate_header">Collaborate with your team</string>
-    <string name="on_boarding_collaborate_info">In online mode, use real-time co-editing features of ONLYOFFICE to work on documents together with your portal members, share documents and create common storage folders.</string>
+    <string name="on_boarding_collaborate_info">In online mode, use real-time co-editing features of Euro-Office to work on documents together with your portal members, share documents and create common storage folders.</string>
     <string name="on_boarding_third_party_header">Third-party storage</string>
     <string name="on_boarding_third_party_info">Connect third-party storage like Nextcloud, ownCloud, Dropbox and others which use WebDAV protocol.</string>
     <string name="media_image_share_chooser">Choose app for sharing</string>
@@ -540,7 +540,7 @@
     <string name="cloud_account_start_button">Get started</string>
     <string name="cloud_account_other_storages_button">Other storages</string>
     <string name="cloud_create_account">Create free account</string>
-    <string name="cloud_only_office_description">Store documents in the cloud and collaborate on them</string>
+    <string name="cloud_eurooffice_description">Store documents in the cloud and collaborate on them</string>
     <string name="cloud_vpn_warning">For the best experience, try turning off VPN. Some server features may not work properly.</string>
     <string name="cloud_accounts_title">Accounts</string>
     <string name="error_long_file_name">File name is too long</string>
@@ -780,8 +780,8 @@
     <string name="conversion_dialog_convert_to">Convert to %1s</string>
     <string name="conversion_dialog_converting_to">Converting to %1s</string>
     <string name="personal_portal_end_button">Create a free account</string>
-    <string name="personal_portal_end_title">ONLYOFFICE Personal is wrapping up</string>
-    <string name="personal_portal_end_text">ONLYOFFICE Personal will be discontinued on September 1st, 2024.\nWe recommend you move to the free ONLYOFFICE DocSpace Cloud.</string>
+    <string name="personal_portal_end_title">Euro-Office Personal is wrapping up</string>
+    <string name="personal_portal_end_text">Euro-Office Personal will be discontinued on September 1st, 2024.\nWe recommend you move to the free Euro-Office DocSpace Cloud.</string>
     <string name="rooms_upload_pdf_from_docspace">Upload PDF Form from DocSpace</string>
     <string name="rooms_upload_pdf_from_device">Upload PDF Form from device</string>
     <string name="rooms_fill_in_as_title">Fill in as</string>
@@ -1003,7 +1003,7 @@
     <!-- Module: libgcells - 217 strings -->
     <string name="cells_about_header">SPREADSHEET EDITOR</string>
     <string name="cells_title">Spreadsheets</string>
-    <string name="cells_intent_title">ONLYOFFICE Spreadsheets</string>
+    <string name="cells_intent_title">Euro-Office Spreadsheets</string>
     <string name="cells_open_format">Need XLSX format!</string>
     <string name="cells_loading">Loading spreadsheet…</string>
     <string name="cells_converting">Converting spreadsheet…</string>
@@ -1221,7 +1221,7 @@
 
     <!-- Module: libgdocs - 257 strings -->
     <string name="docs_title">Documents</string>
-    <string name="docs_intent_title">ONLYOFFICE Documents</string>
+    <string name="docs_intent_title">Euro-Office Documents</string>
     <string name="docs_open_format">DOCX format is needed</string>
     <string name="docs_loading">Loading document…</string>
     <string name="docs_converting">Converting document…</string>
@@ -2189,7 +2189,7 @@
 
     <!-- Module: libgslides - 88 strings -->
     <string name="slides_title">Presentations</string>
-    <string name="slides_intent_title">ONLYOFFICE Presentations</string>
+    <string name="slides_intent_title">Euro-Office Presentations</string>
     <string name="slides_open_format">PPTX format is needed</string>
     <string name="slides_open_error">Unknown format. Try again</string>
     <string name="slides_play_panel_close">CLOSE</string>
@@ -2297,7 +2297,7 @@
     <string name="sizes_gigabytes">Gb</string>
     <string name="sizes_terabytes">Tb</string>
     <string name="chooser_email_client">Choose email client…</string>
-    <string name="about_email_subject">ONLYOFFICE Documents for Android feedback</string>
+    <string name="about_email_subject">Euro-Office Documents for Android feedback</string>
     <string name="about_feedback">Feedback and support</string>
     <string name="text_hint_required">Required</string>
     <string name="help_and_feedback_title">Help &amp; Feedback</string>

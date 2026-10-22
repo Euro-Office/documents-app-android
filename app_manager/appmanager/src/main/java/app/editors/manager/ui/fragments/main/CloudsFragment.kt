@@ -60,9 +60,9 @@ class CloudsFragment : BaseAppFragment() {
     fun init() {
         setActionBarTitle(getString(R.string.fragment_clouds_title))
 
-        viewBinding?.cloudsItemOnlyOffice?.bind(
-            R.drawable.ic_storage_onlyoffice,
-            R.string.cloud_only_office
+        viewBinding?.cloudsItemPortal?.bind(
+            R.drawable.ic_storage_eurooffice,
+            R.string.cloud_eurooffice
         ) {
             PortalsActivity.show(requireActivity())
         }
@@ -137,6 +137,20 @@ class CloudsFragment : BaseAppFragment() {
         }
 
         viewBinding?.cloudsItemGoogleDrive?.isVisible = AppConfig.isGoogleDriveEnabled
+
+        if (AppConfig.isNextcloudOnly) {
+            viewBinding?.let { binding ->
+                listOf(
+                    binding.cloudsItemPortal,
+                    binding.cloudsItemOwnCloud,
+                    binding.cloudsItemKDrive,
+                    binding.cloudsItemOneDrive,
+                    binding.cloudsItemDropbox,
+                    binding.cloudsItemGoogleDrive,
+                    binding.cloudsItemWebDav
+                ).forEach { it.isVisible = false }
+            }
+        }
     }
 
 

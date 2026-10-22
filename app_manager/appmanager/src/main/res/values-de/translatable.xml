@@ -1,21 +1,21 @@
 <resources>
     <string name="app_name">Dokumente</string>
-    <string name="app_name_full">ONLYOFFICE Dokumente</string>
+    <string name="app_name_full">Euro-Office Dokumente</string>
     <string name="app_versions_title">Version 3.0 veröffentlicht</string>
     <string name="app_versions_cancel">Später</string>
     <string name="app_versions_without_release_accept">Offizielle App installieren</string>
-    <string name="app_versions_without_release_info">Vielen Dank, dass Sie an dem Beta-Test teilgenohmen haben! ONLYOFFICE Documents 3.0 wurde veröffentlicht und die Beta-Version wird nicht mehr unterstützt.  Wechseln Sie zur offiziellen App, um weitere Updates zu erhalten. </string>
+    <string name="app_versions_without_release_info">Vielen Dank, dass Sie an dem Beta-Test teilgenohmen haben! Euro-Office Documents 3.0 wurde veröffentlicht und die Beta-Version wird nicht mehr unterstützt.  Wechseln Sie zur offiziellen App, um weitere Updates zu erhalten. </string>
     <string name="app_versions_update_accept">Offizielle App aktualisieren</string>
-    <string name="app_versions_update_info">Vielen Dank, dass Sie an dem Beta-Test teilgenohmen haben! ONLYOFFICE Documents 3.0 wurde veröffentlicht und die Beta-Version wird nicht mehr unterstützt. Bitte wechseln Sie zur offiziellen App, um weitere Updates zu erhalten </string>
+    <string name="app_versions_update_info">Vielen Dank, dass Sie an dem Beta-Test teilgenohmen haben! Euro-Office Documents 3.0 wurde veröffentlicht und die Beta-Version wird nicht mehr unterstützt. Bitte wechseln Sie zur offiziellen App, um weitere Updates zu erhalten </string>
     <string name="app_versions_actual_release_accept">Offizielle App öffnen</string>
-    <string name="app_versions_actual_release_info">Vielen Dank, dass Sie an dem Beta-Test teilgenohmen haben! ONLYOFFICE Documents 3.0 wurde veröffentlicht und die Beta-Version wird nicht mehr unterstützt. Bitte wechseln Sie zur offiziellen App. </string>
+    <string name="app_versions_actual_release_info">Vielen Dank, dass Sie an dem Beta-Test teilgenohmen haben! Euro-Office Documents 3.0 wurde veröffentlicht und die Beta-Version wird nicht mehr unterstützt. Bitte wechseln Sie zur offiziellen App. </string>
     <string name="snackbar_copied">Kopiert</string>
     <string name="about_title">Info</string>
     <string name="about_app_version">Version %1$s, build %2$s, SDK %3$s</string>
     <string name="about_terms">Nutzungsbedingungen</string>
     <string name="about_policy">Datenschutzerklärung</string>
     <string name="about_license">Lizenzvereinbarung</string>
-    <string name="about_website">ONLYOFFICE Webseite</string>
+    <string name="about_website">Euro-Office Webseite</string>
     <string name="errors_unknown_error">Verbindungsfehler. Versuchen Sie es erneut.</string>
     <string name="errors_ssl_error">SSL-Handshake fehlgeschlagenr</string>
     <string name="errors_connection_error">Überprüfen Sie Ihre Internetverbindung</string>
@@ -39,7 +39,7 @@
     <string name="errors_sign_in_account_already_use">Es gibt bereits ein Konto mit diesen Anmeldedaten</string>
     <string name="login_api_init_error">Initialisierungsfehler</string>
     <string name="login_api_init_portal_error">Syntaxfehler des Portalnamens</string>
-    <string name="login_api_portal_name">Ungültiger Portalname Beispiel: example.onlyoffice.com</string>
+    <string name="login_api_portal_name">Ungültiger Portalname Beispiel: cloud.example.com</string>
     <string name="login_api_portal_name_length">Kontoname muss mindestens aus 6 Zeichen bestehen</string>
     <string name="login_api_portal_name_content">Kontoname darf nur die Zeichen A–Z, a–z, 0–9 enthalten</string>
     <string name="login_retry">Verbindung erneut herstellen</string>
@@ -47,7 +47,7 @@
     <string name="login_accounts_select_add">Cloud-Konto hinzufügen</string>
     <string name="login_pager_enterprise">PORTAL</string>
     <string name="login_pager_personal">PERSÖNLICH</string>
-    <string name="login_pager_title">ONLYOFFICE-Cloud verbinden</string>
+    <string name="login_pager_title">Euro-Office-Cloud verbinden</string>
     <string name="login_enterprise_edit_hint">Portal-Adresse</string>
     <string name="login_enterprise_button_next">WEITER</string>
     <string name="login_enterprise_edit_error_hint">Geben Sie eine gültige Adresse ein</string>
@@ -58,7 +58,7 @@
     <string name="login_enterprise_password_hint">Passwort</string>
     <string name="login_enterprise_signin_button">ANMELDEN</string>
     <string name="login_enterprise_single_sign_button">Einmalige Anmeldung</string>
-    <string name="login_enterprise_info">Über ONLYOFFICE Portal können Sie Dateien im Cloud-Speicher sichern und diese mit Kollegen zu teilen und gemeinsam in Echtzeit zu bearbeiten </string>
+    <string name="login_enterprise_info">Über Euro-Office Portal können Sie Dateien im Cloud-Speicher sichern und diese mit Kollegen zu teilen und gemeinsam in Echtzeit zu bearbeiten </string>
     <string name="login_not_authorization_info">Anmeldung bei %1$s um %2$s nicht möglich</string>
     <string name="login_not_authorization_button">ERNEUT VERSUCHEN</string>
     <string name="login_personal_edit_email_hint">E-Mail</string>
@@ -68,7 +68,7 @@
     <string name="login_personal_signup_title">Melden Sie sich im persönlichen Portal an</string>
     <string name="login_personal_signup_edit_info">Der Bestätigungslink wird an diese Adresse gesendet</string>
     <string name="login_personal_signup_dialog_info">Der Bestätigungslink wurde an Ihre E-Mail-Adresse %1$s\n geschickt. Folgen Sie dem Link in der E-Mail, bevor Sie den Vorgang fortsetzen</string>
-    <string name="login_personal_info">Verbinden Sie das persönliche Portal von ONLYOFFICE, um Dateien im Cloud-Speicher zu sichern </string>
+    <string name="login_personal_info">Verbinden Sie das persönliche Portal von Euro-Office, um Dateien im Cloud-Speicher zu sichern </string>
     <string name="login_web_dav_title">Verbindung zu %1$s</string>
     <string name="login_create_portal_title">Portal für Unternehmen erstellen</string>
     <string name="login_create_portal_address_hint">Portal-Adresse</string>
@@ -127,7 +127,7 @@
     <string name="dialogs_question_personal_confirm_link_title">E-Mail-Adresse bestätigen</string>
     <string name="dialogs_question_personal_confirm_cancel">ERNEUT VERSUCHEN</string>
     <string name="dialogs_question_personal_confirm_accept">FORTSETZEN</string>
-    <string name="dialogs_question_rate_first_info">Mögen Sie ONLYOFFICE Documents?</string>
+    <string name="dialogs_question_rate_first_info">Mögen Sie Euro-Office Documents?</string>
     <string name="dialogs_question_rate_second_info">Hätten Sie Lust die App kurz bei Google Play zu bewerten?</string>
 
     <!-- Edit -->
@@ -150,7 +150,7 @@
     <string name="fragment_clouds_title">Clouds</string>
     <string name="fragment_clouds_portal_title">Mit dem Portal verbinden</string>
     <string name="fragment_clouds_storage_title">Mit dem Datenspeicher verbinden</string>
-    <string name="fragment_clouds_onlyoffice_item">ONLYOFFICE</string>
+    <string name="fragment_clouds_eurooffice_item">Euro-Office</string>
     <string name="fragment_recent_title">Zuletzt verwendet</string>
     <string name="fragment_on_device_title">Auf dem Gerät</string>
     <string name="fragment_profile_title">Profil</string>
@@ -304,7 +304,7 @@
     <string name="operation_share_send_link">SENDEN</string>
     <string name="trash_dialog_empty_title">Papierkorb leeren</string>
     <string name="trash_popup_delete">Endgültig löschen</string>
-    <string name="download_manager_title">ONLYOFFICE Downloads</string>
+    <string name="download_manager_title">Euro-Office Downloads</string>
     <string name="download_manager_progress_title">Herunterladen wird ausgeführt</string>
     <string name="download_manager_complete">Herunterladen abgeschlossen</string>
     <string name="download_manager_error">Fehler beim Herunterladen</string>
@@ -357,7 +357,7 @@
     <string name="cloud_account_description">Arbeiten Sie in einer sicheren Umgebung zusammen und verbinden Sie Speicher von Drittanbietern</string>
     <string name="cloud_account_start_button">Los geht‘s</string>
     <string name="cloud_account_other_storages_button">Andere Speicher</string>
-    <string name="cloud_only_office_description">Speichern Sie Ihre Dokumente in der Cloud und arbeiten Sie gemeinsam daran</string>
+    <string name="cloud_eurooffice_description">Speichern Sie Ihre Dokumente in der Cloud und arbeiten Sie gemeinsam daran</string>
     <string name="cloud_accounts_title">Profile</string>
     <string name="error_long_file_name">Dateiname zu lang</string>
     <string name="dialog_remove_account_description">Benutzer mit E-Mail-Adresse %1$s vom Portal %2$s wird abgemeldet und aus der Profilliste entfernt. \n\nBitte beachten Sie, dass die Eingabe von der Adresse des Portals, so wie auch E-Mail-Adresse und Passwort erforderlich wird. Alle Dateien werden sicher gespeichert!</string>
@@ -688,13 +688,13 @@
     <string name="room_storage_reconnect">Speicher neu verbinden</string>
     <string name="room_storage_not_availabale">Der Inhalt des Drittanbieterordners ist nicht verfügbar. Versuchen Sie, das Konto erneut zu verbinden.</string>
     <string name="personal_portal_end_button">Kostenloses Konto erstellen</string>
-    <string name="personal_portal_end_title">ONLYOFFICE Personal schließt ab</string>
-    <string name="personal_portal_end_text">Bitte beachten Sie: ONLYOFFICE Personal wird am 1. September 2024 auslaufen.\n
-Wir empfehlen Ihnen, auf die kostenlose ONLYOFFICE DocSpace Cloud umzusteigen.</string>
+    <string name="personal_portal_end_title">Euro-Office Personal schließt ab</string>
+    <string name="personal_portal_end_text">Bitte beachten Sie: Euro-Office Personal wird am 1. September 2024 auslaufen.\n
+Wir empfehlen Ihnen, auf die kostenlose Euro-Office DocSpace Cloud umzusteigen.</string>
     <string name="dialogs_question_delete_all_fonts">Alle Schriftarten löschen?</string>
     <string name="dialogs_question_delete_font">Diese Schriftart löschen?</string>
     <string name="dialogs_warning_title">Warnung</string>
-    <string name="dialogs_warning_only_pdf_form_message">Die Datei kann nicht in diesen Raum verschoben werden. Bitte versuchen Sie, das ONLYOFFICE PDF-Formular zu verschieben.</string>
+    <string name="dialogs_warning_only_pdf_form_message">Die Datei kann nicht in diesen Raum verschoben werden. Bitte versuchen Sie, das Euro-Office PDF-Formular zu verschieben.</string>
     <string name="dialogs_warning_pinned_room_limit">Sie können nicht mehr als 10 Räume oben anheften. Entpinnen Sie einige, die derzeit angeheftet sind.</string>
     <string name="dialogs_warning_fill_forms_room_create">Für diesen Raumtyp ist die Erstellung auf Basis mehrerer Dateien und Ordner nicht möglich. Um einen solchen Raum zu erstellen, gehen Sie in den Bereich Räume oder verwenden Sie eines der PDF-Formulare.</string>
     <string name="toolbar_menu_view">Ansicht</string>
@@ -885,7 +885,7 @@ Wir empfehlen Ihnen, auf die kostenlose ONLYOFFICE DocSpace Cloud umzusteigen.</
     <string name="list_context_upload_to_cloud">In die Cloud hochladen</string>
     <string name="list_context_version_history">Versionsverlauf anzeigen</string>
     <string name="on_boarding_collaborate_header">Zusammenarbeit mit Ihrem Team</string>
-    <string name="on_boarding_collaborate_info">Nutzen Sie im Onlinemodus die ONLYOFFICE-Funktionen der Zusammenarbeit in Echtzeit, um gemeinsam mit Ihren Portalmitgliedern an Dokumenten zu arbeiten, Dokumente freizugeben und gemeinsame Speicherordner zu erstellen.</string>
+    <string name="on_boarding_collaborate_info">Nutzen Sie im Onlinemodus die Euro-Office-Funktionen der Zusammenarbeit in Echtzeit, um gemeinsam mit Ihren Portalmitgliedern an Dokumenten zu arbeiten, Dokumente freizugeben und gemeinsame Speicherordner zu erstellen.</string>
     <string name="on_boarding_edit_header">Arbeiten mit Office-Dateien</string>
     <string name="on_boarding_edit_info">Erstellen und bearbeiten Sie Dokumente mit der umfassenden Symbolleiste: Arbeiten Sie mit komplexen Objekten in Textdokumenten, führen Sie umfangreiche Berechnungen in Tabellenkalkulationen durch, erstellen Sie beeindruckende Präsentationen und zeigen Sie PDF-Dateien ohne Formatierungsverlust an.</string>
     <string name="on_boarding_finish_button">Loslegen</string>
@@ -894,7 +894,7 @@ Wir empfehlen Ihnen, auf die kostenlose ONLYOFFICE DocSpace Cloud umzusteigen.</
     <string name="on_boarding_third_party_header">Speicher von Drittanbietern</string>
     <string name="on_boarding_third_party_info">Verbinden Sie Speicher von Drittanbietern wie Nextcloud, ownCloud, Dropbox und andere, die das WebDAV-Protokoll verwenden.</string>
     <string name="on_boarding_welcome_header">Erste Schritte</string>
-    <string name="on_boarding_welcome_info">Willkommen bei der mobilen Bearbeitungssuite von ONLYOFFICE! Wischen Sie, um mehr über die App zu erfahren.</string>
+    <string name="on_boarding_welcome_info">Willkommen bei der mobilen Bearbeitungssuite von Euro-Office! Wischen Sie, um mehr über die App zu erfahren.</string>
     <string name="operation_disable_custom_filter">Benutzerdefinierter Filter für die ausgewählte Datei deaktiviert</string>
     <string name="operation_enable_custom_filter">Benutzerdefinierter Filter für die ausgewählte Datei aktiviert</string>
     <string name="placeholder_connection_button">Neu laden</string>

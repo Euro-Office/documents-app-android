@@ -143,7 +143,7 @@ private fun MainScreen(
                         ) {
                             VerticalSpacer(height = 40.dp)
                             Image(
-                                painter = painterResource(id = lib.toolkit.base.R.drawable.image_onlyoffice_text),
+                                painter = painterResource(id = lib.toolkit.base.R.drawable.image_eurooffice_logo),
                                 contentDescription = null,
                                 modifier = Modifier.clickable(
                                     interactionSource = remember { MutableInteractionSource() },
@@ -157,6 +157,14 @@ private fun MainScreen(
                                 }
                             )
                             VerticalSpacer(height = 16.dp)
+                            Text(
+                                text = stringResource(id = R.string.app_name_full),
+                                style = MaterialTheme.typography.h6,
+                                color = MaterialTheme.colors.onSurface,
+                                textAlign = TextAlign.Center,
+                                modifier = Modifier.align(Alignment.CenterHorizontally)
+                            )
+                            VerticalSpacer(height = 8.dp)
                             Text(
                                 text = stringResource(
                                     id = R.string.about_app_version,

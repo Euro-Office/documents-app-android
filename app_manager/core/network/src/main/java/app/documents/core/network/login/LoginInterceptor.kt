@@ -14,8 +14,8 @@ class LoginInterceptor(val context: Context) : Interceptor {
         val request = chain.request()
 
         val newRequest = request.newBuilder()
-            .addHeader(HEADER_AGENT, "Android ONLYOFFICE Documents (" +
-                    "id = com.onlyoffice.documents, " +
+            .addHeader(HEADER_AGENT, "Android Euro-Office Documents (" +
+                    "id = ${context.packageName}, " +
                     "SDK = ${Build.VERSION.SDK_INT}, " +
                     "build = ${info.versionCode}, " +
                     "appName = ${info.versionName}")
