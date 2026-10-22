@@ -88,7 +88,8 @@ class WebDavFileProvider @Inject constructor(
                     file = suspendGetCachedFile(context, cloudFile, ""),
                     fileId = cloudFile.id,
                     editType = editType,
-                    editorConfig = if (editType is EditType.View) null else editorConfig(cloudFile.id)
+                    // Also for viewing: the editors join the session as a viewer, with the others' changes as they come
+                    editorConfig = editorConfig(cloudFile.id)
                 )
             )
         }
