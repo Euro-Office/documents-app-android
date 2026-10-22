@@ -48,6 +48,8 @@ object FileUtils {
     const val MEGA_BYTES = 1048576.0
     const val STRICT_SIZE = 100 * 1024 * 1024.toLong()
 
+    // Writing over a file: "w" alone doesn't cut off what is left of a longer old one
+    private const val TRUNCATE = "wt"
     private const val DOCX_PATTERN_EXT = ".docx"
     private const val ASSETS_TEMPLATES = "templates"
 
@@ -295,7 +297,7 @@ object FileUtils {
     @JvmStatic
     fun replaceFile(context: Context, item: Uri, replace: String): Boolean {
         BufferedInputStream(FileInputStream(replace)).use { input ->
-            BufferedOutputStream(context.contentResolver.openOutputStream(item)).use { output ->
+            BufferedOutputStream(context.contentResolver.openOutputStream(item, TRUNCATE)).use { output ->
                 output.write(input.readBytes())
                 output.flush()
                 return true
@@ -596,7 +598,7 @@ object FileUtils {
         error: Error? = null
     ) {
         AsyncRoutines().run({ _, _ ->
-            context.contentResolver.openOutputStream(to)?.use { out ->
+            context.contentResolver.openOutputStream(to, TRUNCATE)?.use { out ->
                 URL(from).openStream()?.use {
                     out.write(it.readBytes())
                     out.flush()
@@ -671,7 +673,7 @@ object FileUtils {
         var outputStream: OutputStream? = null
         try {
             inputStream = BufferedInputStream(stream, 1024 * 8)
-            outputStream = BufferedOutputStream(context.contentResolver.openOutputStream(to))
+            outputStream = BufferedOutputStream(context.contentResolver.openOutputStream(to, TRUNCATE))
             val buffer = ByteArray(1024 * 4)
             // Downloading with progress
             var countBytes: Int
