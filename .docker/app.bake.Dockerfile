@@ -65,6 +65,11 @@ FROM android-ndk AS android-toolchain
 
     WORKDIR /src
 
+# Gradle's outputs (build directories, CMake's .cxx, the project's .gradle) are deleted in
+# the step that made them, once its results are in /out: they would stay in its layer,
+# several GB each time the sources change and never used again (Gradle's own caches are
+# cache mounts)
+
 #### APP ####
 FROM android-toolchain AS apk-build
 
@@ -78,7 +83,9 @@ FROM android-toolchain AS apk-build
         cd /src/documents-app-android/app_manager && \
         ./gradlew --no-daemon ${GRADLE_TASK} && \
         mkdir -p /out && \
-        find appmanager/build/outputs/apk -name '*.apk' -exec cp {} /out/ \;
+        find appmanager/build/outputs/apk -name '*.apk' -exec cp {} /out/ \; && \
+        { find /src/documents-app-android /src/editors-android /src/core/X2tConverter/build/Android/libx2t \
+            -type d \( -name build -o -name .cxx -o -name .gradle \) -prune -exec rm -rf {} + 2>/dev/null || true; }
 
 FROM scratch AS apk
     COPY --from=apk-build /out/ /
@@ -108,7 +115,9 @@ FROM editors-sources AS apk-editors-build
         cd /src/documents-app-android/app_manager && \
         ./gradlew --no-daemon -PwithNativeCore=true ${GRADLE_TASK} && \
         mkdir -p /out && \
-        find appmanager/build/outputs/apk -name '*.apk' -exec cp {} /out/ \;
+        find appmanager/build/outputs/apk -name '*.apk' -exec cp {} /out/ \; && \
+        { find /src/documents-app-android /src/editors-android /src/core/X2tConverter/build/Android/libx2t \
+            -type d \( -name build -o -name .cxx -o -name .gradle \) -prune -exec rm -rf {} + 2>/dev/null || true; }
 
 FROM scratch AS apk-editors
     COPY --from=apk-editors-build /out/ /
@@ -126,7 +135,9 @@ FROM editors-sources AS editors-unit-tests-run
         for module in libeditors libgeditors; do \
             cp -r /src/editors-android/$module/build/test-results /out/$module-results 2>/dev/null; \
             cp -r /src/editors-android/$module/build/reports /out/$module-reports 2>/dev/null; \
-        done; true
+        done; \
+        find /src/documents-app-android /src/editors-android /src/core/X2tConverter/build/Android/libx2t \
+            -type d \( -name build -o -name .cxx -o -name .gradle \) -prune -exec rm -rf {} + 2>/dev/null; true
 
 FROM scratch AS editors-unit-tests
     COPY --from=editors-unit-tests-run /out/ /
