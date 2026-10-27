@@ -9,6 +9,7 @@
 - Koin 3.5.0([Apache License](https://github.com/InsertKoinIO/koin/blob/main/LICENSE))
 - Kotlin Serialization Converter 1.0.0 ([Apache License](https://github.com/JakeWharton/retrofit2-kotlinx-serialization-converter/blob/trunk/LICENSE.txt))
 - Libphonenumber-android 8.13.28 ([Apache License](https://github.com/MichaelRocks/libphonenumber-android/blob/master/LICENSE.txt))
+- Material Symbols, the Euro-Office logo ([Apache License](https://github.com/google/material-design-icons/blob/master/LICENSE))
 - Moxy 2.2.2([MIT License](https://github.com/moxy-community/Moxy/blob/develop/LICENSE))
 - PageIndicatorView 1.0.3 ([License](https://github.com/romandanylyk/PageIndicatorView/tree/master?tab=readme-ov-file#license))
 - PhotoView 2.3.0 ([Apache License](https://github.com/Baseflow/PhotoView/blob/master/LICENSE))

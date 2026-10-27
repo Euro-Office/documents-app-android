@@ -26,3 +26,7 @@ Please report problems at [Euro-Office](https://github.com/Euro-Office).
 ## License
 
 Euro-Office Documents for Android is released under the AGPLv3 license. See [LICENSE.txt](LICENSE.txt).
+
+It is based on [ONLYOFFICE Documents for Android](https://github.com/ONLYOFFICE/documents-app-android) 9.3.1 (707) by Ascensio System SIA, released under the AGPLv3, and has been modified by the Euro-Office contributors since October 2026 (see the Git history). Changed pictures say so in a comment.
+
+The Euro-Office logo is the Material Symbols icon "description" by Google, under the [Apache License 2.0](LICENSES/Apache-2.0.txt). [REUSE.toml](REUSE.toml) gives the licence of each file; the third-party libraries are listed in [thirdparty.md](thirdparty.md).
