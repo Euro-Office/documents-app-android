@@ -1,6 +1,5 @@
 package app.editors.manager.mvp.presenters.login
 
-import android.content.Intent
 import app.documents.core.account.AccountPreferences
 import app.documents.core.login.CloudLoginRepository
 import app.documents.core.login.LoginResult
@@ -11,7 +10,6 @@ import app.editors.manager.R
 import app.editors.manager.app.App
 import app.editors.manager.mvp.presenters.base.BasePresenter
 import app.editors.manager.mvp.views.base.BaseView
-import com.google.android.gms.auth.UserRecoverableAuthException
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import moxy.presenterScope
@@ -82,10 +80,7 @@ abstract class BaseLoginPresenter<View : BaseView> : BasePresenter<View>() {
             ).collect { result ->
                 when (result) {
                     is LoginResult.Success -> onAccountCreateSuccess(result.cloudAccount)
-                    is LoginResult.Error -> when (val exception = result.exception) {
-                        is UserRecoverableAuthException -> onGooglePermission(exception.intent)
-                        else -> fetchError(exception)
-                    }
+                    is LoginResult.Error -> fetchError(result.exception)
 
                     is LoginResult.Sms -> onTwoFactorAuth(
                         result.phoneNoise,
@@ -112,7 +107,5 @@ abstract class BaseLoginPresenter<View : BaseView> : BasePresenter<View>() {
     protected open fun onTwoFactorAuthApp(secretKey: String?, request: RequestSignIn) {}
 
     protected open fun onGetUser(user: User) {}
-
-    protected open fun onGooglePermission(intent: Intent?) {}
 
 }

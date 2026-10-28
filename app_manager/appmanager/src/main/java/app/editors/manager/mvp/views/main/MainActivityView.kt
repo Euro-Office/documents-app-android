@@ -5,7 +5,6 @@ import android.net.Uri
 import androidx.annotation.StringRes
 import app.documents.core.model.cloud.Access
 import app.editors.manager.mvp.views.base.BaseViewExt
-import com.google.android.play.core.review.ReviewInfo
 import lib.toolkit.base.managers.utils.EditType
 import moxy.viewstate.strategy.OneExecutionStateStrategy
 import moxy.viewstate.strategy.StateStrategyType
@@ -19,7 +18,6 @@ interface MainActivityView : BaseViewExt {
     fun onQuestionDialog(title: String, tag: String, accept: String, cancel: String, question: String?)
     fun onShowEditMultilineDialog(title: String, hint: String, accept: String, cancel: String, tag: String)
     fun onShowPlayMarket(releaseId: String)
-    fun onShowInAppReview(reviewInfo: ReviewInfo)
     fun onShowApp(releaseId: String)
     fun onShowEmailClientTemplate(value: String)
     fun onShowOnBoarding()
