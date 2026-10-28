@@ -65,8 +65,9 @@ android {
         manifestPlaceholders += mapOf()
         minSdk = libs.versions.minSdk.get().toInt()
         targetSdk = libs.versions.targetSdk.get().toInt()
-        versionCode = 707
-        versionName = "9.3.1"
+        // Releases pass the version: -PappVersionName=0.1.0-alpha.1 -PappVersionCode=10001
+        versionCode = providers.gradleProperty("appVersionCode").orNull?.toInt() ?: 707
+        versionName = providers.gradleProperty("appVersionName").orNull ?: "9.3.1"
         multiDexEnabled = true
         applicationId = "eu.eurooffice.documents"
 
