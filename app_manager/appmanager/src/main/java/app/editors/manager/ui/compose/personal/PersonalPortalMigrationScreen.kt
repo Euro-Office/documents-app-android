@@ -134,7 +134,7 @@ private fun TextBlock(modifier: Modifier = Modifier) {
                     Placeholder(24.sp, 24.sp, PlaceholderVerticalAlign.TextCenter)
                 ) {
                     Image(
-                        imageVector = ImageVector.vectorResource(id = R.drawable.ic_storage_onlyoffice),
+                        imageVector = ImageVector.vectorResource(id = R.drawable.ic_storage_eurooffice),
                         contentDescription = null
                     )
                 }

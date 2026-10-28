@@ -2,7 +2,7 @@
 <resources>
 
     <!-- Base -->
-    <color name="colorPrimary">#3880BE</color>
+    <color name="colorPrimary">#0082C9</color>
     <color name="colorOnPrimary">@color/colorWhite</color>
     <color name="colorSecondary">#F77F00</color>
     <color name="colorSecondary30">#4DF77F00</color>
@@ -22,7 +22,7 @@
     <!-- Custom -->
     <color name="colorBackdrop">#EFF0F5</color>
     <color name="colorAppBar">@color/colorWhite</color>
-    <color name="colorBottomBar">#0F4071</color>
+    <color name="colorBottomBar">#006AA3</color>
     <color name="colorOutline">@color/colorBlack12</color>
     <color name="colorCloudItem">#EDF9FF</color>
     <color name="colorButtonBackground">@color/colorBackdrop</color>

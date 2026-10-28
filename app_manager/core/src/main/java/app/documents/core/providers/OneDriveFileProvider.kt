@@ -465,7 +465,7 @@ class OneDriveFileProvider(
         when (getExtension(file.fileExst)) {
             StringUtils.Extension.UNKNOWN, StringUtils.Extension.EBOOK, StringUtils.Extension.ARCH,
             StringUtils.Extension.VIDEO, StringUtils.Extension.HTML -> {
-                val parent = File(Environment.getExternalStorageDirectory().absolutePath + "/OnlyOffice")
+                val parent = File(Environment.getExternalStorageDirectory().absolutePath + "/Euro-Office")
                 return createFile(parent, file.title)
             }
             else -> {

@@ -32,7 +32,7 @@ android {
 
         val keystoreProperties = Properties()
 
-        rootProject.file("Onlyoffice-keystore.properties").let { file ->
+        rootProject.file("eurooffice-keystore.properties").let { file ->
             if (file.exists()) {
                 keystoreProperties.load(FileInputStream(file))
             }
@@ -87,8 +87,6 @@ dependencies {
     implementation(libs.androidDocumentFile)
 
 
-    // Firebase
-    implementation(libs.firebase.messaging)
 
     // Google
     implementation(libs.google.material)

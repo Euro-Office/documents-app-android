@@ -4,18 +4,18 @@
     <string name="about_policy">Informativa sulla privacy</string>
     <string name="about_terms">Condizioni d’uso</string>
     <string name="about_title">Informazioni su</string>
-    <string name="about_website">ONLYOFFICE website</string>
+    <string name="about_website">Euro-Office website</string>
     <string name="actionbar_title_main">Documenti</string>
     <string name="app_name">Documenti</string>
-    <string name="app_name_full">ONLYOFFICE Documents</string>
+    <string name="app_name_full">Euro-Office Documents</string>
     <string name="app_versions_actual_release_accept">Apri l\’app ufficiale</string>
-    <string name="app_versions_actual_release_info">Grazie per il test della versione beta! ONLYOFFICE Documents 3.0 è ora disponibile e la versione beta non è più supportata. Passa all’app ufficiale.</string>
+    <string name="app_versions_actual_release_info">Grazie per il test della versione beta! Euro-Office Documents 3.0 è ora disponibile e la versione beta non è più supportata. Passa all’app ufficiale.</string>
     <string name="app_versions_cancel">In seguito</string>
     <string name="app_versions_title">Versione 3.0 rilasciata</string>
     <string name="app_versions_update_accept">Aggiorna l’app ufficiale</string>
-    <string name="app_versions_update_info">Grazie per il test della versione beta! ONLYOFFICE Documents 3.0 è ora disponibile e la versione beta non è più supportata. Passa all’app ufficiale per ricevere ulteriori aggiornamenti.</string>
+    <string name="app_versions_update_info">Grazie per il test della versione beta! Euro-Office Documents 3.0 è ora disponibile e la versione beta non è più supportata. Passa all’app ufficiale per ricevere ulteriori aggiornamenti.</string>
     <string name="app_versions_without_release_accept">Installa l’app ufficiale</string>
-    <string name="app_versions_without_release_info">Grazie per il test della versione beta! ONLYOFFICE Documents 3.0 è ora disponibile e la versione beta non è più supportata. Passa all’app ufficiale per ricevere ulteriori aggiornamenti.</string>
+    <string name="app_versions_without_release_info">Grazie per il test della versione beta! Euro-Office Documents 3.0 è ora disponibile e la versione beta non è più supportata. Passa all’app ufficiale per ricevere ulteriori aggiornamenti.</string>
     <string name="auth_header_screen_1">Configurare un’applicazione per generare i codici di autenticazione</string>
     <string name="auth_header_screen_2">Avvia Google Authenticator</string>
     <string name="auth_header_screen_3">Aggiungi una chiave segreta</string>
@@ -66,7 +66,7 @@
     <string name="dialogs_question_personal_confirm_accept">CONTINUA</string>
     <string name="dialogs_question_personal_confirm_cancel">RIPROVA</string>
     <string name="dialogs_question_personal_confirm_link_title">Conferma email</string>
-    <string name="dialogs_question_rate_first_info">Ti piace usare ONLYOFFICE Documents?</string>
+    <string name="dialogs_question_rate_first_info">Ti piace usare Euro-Office Documents?</string>
     <string name="dialogs_question_rate_second_info">Ti dispiacerebbe valutare l’app su Google Play?</string>
     <string name="dialogs_question_remove_account_info">L’account con email %1$s dal portale %2$s verrà disconnesso e rimosso dall’elenco</string>
     <string name="dialogs_question_remove_account_title">Elimina account?</string>
@@ -86,7 +86,7 @@
     <string name="download_manager_progress_title">Download in corso</string>
     <string name="download_manager_repeat">Il file è già in fase di download</string>
     <string name="download_manager_select_files">Seleziona i file</string>
-    <string name="download_manager_title">ONLYOFFICE downloads</string>
+    <string name="download_manager_title">Euro-Office downloads</string>
     <string name="error_recent_account">Il file è stato eliminato o non è disponibile da questo account.</string>
     <string name="error_recent_enter_account">Inserisci un account.</string>
     <string name="errors_client_error">Errore client sconosciuto con codice:\u0020</string>
@@ -110,7 +110,7 @@
     <string name="errors_unknown_error">Errore di connessione. Prova nuovamente più tardi.</string>
     <string name="errors_unknown_host_error">Host sconosciuto</string>
     <string name="errors_viewer_download_name">Download non riuscito</string>
-    <string name="fragment_clouds_onlyoffice_item">ONLYOFFICE</string>
+    <string name="fragment_clouds_eurooffice_item">Euro-Office</string>
     <string name="fragment_clouds_portal_title">Connettersi al portale</string>
     <string name="fragment_clouds_storage_title">Connettersi allo spazio di archiviazione</string>
     <string name="fragment_clouds_title">Cloud</string>
@@ -152,7 +152,7 @@
     <string name="login_accounts_select_title">Seleziona account</string>
     <string name="login_api_init_error">Errore iniziale</string>
     <string name="login_api_init_portal_error">Errore di sintassi del nome del portale</string>
-    <string name="login_api_portal_name">Nome del portale errato. Esempio: example.onlyoffice.com</string>
+    <string name="login_api_portal_name">Nome del portale errato. Esempio: cloud.example.com</string>
     <string name="login_api_portal_name_content">Il nome del portale deve essere composto da A–Z, a–z, 0–9</string>
     <string name="login_api_portal_name_length">Il nome del portale deve contenere almeno 6 caratteri</string>
     <string name="login_create_portal_address_hint">Indirizzo del portale</string>
@@ -174,7 +174,7 @@
     <string name="login_enterprise_edit_hint">Indirizzo del portale</string>
     <string name="login_enterprise_email_hint">Email</string>
     <string name="login_enterprise_forgot_password">Hai dimenticato la password o l’email?</string>
-    <string name="login_enterprise_info">Il portale ONLYOFFICE consente di salvare i file archiviandoli su cloud, condividerli con i colleghi e co-modificarli in tempo reale</string>
+    <string name="login_enterprise_info">Il portale Euro-Office consente di salvare i file archiviandoli su cloud, condividerli con i colleghi e co-modificarli in tempo reale</string>
     <string name="login_enterprise_password_hint">Password</string>
     <string name="login_enterprise_signin_button">Accedi</string>
     <string name="login_enterprise_single_sign_button">Accesso singolo</string>
@@ -182,10 +182,10 @@
     <string name="login_not_authorization_info">Impossibile accedere a %1$s a %2$s</string>
     <string name="login_pager_enterprise">PORTALE</string>
     <string name="login_pager_personal">PERSONALE</string>
-    <string name="login_pager_title">Collega ONLYOFFICE cloud</string>
+    <string name="login_pager_title">Collega Euro-Office cloud</string>
     <string name="login_personal_edit_email_hint">Email</string>
     <string name="login_personal_edit_password_hint">Password</string>
-    <string name="login_personal_info">Collega il portale personale ONLYOFFICE per archiviare i file su cloud</string>
+    <string name="login_personal_info">Collega il portale personale Euro-Office per archiviare i file su cloud</string>
     <string name="login_personal_signin_button">Accedi</string>
     <string name="login_personal_signup_button">Registrati</string>
     <string name="login_personal_signup_dialog_info">Link di conferma inviato all’email %1$s\nSegui il link presente nell’email prima di continuare</string>
@@ -348,7 +348,7 @@
     <string name="cloud_account_description">Collabora in un ambiente sicuro e collega cloud di terze parti</string>
     <string name="cloud_account_start_button">Inizia</string>
     <string name="cloud_account_other_storages_button">Altri cloud</string>
-    <string name="cloud_only_office_description">Archivia i documenti nel cloud e collabora su di essi</string>
+    <string name="cloud_eurooffice_description">Archivia i documenti nel cloud e collabora su di essi</string>
     <string name="cloud_accounts_title">Account</string>
     <string name="error_long_file_name">Il nome del file è troppo lungo</string>
     <string name="dialog_remove_account_description">
@@ -685,13 +685,13 @@
     <string name="room_storage_reconnect">Ricollega lo spazio di archiviazione</string>
     <string name="room_storage_not_availabale">Il contenuto della cartella di terze parti non è disponibile. Prova a ricollegare l\'account.</string>
     <string name="personal_portal_end_button">Crea un account gratuito</string>
-    <string name="personal_portal_end_title">ONLYOFFICE Personal sta per concludersi</string>
-    <string name="personal_portal_end_text">Tieni presente: ONLYOFFICE Personal verrà interrotto il 1° settembre 2024.\n
-        Ti consigliamo di passare alla versione gratuita di ONLYOFFICE DocSpace Cloud.</string>
+    <string name="personal_portal_end_title">Euro-Office Personal sta per concludersi</string>
+    <string name="personal_portal_end_text">Tieni presente: Euro-Office Personal verrà interrotto il 1° settembre 2024.\n
+        Ti consigliamo di passare alla versione gratuita di Euro-Office DocSpace Cloud.</string>
     <string name="dialogs_question_delete_all_fonts">Eliminare tutti i font?</string>
     <string name="dialogs_question_delete_font">Eliminare questo font?</string>
     <string name="dialogs_warning_title">Attenzione</string>
-    <string name="dialogs_warning_only_pdf_form_message">Il file non può essere spostato in questa stanza. Prova a spostare il modulo PDF ONLYOFFICE.</string>
+    <string name="dialogs_warning_only_pdf_form_message">Il file non può essere spostato in questa stanza. Prova a spostare il modulo PDF Euro-Office.</string>
     <string name="dialogs_warning_pinned_room_limit">Non puoi appuntare in alto più di 10 stanze in alto. Rimuovi alcune delle stanze attualmente appuntate.</string>
     <string name="dialogs_warning_fill_forms_room_create">La creazione basata su diversi file e cartelle non è disponibile per questo tipo di stanza. Per creare una stanza di questo tipo, vai alla sezione Stanze oppure utilizza uno dei moduli PDF.</string>
     <string name="toolbar_menu_view">Visualizza</string>
@@ -882,7 +882,7 @@
     <string name="list_context_upload_to_cloud">Upload to cloud</string>
     <string name="list_context_version_history">Show version history</string>
     <string name="on_boarding_collaborate_header">Collaborate with your team</string>
-    <string name="on_boarding_collaborate_info">In online mode, use real-time co-editing features of ONLYOFFICE to work on documents together with your portal members, share documents and create common storage folders.</string>
+    <string name="on_boarding_collaborate_info">In online mode, use real-time co-editing features of Euro-Office to work on documents together with your portal members, share documents and create common storage folders.</string>
     <string name="on_boarding_edit_header">Work with office files</string>
     <string name="on_boarding_edit_info">Create and edit documents with our comprehensive toolbar: work with complex objects in text documents, perform extensive calculations in spreadsheets, create stunning presentations and view PDF files with no formatting loss.</string>
     <string name="on_boarding_finish_button">Get Started</string>
@@ -891,7 +891,7 @@
     <string name="on_boarding_third_party_header">Third-party storage</string>
     <string name="on_boarding_third_party_info">Connect third-party storage like Nextcloud, ownCloud, Dropbox and others which use WebDAV protocol.</string>
     <string name="on_boarding_welcome_header">Getting started</string>
-    <string name="on_boarding_welcome_info">Welcome to ONLYOFFICE mobile editing suite! Swipe to learn more about the app.</string>
+    <string name="on_boarding_welcome_info">Welcome to Euro-Office mobile editing suite! Swipe to learn more about the app.</string>
     <string name="operation_disable_custom_filter">Custom filter for the selected file disabled</string>
     <string name="operation_enable_custom_filter">Custom filter for the selected file enabled</string>
     <string name="placeholder_connection_button">Reload</string>

@@ -122,8 +122,8 @@
     <string name="conversion_dialog_convert_to">%1s වෙත හරවන්න</string>
     <string name="conversion_dialog_converting_to">%1s වෙත හැරවෙමින්</string>
     <string name="personal_portal_end_button">ගිණුමක්  නොමිලේ සාදන්න</string>
-    <string name="personal_portal_end_title">ONLYOFFICE Personal අවසන් වෙමින් පවතී</string>
-    <string name="personal_portal_end_text">ONLYOFFICE Personal 2024 සැප්තැම්බර් 1 වැනි දින නවත්වනු ඇත.\nඅපි ඔබට නොමිලේ ලබා දෙන ONLYOFFICE DocSpace Cloud වෙත යාම නිර්දේශ කරනවා.</string>
+    <string name="personal_portal_end_title">Euro-Office Personal අවසන් වෙමින් පවතී</string>
+    <string name="personal_portal_end_text">Euro-Office Personal 2024 සැප්තැම්බර් 1 වැනි දින නවත්වනු ඇත.\nඅපි ඔබට නොමිලේ ලබා දෙන Euro-Office DocSpace Cloud වෙත යාම නිර්දේශ කරනවා.</string>
     <string name="list_action_delete_image">රූපය මකන්න</string>
 
     <!-- Newly added translations (v9.0.0 - 2025-06-09) -->
@@ -132,7 +132,7 @@
     <string name="about_policy">රහස්‍යතා ප්‍රතිපත්තිය</string>
     <string name="about_terms">භාවිත නියමයන්</string>
     <string name="about_title">ගැන</string>
-    <string name="about_website">ONLYOFFICE වෙබ් අඩවිය</string>
+    <string name="about_website">Euro-Office වෙබ් අඩවිය</string>
     <string name="actionbar_title_main">ලේඛන</string>
     <string name="app_Settings_passcode_enable">මුර කේතය සක්‍රිය කරන්න</string>
     <string name="app_fragment_crash_error">කරුණාකර මෙම යෙදුම වසා නැවත උත්සාහ කරන්න</string>
@@ -140,7 +140,7 @@
     <string name="app_manage_files_description">දේශීයව ලේඛන සංස්කරණය කිරීමට සහ නිර්මාණය කිරීමට, ඔබගේ උපාංගයේ ගොනු වෙත ප්‍රවේශ වීමට යෙදුමට ඉඩ දිය යුතුය.</string>
     <string name="app_manage_files_title">ගොනු කළමනාකරණයට ප්‍රවේශය</string>
     <string name="app_name">ලේඛන</string>
-    <string name="app_name_full">ONLYOFFICE ලේඛන</string>
+    <string name="app_name_full">Euro-Office ලේඛන</string>
     <string name="app_settings_analytic">යෙදුම් විශ්ලේෂණ බෙදා ගන්න</string>
     <string name="app_settings_analytic_title">නිෂ්පාදනය වැඩිදියුණු කිරීමට උදව් කරන්න</string>
     <string name="app_settings_color_theme">තේමාව</string>
@@ -164,13 +164,13 @@
     <string name="app_settings_passscode_enter_full_title">යෙදුම අගුළු ඇරීමට මුර කේතය ඇතුළත් කරන්න</string>
     <string name="app_settings_security">ආරක්ෂාව</string>
     <string name="app_versions_actual_release_accept">නිල යෙදුම විවෘත කරන්න</string>
-    <string name="app_versions_actual_release_info">බීටා පරීක්ෂාවට ස්තූතියි! ONLYOFFICE ලේඛන 3.0 දැන් නිකුත් කර ඇති අතර, බීටා අනුවාදය තවදුරටත් සහාය නොදක්වයි. කරුණාකර, නිල යෙදුමට මාරු වන්න.</string>
+    <string name="app_versions_actual_release_info">බීටා පරීක්ෂාවට ස්තූතියි! Euro-Office ලේඛන 3.0 දැන් නිකුත් කර ඇති අතර, බීටා අනුවාදය තවදුරටත් සහාය නොදක්වයි. කරුණාකර, නිල යෙදුමට මාරු වන්න.</string>
     <string name="app_versions_cancel">පසුව</string>
     <string name="app_versions_title">අනුවාදය 3.0 නිකුත් කරන ලදී</string>
     <string name="app_versions_update_accept">නිල යෙදුම යාවත්කාලීන කරන්න</string>
-    <string name="app_versions_update_info">බීටා පරීක්ෂාවට ස්තූතියි! ONLYOFFICE ලේඛන 3.0 දැන් නිකුත් කර ඇති අතර, බීටා අනුවාදය තවදුරටත් සහාය නොදක්වයි. වැඩිදුර යාවත්කාලීන ලබා ගැනීමට කරුණාකර නිල යෙදුමට මාරු වන්න.</string>
+    <string name="app_versions_update_info">බීටා පරීක්ෂාවට ස්තූතියි! Euro-Office ලේඛන 3.0 දැන් නිකුත් කර ඇති අතර, බීටා අනුවාදය තවදුරටත් සහාය නොදක්වයි. වැඩිදුර යාවත්කාලීන ලබා ගැනීමට කරුණාකර නිල යෙදුමට මාරු වන්න.</string>
     <string name="app_versions_without_release_accept">නිල යෙදුම ස්ථාපනය කරන්න</string>
-    <string name="app_versions_without_release_info">බීටා පරීක්ෂාවට ස්තූතියි! ONLYOFFICE ලේඛන 3.0 දැන් නිකුත් කර ඇති අතර, බීටා අනුවාදය තවදුරටත් සහාය නොදක්වයි. වැඩිදුර යාවත්කාලීන ලබා ගැනීමට නිල යෙදුමට මාරු වන්න.</string>
+    <string name="app_versions_without_release_info">බීටා පරීක්ෂාවට ස්තූතියි! Euro-Office ලේඛන 3.0 දැන් නිකුත් කර ඇති අතර, බීටා අනුවාදය තවදුරටත් සහාය නොදක්වයි. වැඩිදුර යාවත්කාලීන ලබා ගැනීමට නිල යෙදුමට මාරු වන්න.</string>
     <string name="auth_clipboard_key_copied">යතුර ක්ලිප්බෝඩ් එකට පිටපත් කර ඇත</string>
     <string name="auth_confirm_button">තහවුරු කරන්න</string>
     <string name="auth_edit_hint">කේතය</string>
@@ -194,7 +194,7 @@
     <string name="cloud_account_start_button">ආරම්භ කරන්න</string>
     <string name="cloud_accounts_title">ගිණුම්</string>
     <string name="cloud_create_account">නොමිලේ ගිණුමක් සාදන්න</string>
-    <string name="cloud_only_office_description">ලේඛන වලාකුළෙහි ගබඩා කර ඒවා සමඟ සහයෝගයෙන් කටයුතු කරන්න.</string>
+    <string name="cloud_eurooffice_description">ලේඛන වලාකුළෙහි ගබඩා කර ඒවා සමඟ සහයෝගයෙන් කටයුතු කරන්න.</string>
     <string name="context_menu_desc">තවත්</string>
     <string name="context_protection_title">ආරක්ෂාව</string>
     <string name="countries_codes_title">රට තෝරන්න</string>
@@ -244,7 +244,7 @@
     <string name="dialogs_question_personal_confirm_accept">දිගටම</string>
     <string name="dialogs_question_personal_confirm_cancel">නැවත උත්සාහ කරන්න</string>
     <string name="dialogs_question_personal_confirm_link_title">ඊමේල් තහවුරු කරන්න</string>
-    <string name="dialogs_question_rate_first_info">ඔබ ONLYOFFICE ලේඛන භාවිතා කිරීමට කැමතිද?</string>
+    <string name="dialogs_question_rate_first_info">ඔබ Euro-Office ලේඛන භාවිතා කිරීමට කැමතිද?</string>
     <string name="dialogs_question_rate_second_info">Google Play හි යෙදුම ශ්‍රේණිගත කිරීමට ඔබට අවශ්‍යද?</string>
     <string name="dialogs_question_remove_account_info">%2$s ද්වාරයෙන් %1$s ඊමේල් ලිපිනය සහිත ගිණුම ඉවත් කර ලැයිස්තුවෙන් ඉවත් කරනු ලැබේ</string>
     <string name="dialogs_question_remove_account_title">ගිණුම ඉවත් කරන්නද?</string>
@@ -253,7 +253,7 @@
     <string name="dialogs_sign_in_register_portal">ද්වාරය ලියාපදිංචි කිරීම</string>
     <string name="dialogs_wait_title">ගබඩාව සම්බන්ධ කරමින්…</string>
     <string name="dialogs_warning_fill_forms_room_create">ගොනු සහ ෆෝල්ඩර කිහිපයක් මත පදනම්ව නිර්මාණය කිරීම මෙම වර්ගයේ කාමර සඳහා ලබා ගත නොහැක. එවැනි කාමරයක් නිර්මාණය කිරීමට, කාමර අංශයට යන්න හෝ PDF පෝරම වලින් එකක් භාවිතා කරන්න.</string>
-    <string name="dialogs_warning_only_pdf_form_message">ගොනුව මෙම කාමරයට ගෙන යා නොහැක. කරුණාකර ONLYOFFICE PDF පෝරමය ගෙනයාමට උත්සාහ කරන්න.</string>
+    <string name="dialogs_warning_only_pdf_form_message">ගොනුව මෙම කාමරයට ගෙන යා නොහැක. කරුණාකර Euro-Office PDF පෝරමය ගෙනයාමට උත්සාහ කරන්න.</string>
     <string name="dialogs_warning_pinned_room_limit">ඔබට කාමර 10කට වඩා ඉහළට ඇමිණිය නොහැක. දැනට ඇමිණිය හැකි සමහරක් ඉවත් කරන්න.</string>
     <string name="dialogs_warning_room_space_quota_exceed">කාමර ඉඩ කෝටාව (%s) ඉක්මවා ඇත.</string>
     <string name="dialogs_warning_title">අනතුරු ඇඟවීම</string>
@@ -272,7 +272,7 @@
     <string name="download_manager_progress_title">බාගැනීම සිදුවෙමින් පවතී</string>
     <string name="download_manager_repeat">ගොනුව දැනටමත් බාගත වෙමින් පවතී</string>
     <string name="download_manager_select_files">ගොනු තෝරන්න</string>
-    <string name="download_manager_title">ONLYOFFICE බාගැනීම්</string>
+    <string name="download_manager_title">Euro-Office බාගැනීම්</string>
     <string name="edit_comment_field_label">අදහස</string>
     <string name="edit_comment_label">අදහස</string>
     <string name="edit_comment_success">අදහස සාර්ථකව සුරකින ලදී</string>
@@ -376,7 +376,7 @@
     <string name="form_status_in_progress">ප්‍රගතියේ පවතී</string>
     <string name="form_status_stopped">නැවැත්තුවා</string>
     <string name="form_status_your_turn">ඔබේ වාරය</string>
-    <string name="fragment_clouds_onlyoffice_item">ONLYOFFICE</string>
+    <string name="fragment_clouds_eurooffice_item">Euro-Office</string>
     <string name="fragment_clouds_portal_title">ද්වාරයට සම්බන්ධ වන්න</string>
     <string name="fragment_clouds_storage_title">ගබඩාවට සම්බන්ධ වන්න</string>
     <string name="fragment_clouds_title">වලාකුළු</string>
@@ -450,7 +450,7 @@
     <string name="login_accounts_select_title">ගිණුම තෝරන්න</string>
     <string name="login_api_init_error">Init දෝෂය</string>
     <string name="login_api_init_portal_error">ද්වාර නාමයේ වාක්‍ය ඛණ්ඩ දෝෂය</string>
-    <string name="login_api_portal_name">වැරදි ද්වාර නාමය. උදාහරණය: example.onlyoffice.com</string>
+    <string name="login_api_portal_name">වැරදි ද්වාර නාමය. උදාහරණය: cloud.example.com</string>
     <string name="login_api_portal_name_content">ද්වාර නාමයේ A–Z, a–z, 0–9 අඩංගු විය යුතුය</string>
     <string name="login_api_portal_name_length">ද්වාර නාමයේ අවම වශයෙන් අක්ෂර 6ක් අඩංගු විය යුතුය</string>
     <string name="login_create_portal_address_hint">ද්වාර ලිපිනය</string>
@@ -473,7 +473,7 @@
     <string name="login_enterprise_edit_hint">ද්වාර ලිපිනය</string>
     <string name="login_enterprise_email_hint">ඊමේල්</string>
     <string name="login_enterprise_forgot_password">මුරපදය අමතකද?</string>
-    <string name="login_enterprise_info">ONLYOFFICE ද්වාරය මඟින් වලාකුළෙහි ගොනු සුරැකීමට, ඒවා සම-සේවකයින් සමඟ බෙදා ගැනීමට සහ තථ්‍ය කාලය තුළ සම-සංස්කරණය කිරීමට ඉඩ සලසයි.</string>
+    <string name="login_enterprise_info">Euro-Office ද්වාරය මඟින් වලාකුළෙහි ගොනු සුරැකීමට, ඒවා සම-සේවකයින් සමඟ බෙදා ගැනීමට සහ තථ්‍ය කාලය තුළ සම-සංස්කරණය කිරීමට ඉඩ සලසයි.</string>
     <string name="login_enterprise_password_hint">මුරපදය</string>
     <string name="login_enterprise_signin_button">පුරන්න</string>
     <string name="login_enterprise_single_sign_button">තනි පුරනය වීම</string>
@@ -484,14 +484,14 @@
     <string name="login_not_authorization_info_token">සැසි කාලය අවසන්</string>
     <string name="login_pager_enterprise">ද්වාරය</string>
     <string name="login_pager_personal">පුද්ගලික</string>
-    <string name="login_pager_title">ONLYOFFICE වලාකුළ සම්බන්ධ කරන්න</string>
+    <string name="login_pager_title">Euro-Office වලාකුළ සම්බන්ධ කරන්න</string>
     <string name="login_password_recovery_button_text">තිරයට ඇතුළු වීමට ආපසු යන්න</string>
     <string name="login_password_recovery_hint">ද්වාරයෙහි ලියාපදිංචි කිරීම සඳහා ඔබ භාවිතා කළ විද්‍යුත් තැපෑල ඇතුළත් කරන්න. මුරපද ප්‍රතිසාධනය සඳහා උපදෙස් මෙම විද්‍යුත් තැපෑලට යවනු ලැබේ.</string>
     <string name="login_password_recovery_success_hint">%1$s විද්‍යුත් තැපෑල සහිත පරිශීලකයෙකු සිටී නම්, මුරපදය වෙනස් කිරීම සඳහා උපදෙස් මෙම විද්‍යුත් තැපෑලට යවනු ලැබේ.</string>
     <string name="login_password_recovery_toolbar_title">මුරපද ප්‍රතිසාධනය</string>
     <string name="login_personal_edit_email_hint">ඊමේල්</string>
     <string name="login_personal_edit_password_hint">මුරපදය</string>
-    <string name="login_personal_info">වලාකුළෙහි ගොනු සුරැකීමට ONLYOFFICE පුද්ගලිකව සම්බන්ධ කරන්න</string>
+    <string name="login_personal_info">වලාකුළෙහි ගොනු සුරැකීමට Euro-Office පුද්ගලිකව සම්බන්ධ කරන්න</string>
     <string name="login_personal_signin_button">පුරනය වන්න</string>
     <string name="login_personal_signup_button">පුරනය වන්න</string>
     <string name="login_personal_signup_dialog_info">%1$s විද්‍යුත් තැපෑලට තහවුරු කිරීමේ සබැඳිය යවන ලදී\nඉදිරියට යාමට පෙර තැපෑලෙහි ඇති සබැඳිය අනුගමනය කරන්න.</string>
@@ -533,7 +533,7 @@
     <string name="navigation_drawer_open">සංචාලන ලාච්චුව විවෘත කරන්න</string>
     <string name="on_boarding_back_button">ආපසු</string>
     <string name="on_boarding_collaborate_header">ඔබේ කණ්ඩායම සමඟ සහයෝගයෙන් කටයුතු කරන්න</string>
-    <string name="on_boarding_collaborate_info">මාර්ගගත ප්‍රකාරයේදී, ඔබේ ද්වාර සාමාජිකයින් සමඟ එක්ව ලේඛන මත වැඩ කිරීමට, ලේඛන බෙදා ගැනීමට සහ පොදු ගබඩා ෆෝල්ඩර නිර්මාණය කිරීමට ONLYOFFICE හි තත්‍ය කාලීන සම-සංස්කරණ විශේෂාංග භාවිතා කරන්න.</string>
+    <string name="on_boarding_collaborate_info">මාර්ගගත ප්‍රකාරයේදී, ඔබේ ද්වාර සාමාජිකයින් සමඟ එක්ව ලේඛන මත වැඩ කිරීමට, ලේඛන බෙදා ගැනීමට සහ පොදු ගබඩා ෆෝල්ඩර නිර්මාණය කිරීමට Euro-Office හි තත්‍ය කාලීන සම-සංස්කරණ විශේෂාංග භාවිතා කරන්න.</string>
     <string name="on_boarding_edit_header">කාර්යාල ලිපිගොනු සමඟ වැඩ කරන්න</string>
     <string name="on_boarding_edit_info">අපගේ පුළුල් මෙවලම් තීරුව සමඟ ලේඛන සාදන්න සහ සංස්කරණය කරන්න: පෙළ ලේඛනවල සංකීර්ණ වස්තූන් සමඟ වැඩ කරන්න, පැතුරුම්පත් වල පුළුල් ගණනය කිරීම් සිදු කරන්න, විශ්මයජනක ඉදිරිපත් කිරීම් සාදන්න සහ ආකෘතිකරණ පාඩුවකින් තොරව PDF ගොනු බලන්න.</string>
     <string name="on_boarding_finish_button">ආරම්භ කරන්න</string>
@@ -544,7 +544,7 @@
     <string name="on_boarding_third_party_header">තෙවන පාර්ශවීය ගබඩාව</string>
     <string name="on_boarding_third_party_info">Nextcloud, ownCloud, Dropbox සහ WebDAV ප්‍රොටෝකෝලය භාවිතා කරන අනෙකුත් තෙවන පාර්ශවීය ගබඩා සම්බන්ධ කරන්න.</string>
     <string name="on_boarding_welcome_header">ඇරඹේ</string>
-    <string name="on_boarding_welcome_info">ONLYOFFICE ජංගම සංස්කරණ කට්ටලයට සාදරයෙන් පිළිගනිමු! යෙදුම ගැන වැඩිදුර දැන ගැනීමට ස්වයිප් කරන්න.</string>
+    <string name="on_boarding_welcome_info">Euro-Office ජංගම සංස්කරණ කට්ටලයට සාදරයෙන් පිළිගනිමු! යෙදුම ගැන වැඩිදුර දැන ගැනීමට ස්වයිප් කරන්න.</string>
     <string name="operation_add_to_favorites">ප්‍රියතමයන් වෙත එක් කරන ලදී</string>
     <string name="operation_choose_section">කොටස තෝරන්න</string>
     <string name="operation_complete_message">මෙහෙයුම සම්පූර්ණයි</string>
@@ -875,7 +875,7 @@
     <string name="version_restore_subtitle">වත්මන් ගොනුව අනුවාද ඉතිහාසයේ සුරකිනු ඇත.</string>
     <string name="version_restore_title">මෙම අනුවාදය ප්‍රතිසාධනය කරන්නද?</string>
     <string name="whats_new_1">DocSpace v3.0 සමඟ වැඩිදියුණු කළ ඒකාබද්ධ කිරීම</string>
-    <string name="whats_new_1_desc">ONLYOFFICE DocSpace v3.0 සඳහා නවතම යාවත්කාලීන කිරීම් සහ වැඩිදියුණු කිරීම් සමඟ ලේඛන සමඟ සහයෝගයෙන් කටයුතු කරන්න.</string>
+    <string name="whats_new_1_desc">Euro-Office DocSpace v3.0 සඳහා නවතම යාවත්කාලීන කිරීම් සහ වැඩිදියුණු කිරීම් සමඟ ලේඛන සමඟ සහයෝගයෙන් කටයුතු කරන්න.</string>
     <string name="whats_new_2">ටැබ්ලට් සහ ඩෙස්ක්ටොප් සඳහා ටැබ් කළ අතුරුමුහුණත</string>
     <string name="whats_new_2_desc">ටැබ්ලට් සහ ඩෙස්ක්ටොප් උපාංගවල ටැබ් කළ මෙවලම් තීරුව සමඟ සංචාලනය සහ සංස්කරණය සරල කරන්න.</string>
     <string name="whats_new_3">නව ප්‍රස්ථාර වර්ග</string>

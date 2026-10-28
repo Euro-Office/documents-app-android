@@ -10,7 +10,7 @@ import app.documents.core.network.common.utils.GoogleDriveUtils
 import app.documents.core.network.common.utils.OneDriveUtils
 import app.editors.manager.R
 import app.editors.manager.databinding.FragmentChooseCloudsBinding
-import app.editors.manager.managers.utils.FirebaseUtils
+import app.editors.manager.managers.utils.AppConfig
 import app.editors.manager.ui.activities.login.PortalsActivity
 import app.editors.manager.ui.activities.login.WebDavLoginActivity
 import app.editors.manager.ui.fragments.base.BaseAppFragment
@@ -60,9 +60,9 @@ class CloudsFragment : BaseAppFragment() {
     fun init() {
         setActionBarTitle(getString(R.string.fragment_clouds_title))
 
-        viewBinding?.cloudsItemOnlyOffice?.bind(
-            R.drawable.ic_storage_onlyoffice,
-            R.string.cloud_only_office
+        viewBinding?.cloudsItemPortal?.bind(
+            R.drawable.ic_storage_eurooffice,
+            R.string.cloud_eurooffice
         ) {
             PortalsActivity.show(requireActivity())
         }
@@ -136,8 +136,20 @@ class CloudsFragment : BaseAppFragment() {
             WebDavLoginActivity.show(requireActivity(), WebdavProvider.WebDav, null)
         }
 
-        FirebaseUtils.isGoogleDriveEnable {
-            viewBinding?.cloudsItemGoogleDrive?.isVisible = it
+        viewBinding?.cloudsItemGoogleDrive?.isVisible = AppConfig.isGoogleDriveEnabled
+
+        if (AppConfig.isNextcloudOnly) {
+            viewBinding?.let { binding ->
+                listOf(
+                    binding.cloudsItemPortal,
+                    binding.cloudsItemOwnCloud,
+                    binding.cloudsItemKDrive,
+                    binding.cloudsItemOneDrive,
+                    binding.cloudsItemDropbox,
+                    binding.cloudsItemGoogleDrive,
+                    binding.cloudsItemWebDav
+                ).forEach { it.isVisible = false }
+            }
         }
     }
 

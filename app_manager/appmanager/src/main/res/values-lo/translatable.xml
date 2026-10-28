@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">ເອກະສານ</string>
-    <string name="app_name_full">ເອກະສານ ONLYOFFICE ເທົ່ານັ້ນ </string>
+    <string name="app_name_full">ເອກະສານ Euro-Office ເທົ່ານັ້ນ </string>
 
     <!-- ======================================================================================= -->
     <!-- Permissions -->
@@ -12,15 +12,15 @@
     <string name="app_versions_cancel">ພາຍຫຼັງ </string>
     <string name="app_versions_without_release_accept">ຕິດຕັ້ງແອັບຢ່າງເປັນທາງການ</string>
     <string name="app_versions_without_release_info">
-        ຂໍຂອບໃຈ ສຳ ລັບການທົດລອງເບຕ້າ! ເອກະສານ ONLYOFFICE ລຸ້ນ3.0 ຖືກນຳໃຊ້ດຽວນີ້, ແລະ ລຸ້ນ beta ບໍ່ໄດ້ຮັບການສະໜັບສະໜູນອີກຕໍ່ໄປ. ປ່ຽນໄປທີ່ແອັບທາງການເພື່ອຮັບການອັບເດດເພີ່ມເຕີມ.
+        ຂໍຂອບໃຈ ສຳ ລັບການທົດລອງເບຕ້າ! ເອກະສານ Euro-Office ລຸ້ນ3.0 ຖືກນຳໃຊ້ດຽວນີ້, ແລະ ລຸ້ນ beta ບໍ່ໄດ້ຮັບການສະໜັບສະໜູນອີກຕໍ່ໄປ. ປ່ຽນໄປທີ່ແອັບທາງການເພື່ອຮັບການອັບເດດເພີ່ມເຕີມ.
     </string>
     <string name="app_versions_update_accept">ອັບເດດແອັບຢ່າງເປັນທາງການ </string>
     <string name="app_versions_update_info">
-         ຂໍຂອບໃຈ ສຳ ລັບການທົດລອງເບຕ້າ! ເອກະສານ ONLYOFFICE ລຸ້ນ3.0 ຖືກນຳໃຊ້ດຽວນີ້, ແລະ ລຸ້ນ beta ບໍ່ໄດ້ຮັບການສະໜັບສະໜູນອີກຕໍ່ໄປ. ກະລຸນາ, ປ່ຽນໄປທີ່ແອັບທາງການເພື່ອຮັບການປັບປຸງຕື່ມອີ.
+         ຂໍຂອບໃຈ ສຳ ລັບການທົດລອງເບຕ້າ! ເອກະສານ Euro-Office ລຸ້ນ3.0 ຖືກນຳໃຊ້ດຽວນີ້, ແລະ ລຸ້ນ beta ບໍ່ໄດ້ຮັບການສະໜັບສະໜູນອີກຕໍ່ໄປ. ກະລຸນາ, ປ່ຽນໄປທີ່ແອັບທາງການເພື່ອຮັບການປັບປຸງຕື່ມອີ.
     </string>
     <string name="app_versions_actual_release_accept">ເປີດແອັບຢ່າງເປັນທາງການ </string>
     <string name="app_versions_actual_release_info">
-        ຂໍຂອບໃຈ ສຳ ລັບການທົດລອງເບຕ້າ! ເອກະສານ ONLYOFFICE ລຸ້ນ3.0 ຖືກນຳໃຊ້, ແລະ ລຸ້ນ beta ບໍ່ໄດ້ຮັບການສະໜັບສະໜູນອີກຕໍ່ໄປ. ກະລຸນາປ່ຽນໄປທີ່ແອັບທາງການ..
+        ຂໍຂອບໃຈ ສຳ ລັບການທົດລອງເບຕ້າ! ເອກະສານ Euro-Office ລຸ້ນ3.0 ຖືກນຳໃຊ້, ແລະ ລຸ້ນ beta ບໍ່ໄດ້ຮັບການສະໜັບສະໜູນອີກຕໍ່ໄປ. ກະລຸນາປ່ຽນໄປທີ່ແອັບທາງການ..
     </string>
 
     <!-- ======================================================================================= -->
@@ -34,7 +34,7 @@
     <string name="about_terms">ເງື່ອນໄຂການນຳໃຊ້</string>
     <string name="about_policy">ນະໂຍບາຍຄວາມເປັນສ່ວນຕົວ</string>
     <string name="about_license">ການອະນຸຍາດ</string>
-    <string name="about_website">ເວັບໄຊທ໌ ONLYOFFICE ເທົ່ານັ້ນ</string>
+    <string name="about_website">ເວັບໄຊທ໌ Euro-Office ເທົ່ານັ້ນ</string>
 
     <!-- ======================================================================================= -->
     <!-- Common errors -->
@@ -67,7 +67,7 @@
     <!-- Login -->
     <string name="login_api_init_error">ເຂົ້າລະບົບ</string>
     <string name="login_api_init_portal_error">ຜິດພາດຊື່ປະຕູ  syntax</string>
-    <string name="login_api_portal_name">ຊື່ປະຕູທີ່ບໍ່ຖືກຕ້ອງ. ຕົວຢ່າງ   : example.onlyoffice.com</string>
+    <string name="login_api_portal_name">ຊື່ປະຕູທີ່ບໍ່ຖືກຕ້ອງ. ຕົວຢ່າງ   : cloud.example.com</string>
     <string name="login_api_portal_name_length">ຊື່ປະຕູຕ້ອງມີຢ່າງ ໜ້ອຍ 6 ຕົວອັກສອນ </string>
     <string name="login_api_portal_name_content">ຊື່ປະຕູຕ້ອງມີ A–Z, a–z, 0–9</string>
 
@@ -80,7 +80,7 @@
     <!-- Portal pager -->
     <string name="login_pager_enterprise">ປ່ະຕູ</string>
     <string name="login_pager_personal">ສ່ວນບຸກຄົນ </string>
-    <string name="login_pager_title">ເຊື່ອມຕໍ່cloud ONLYOFFICE</string>
+    <string name="login_pager_title">ເຊື່ອມຕໍ່cloud Euro-Office</string>
 
     <!-- Portal enterprise-->
     <string name="login_enterprise_edit_hint">ທີ່ຢູ່ປະຕູ </string>
@@ -93,7 +93,7 @@
     <string name="login_enterprise_signin_button">ເຂົ້າສູ່ລະບົບ </string>
     <string name="login_enterprise_single_sign_button">ເຂົ້າສູ່ລະບົບດຽວ</string>
     <string name="login_enterprise_info">
-        ONLYOFFICE portal ຊ່ວຍໃຫ້ທ່ານສາມາດປະຫຍັດເອກະສານໃນຄລາວ, ແບ່ງປັນກັບເພື່ອນຮ່ວມງານ ແລະ ແກ້ໄຂຮ່ວມກັນໃນເວລາຈິງ.
+        Euro-Office portal ຊ່ວຍໃຫ້ທ່ານສາມາດປະຫຍັດເອກະສານໃນຄລາວ, ແບ່ງປັນກັບເພື່ອນຮ່ວມງານ ແລະ ແກ້ໄຂຮ່ວມກັນໃນເວລາຈິງ.
     </string>
     <string name="login_not_authorization_info">ບໍ່ສາມາດລົງຊື່ເຂົ້າໃຊ້ %1$s ທີ່ %2$s</string>
     <string name="login_not_authorization_button"> ລອງອີກຄັ້ງ </string>
@@ -107,7 +107,7 @@
     <string name="login_personal_signup_edit_info">ລິ້ງຢືນຢັນຈະຖືກສົ່ງໄປຫາທີ່ຢູ່ນີ້ </string>
     <string name="login_personal_signup_dialog_info">ລິ້ງຢືນຢັນທີ່ຖືກສົ່ງໄປຫາອີເມວ %1$s \ n ການເຊື່ອມຕໍ່ຢູ່ໃນອີເມວກ່ອນທີ່ທ່ານຈະສືບຕໍ່ </string>
     <string name="login_personal_info">
-         ເຊື່ອມຕໍ່ ONLYOFFICE ເປັນສ່ວນຕົວ ເພື່ອບັນທຶກເອກະສານໃນ cloud
+         ເຊື່ອມຕໍ່ Euro-Office ເປັນສ່ວນຕົວ ເພື່ອບັນທຶກເອກະສານໃນ cloud
     </string>
     <string name="login_web_dav_title">ເຊື່ອມຕໍ່ກັບ %1$s </string>
 
@@ -189,7 +189,7 @@
     <string name="dialogs_question_personal_confirm_link_title">ຢືນຢັນອີເມວ</string>
     <string name="dialogs_question_personal_confirm_cancel">ລອງອີກ</string>
     <string name="dialogs_question_personal_confirm_accept">ສືບຕໍ່</string>
-    <string name="dialogs_question_rate_first_info">ທ່ານມັກໃຊ້ເອກະສານ ONLYOFFICE ບໍ?</string>
+    <string name="dialogs_question_rate_first_info">ທ່ານມັກໃຊ້ເອກະສານ Euro-Office ບໍ?</string>
     <string name="dialogs_question_rate_second_info">ທ່ານຕ້ອງການໃຫ້ຄະແນນແອັບໃນ Google Playບໍ?</string>
 
     <!-- Edit -->
@@ -219,7 +219,7 @@
     <string name="fragment_clouds_title">ຄລາວ</string>
     <string name="fragment_clouds_portal_title"> ເຊື່ອມຕໍ່ກັບ portal</string>
     <string name="fragment_clouds_storage_title"> ເຊື່ອມຕໍ່ກັບບ່ອນເກັບຂໍ້ມູນ</string>
-    <string name="fragment_clouds_onlyoffice_item">ONLYOFFICE</string>
+    <string name="fragment_clouds_eurooffice_item">Euro-Office</string>
     <string name="fragment_recent_title">ວ່າງບໍ່ດົນ</string>
     <string name="fragment_on_device_title">ໃນອຸປະກອນ </string>
     <string name="fragment_profile_title">ໜ້າປົກ</string>
@@ -414,7 +414,7 @@
 
     <!-- ======================================================================================= -->
     <!-- Managers load -->
-    <string name="download_manager_title">ດາວໂຫລດ ONLYOFFICE ເທົ່ານັ້ນ</string>
+    <string name="download_manager_title">ດາວໂຫລດ Euro-Office ເທົ່ານັ້ນ</string>
     <string name="download_manager_progress_title">ດາວໂຫລດກຳລັງດຳເນີນຢູ່ </string>
     <string name="download_manager_complete">ດາວໂຫລດສຳເລັດ</string>
     <string name="download_manager_error">ດາວໂຫລດຜິດພາດ</string>
@@ -482,7 +482,7 @@
     <string name="cloud_account_description">ຮ່ວມມືໃນສະພາບແວດລ້ອມທີ່ປອດໄພແລະເຊື່ອມຕໍ່ບັນດາເຄື່ອງຂອງຂອງພາກສ່ວນທີສາມ </string>
     <string name="cloud_account_start_button">ເລີ່ມຕົ້ນ</string>
     <string name="cloud_account_other_storages_button">ຖານເກັບຂໍ້ມູນອຶ່ນໆ</string>
-    <string name="cloud_only_office_description">ເກັບຮັກສາເອກະສານໄວ້ໃນເມຄແລະຮ່ວມມືກັບພວກມັນ</string>
+    <string name="cloud_eurooffice_description">ເກັບຮັກສາເອກະສານໄວ້ໃນເມຄແລະຮ່ວມມືກັບພວກມັນ</string>
     <string name="cloud_accounts_title">ບັນຊີ</string>
     <string name="error_long_file_name">ຊື່ແຟ້ມຍາວເກີນໄປ </string>
     <string name="dialog_remove_account_description">
@@ -816,8 +816,8 @@
     <string name="room_storage_reconnect">ເຊື່ອມຕໍ່ບ່ອນເກັບຂໍ້ມູນຄືນໃໝ່</string>
     <string name="room_storage_not_availabale">ເນື້ອຫາຂອງໂຟນເດີພາກສ່ວນທີສາມ ບໍ່ ສາມາດໃຊ້ໄດ້. ພະຍາຍາມເຊື່ອມຕໍ່ບັນຊີຄືນໃໝ່.</string>
     <string name="personal_portal_end_button">ສ້າງບັນຊີຟຣີໄດ້ເລີຍ</string>
-    <string name="personal_portal_end_title">ONLYOFFICE Personal ກຳລັງປິດຕົວລົງ</string>
-    <string name="personal_portal_end_text">ONLYOFFICE Personal ຈະຢຸດໃຫ້ບໍລິການຕັ້ງແຕ່ວັນທີ 1 ກັນຍາ 2024.\nພວກເຮົາຂໍແນະນຳໃຫ້ທ່ານຍ້າຍໄປໃຊ້ ONLYOFFICE DocSpace Cloud ຟຣີ.</string>\
+    <string name="personal_portal_end_title">Euro-Office Personal ກຳລັງປິດຕົວລົງ</string>
+    <string name="personal_portal_end_text">Euro-Office Personal ຈະຢຸດໃຫ້ບໍລິການຕັ້ງແຕ່ວັນທີ 1 ກັນຍາ 2024.\nພວກເຮົາຂໍແນະນຳໃຫ້ທ່ານຍ້າຍໄປໃຊ້ Euro-Office DocSpace Cloud ຟຣີ.</string>\
     <string name="list_action_delete_image">ລຶບຮູບ</string>
 
     <!-- Newly added translations (v9.0.0 - 2025-06-09) -->
@@ -830,7 +830,7 @@
     <string name="dialogs_question_delete_all_fonts">ລຶບຟອນທັງໝົດບໍ?</string>
     <string name="dialogs_question_delete_font">ລຶບຟອນນີ້ອອກບໍ?</string>
     <string name="dialogs_warning_fill_forms_room_create">ການ​ສ້າງ​ໂດຍ​ອີງ​ໃສ່​ຫຼາຍ​ໄຟ​ລ໌ ແລະ​ໂຟ​ລ​ເດີ​ບໍ່​ມີ​ໃຫ້​ສຳ​ລັບ​ຫ້ອງ​ປະ​ເພດ​ນີ້. ເພື່ອສ້າງຫ້ອງດັ່ງກ່າວ, ໃຫ້ໄປທີ່ພາກສ່ວນຫ້ອງ ຫຼືໃຊ້ແບບຟອມ PDF ໃດນຶ່ງ.</string>
-    <string name="dialogs_warning_only_pdf_form_message">ໄຟລ໌ດັ່ງກ່າວບໍ່ສາມາດຍ້າຍໄປຫ້ອງນີ້ໄດ້. ກະລຸນາລອງຍ້າຍແບບຟອມ ONLYOFFICE PDF.</string>
+    <string name="dialogs_warning_only_pdf_form_message">ໄຟລ໌ດັ່ງກ່າວບໍ່ສາມາດຍ້າຍໄປຫ້ອງນີ້ໄດ້. ກະລຸນາລອງຍ້າຍແບບຟອມ Euro-Office PDF.</string>
     <string name="dialogs_warning_pinned_room_limit">ທ່ານບໍ່ສາມາດປັກໝຸດໄດ້ຫຼາຍກວ່າ 10 ຫ້ອງຢູ່ເທິງສຸດ. ຖອນປັກໝຸດບາງອັນທີ່ປັກໝຸດຢູ່.</string>
     <string name="dialogs_warning_room_space_quota_exceed">ໂຄຕ້າພື້ນທີ່ຫ້ອງເກີນ (%s).</string>
     <string name="dialogs_warning_title">ຄຳເຕືອນ</string>
@@ -906,7 +906,7 @@
     <string name="list_context_upload_to_cloud">ອັບໂຫຼດຂຶ້ນຄລາວ</string>
     <string name="list_context_version_history">ສະແດງປະຫວັດເວີຊັນ</string>
     <string name="on_boarding_collaborate_header">ຮ່ວມ​ມື​ກັບ​ທີມ​ຂອງ​ທ່ານ</string>
-    <string name="on_boarding_collaborate_info">ໃນໂໝດອອນໄລນ໌, ໃຫ້ໃຊ້ຄຸນສົມບັດການແກ້ໄຂຮ່ວມກັນແບບສົດໆຂອງ ONLYOFFICE ເພື່ອເຮັດວຽກໃນເອກະສານຮ່ວມກັນກັບສະມາຊິກປະຕູຂອງທ່ານ, ແບ່ງປັນເອກະສານ ແລະສ້າງໂຟນເດີເກັບມ້ຽນທົ່ວໄປ.</string>
+    <string name="on_boarding_collaborate_info">ໃນໂໝດອອນໄລນ໌, ໃຫ້ໃຊ້ຄຸນສົມບັດການແກ້ໄຂຮ່ວມກັນແບບສົດໆຂອງ Euro-Office ເພື່ອເຮັດວຽກໃນເອກະສານຮ່ວມກັນກັບສະມາຊິກປະຕູຂອງທ່ານ, ແບ່ງປັນເອກະສານ ແລະສ້າງໂຟນເດີເກັບມ້ຽນທົ່ວໄປ.</string>
     <string name="on_boarding_edit_header">ເຮັດວຽກກັບໄຟລ໌ຫ້ອງການ</string>
     <string name="on_boarding_edit_info">ສ້າງແລະແກ້ໄຂເອກະສານດ້ວຍແຖບເຄື່ອງມືທີ່ສົມບູນແບບຂອງພວກເຮົາ: ເຮັດວຽກກັບວັດຖຸທີ່ຊັບຊ້ອນໃນເອກະສານຂໍ້ຄວາມ, ປະຕິບັດການຄິດໄລ່ຢ່າງກວ້າງຂວາງໃນຕາຕະລາງ, ສ້າງການນໍາສະເຫນີທີ່ສວຍງາມແລະເບິ່ງໄຟລ໌ PDF ໂດຍບໍ່ມີການສູນເສຍຮູບແບບ.</string>
     <string name="on_boarding_finish_button">ເລີ່ມຕົ້ນ</string>
@@ -915,7 +915,7 @@
     <string name="on_boarding_third_party_header">ບ່ອນເກັບຂໍ້ມູນພາກສ່ວນທີສາມ</string>
     <string name="on_boarding_third_party_info">ເຊື່ອມຕໍ່ບ່ອນເກັບຂໍ້ມູນພາກສ່ວນທີສາມເຊັ່ນ Nextcloud, ownCloud, Dropbox ແລະອື່ນໆທີ່ໃຊ້ໂປຣໂຕຄໍ WebDAV.</string>
     <string name="on_boarding_welcome_header">ການ​ເລີ່ມ​ຕົ້ນ</string>
-    <string name="on_boarding_welcome_info">ຍິນດີຕ້ອນຮັບສູ່ຊຸດແກ້ໄຂມືຖື ONLYOFFICE! ປັດເພື່ອສຶກສາເພີ່ມເຕີມກ່ຽວກັບແອັບ.</string>
+    <string name="on_boarding_welcome_info">ຍິນດີຕ້ອນຮັບສູ່ຊຸດແກ້ໄຂມືຖື Euro-Office! ປັດເພື່ອສຶກສາເພີ່ມເຕີມກ່ຽວກັບແອັບ.</string>
     <string name="operation_disable_custom_filter">ຕົວ​ກັ່ນ​ຕອງ​ແບບ​ກຳ​ນົດ​ເອງ​ສຳ​ລັບ​ໄຟ​ທີ່​ເລືອກ​ໄດ້​ປິດ​ໃຊ້​ງານ​ແລ້ວ</string>
     <string name="operation_enable_custom_filter">ຕົວ​ກັ່ນ​ຕອງ​ແບບ​ກຳ​ນົດ​ເອງ​ສຳ​ລັບ​ໄຟ​ລ໌​ທີ່​ເລືອກ​ເປີດ​ໃຊ້​ງານ​ແລ້ວ</string>
     <string name="operation_select_room_title">ເລືອກຫ້ອງ</string>
@@ -1053,7 +1053,7 @@
     <string name="version_restore_subtitle">ໄຟລ໌ປັດຈຸບັນຈະຖືກບັນທຶກໄວ້ໃນປະຫວັດເວີຊັນ.</string>
     <string name="version_restore_title">ກູ້​ເວີ​ຊັນ​ນີ້​ຄືນ​ມາ​ບໍ?</string>
     <string name="whats_new_1">ປັບປຸງການເຊື່ອມໂຍງກັບ DocSpace v3.0</string>
-    <string name="whats_new_1_desc">ຮ່ວມ​ມື​ໃນ​ເອກະສານ​ດ້ວຍ​ການ​ອັບ​ເດດ ແລະ​ການ​ປັບ​ປຸງ​ຫລ້າ​ສຸດ​ສຳ​ລັບ ONLYOFFICE DocSpace v3.0.</string>
+    <string name="whats_new_1_desc">ຮ່ວມ​ມື​ໃນ​ເອກະສານ​ດ້ວຍ​ການ​ອັບ​ເດດ ແລະ​ການ​ປັບ​ປຸງ​ຫລ້າ​ສຸດ​ສຳ​ລັບ Euro-Office DocSpace v3.0.</string>
     <string name="whats_new_2">ສ່ວນຕິດຕໍ່ແຖບສຳລັບແທັບເລັດ ແລະເດັສທັອບ</string>
     <string name="whats_new_2_desc">ເຮັດ​ໃຫ້​ການ​ນຳ​ທາງ​ງ່າຍ​ຂຶ້ນ ແລະ​ການ​ແກ້​ໄຂ​ດ້ວຍ​ແຖບ​ເຄື່ອງ​ມື​ທີ່​ຕິດ​ຢູ່​ໃນ​ແທັບ​ເລັດ ແລະ​ອຸ​ປະ​ກອນ​ເດັສ​ທັອບ.</string>
     <string name="whats_new_3">ປະເພດແຜນວາດໃໝ່</string>

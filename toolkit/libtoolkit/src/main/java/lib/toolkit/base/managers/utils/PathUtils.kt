@@ -55,7 +55,7 @@ object PathUtils {
                                     return path
                                 }
                             }
-                            (Environment.getExternalStorageDirectory().toString() + "/OnlyOffice/" + name)?.let { path ->
+                            (Environment.getExternalStorageDirectory().toString() + "/Euro-Office/" + name)?.let { path ->
                                 if (File(path).exists()) {
                                     return path
                                 }

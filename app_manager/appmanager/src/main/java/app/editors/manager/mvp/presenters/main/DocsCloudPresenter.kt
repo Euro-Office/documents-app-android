@@ -24,7 +24,7 @@ import app.documents.core.network.share.models.request.UserIdInvitation
 import app.documents.core.providers.CloudFileProvider
 import app.documents.core.providers.CloudFileProvider.RoomCallback
 import app.documents.core.providers.RoomProvider
-import app.documents.core.utils.FirebaseTool
+import app.documents.core.utils.CoauthoringChecker
 import app.editors.manager.R
 import app.editors.manager.app.App
 import app.editors.manager.app.accountOnline
@@ -37,7 +37,6 @@ import app.editors.manager.managers.receivers.DownloadReceiver.OnDownloadListene
 import app.editors.manager.managers.receivers.RoomDuplicateReceiver
 import app.editors.manager.managers.receivers.UploadReceiver
 import app.editors.manager.managers.receivers.UploadReceiver.OnUploadListener
-import app.editors.manager.managers.utils.FirebaseUtils
 import app.editors.manager.managers.works.RoomDuplicateWork
 import app.editors.manager.mvp.models.list.Templates
 import app.editors.manager.mvp.models.states.OperationsState
@@ -85,7 +84,7 @@ class DocsCloudPresenter(private val account: CloudAccount) : DocsBasePresenter<
     lateinit var downloadReceiver: DownloadReceiver
 
     @Inject
-    lateinit var firebaseTool: FirebaseTool
+    lateinit var coauthoringChecker: CoauthoringChecker
 
     private val uploadReceiver: UploadReceiver = UploadReceiver()
     private var duplicateRoomReceiver: RoomDuplicateReceiver = RoomDuplicateReceiver()
@@ -308,11 +307,6 @@ class DocsCloudPresenter(private val account: CloudAccount) : DocsBasePresenter<
     }
 
     override fun createDocs(title: String) {
-        FirebaseUtils.addAnalyticsCreateEntity(
-            account.portalUrl,
-            true,
-            StringUtils.getExtensionFromPath(title)
-        )
         super.createDocs(title)
     }
 
@@ -526,7 +520,7 @@ class DocsCloudPresenter(private val account: CloudAccount) : DocsBasePresenter<
 
         presenterScope.launch {
             if ((file.formFillingStatus == ApiContract.FormFillingStatus.YourTurn) &&
-                !firebaseTool.isCoauthoring()
+                !coauthoringChecker.isCoauthoring()
             ) {
                 viewState.showFillFormIncompatibleVersionsDialog()
                 return@launch

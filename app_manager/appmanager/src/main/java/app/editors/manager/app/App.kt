@@ -37,9 +37,7 @@ import app.editors.manager.di.component.GoogleDriveComponent
 import app.editors.manager.di.component.OneDriveComponent
 import app.editors.manager.managers.utils.GoogleUtils
 import app.editors.manager.managers.utils.KeyStoreUtils
-import com.google.firebase.FirebaseApp
-import com.google.firebase.crashlytics.FirebaseCrashlytics
-import lib.toolkit.base.managers.utils.ActivitiesUtils
+import lib.toolkit.base.managers.utils.CrashLog
 import java.util.Locale
 
 class App : Application(), MessengerServiceApp {
@@ -68,12 +66,6 @@ class App : Application(), MessengerServiceApp {
 
     var showPersonalPortalMigration: Boolean = true
 
-    var isAnalyticEnable = true
-        set(value) {
-            field = value
-            initCrashlytics()
-        }
-
     private var _appComponent: AppComponent? = null
     val appComponent: AppComponent
         get() = checkNotNull(_appComponent) {
@@ -99,9 +91,11 @@ class App : Application(), MessengerServiceApp {
         }
 
     private var _loginComponent: LoginComponent? = null
+    // Without a portal when no login prepared one (WebDAV and Nextcloud logins don't)
     val loginComponent: LoginComponent
-        get() = checkNotNull(_loginComponent) {
-            "LoginComponent component can't be null"
+        get() = _loginComponent ?: run {
+            refreshLoginComponent(null)
+            checkNotNull(_loginComponent)
         }
 
     private var _messengerServiceComponent: MessengerServiceComponent? = null
@@ -116,9 +110,6 @@ class App : Application(), MessengerServiceApp {
 
     private fun accountsMigrate() {
         refreshLoginComponent(null)
-        if (ActivitiesUtils.isPackageExist(this, "com.onlyoffice.projects")) {
-            appComponent.accountHelper.copyData()
-        }
         appComponent.migrationHelper.migrate()
         _loginComponent = null
     }
@@ -205,12 +196,12 @@ class App : Application(), MessengerServiceApp {
          For Android Pie is a separate directory for the process with WebView
          */
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
-            if (getProcess() == "com.onlyoffice.documents:WebViewerActivity") {
+            if (getProcess() == "${BuildConfig.APPLICATION_ID}:WebViewerActivity") {
                 WebView.setDataDirectorySuffix("cacheWebView")
             }
         }
-        isAnalyticEnable = appComponent.preference.isAnalyticEnable
-        initCrashlytics()
+        // Crash reports stay on the device until the user sends them
+        CrashLog.install(this)
         KeyStoreUtils.init()
     }
 
@@ -230,13 +221,6 @@ class App : Application(), MessengerServiceApp {
         refreshGoogleDriveInstance()
         refreshOneDriveInstance()
         RequestsCollector.setDeveloperMode(appComponent.preference.developMode)
-    }
-
-    private fun initCrashlytics() {
-        FirebaseApp.initializeApp(this)
-        if (BuildConfig.DEBUG || !isAnalyticEnable) {
-            FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(false)
-        }
     }
 
 }

@@ -39,12 +39,14 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/onlyOfficeLogoImage"
+            <TextView
+                android:id="@+id/titleTextView"
+                style="@style/Widget.Common.TextView.Title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/only_office_logo"
-                tools:ignore="ContentDescription" />
+                android:drawablePadding="6dp"
+                android:text="@string/cloud_eurooffice"
+                app:drawableStartCompat="@drawable/ic_storage_eurooffice" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/descriptionTextView"

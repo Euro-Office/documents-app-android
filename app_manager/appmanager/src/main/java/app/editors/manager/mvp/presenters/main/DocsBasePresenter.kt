@@ -44,8 +44,7 @@ import app.editors.manager.app.App
 import app.editors.manager.app.accountOnline
 import app.editors.manager.managers.tools.FilterManager
 import app.editors.manager.managers.tools.PreferenceTool
-import app.editors.manager.managers.utils.FirebaseUtils
-import app.editors.manager.managers.utils.FirebaseUtils.addCrash
+import lib.toolkit.base.managers.utils.CrashLog
 import app.editors.manager.managers.works.BaseDownloadWork
 import app.editors.manager.managers.works.DownloadWork
 import app.editors.manager.managers.works.UploadWork
@@ -308,13 +307,14 @@ abstract class DocsBasePresenter<V : DocsBaseView, FP : BaseFileProvider> : MvpP
             is FileOpenResult.Loading -> showDialogWaiting(TAG_DIALOG_CANCEL_SINGLE_OPERATIONS, true)
             is FileOpenResult.OpenDocumentServer -> {
                 viewState.onOpenDocumentServer(result.cloudFile, result.info, result.editType)
-                FirebaseUtils.addAnalyticsOpenEntity(
-                    context.accountOnline?.portalUrl.orEmpty(),
-                    result.cloudFile.fileExst
-                )
             }
             is FileOpenResult.OpenLocally -> {
-                openFileFromPortal(result.file, result.fileId, result.editType, result.access)
+                val config = result.editorConfig
+                if (config != null) {
+                    viewState.onOpenCoEditing(Uri.fromFile(result.file), StringUtils.getExtensionFromPath(result.file.absolutePath), config, result.editType)
+                } else {
+                    openFileFromPortal(result.file, result.fileId, result.editType, result.access)
+                }
             }
             is FileOpenResult.OpenCloudMedia -> {
                 viewState.onFileMedia(getListMedia(result.media), false)
@@ -1592,7 +1592,7 @@ abstract class DocsBasePresenter<V : DocsBaseView, FP : BaseFileProvider> : MvpP
                     errorMessage = jsonObject.getJSONObject(KEY_ERROR_INFO).getString(KEY_ERROR_INFO_MESSAGE)
                 } catch (e: JSONException) {
                     Log.e(TAG, "onErrorHandle()", e)
-                    addCrash(e)
+                    CrashLog.note(e)
                 }
             }
         }
@@ -1703,8 +1703,8 @@ abstract class DocsBasePresenter<V : DocsBaseView, FP : BaseFileProvider> : MvpP
 
             else -> {
                 throwable?.let {
-                    addCrash(BasePresenter::class.java.simpleName + " - method - onFailureHandle()")
-                    addCrash(it)
+                    CrashLog.note(BasePresenter::class.java.simpleName + " - method - onFailureHandle()")
+                    CrashLog.note(it)
                 }
 
                 viewState.onError(context.getString(R.string.errors_unknown_error))

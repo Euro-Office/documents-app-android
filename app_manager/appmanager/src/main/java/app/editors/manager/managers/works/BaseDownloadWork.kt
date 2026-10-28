@@ -11,7 +11,7 @@ import androidx.work.WorkerParameters
 import app.editors.manager.R
 import app.editors.manager.app.App
 import app.editors.manager.managers.receivers.DownloadReceiver
-import app.editors.manager.managers.utils.FirebaseUtils
+import lib.toolkit.base.managers.utils.CrashLog
 import app.editors.manager.managers.utils.NotificationUtils
 import lib.toolkit.base.managers.utils.FileUtils
 import lib.toolkit.base.managers.utils.PathUtils
@@ -107,7 +107,7 @@ abstract class BaseDownloadWork(
             notificationUtils.showCanceledNotification(id.hashCode(), file?.name)
         } else {
             sendBroadcastError(error)
-            FirebaseUtils.addCrash(error)
+            CrashLog.note(error)
             notificationUtils.removeNotification(id.hashCode())
             notificationUtils.showErrorNotification(id.hashCode(), file?.name)
             file?.delete()

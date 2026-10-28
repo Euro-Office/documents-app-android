@@ -3,7 +3,7 @@ package app.editors.manager.managers.tools
 import android.util.Log
 import app.documents.core.network.common.contracts.ApiContract
 import app.editors.manager.R
-import app.editors.manager.managers.utils.FirebaseUtils
+import lib.toolkit.base.managers.utils.CrashLog
 import app.editors.manager.mvp.models.error.AppErrors
 import app.editors.manager.mvp.presenters.base.BasePresenter
 import lib.toolkit.base.managers.tools.ResourcesProvider
@@ -60,7 +60,7 @@ class ErrorHandler @Inject constructor(
                     errorMessage = jsonObject.getJSONObject(KEY_ERROR_INFO).getString(KEY_ERROR_INFO_MESSAGE)
                 } catch (e: JSONException) {
                     Log.e(BasePresenter.TAG, "onErrorHandle()", e)
-                    FirebaseUtils.addCrash(e)
+                    CrashLog.note(e)
                 }
             }
         }
@@ -131,8 +131,8 @@ class ErrorHandler @Inject constructor(
                 handler(AppErrors.HttpError(resourcesProvider.getString(R.string.errors_ssl_error)))
             }
             else -> {
-                FirebaseUtils.addCrash(ErrorHandler::class.java.simpleName + " - method - onFailureHandle()")
-                FirebaseUtils.addCrash(error)
+                CrashLog.note(ErrorHandler::class.java.simpleName + " - method - onFailureHandle()")
+                CrashLog.note(error)
                 handler(AppErrors.HttpError(resourcesProvider.getString(R.string.errors_unknown_error)))
             }
         }

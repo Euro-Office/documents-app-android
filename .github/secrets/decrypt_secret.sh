@@ -8,7 +8,6 @@ SECRETS=(
     "../../app_manager/google_api.json"
     "../../app_manager/Onlyoffice-keystore.properties"
     "../../app_manager/Onlyoffice.jks"
-    "../../app_manager/appmanager/google-services.json"
     "../../app_manager/auth_strings.xml"
     "../../app_manager/Onlyoffice-182ba7a9-5335-449e-9c63-2585101e45bc.lic"
 )

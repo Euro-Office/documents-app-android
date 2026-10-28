@@ -3,14 +3,10 @@
 import com.android.build.gradle.internal.api.BaseVariantOutputImpl
 import java.io.FileInputStream
 import java.io.FileWriter
-import java.text.SimpleDateFormat
-import java.util.Date
-import java.util.Locale
 import java.util.Properties
 
 plugins {
     id("com.android.application")
-    id("com.google.firebase.crashlytics")
     id("kotlinx-serialization")
     kotlin("android")
     kotlin("kapt")
@@ -22,9 +18,9 @@ plugins {
 val withEditors: Boolean = project.findProperty("withEditors")?.toString()?.toBoolean() ?: true
 val isBuildingBundle = gradle.startParameter.taskNames.any { it.lowercase().contains("bundle") }
 
-// Onlyoffice
-val appId = "com.onlyoffice.documents"
-val appName = "onlyoffice-manager"
+val appId = "eu.eurooffice.documents"
+// Names the APK files
+val appName = "euro-office-documents"
 
 /*
 * Create a variable called keystorePropertiesFile, and initialize it to your
@@ -72,13 +68,13 @@ android {
         versionCode = 707
         versionName = "9.3.1"
         multiDexEnabled = true
-        applicationId = "com.onlyoffice.documents"
+        applicationId = "eu.eurooffice.documents"
 
         vectorDrawables {
             useSupportLibrary = true
         }
 
-        val keystoreProperties = getKeystore("Onlyoffice-keystore.properties")
+        val keystoreProperties = getKeystore("eurooffice-keystore.properties")
 
         manifestPlaceholders["facebookId"] = keystoreProperties["FACEBOOK_APP_ID"] as String? ?: ""
         manifestPlaceholders["dropboxKey"] = keystoreProperties["DROP_BOX_COM_CLIENT_ID"] as? String ?: ""
@@ -124,12 +120,22 @@ android {
     }
 
     signingConfigs {
-        create("onlyoffice") {
-            val keystoreProperties = getKeystore("Onlyoffice-keystore.properties")
-            keyAlias = keystoreProperties["keyAlias"] as String
-            keyPassword = keystoreProperties["keyPassword"] as String
-            storeFile = file(keystoreProperties["storeFile"] ?: "")
-            storePassword = keystoreProperties["storePassword"] as String
+        create("eurooffice") {
+            // The release key: from the environment (CI: EO_KEYSTORE_FILE, EO_KEYSTORE_PASSWORD,
+            // EO_KEY_ALIAS, EO_KEY_PASSWORD), else from eurooffice-keystore.properties
+            val keystoreFile = System.getenv("EO_KEYSTORE_FILE")
+            if (keystoreFile != null) {
+                storeFile = file(keystoreFile)
+                storePassword = System.getenv("EO_KEYSTORE_PASSWORD")
+                keyAlias = System.getenv("EO_KEY_ALIAS")
+                keyPassword = System.getenv("EO_KEY_PASSWORD")
+            } else {
+                val keystoreProperties = getKeystore("eurooffice-keystore.properties")
+                keyAlias = keystoreProperties["keyAlias"] as String
+                keyPassword = keystoreProperties["keyPassword"] as String
+                storeFile = file(keystoreProperties["storeFile"] ?: "")
+                storePassword = keystoreProperties["storePassword"] as String
+            }
         }
     }
     buildTypes {
@@ -139,7 +145,7 @@ android {
             isShrinkResources = true
             proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro")
 
-            signingConfig = signingConfigs.getByName("onlyoffice")
+            signingConfig = signingConfigs.getByName("eurooffice")
             ndk {
                 abiFilters.addAll(arrayOf("armeabi-v7a", "arm64-v8a", "x86", "x86_64"))
             }
@@ -147,7 +153,6 @@ android {
 
         debug {
             isMinifyEnabled = false
-            extra["enableCrashlytics"] = false
             ndk {
                 if (System.getProperty("os.arch") == "aarch64") {
                     abiFilters.add("arm64-v8a")
@@ -162,15 +167,11 @@ android {
             variant.outputs
                 .map { it as BaseVariantOutputImpl }
                 .forEach { output ->
-                    val timeMark = SimpleDateFormat("MMMMM.dd_HH-mm", Locale.ENGLISH).format(Date())
-                    val buildAbi = output.filters.find { it.filterType == "ABI" }?.identifier
+                    // The same name for each build of a variant, so a new build replaces the last one
+                    val buildAbi = output.filters.find { it.filterType == "ABI" }?.identifier ?: "universal"
                     val buildType = if (buildType.isDebuggable) "debug" else "release"
-                    val buildCode = "_build-${output.versionCode}"
-
-                    output.outputFileName = "${appName}-${versionName}-" +
-                            "${flavorName.uppercase()}-" +
-                            "${buildAbi}-${buildType}${buildCode}${timeMark}.apk"
-
+                    val flavor = flavorName.takeIf { it.isNotEmpty() }?.let { "-$it" }.orEmpty()
+                    output.outputFileName = "${appName}-${versionName}${flavor}-${buildAbi}-${buildType}.apk"
                 }
         }
 
@@ -269,12 +270,6 @@ dependencies {
         println("ℹ️ Build mode without editors")
     }
 
-    // Firebase
-    implementation(libs.firebase.crashlytics)
-    implementation(libs.firebase.core)
-    implementation(libs.firebase.messaging)
-    implementation(libs.firebase.config)
-
     // Google libs
     implementation(libs.google.playReview)
     implementation(libs.google.playServiceAuth)
@@ -356,8 +351,6 @@ dependencies {
     implementation(libs.jackson.annotations)
     implementation(libs.jackson.databind)
 }
-
-apply(plugin = "com.google.gms.google-services")
 
 //tasks.register("copySamples") {
 //    println("Copy samples")

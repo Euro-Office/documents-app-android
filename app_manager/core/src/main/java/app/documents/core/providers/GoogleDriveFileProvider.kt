@@ -436,7 +436,7 @@ class GoogleDriveFileProvider(
         when (StringUtils.getExtension(file.fileExst)) {
             StringUtils.Extension.UNKNOWN, StringUtils.Extension.EBOOK, StringUtils.Extension.ARCH, StringUtils.Extension.VIDEO, StringUtils.Extension.HTML -> {
                 val parent =
-                    File(Environment.getExternalStorageDirectory().absolutePath + "/OnlyOffice")
+                    File(Environment.getExternalStorageDirectory().absolutePath + "/Euro-Office")
                 return FileUtils.createFile(parent, file.title)
             }
             else -> {

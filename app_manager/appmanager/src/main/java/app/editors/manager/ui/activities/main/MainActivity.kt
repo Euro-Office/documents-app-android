@@ -1,5 +1,6 @@
 package app.editors.manager.ui.activities.main
 
+import lib.toolkit.base.managers.utils.CrashLog
 import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Context
@@ -44,7 +45,7 @@ import app.editors.manager.ui.fragments.main.DocsOnDeviceFragment
 import app.editors.manager.ui.fragments.main.DocsRecentFragment
 import app.editors.manager.ui.fragments.main.DocsWebDavFragment
 import app.editors.manager.ui.fragments.main.MainPagerFragment
-import app.editors.manager.ui.fragments.main.OnlyOfficeCloudFragment
+import app.editors.manager.ui.fragments.main.CloudStartFragment
 import app.editors.manager.ui.fragments.main.settings.AppSettingsFragment
 import app.editors.manager.ui.fragments.storages.DocsDropboxFragment
 import app.editors.manager.ui.fragments.storages.DocsGoogleDriveFragment
@@ -91,12 +92,14 @@ interface IMainActivity {
         drawable: Int? = null,
         drawablePadding: Int? = null
     )
+    /** [editorConfig]: co-editing the copy at [uri] through a Document Server (EditorsContract.KEY_DOC_SERVER). */
     fun showEditors(
         uri: Uri,
         extension: String,
         editType: EditType,
         access: Access,
-        onResultListener: ((Int, Intent?) -> Unit)? = null
+        onResultListener: ((Int, Intent?) -> Unit)? = null,
+        editorConfig: String? = null
     )
     fun showEditors(
         data: String,
@@ -222,6 +225,8 @@ class MainActivity : BaseAppActivity(), MainActivityView, BaseBottomDialog.OnBot
         viewBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(viewBinding.root)
         init(savedInstanceState)
+        // Reports of earlier crashes, to send or delete
+        CrashLog.offerReports(this)
     }
 
     override fun onStart() {
@@ -443,7 +448,7 @@ class MainActivity : BaseAppActivity(), MainActivityView, BaseBottomDialog.OnBot
         presenter.clear()
         FragmentUtils.showFragment(
             supportFragmentManager,
-            OnlyOfficeCloudFragment.newInstance(false),
+            CloudStartFragment.newInstance(false),
             R.id.frame_container
         )
     }
@@ -575,7 +580,7 @@ class MainActivity : BaseAppActivity(), MainActivityView, BaseBottomDialog.OnBot
         if (accountOnline == null) {
             FragmentUtils.showFragment(
                 supportFragmentManager,
-                OnlyOfficeCloudFragment.newInstance(false),
+                CloudStartFragment.newInstance(false),
                 R.id.frame_container
             )
             checkVPNConnection()
@@ -596,7 +601,7 @@ class MainActivity : BaseAppActivity(), MainActivityView, BaseBottomDialog.OnBot
                     return
                 }
 
-                else -> OnlyOfficeCloudFragment.newInstance(false)
+                else -> CloudStartFragment.newInstance(false)
             }
             FragmentUtils.showFragment(
                 supportFragmentManager,
@@ -683,12 +688,24 @@ class MainActivity : BaseAppActivity(), MainActivityView, BaseBottomDialog.OnBot
         access: Access,
         onResultListener: ((Int, Intent?) -> Unit)?
     ) {
+        showEditors(uri, extension, editType, access, onResultListener, editorConfig = null)
+    }
+
+    override fun showEditors(
+        uri: Uri,
+        extension: String,
+        editType: EditType,
+        access: Access,
+        onResultListener: ((Int, Intent?) -> Unit)?,
+        editorConfig: String?
+    ) {
         val intent = EditorsUtils.getLocalEditorIntent(
             context = this,
             uri = uri,
             extension = extension,
             editType = editType,
-            access = access
+            access = access,
+            editorConfig = editorConfig
         )
 
         if (intent == null) {

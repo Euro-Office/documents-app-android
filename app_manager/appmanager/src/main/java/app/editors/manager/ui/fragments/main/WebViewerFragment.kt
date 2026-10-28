@@ -48,7 +48,7 @@ import app.documents.core.network.manager.models.explorer.CloudFile
 import app.editors.manager.R
 import app.editors.manager.app.App
 import app.editors.manager.app.accountOnline
-import app.editors.manager.managers.utils.FirebaseUtils
+import lib.toolkit.base.managers.utils.CrashLog
 import app.editors.manager.ui.activities.main.MainActivity.Companion.show
 import app.editors.manager.ui.activities.main.WebViewerActivity
 import app.editors.manager.ui.fragments.base.BaseAppFragment
@@ -448,10 +448,10 @@ class WebViewerFragment : BaseAppFragment(), OnRefreshListener {
     /*
      * WebView callback class
      * Example reload url:
-     *   https://alexanderyuzhin.teamlab.info/products/files/doceditor.aspx?fileid=7052736&action=view#reload
+     *   https://portal.example.com/products/files/doceditor.aspx?fileid=7052736&action=view#reload
      * Example back url:
-     *   https://alexanderyuzhin.onlyoffice.eu/products/files/#1423844
-     *   https://alexanderyuzhin.onlyoffice.eu/products/projects/tmdocs.aspx?prjid=587511#2371465
+     *   https://portal.example.com/products/files/#1423844
+     *   https://portal.example.com/products/projects/tmdocs.aspx?prjid=587511#2371465
      * */
     private inner class WebViewCallbacks : WebViewClient() {
 
@@ -532,7 +532,7 @@ class WebViewerFragment : BaseAppFragment(), OnRefreshListener {
     /*
      * WebView download callback
      * Example:
-     *   https://doc.onlyoffice.eu/cache/files/TVX_cPyfJuNK3wcEbFA__6840/output.pdf/Name.name.name.pdf?md5=2DYh9yN5kziiKkb1oXMx-w==&expires=1524920139&disposition=attachment&ooname=output.pdfb
+     *   https://docs.example.com/cache/files/TVX_cPyfJuNK3wcEbFA__6840/output.pdf/Name.name.name.pdf?md5=2DYh9yN5kziiKkb1oXMx-w==&expires=1524920139&disposition=attachment&ooname=output.pdfb
      * */
     private inner class WebViewDownload : DownloadListener {
         override fun onDownloadStart(
@@ -554,9 +554,9 @@ class WebViewerFragment : BaseAppFragment(), OnRefreshListener {
         val fileName = elements?.get(if (length > 0) length - 1 else 0) ?: ""
         val title = StringUtils.getNameWithoutExtension(cloudFile!!.title)
         if (fileName.isNotEmpty() && !fileName.startsWith(title)) {
-            FirebaseUtils.addCrash(WebViewDownload::class.java.simpleName + " - wrong file name!")
-            FirebaseUtils.addCrash("Url: $url")
-            FirebaseUtils.addCrash("File name: $fileName")
+            CrashLog.note(WebViewDownload::class.java.simpleName + " - wrong file name!")
+            CrashLog.note("Url: $url")
+            CrashLog.note("File name: $fileName")
             showSnackBar(R.string.errors_viewer_download_name)
         }
         downloadUrl = url
@@ -661,7 +661,7 @@ class WebViewerFragment : BaseAppFragment(), OnRefreshListener {
                     }
                 }
             } catch (e: Exception) {
-                FirebaseUtils.addCrash(e)
+                CrashLog.note(e)
             }
         }
 

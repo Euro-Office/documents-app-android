@@ -1,13 +1,11 @@
 package app.editors.manager.mvp.presenters.main
 
-import android.net.Uri
 import android.os.Bundle
 import app.documents.core.login.CheckLoginResult
 import app.documents.core.model.cloud.CloudAccount
 import app.documents.core.model.cloud.PortalProvider
 import app.documents.core.network.common.NetworkResult
 import app.documents.core.network.common.contracts.ApiContract
-import app.editors.manager.BuildConfig
 import app.editors.manager.R
 import app.editors.manager.app.App
 import app.editors.manager.mvp.models.models.OpenDataModel
@@ -18,7 +16,6 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
-import lib.toolkit.base.managers.utils.ActivitiesUtils
 import moxy.InjectViewState
 import moxy.presenterScope
 import retrofit2.HttpException
@@ -104,7 +101,6 @@ class CloudAccountPresenter : BaseLoginPresenter<CloudAccountView>() {
                         is NetworkResult.Error -> fetchError(result.exception)
                         is NetworkResult.Success -> {
                             withContext(Dispatchers.Main) {
-                                selection?.forEach { id -> deleteFromAccountProvider(id) }
                                 viewState.onRender(CloudAccountState.AccountLoadedState(result.data))
                             }
                         }
@@ -124,7 +120,6 @@ class CloudAccountPresenter : BaseLoginPresenter<CloudAccountView>() {
                         is NetworkResult.Error -> fetchError(result.exception)
                         is NetworkResult.Success -> {
                             withContext(Dispatchers.Main) {
-                                deleteFromAccountProvider(accountId)
                                 viewState.onRender(CloudAccountState.AccountLoadedState(result.data))
                             }
                         }
@@ -181,25 +176,6 @@ class CloudAccountPresenter : BaseLoginPresenter<CloudAccountView>() {
             )
 
             else -> viewState.onAccountLogin(account.portal.url, account.login)
-        }
-    }
-
-    private fun deleteFromAccountProvider(accountId: String) {
-        @Suppress("KotlinConstantConditions")
-        if (BuildConfig.APPLICATION_ID == "com.onlyoffice.documents" && ActivitiesUtils.isPackageExist(
-                App.getApp(),
-                "com.onlyoffice.projects"
-            )
-        ) {
-            try {
-                context.contentResolver.delete(
-                    Uri.parse("content://com.onlyoffice.projects.accounts/accounts/$accountId"),
-                    null,
-                    null
-                )
-            } catch (e: IllegalArgumentException) {
-                e.printStackTrace()
-            }
         }
     }
 

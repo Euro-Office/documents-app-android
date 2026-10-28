@@ -2,7 +2,7 @@
 <resources>
 
     <!-- Base -->
-    <color name="colorPrimary">#3E9CF0</color>
+    <color name="colorPrimary">#00A2F5</color>
     <color name="colorOnPrimary">@color/colorWhite</color>
     <color name="colorSecondary">#FFB05C</color>
     <color name="colorSecondary30">#4DFFB05C</color>

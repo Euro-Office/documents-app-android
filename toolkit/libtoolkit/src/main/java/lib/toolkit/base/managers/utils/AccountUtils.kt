@@ -44,7 +44,7 @@ object AccountUtils {
     fun addAccount(context: Context, account: Account, password: String, userData: AccountData): Boolean {
         return getAccountManager(context).addAccountExplicitly(account, password, Bundle().apply {
             putString(ACCOUNT_DATA, Json.encodeToString(userData))
-        }, mapOf(Pair("com.onlyoffice.projects", AccountManager.VISIBILITY_VISIBLE)))
+        })
     }
 
     /**

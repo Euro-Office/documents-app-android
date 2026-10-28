@@ -9,7 +9,6 @@ import app.documents.core.network.common.asResult
 import app.documents.core.network.common.contracts.ApiContract
 import app.editors.manager.R
 import app.editors.manager.app.App
-import app.editors.manager.managers.utils.FirebaseUtils
 import app.editors.manager.mvp.views.login.EnterpriseCreateSignInView
 import io.reactivex.disposables.Disposable
 import kotlinx.coroutines.launch
@@ -95,7 +94,6 @@ class EnterpriseCreateLoginPresenter : BaseLoginPresenter<EnterpriseCreateSignIn
                 .collect { result ->
                     when (result) {
                         is NetworkResult.Success -> {
-                            FirebaseUtils.addAnalyticsCreatePortal(cloudPortal?.url.orEmpty(), email)
                             App.getApp().refreshLoginComponent(cloudPortal)
                             signInWithEmail(email, password)
                         }

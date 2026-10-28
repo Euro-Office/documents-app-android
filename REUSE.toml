@@ -1,0 +1,45 @@
+# SPDX-FileCopyrightText: 2026 Euro-Office contributors
+# SPDX-License-Identifier: AGPL-3.0-only
+
+# Licences of the files, for https://reuse.software (reuse lint). The app is ONLYOFFICE Documents
+# for Android 9.3.1 by Ascensio System SIA (AGPL-3.0), modified by the Euro-Office contributors;
+# pictures we changed say so in a comment. The Euro-Office logo is a Material Symbols icon
+# (Apache-2.0), and the app's licences page (assets/licenses.html) lists it.
+
+version = 1
+
+[[annotations]]
+path = "**"
+SPDX-FileCopyrightText = ["Ascensio System SIA", "2026 Euro-Office contributors"]
+SPDX-License-Identifier = "AGPL-3.0-only"
+
+# The Euro-Office logo: Material Symbols "description" (https://fonts.google.com/icons)
+[[annotations]]
+path = [
+    "app_manager/appmanager/src/main/res/drawable/ic_launcher_foreground.xml",
+    "app_manager/appmanager/src/main/res/drawable/ic_launcher_monochrome.xml",
+    "app_manager/appmanager/src/main/res/drawable/ic_storage_eurooffice.xml",
+    "toolkit/libtoolkit/src/main/res/drawable/drawable_ic_logo.xml",
+    "toolkit/libtoolkit/src/main/res/drawable/image_eurooffice_logo.xml"
+]
+SPDX-FileCopyrightText = "Google LLC"
+SPDX-License-Identifier = "Apache-2.0"
+
+# ONLYOFFICE's illustrations with the Euro-Office logo in place of ONLYOFFICE's
+[[annotations]]
+path = [
+    "app_manager/appmanager/src/main/res/drawable/image_account_cloud.xml",
+    "app_manager/appmanager/src/main/res/drawable/image_on_boarding_screen1.xml",
+    "app_manager/appmanager/src/main/res/drawable/image_on_boarding_screen4.xml",
+    "app_manager/appmanager/src/main/res/drawable-night/image_account_cloud.xml",
+    "app_manager/appmanager/src/main/res/drawable-night/image_on_boarding_screen1.xml",
+    "app_manager/appmanager/src/main/res/drawable-night/image_on_boarding_screen4.xml"
+]
+SPDX-FileCopyrightText = ["Ascensio System SIA", "2026 Euro-Office contributors", "Google LLC"]
+SPDX-License-Identifier = "AGPL-3.0-only AND Apache-2.0"
+
+# The Gradle wrapper
+[[annotations]]
+path = ["**/gradlew", "**/gradlew.bat", "**/gradle/wrapper/gradle-wrapper.jar"]
+SPDX-FileCopyrightText = "Gradle Inc."
+SPDX-License-Identifier = "Apache-2.0"

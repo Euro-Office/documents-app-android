@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">ملفات</string>
-    <string name="app_name_full">ملفات ONLYOFFICE</string>
+    <string name="app_name_full">ملفات Euro-Office</string>
 
     <!-- ======================================================================================= -->
     <!-- Permissions -->
@@ -12,15 +12,15 @@
     <string name="app_versions_cancel">لاحقا</string>
     <string name="app_versions_without_release_accept">تثبيت التطبيق الرسمي</string>
     <string name="app_versions_without_release_info">
-      شكرا للاختبار التجريبي! تم الآن إصدار ONLYOFFICE ملفات 3.0، ولم يعد الإصدار التجريبي مدعومًا. قم بالتبديل إلى التطبيق الرسمي
+      شكرا للاختبار التجريبي! تم الآن إصدار Euro-Office ملفات 3.0، ولم يعد الإصدار التجريبي مدعومًا. قم بالتبديل إلى التطبيق الرسمي
     </string>
     <string name="app_versions_update_accept">تحديث التطبيق الرسمي</string>
     <string name="app_versions_update_info">
-      شكرا للاختبار التجريبي! تم الآن إصدار ONLYOFFICE الملفات 3.0، ولم يعد الإصدار التجريبي مدعومًا. يرجى التبديل إلى التطبيق
+      شكرا للاختبار التجريبي! تم الآن إصدار Euro-Office الملفات 3.0، ولم يعد الإصدار التجريبي مدعومًا. يرجى التبديل إلى التطبيق
     </string>
     <string name="app_versions_actual_release_accept">افتح التطبيق الرسمي</string>
     <string name="app_versions_actual_release_info">в
-      شكرا للاختبار التجريبي! تم الآن إصدار ONLYOFFICE الملفات 3.0، ولم يعد الإصدار التجريبي مدعومًا. من فضلك قم بالتبديل إلى
+      شكرا للاختبار التجريبي! تم الآن إصدار Euro-Office الملفات 3.0، ولم يعد الإصدار التجريبي مدعومًا. من فضلك قم بالتبديل إلى
     </string>
 
     <!-- ======================================================================================= -->
@@ -35,7 +35,7 @@
     <string name="about_terms">شروط الاستخدام</string>
     <string name="about_policy">سياسة الخصوصية</string>
     <string name="about_license">اتفاقية الترخيص</string>
-    <string name="about_website">موقع ONLYOFFICE</string>
+    <string name="about_website">موقع Euro-Office</string>
 
     <!-- ======================================================================================= -->
     <!-- Common errors -->
@@ -75,7 +75,7 @@
     <!-- Login -->
     <string name="login_api_init_error">خطأ في البداية</string>
     <string name="login_api_init_portal_error">خطأ في بناء جملة اسم البوابة الإلكترونية</string>
-    <string name="login_api_portal_name">اسم البوابة خاطئ. مثال: example.onlyoffice.com</string>
+    <string name="login_api_portal_name">اسم البوابة خاطئ. مثال: cloud.example.com</string>
     <string name="login_api_portal_name_length">يجب أن يتكون اسم البوابة الإلكترونية من 6 أحرف على الأقل</string>
     <string name="login_api_portal_name_content">يجب أن يتكون اسم البوابة الإلكترونية من A–Z، وa–z، و0–9</string>
 
@@ -89,7 +89,7 @@
     <!-- Portal pager -->
     <string name="login_pager_enterprise">بوابة</string>
     <string name="login_pager_personal">شخصي</string>
-    <string name="login_pager_title">قم بتوصيل سحابة ONLYOFFICE</string>
+    <string name="login_pager_title">قم بتوصيل سحابة Euro-Office</string>
 
     <!-- Portal enterprise-->
     <string name="login_enterprise_edit_hint">عنوان البوابة</string>
@@ -105,7 +105,7 @@
     <string name="login_enterprise_single_sign_button_login">تسجيل الدخول بواسطة %1$s</string>
     <string name="login_enterprise_single_sign_button_login_default">تسجيل دخول واحد</string>
     <string name="login_enterprise_info">
-      تسمح بوابة ONLYOFFICE بحفظ الملفات في السحابة ومشاركتها مع زملاء العمل والتحرير المشترك في
+      تسمح بوابة Euro-Office بحفظ الملفات في السحابة ومشاركتها مع زملاء العمل والتحرير المشترك في
     </string>
     <string name="login_not_authorization_info">تعذر تسجيل الدخول إلى %1$s في %2$s</string>
     <string name="login_not_authorization_info_token">انتهى وقت الجلسة</string>
@@ -125,7 +125,7 @@
     <string name="login_personal_signup_edit_info">سيتم إرسال رابط التأكيد إلى هذا العنوان</string>
     <string name="login_personal_signup_dialog_info">تم إرسال رابط التأكيد إلى البريد الإلكتروني %1$s\nاتبع الرابط </string>
     <string name="login_personal_info">
-      قم بتوصيل ONLYOFFICE Personal لحفظ الملفات في السحابة
+      قم بتوصيل Euro-Office Personal لحفظ الملفات في السحابة
     </string>
     <string name="login_web_dav_title">الاتصال بـ %1$s</string>
 
@@ -208,7 +208,7 @@
     <string name="dialogs_question_personal_confirm_link_title">تأكيد عنوان البريد الإلكتروني</string>
     <string name="dialogs_question_personal_confirm_cancel">حاول ثانية</string>
     <string name="dialogs_question_personal_confirm_accept">يكمل</string>
-    <string name="dialogs_question_rate_first_info">هل تستمتع باستخدام مستندات ONLYOFFICE؟</string>
+    <string name="dialogs_question_rate_first_info">هل تستمتع باستخدام مستندات Euro-Office؟</string>
     <string name="dialogs_question_rate_second_info">هل تمانع في تقييم التطبيق على Google Play؟</string>
     <string name="dialogs_question_delete_all_title">هل تريد حذف جميع العناصر؟</string>
 
@@ -254,7 +254,7 @@
     <string name="fragment_clouds_title">سحاب</string>
     <string name="fragment_clouds_portal_title">الاتصال بالبوابة</string>
     <string name="fragment_clouds_storage_title">الاتصال بالتخزين</string>
-    <string name="fragment_clouds_onlyoffice_item">ONLYOFFICE</string>
+    <string name="fragment_clouds_eurooffice_item">Euro-Office</string>
     <string name="fragment_recent_title">مؤخرًا</string>
     <string name="fragment_on_device_title">على الجهاز</string>
     <string name="fragment_profile_title">حساب تعريفي</string>
@@ -494,7 +494,7 @@
 
     <!-- ======================================================================================= -->
     <!-- Managers load -->
-    <string name="download_manager_title">تنزيلات ONLYOFFICE</string>
+    <string name="download_manager_title">تنزيلات Euro-Office</string>
     <string name="download_manager_progress_title">التنزيل قيد التقدم</string>
     <string name="download_manager_archiving_progress">إنشاء أرشيف</string>
     <string name="download_manager_complete">تم التحميل</string>
@@ -579,7 +579,7 @@
     <string name="cloud_account_description">التعاون في بيئة آمنة وربط مخازن الطرف الثالث</string>
     <string name="cloud_account_start_button">البدء</string>
     <string name="cloud_account_other_storages_button">مخازن أخرى</string>
-    <string name="cloud_only_office_description">قم بتخزين المستندات في السحابة والتعاون عليها</string>
+    <string name="cloud_eurooffice_description">قم بتخزين المستندات في السحابة والتعاون عليها</string>
     <string name="cloud_accounts_title">حسابات</string>
     <string name="error_long_file_name">اسم الملف طويل جدًا</string>
     <string name="dialog_remove_account_title">حذف من الجهاز</string>
@@ -842,12 +842,12 @@
     <string name="room_storage_reconnect">إعادة توصيل وحدة التخزين</string>
     <string name="room_storage_not_availabale">محتوى مجلد الطرف الثالث غير متوفر. حاول إعادة ربط الحساب.</string>
     <string name="personal_portal_end_button">أنشئ حسابًا مجانيًا</string>
-    <string name="personal_portal_end_title">يتم إنهاء خدمة ONLYOFFICE Personal</string>
-    <string name="personal_portal_end_text">سيتم إيقاف خدمة ONLYOFFICE Personal في الأول من سبتمبر 2024\n.نوصي بالانتقال إلى خدمة ONLYOFFICE DocSpace Cloud المجانية.</string>
+    <string name="personal_portal_end_title">يتم إنهاء خدمة Euro-Office Personal</string>
+    <string name="personal_portal_end_text">سيتم إيقاف خدمة Euro-Office Personal في الأول من سبتمبر 2024\n.نوصي بالانتقال إلى خدمة Euro-Office DocSpace Cloud المجانية.</string>
     <string name="dialogs_question_delete_all_fonts">هل تريد حذف جميع الخطوط؟</string>
     <string name="dialogs_question_delete_font">هل تريد حذف هذا الخط؟</string>
     <string name="dialogs_warning_title">تحذير</string>
-    <string name="dialogs_warning_only_pdf_form_message">لا يمكن نقل الملف إلى هذه الغرفة. يُرجى محاولة نقل نموذج "PDF" الخاص بـ"ONLYOFFICE".</string>
+    <string name="dialogs_warning_only_pdf_form_message">لا يمكن نقل الملف إلى هذه الغرفة. يُرجى محاولة نقل نموذج "PDF" الخاص بـ"Euro-Office".</string>
     <string name="dialogs_warning_pinned_room_limit">لا يمكنك تثبيت أكثر من 10 غرف في الأعلى. يُرجى إلغاء تثبيت بعض الغرف المثبتة حاليًا.</string>
     <string name="dialogs_warning_fill_forms_room_create">إنشاء الغرف باستخدام ملفات ومجلدات متعددة غير متاح لهذا النوع من الغرف. لإنشاء غرفة بهذا الشكل، اذهب إلى قسم "الغرف" أو استخدم أحد نماذج "PDF".</string>
     <string name="toolbar_menu_view">عرض</string>
@@ -961,7 +961,7 @@
     <string name="list_context_upload_to_cloud">رفع إلى السحابة</string>
     <string name="list_context_version_history">عرض سجل الإصدارات</string>
     <string name="on_boarding_collaborate_header">تعاونوا مع فريقكم</string>
-    <string name="on_boarding_collaborate_info">في الوضع المتصل، استخدموا ميزات التحرير التعاوني الفوري في ONLYOFFICE للعمل على المستندات مع أعضاء البوابة، ومشاركة الملفات، وإنشاء مجلدات تخزين مشتركة.</string>
+    <string name="on_boarding_collaborate_info">في الوضع المتصل، استخدموا ميزات التحرير التعاوني الفوري في Euro-Office للعمل على المستندات مع أعضاء البوابة، ومشاركة الملفات، وإنشاء مجلدات تخزين مشتركة.</string>
     <string name="on_boarding_edit_header">العمل مع ملفات المكتب</string>
     <string name="on_boarding_edit_info">أنشئوا المستندات وحرروها باستخدام شريط الأدوات المتكامل: تعاملوا مع العناصر المعقّدة في مستندات النصوص، وأجروا حسابات متقدمة في جداول البيانات، وأنشئوا عروضًا تقديمية مبهرة، واطلعوا على ملفات "PDF" بدون فقدان التنسيق.</string>
     <string name="on_boarding_finish_button">البدء</string>
@@ -970,7 +970,7 @@
     <string name="on_boarding_third_party_header">تخزين خارجي</string>
     <string name="on_boarding_third_party_info">يمكنكم ربط خدمات تخزين خارجية مثل "Nextcloud" و"ownCloud" و"Dropbox" وغيرها من الخدمات التي تستخدم بروتوكول "WebDAV".</string>
     <string name="on_boarding_welcome_header">البدء</string>
-    <string name="on_boarding_welcome_info">مرحبًا بكم في مجموعة تحرير ONLYOFFICEعلى الأجهزة المحمولة! اسحبوا الشاشة للاطلاع على مزيد من المعلومات حول التطبيق.</string>
+    <string name="on_boarding_welcome_info">مرحبًا بكم في مجموعة تحرير Euro-Officeعلى الأجهزة المحمولة! اسحبوا الشاشة للاطلاع على مزيد من المعلومات حول التطبيق.</string>
     <string name="operation_disable_custom_filter">تم تعطيل الفلتر المخصّص للملف المحدد</string>
     <string name="operation_enable_custom_filter">تم تفعيل الفلتر المخصّص للملف المحدد</string>
     <string name="placeholder_connection_button">إعادة التحميل</string>
@@ -1081,7 +1081,7 @@
     <string name="version_restore_subtitle">سيتم حفظ الملف الحالي في سجل الإصدارات.</string>
     <string name="version_restore_title">هل ترغبون في استعادة هذا الإصدار؟</string>
     <string name="whats_new_1">تكامل محسّن مع الإصدار 3.0 من DocSpace</string>
-    <string name="whats_new_1_desc">تعاونوا على المستندات باستخدام آخر التحديثات والتحسينات في الإصدار 3.0 من ONLYOFFICE DocSpace</string>
+    <string name="whats_new_1_desc">تعاونوا على المستندات باستخدام آخر التحديثات والتحسينات في الإصدار 3.0 من Euro-Office DocSpace</string>
     <string name="whats_new_2">واجهة مبوّبة للأجهزة اللوحية وأجهزة سطح المكتب</string>
     <string name="whats_new_2_desc">بسّطوا التنقل والتحرير باستخدام شريط الأدوات المبوب على الأجهزة اللوحية وأجهزة الكمبيوتر.</string>
     <string name="whats_new_3">أنواع جديدة من المخططات</string>

@@ -92,7 +92,7 @@ class AppLocaleConfirmationActivity : AppCompatActivity() {
                                 .weight(1f)
                         ) {
                             Image(
-                                painter = painterResource(id = Toolkit.drawable.image_onlyoffice_text),
+                                painter = painterResource(id = Toolkit.drawable.image_eurooffice_logo),
                                 contentDescription = null
                             )
                         }

@@ -33,7 +33,9 @@ sealed class FileOpenResult {
         val file: File,
         val fileId: String,
         val editType: EditType,
-        val access: Access = Access.None
+        val access: Access = Access.None,
+        /** The editor configuration for co-editing through a Document Server, if there is one. */
+        val editorConfig: String? = null
     ) : FileOpenResult()
 }
 

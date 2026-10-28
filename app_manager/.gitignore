@@ -10,7 +10,7 @@
 *.ttf
 
 google_api.json
-Onlyoffice-keystore.properties
+eurooffice-keystore.properties
 local.properties
 facebook_id.xml
 

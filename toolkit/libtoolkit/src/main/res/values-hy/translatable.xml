@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_title" translatable="false">ONLYOFFICE</string>
+    <string name="app_title" translatable="false">Euro-Office</string>
     <string name="dialogs_edit_forbidden_symbols">Մի օգտագործեք այս նշանները\u0020</string>
     <string name="dialogs_edit_forbidden_name">Անվավեր անվանում</string>
 
@@ -14,7 +14,7 @@
 
     <!--  Feedback  -->
     <string name="chooser_email_client">Ընտրեք էլ․փոստի հաճախորդ…</string>
-    <string name="about_email_subject">ONLYOFFICE Documents Android-ի հետադարձ կապի համար</string>
+    <string name="about_email_subject">Euro-Office Documents Android-ի հետադարձ կապի համար</string>
     <string name="about_feedback">Հետադարձ կապ և աջակցություն</string>
     <string name="text_hint_required">Պահանջվում է</string>
 

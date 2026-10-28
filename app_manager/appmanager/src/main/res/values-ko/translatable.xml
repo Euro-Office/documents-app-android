@@ -2,15 +2,15 @@
 <resources>
     <!-- Translations added in version 9.3.0 - 2026-02-12 -->
     <string name="app_name">문서</string>
-    <string name="app_name_full">ONLYOFFICE Documents</string>
+    <string name="app_name_full">Euro-Office Documents</string>
     <string name="app_versions_title">버전 3.0 출시</string>
     <string name="app_versions_cancel">나중에</string>
     <string name="app_versions_without_release_accept">공식 앱 설치</string>
-    <string name="app_versions_without_release_info">베타 테스트에 참여해 주셔서 감사합니다! ONLYOFFICE Documents 3.0이 정식 출시되었으며, 베타 버전은 더 이상 지원되지 않습니다. 향후 업데이트를 받으려면 공식 앱으로 전환하세요.</string>
+    <string name="app_versions_without_release_info">베타 테스트에 참여해 주셔서 감사합니다! Euro-Office Documents 3.0이 정식 출시되었으며, 베타 버전은 더 이상 지원되지 않습니다. 향후 업데이트를 받으려면 공식 앱으로 전환하세요.</string>
     <string name="app_versions_update_accept">공식 앱 업데이트</string>
-    <string name="app_versions_update_info">베타 테스트에 참여해 주셔서 감사합니다! ONLYOFFICE Documents 3.0이 정식 출시되었으며, 베타 버전은 더 이상 지원되지 않습니다. 향후 업데이트를 받으려면 공식 앱으로 전환하세요.</string>
+    <string name="app_versions_update_info">베타 테스트에 참여해 주셔서 감사합니다! Euro-Office Documents 3.0이 정식 출시되었으며, 베타 버전은 더 이상 지원되지 않습니다. 향후 업데이트를 받으려면 공식 앱으로 전환하세요.</string>
     <string name="app_versions_actual_release_accept">공식 앱 열기</string>
-    <string name="app_versions_actual_release_info">베타 테스트에 참여해 주셔서 감사합니다! ONLYOFFICE Documents 3.0이 정식 출시되었으며, 베타 버전은 더 이상 지원되지 않습니다. 공식 앱으로 전환하세요.</string>
+    <string name="app_versions_actual_release_info">베타 테스트에 참여해 주셔서 감사합니다! Euro-Office Documents 3.0이 정식 출시되었으며, 베타 버전은 더 이상 지원되지 않습니다. 공식 앱으로 전환하세요.</string>
     <string name="snackbar_copied">복사됨</string>
     <string name="snackbar_undo">실행 취소</string>
     <string name="about_title">정보</string>
@@ -18,7 +18,7 @@
     <string name="about_terms">이용 약관</string>
     <string name="about_policy">개인정보 처리방침</string>
     <string name="about_license">라이선스 계약</string>
-    <string name="about_website">ONLYOFFICE 웹사이트</string>
+    <string name="about_website">Euro-Office 웹사이트</string>
     <string name="errors_unknown_error">연결 오류. 나중에 다시 시도하세요.</string>
     <string name="errors_ssl_error">SSL 핸드셰이크 오류</string>
     <string name="errors_connection_error">인터넷 연결을 확인하세요</string>
@@ -53,7 +53,7 @@
     <string name="errors_sign_in_ldap_checkbox">LDAP 사용자로 로그인</string>
     <string name="login_api_init_error">초기화 오류</string>
     <string name="login_api_init_portal_error">포털 이름 구문 오류</string>
-    <string name="login_api_portal_name">잘못된 포털 이름. 예: example.onlyoffice.com</string>
+    <string name="login_api_portal_name">잘못된 포털 이름. 예: cloud.example.com</string>
     <string name="login_api_portal_name_length">포털 이름은 최소 6자 이상이어야 합니다</string>
     <string name="login_api_portal_name_content">포털 이름은 A–Z, a–z, 0–9로 구성되어야 합니다</string>
     <string name="login_retry">다시 연결</string>
@@ -61,7 +61,7 @@
     <string name="login_accounts_select_add">계정 추가</string>
     <string name="login_pager_enterprise">포털</string>
     <string name="login_pager_personal">개인</string>
-    <string name="login_pager_title">ONLYOFFICE 클라우드 연결</string>
+    <string name="login_pager_title">Euro-Office 클라우드 연결</string>
     <string name="login_enterprise_edit_hint">포털 주소</string>
     <string name="login_enterprise_button_next">다음</string>
     <string name="login_enterprise_edit_error_hint">유효한 주소를 입력하세요</string>
@@ -74,7 +74,7 @@
     <string name="login_enterprise_single_sign_button">Single Sign-on</string>
     <string name="login_enterprise_single_sign_button_login">%1$s(으)로 로그인</string>
     <string name="login_enterprise_single_sign_button_login_default">Single Sign-on</string>
-    <string name="login_enterprise_info">ONLYOFFICE 포털을 통해 파일을 클라우드에 저장하고, 동료와 공유하고, 실시간으로 공동 편집할 수 있습니다.</string>
+    <string name="login_enterprise_info">Euro-Office 포털을 통해 파일을 클라우드에 저장하고, 동료와 공유하고, 실시간으로 공동 편집할 수 있습니다.</string>
     <string name="login_not_authorization_info">%2$s에서 %1$s(으)로 로그인할 수 없습니다</string>
     <string name="login_not_authorization_info_token">세션이 만료되었습니다</string>
     <string name="login_not_authorization_button">다시 시도</string>
@@ -91,7 +91,7 @@
     <string name="login_personal_signup_title">개인 포털 회원가입</string>
     <string name="login_personal_signup_edit_info">이 주소로 확인 링크가 발송됩니다</string>
     <string name="login_personal_signup_dialog_info">이메일 %1$s(으)로 확인 링크가 발송되었습니다\n계속하기 전에 메일의 링크를 클릭하세요</string>
-    <string name="login_personal_info">ONLYOFFICE Personal에 연결하여 파일을 클라우드에 저장하세요</string>
+    <string name="login_personal_info">Euro-Office Personal에 연결하여 파일을 클라우드에 저장하세요</string>
     <string name="login_web_dav_title">%1$s에 연결</string>
     <string name="login_create_portal_title">조직용 포털 생성</string>
     <string name="login_create_portal_address_hint">포털 주소</string>
@@ -152,13 +152,13 @@
     <string name="dialogs_question_personal_confirm_link_title">이메일 확인</string>
     <string name="dialogs_question_personal_confirm_cancel">다시 시도</string>
     <string name="dialogs_question_personal_confirm_accept">계속</string>
-    <string name="dialogs_question_rate_first_info">ONLYOFFICE Documents를 즐겨 사용하고 계신가요?</string>
+    <string name="dialogs_question_rate_first_info">Euro-Office Documents를 즐겨 사용하고 계신가요?</string>
     <string name="dialogs_question_rate_second_info">Google Play에서 앱을 평가해 주시겠습니까?</string>
     <string name="dialogs_question_delete_all_title">모든 항목을 삭제하시겠습니까?</string>
     <string name="dialogs_question_delete_all_fonts">모든 글꼴을 삭제하시겠습니까?</string>
     <string name="dialogs_question_delete_font">이 글꼴을 삭제하시겠습니까?</string>
     <string name="dialogs_warning_title">경고</string>
-    <string name="dialogs_warning_only_pdf_form_message">파일을 이 방으로 이동할 수 없습니다. ONLYOFFICE PDF 양식을 이동해 보세요.</string>
+    <string name="dialogs_warning_only_pdf_form_message">파일을 이 방으로 이동할 수 없습니다. Euro-Office PDF 양식을 이동해 보세요.</string>
     <string name="dialogs_warning_pinned_room_limit">상단에 10개 이상의 방을 고정할 수 없습니다. 현재 고정된 방 중 일부를 고정 해제하세요.</string>
     <string name="dialogs_warning_fill_forms_room_create">여러 파일과 폴더를 기반으로 한 생성은 이 유형의 방에서 사용할 수 없습니다. 이러한 방을 만들려면 방 섹션으로 이동하거나 PDF 양식 중 하나를 사용하세요.</string>
     <string name="dialogs_warning_room_space_quota_exceed">방 저장 용량 초과 (%s).</string>
@@ -181,7 +181,7 @@
     <string name="fragment_clouds_title">클라우드</string>
     <string name="fragment_clouds_portal_title">포털에 연결</string>
     <string name="fragment_clouds_storage_title">저장소에 연결</string>
-    <string name="fragment_clouds_onlyoffice_item">ONLYOFFICE</string>
+    <string name="fragment_clouds_eurooffice_item">Euro-Office</string>
     <string name="fragment_recent_title">최근 항목</string>
     <string name="fragment_on_device_title">디바이스</string>
     <string name="fragment_profile_title">프로필</string>
@@ -446,7 +446,7 @@
     <string name="trash_snackbar_move_button">복원</string>
     <string name="trash_popup_move">복원 위치</string>
     <string name="trash_popup_delete">영구 삭제</string>
-    <string name="download_manager_title">ONLYOFFICE 다운로드</string>
+    <string name="download_manager_title">Euro-Office 다운로드</string>
     <string name="download_manager_progress_title">다운로드 진행 중</string>
     <string name="download_manager_archiving_progress">압축 파일 생성 중</string>
     <string name="download_manager_complete">다운로드 완료</string>
@@ -496,13 +496,13 @@
     <string name="on_boarding_next_button">다음</string>
     <string name="on_boarding_finish_button">시작하기</string>
     <string name="on_boarding_welcome_header">시작하기</string>
-    <string name="on_boarding_welcome_info">ONLYOFFICE 모바일 편집 스위트에 오신 것을 환영합니다! 스와이프하여 앱에 대해 더 알아보세요.</string>
+    <string name="on_boarding_welcome_info">Euro-Office 모바일 편집 스위트에 오신 것을 환영합니다! 스와이프하여 앱에 대해 더 알아보세요.</string>
     <string name="on_boarding_edit_header">오피스 파일 작업</string>
     <string name="on_boarding_edit_info">포괄적인 도구 모음으로 문서를 만들고 편집하세요: 텍스트 문서에서 복잡한 객체를 다루고, 스프레드시트에서 광범위한 계산을 수행하고, 멋진 프레젠테이션을 만들고, 서식 손실 없이 PDF 파일을 보세요.</string>
     <string name="on_boarding_locally_header">로컬에서 문서 편집</string>
     <string name="on_boarding_locally_info">오프라인으로 문서를 작업하세요. 생성된 파일은 나중에 온라인 포털에 업로드하여 다른 기기에서 접근할 수 있습니다.</string>
     <string name="on_boarding_collaborate_header">팀과 협업</string>
-    <string name="on_boarding_collaborate_info">온라인 모드에서 ONLYOFFICE의 실시간 공동 편집 기능을 사용하여 포털 멤버와 함께 문서를 작업하고, 문서를 공유하고, 공용 저장 폴더를 만드세요.</string>
+    <string name="on_boarding_collaborate_info">온라인 모드에서 Euro-Office의 실시간 공동 편집 기능을 사용하여 포털 멤버와 함께 문서를 작업하고, 문서를 공유하고, 공용 저장 폴더를 만드세요.</string>
     <string name="on_boarding_third_party_header">서드파티 저장소</string>
     <string name="on_boarding_third_party_info">Nextcloud, ownCloud, Dropbox 등 WebDAV 프로토콜을 사용하는 서드파티 저장소를 연결하세요.</string>
     <string name="media_image_share_chooser">공유할 앱 선택</string>
@@ -538,7 +538,7 @@
     <string name="cloud_account_start_button">시작하기</string>
     <string name="cloud_account_other_storages_button">다른 저장소</string>
     <string name="cloud_create_account">무료 계정 만들기</string>
-    <string name="cloud_only_office_description">클라우드에 문서를 저장하고 협업하세요</string>
+    <string name="cloud_eurooffice_description">클라우드에 문서를 저장하고 협업하세요</string>
     <string name="cloud_vpn_warning">최적의 경험을 위해 VPN을 끄어보세요. 일부 서버 기능이 정상적으로 작동하지 않을 수 있습니다.</string>
     <string name="cloud_accounts_title">계정</string>
     <string name="error_long_file_name">파일 이름이 너무 깁니다</string>
@@ -783,8 +783,8 @@
     <string name="conversion_dialog_convert_to">%1s(으)로 변환</string>
     <string name="conversion_dialog_converting_to">%1s(으)로 변환 중</string>
     <string name="personal_portal_end_button">무료 계정 만들기</string>
-    <string name="personal_portal_end_title">ONLYOFFICE Personal이 서비스가 종료됩니다</string>
-    <string name="personal_portal_end_text">ONLYOFFICE Personal은 2024년 9월 1일에 서비스가 종료됩니다.\n무료 ONLYOFFICE DocSpace Cloud로 이전하는 것을 권장합니다.</string>
+    <string name="personal_portal_end_title">Euro-Office Personal이 서비스가 종료됩니다</string>
+    <string name="personal_portal_end_text">Euro-Office Personal은 2024년 9월 1일에 서비스가 종료됩니다.\n무료 Euro-Office DocSpace Cloud로 이전하는 것을 권장합니다.</string>
     <string name="rooms_upload_pdf_from_docspace">DocSpace에서 PDF 서식 업로드</string>
     <string name="rooms_upload_pdf_from_device">기기에서 PDF 서식 업로드</string>
     <string name="rooms_fill_in_as_title">다음으로 작성</string>

@@ -30,7 +30,6 @@ import javax.inject.Inject
 data class AppSettingsState(
     val cache: Long = 0,
     val themeMode: Int = 0,
-    val analytics: Boolean = false,
     val wifi: Boolean = false,
     val keepScreenOn: Boolean = false,
     val passcodeEnabled: Boolean = false,
@@ -71,7 +70,6 @@ class AppSettingsViewModel(
         emit(
             AppSettingsState(
                 cache = cache,
-                analytics = preferenceTool.isAnalyticEnable,
                 wifi = preferenceTool.uploadWifiState,
                 keepScreenOn = preferenceTool.keepScreenOn,
                 passcodeEnabled = preferenceTool.passcodeLock.enabled,
@@ -93,11 +91,6 @@ class AppSettingsViewModel(
 
     private fun fetchFonts() {
         _settingsState.value = _settingsState.value.copy(fonts = fontManager.getFonts())
-    }
-
-    fun setAnalytic(isEnable: Boolean) {
-        preferenceTool.isAnalyticEnable = isEnable
-        _settingsState.value = _settingsState.value.copy(analytics = isEnable)
     }
 
     fun setWifiState(isEnable: Boolean) {

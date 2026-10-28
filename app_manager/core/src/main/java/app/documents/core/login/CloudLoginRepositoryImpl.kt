@@ -18,7 +18,6 @@ import app.documents.core.network.common.contracts.ApiContract
 import app.documents.core.network.login.CloudLoginDataSource
 import app.documents.core.network.login.PasswordHashGenerator
 import app.documents.core.utils.displayNameFromHtml
-import com.google.firebase.messaging.FirebaseMessaging
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
@@ -27,7 +26,6 @@ import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.onEach
-import kotlinx.coroutines.tasks.await
 import retrofit2.HttpException
 import java.io.IOException
 import java.net.ConnectException
@@ -312,7 +310,7 @@ internal class CloudLoginRepositoryImpl(
             val token = account.unsubToken
             if (account.portal.provider.registerDeviceRequired || token.isNotEmpty()) {
                 try {
-                    val deviceToken = getDeviceToken()
+                    val deviceToken = getDeviceToken() ?: return
                     cloudLoginDataSource.subscribe(
                         portal = account.portal,
                         token = token,
@@ -335,7 +333,7 @@ internal class CloudLoginRepositoryImpl(
     private suspend fun subscribePush(cloudPortal: CloudPortal, accessToken: String) {
         if (cloudPortal.provider.registerDeviceRequired && isGooglePlayServicesAvailable) {
             try {
-                val deviceToken = getDeviceToken()
+                val deviceToken = getDeviceToken() ?: return
                 cloudLoginDataSource.registerDevice(accessToken, deviceToken)
                 cloudLoginDataSource.subscribe(cloudPortal, accessToken, deviceToken, true)
             } catch (_: Exception) {
@@ -344,9 +342,7 @@ internal class CloudLoginRepositoryImpl(
         }
     }
 
-    private suspend fun getDeviceToken(): String {
-        return FirebaseMessaging.getInstance()
-            .token
-            .await()
-    }
+    // The device's token at a push service, for portals to send notifications to. The app uses no
+    // push service (no Firebase Cloud Messaging), so portals send none.
+    private fun getDeviceToken(): String? = null
 }

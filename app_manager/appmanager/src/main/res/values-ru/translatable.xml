@@ -4,23 +4,23 @@
     <string name="about_policy">Конфиденциальность</string>
     <string name="about_terms">Условия использования</string>
     <string name="about_title">О приложении</string>
-    <string name="about_website">Сайт ONLYOFFICE</string>
+    <string name="about_website">Сайт Euro-Office</string>
     <string name="actionbar_title_main">Документы</string>
     <string name="app_name">Документы</string>
-    <string name="app_name_full">ONLYOFFICE Документы</string>
+    <string name="app_name_full">Euro-Office Документы</string>
     <string name="app_versions_actual_release_accept">Открыть</string>
     <string name="app_versions_actual_release_info">
-        Спасибо за участие! Бета-тестирование ONLYOFFICE Документы 3.0 завершено. Новые функции и багфиксы будут доступны только в официальной версии приложения.
+        Спасибо за участие! Бета-тестирование Euro-Office Документы 3.0 завершено. Новые функции и багфиксы будут доступны только в официальной версии приложения.
     </string>
     <string name="app_versions_cancel">Позже</string>
     <string name="app_versions_title">Релиз версии 3.0</string>
     <string name="app_versions_update_accept">Обновить</string>
     <string name="app_versions_update_info">
-        Спасибо за участие! Бета-тестирование ONLYOFFICE Документы 3.0 завершено. Пожалуйста, обновите официальное приложение - все новые функции и багфиксы будут доступны только там.
+        Спасибо за участие! Бета-тестирование Euro-Office Документы 3.0 завершено. Пожалуйста, обновите официальное приложение - все новые функции и багфиксы будут доступны только там.
     </string>
     <string name="app_versions_without_release_accept">Установить</string>
     <string name="app_versions_without_release_info">
-        Спасибо за участие! Бета-тестирование ONLYOFFICE Документы 3.0 завершено. Пожалуйста, установите официальное приложение ONLYOFFICE, чтобы получать дальнейшие обновления.
+        Спасибо за участие! Бета-тестирование Euro-Office Документы 3.0 завершено. Пожалуйста, установите официальное приложение Euro-Office, чтобы получать дальнейшие обновления.
     </string>
     <string name="auth_header_screen_1">Настройте приложение для генерации кодов входа</string>
     <string name="auth_header_screen_2">Запустите приложение Google Authenticator</string>
@@ -72,7 +72,7 @@
     <string name="dialogs_question_personal_confirm_accept">ПРОДОЛЖИТЬ</string>
     <string name="dialogs_question_personal_confirm_cancel">ПОВТОРИТЬ</string>
     <string name="dialogs_question_personal_confirm_link_title">Подтвердить email</string>
-    <string name="dialogs_question_rate_first_info">Вам нравится использовать ONLYOFFICE Документы?</string>
+    <string name="dialogs_question_rate_first_info">Вам нравится использовать Euro-Office Документы?</string>
     <string name="dialogs_question_rate_second_info">Не могли бы вы оценить приложение в Google Play?</string>
     <string name="dialogs_question_remove_account_info">         Будет выполнен выход из аккаунта с email-адресом %1$s из облачного офиса %2$s и аккаунт будет удален из списка
     </string>
@@ -94,7 +94,7 @@
     <string name="download_manager_archiving_progress">Создание архива</string>
     <string name="download_manager_repeat">Файл уже скачивается</string>
     <string name="download_manager_select_files">Выбрать файлы</string>
-    <string name="download_manager_title">Скачивания ONLYOFFICE</string>
+    <string name="download_manager_title">Скачивания Euro-Office</string>
     <string name="error_recent_account">Файл был удален или недоступен с этого аккаунта.</string>
     <string name="error_recent_enter_account">Пожалуйста, войдите в аккаунт.</string>
     <string name="errors_client_error">Неизвестная ошибка клиента с кодом:\u0020</string>
@@ -118,7 +118,7 @@
     <string name="errors_unknown_error">Ошибка подключения. Повторите попытку позже.</string>
     <string name="errors_unknown_host_error">Неизвестный хост</string>
     <string name="errors_viewer_download_name">Не удалось выполнить скачивание</string>
-    <string name="fragment_clouds_onlyoffice_item">ONLYOFFICE</string>
+    <string name="fragment_clouds_eurooffice_item">Euro-Office</string>
     <string name="fragment_clouds_portal_title">Подключиться к порталу</string>
     <string name="fragment_clouds_storage_title">Подключиться к хранилищу</string>
     <string name="fragment_clouds_title">Облака</string>
@@ -161,7 +161,7 @@
     <string name="login_accounts_select_title">Выбор аккаунта</string>
     <string name="login_api_init_error">Ошибка инициализации</string>
     <string name="login_api_init_portal_error">Синтаксическая ошибка в адресе облачного офиса</string>
-    <string name="login_api_portal_name">Неправильный адрес облачного офиса. Пример: example.onlyoffice.com</string>
+    <string name="login_api_portal_name">Неправильный адрес облачного офиса. Пример: cloud.example.com</string>
     <string name="login_api_portal_name_content">Имя учетной записи должно состоять только из символов A–Z, a–z, 0–9</string>
     <string name="login_api_portal_name_length">Имя учетной записи должно содержать не менее 6 символов</string>
     <string name="login_create_portal_address_hint">Имя учетной записи</string>
@@ -191,7 +191,7 @@
     <string name="login_not_authorization_info">Не удалось войти в %1$s на %2$s</string>
     <string name="login_pager_enterprise">Корпоративное</string>
     <string name="login_pager_personal">Персональное</string>
-    <string name="login_pager_title">Подключение к облаку ONLYOFFICE</string>
+    <string name="login_pager_title">Подключение к облаку Euro-Office</string>
     <string name="login_personal_edit_email_hint">Email</string>
     <string name="login_personal_edit_password_hint">Пароль</string>
     <string name="login_personal_info">Подключитесь к персональному облаку, чтобы сохранять файлы в облачном хранилище</string>
@@ -367,7 +367,7 @@
     <string name="cloud_account_description">Работайте совместно в защищенной среде и подключайте сторонние хранилища</string>
     <string name="cloud_account_start_button">Начать работу</string>
     <string name="cloud_account_other_storages_button">Другие хранилища</string>
-    <string name="cloud_only_office_description">Храните документы в облаке и работайте над ними совместно</string>
+    <string name="cloud_eurooffice_description">Храните документы в облаке и работайте над ними совместно</string>
     <string name="cloud_accounts_title">Аккаунты</string>
     <string name="error_long_file_name">Слишком длинное имя файла</string>
     <string name="dialog_remove_account_description">
@@ -700,13 +700,13 @@
     <string name="room_storage_reconnect">Подключиться к хранилищу еще раз</string>
     <string name="room_storage_not_availabale">Содержимое сторонней папки недоступно. Войдите в учетную запись еще раз.</string>
     <string name="personal_portal_end_button">Создать бесплатный аккаунт</string>
-    <string name="personal_portal_end_title">ONLYOFFICE Personal завершает работу</string>
-    <string name="personal_portal_end_text">Пожалуйста, обратите внимание: поддержка ONLYOFFICE Personal прекращается 1 сентября 2024 года.\n
-    Рекомендуем перейти на бесплатный ONLYOFFICE DocSpace Cloud.</string>
+    <string name="personal_portal_end_title">Euro-Office Personal завершает работу</string>
+    <string name="personal_portal_end_text">Пожалуйста, обратите внимание: поддержка Euro-Office Personal прекращается 1 сентября 2024 года.\n
+    Рекомендуем перейти на бесплатный Euro-Office DocSpace Cloud.</string>
     <string name="dialogs_question_delete_all_fonts">Удалить все шрифты?</string>
     <string name="dialogs_question_delete_font">Удалить этот шрифт?</string>
     <string name="dialogs_warning_title">Внимание</string>
-    <string name="dialogs_warning_only_pdf_form_message">Файл не может быть перемещен в эту комнату. Пожалуйста, попробуйте переместить PDF-форму ONLYOFFICE.</string>
+    <string name="dialogs_warning_only_pdf_form_message">Файл не может быть перемещен в эту комнату. Пожалуйста, попробуйте переместить PDF-форму Euro-Office.</string>
     <string name="dialogs_warning_pinned_room_limit">Нельзя закрепить вверху больше 10 комнат. Открепите некоторые комнаты, закрепленные в данный момент.</string>
     <string name="dialogs_warning_fill_forms_room_create">Создание на основе нескольких файлов и папок недоступно для комнаты данного типа. Чтобы создать такую ​​комнату, перейдите в раздел Комнаты или воспользуйтесь одной из PDF-форм.</string>
     <string name="toolbar_menu_view">Вид</string>
@@ -898,7 +898,7 @@
     <string name="list_context_upload_to_cloud">Загрузить в облако</string>
     <string name="list_context_version_history">Показать историю версий</string>
     <string name="on_boarding_collaborate_header">Работайте вместе с командой</string>
-    <string name="on_boarding_collaborate_info">В онлайн режиме используйте функциональные возможности ONLYOFFICE для совместного редактирования в реальном времени для работы над документами вместе с участниками вашего портала, обмена документами и создания общих папок для хранения.</string>
+    <string name="on_boarding_collaborate_info">В онлайн режиме используйте функциональные возможности Euro-Office для совместного редактирования в реальном времени для работы над документами вместе с участниками вашего портала, обмена документами и создания общих папок для хранения.</string>
     <string name="on_boarding_edit_header">Работайте с офисными файлами</string>
     <string name="on_boarding_edit_info">Создавайте и редактируйте документы с помощью панели инструментов: работайте со сложными объектами в текстовых документах, выполняйте сложные вычисления в электронных таблицах, создавайте впечатляющие презентации и просматривайте PDF-файлы без потери форматирования.</string>
     <string name="on_boarding_finish_button">Начать</string>
@@ -907,7 +907,7 @@
     <string name="on_boarding_third_party_header">Стороннее хранилище</string>
     <string name="on_boarding_third_party_info">Подключите сторонние хранилища, такие как Nextcloud, ownCloud, Dropbox и другие, которые используют протокол WebDAV.</string>
     <string name="on_boarding_welcome_header">Начало работы</string>
-    <string name="on_boarding_welcome_info">Добро пожаловать в мобильные редакторы ONLYOFFICE! Проведите по экрану, чтобы узнать больше о приложении.</string>
+    <string name="on_boarding_welcome_info">Добро пожаловать в мобильные редакторы Euro-Office! Проведите по экрану, чтобы узнать больше о приложении.</string>
     <string name="operation_disable_custom_filter">Пользовательский фильтр для выбранного файла отключен</string>
     <string name="operation_enable_custom_filter">Пользовательский фильтр для выбранного файла включен</string>
     <string name="placeholder_connection_button">Перезагрузить</string>

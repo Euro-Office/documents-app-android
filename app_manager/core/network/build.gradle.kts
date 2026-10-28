@@ -20,7 +20,7 @@ android {
 
         val keystoreProperties = Properties()
 
-        rootProject.file("Onlyoffice-keystore.properties").let { file ->
+        rootProject.file("eurooffice-keystore.properties").let { file ->
             if (file.exists()) {
                 keystoreProperties.load(FileInputStream(file))
             }

@@ -13,19 +13,22 @@ import lib.toolkit.base.managers.utils.StringUtils
 
 object EditorsUtils {
 
+    /** [editorConfig]: the copy at [uri] is co-edited through a Document Server (EditorsContract.KEY_DOC_SERVER). */
     fun getLocalEditorIntent(
         context: Context,
         uri: Uri,
         extension: String,
         editType: EditType,
-        access: Access
+        access: Access,
+        editorConfig: String? = null
     ): Intent? {
         return getEditorIntent(
             context = context,
             uri = uri,
             extension = FileExtensions.fromExtension(extension),
             editType = editType,
-            access = access
+            access = access,
+            info = editorConfig
         )
     }
 

@@ -2,17 +2,17 @@
 <resources>
     <!-- Newly added translations (v9.1.0 - 2025-10-10) -->
     <string name="app_name">Documents</string>
-    <string name="app_name_full">ONLYOFFICE Documents</string>
+    <string name="app_name_full">Euro-Office Documents</string>
     <string name="app_versions_title">Versie 3.0 uitgegeven</string>
     <string name="app_versions_cancel">Later</string>
     <string name="app_versions_without_release_accept">Installeer officiële app</string>
-    <string name="app_versions_without_release_info">Dank u voor het beta testen! ONLYOFFICE Documents 3.0 is nu uitgegeven, en beta versie is niet langer ondersteund.
+    <string name="app_versions_without_release_info">Dank u voor het beta testen! Euro-Office Documents 3.0 is nu uitgegeven, en beta versie is niet langer ondersteund.
  Switch naar de officiële app om updates te blijven ontvangen.</string>
     <string name="app_versions_update_accept">Update officiële app</string>
-    <string name="app_versions_update_info">Dank u voor het beta testen! ONLYOFFICE Documents 3.0 is nu uitgegeven, en beta versie is niet langer ondersteund.
+    <string name="app_versions_update_info">Dank u voor het beta testen! Euro-Office Documents 3.0 is nu uitgegeven, en beta versie is niet langer ondersteund.
  Switch naar de officiële app om updates te blijven ontvangen.</string>
     <string name="app_versions_actual_release_accept">Open de officiële app</string>
-    <string name="app_versions_actual_release_info">Dank u voor het beta testen! ONLYOFFICE Documents 3.0 is nu uitgegeven, en beta versie is niet langer ondersteund.
+    <string name="app_versions_actual_release_info">Dank u voor het beta testen! Euro-Office Documents 3.0 is nu uitgegeven, en beta versie is niet langer ondersteund.
  Switch naar de officiële app om updates te blijven ontvangen.</string>
     <string name="snackbar_copied">Gekopieerd</string>
     <string name="snackbar_undo">ONGEDAAN MAKEN</string>
@@ -21,7 +21,7 @@
     <string name="about_terms">Gebruiksvoorwaarden</string>
     <string name="about_policy">Privacybeleid</string>
     <string name="about_license">Licentie overeenkomst</string>
-    <string name="about_website">ONLYOFFICE website</string>
+    <string name="about_website">Euro-Office website</string>
     <string name="errors_unknown_error">Verbindingsfout. Probeer later opnieuw.</string>
     <string name="errors_ssl_error">SSL handshake fout</string>
     <string name="errors_connection_error">Check internet verbinding</string>
@@ -56,7 +56,7 @@
     <string name="errors_sign_in_ldap_checkbox">Aanmelden als LDAP-user</string>
     <string name="login_api_init_error">Initialisatiefout</string>
     <string name="login_api_init_portal_error">Portal naam syntax fout</string>
-    <string name="login_api_portal_name">Verkeerde portal naam. Voorbeeld: example.onlyoffice.com</string>
+    <string name="login_api_portal_name">Verkeerde portal naam. Voorbeeld: cloud.example.com</string>
     <string name="login_api_portal_name_length">Portal naam moet tenminste 6 karakters bevatten</string>
     <string name="login_api_portal_name_content">Portal naam moet bestaan uit A–Z, a–z, 0–9</string>
     <string name="login_retry">Opnieuw verbinding maken</string>
@@ -64,7 +64,7 @@
     <string name="login_accounts_select_add">Voeg account toe</string>
     <string name="login_pager_enterprise">PORTAL</string>
     <string name="login_pager_personal">PERSONAL</string>
-    <string name="login_pager_title">Verbind met ONLYOFFICE cloud</string>
+    <string name="login_pager_title">Verbind met Euro-Office cloud</string>
     <string name="login_enterprise_edit_hint">Portal adres</string>
     <string name="login_enterprise_button_next">VOLGENDE</string>
     <string name="login_enterprise_edit_error_hint">Voer geldig adres in</string>
@@ -77,7 +77,7 @@
     <string name="login_enterprise_single_sign_button">Single Sign-on</string>
     <string name="login_enterprise_single_sign_button_login">Login bij %1$s</string>
     <string name="login_enterprise_single_sign_button_login_default">Single Sign-on</string>
-    <string name="login_enterprise_info">Via ONLYOFFICE portal kunt u bestanden opslaan in de cloud, ze delen met collega\'s en ze in realtime samen bewerken.</string>
+    <string name="login_enterprise_info">Via Euro-Office portal kunt u bestanden opslaan in de cloud, ze delen met collega\'s en ze in realtime samen bewerken.</string>
     <string name="login_not_authorization_info">Kon niet inloggen op %1$s at %2$s</string>
     <string name="login_not_authorization_info_token">De sessietijd is voorbij</string>
     <string name="login_not_authorization_button">PROBEER OPNIEUW</string>
@@ -95,7 +95,7 @@
     <string name="login_personal_signup_title">Meld u aan voor personal portal</string>
     <string name="login_personal_signup_edit_info">Bevestigingslink wordt naar dit adres verzonden</string>
     <string name="login_personal_signup_dialog_info">Bevestigingslink verzonden naar e-mail %1$s\nVolg de link in de e-mail voordat u verdergaat</string>
-    <string name="login_personal_info">Verbind met ONLYOFFICE Personal om bestanden in de cloud op te slaan</string>
+    <string name="login_personal_info">Verbind met Euro-Office Personal om bestanden in de cloud op te slaan</string>
     <string name="login_web_dav_title">Verbind met to %1$s</string>
     <string name="login_create_portal_title">Creër portal voor organisatie</string>
     <string name="login_create_portal_address_hint">Portal adres</string>
@@ -156,13 +156,13 @@
     <string name="dialogs_question_personal_confirm_link_title">Bevestig e-mail</string>
     <string name="dialogs_question_personal_confirm_cancel">PROBEER OPNIEUW</string>
     <string name="dialogs_question_personal_confirm_accept">VERDER</string>
-    <string name="dialogs_question_rate_first_info">Vindt u het leuk \'ONLYOFFICE Documenten\' te gebruiken?</string>
+    <string name="dialogs_question_rate_first_info">Vindt u het leuk \'Euro-Office Documenten\' te gebruiken?</string>
     <string name="dialogs_question_rate_second_info">Zou u de app op Google Play willen beoordelen?</string>
     <string name="dialogs_question_delete_all_title">Alle items verwijderen?</string>
     <string name="dialogs_question_delete_all_fonts">Alle lettertypen verwijderen?</string>
     <string name="dialogs_question_delete_font">Dit lettertype verwijderen?</string>
     <string name="dialogs_warning_title">Waarschuwing</string>
-    <string name="dialogs_warning_only_pdf_form_message">Het bestand kan niet naar deze ruimte worden verplaatst. Probeer het ONLYOFFICE PDF-formulier te verplaatsen.</string>
+    <string name="dialogs_warning_only_pdf_form_message">Het bestand kan niet naar deze ruimte worden verplaatst. Probeer het Euro-Office PDF-formulier te verplaatsen.</string>
     <string name="dialogs_warning_pinned_room_limit">Je kunt niet meer dan 10 ruimtes bovenaan vastpinnen. Maak de vastgepinde ruimtes los.</string>
     <string name="dialogs_warning_fill_forms_room_create">Creatie op basis van meerdere bestanden en mappen is niet beschikbaar voor dit type ruimte. Om zo\'n ruimte te creëren,
  ga naar de sectie Kamers of gebruik een van de PDF-formulieren.</string>
@@ -186,7 +186,7 @@
     <string name="fragment_clouds_title">Clouds</string>
     <string name="fragment_clouds_portal_title">Verbind met portal</string>
     <string name="fragment_clouds_storage_title">Verbind met opslag</string>
-    <string name="fragment_clouds_onlyoffice_item">ONLYOFFICE</string>
+    <string name="fragment_clouds_eurooffice_item">Euro-Office</string>
     <string name="fragment_recent_title">Recent</string>
     <string name="fragment_on_device_title">Op apparaat</string>
     <string name="fragment_profile_title">Profiel</string>
@@ -434,7 +434,7 @@
     <string name="trash_snackbar_move_button">HERSTELLEN</string>
     <string name="trash_popup_move">Herstellen naar</string>
     <string name="trash_popup_delete">Permanent verwijderen?</string>
-    <string name="download_manager_title">ONLYOFFICE downloads</string>
+    <string name="download_manager_title">Euro-Office downloads</string>
     <string name="download_manager_progress_title">Download in behandeling</string>
     <string name="download_manager_archiving_progress">Archief maken</string>
     <string name="download_manager_complete">Download compleet</string>
@@ -476,8 +476,8 @@
     <string name="on_boarding_back_button">TERUG</string>
     <string name="on_boarding_next_button">VOLGENDE</string>
     <string name="on_boarding_finish_button">KLAAR</string>
-    <string name="on_boarding_welcome_header">Welkom bij ONLYOFFICE</string>
-    <string name="on_boarding_welcome_info">We hebben ONLYOFFICE Documents voor Android aanzienlijk geüpdate. Swipe om meer te weten te komen.</string>
+    <string name="on_boarding_welcome_header">Welkom bij Euro-Office</string>
+    <string name="on_boarding_welcome_info">We hebben Euro-Office Documents voor Android aanzienlijk geüpdate. Swipe om meer te weten te komen.</string>
     <string name="on_boarding_edit_header">Bewerk office documenten</string>
     <string name="on_boarding_edit_info">Create and edit documents with our comprehensive toolbar: work with complex objects in text documents, perform
  extensive calculations in spreadsheets, create stunning presentations and view PDF files with no formatting loss.</string>
@@ -485,7 +485,7 @@
     <string name="on_boarding_locally_info">Work with documents offline. Created files can later be uploaded to online portal and then accessed from any other
  device.</string>
     <string name="on_boarding_collaborate_header">Collaborate with your team</string>
-    <string name="on_boarding_collaborate_info">In online mode, use real-time co-editing features of ONLYOFFICE to work on documents together with your portal
+    <string name="on_boarding_collaborate_info">In online mode, use real-time co-editing features of Euro-Office to work on documents together with your portal
  members, share documents and create common storage folders.</string>
     <string name="on_boarding_third_party_header">Verbind met third-party clouds</string>
     <string name="on_boarding_third_party_info">Verbind de app met andere cloudopslagplatformen die u gebruikt: Google Drive, Dropbox, Nextcloud, etc.</string>
@@ -523,8 +523,8 @@
     <string name="cloud_account_description">Samenwerken in een veilige omgeving en verbinding maken met cloudopslag van derden</string>
     <string name="cloud_account_start_button">Aan de slag</string>
     <string name="cloud_account_other_storages_button">Andere opslaglocaties</string>
-    <string name="cloud_only_office">ONLYOFFICE Cloud</string>
-    <string name="cloud_only_office_description">Sla documenten op in de cloud en werk online samen</string>
+    <string name="cloud_eurooffice">Euro-Office Cloud</string>
+    <string name="cloud_eurooffice_description">Sla documenten op in de cloud en werk online samen</string>
     <string name="cloud_accounts_title">Accounts</string>
     <string name="error_long_file_name">Bestandsnaam is te lang</string>
     <string name="dialog_remove_account_title">Verwijderen van apparaat</string>
@@ -760,8 +760,8 @@
     <string name="conversion_dialog_convert_to">Converteer naar %1s</string>
     <string name="conversion_dialog_converting_to">Converteren naar %1s</string>
     <string name="personal_portal_end_button">Maak een gratis account aan</string>
-    <string name="personal_portal_end_title">ONLYOFFICE Personal is aan het afronden</string>
-    <string name="personal_portal_end_text">ONLYOFFICE Personal wordt stopgezet op 1 september 2024.\nWij raden u aan om over te stappen op de gratis ONLYOFFICE
+    <string name="personal_portal_end_title">Euro-Office Personal is aan het afronden</string>
+    <string name="personal_portal_end_text">Euro-Office Personal wordt stopgezet op 1 september 2024.\nWij raden u aan om over te stappen op de gratis Euro-Office
  DocSpace Cloud.</string>
     <string name="rooms_upload_pdf_from_docspace">PDF-formulier uploaden vanuit DocSpace</string>
     <string name="rooms_upload_pdf_from_device">PDF-formulier uploaden vanaf apparaat</string>

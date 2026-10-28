@@ -40,7 +40,7 @@ import app.documents.core.network.room.RoomService
 import app.documents.core.network.room.models.DeleteVersionRequest
 import app.documents.core.network.room.models.EditCommentRequest
 import app.documents.core.network.room.models.RequestFormRoleMapping
-import app.documents.core.utils.FirebaseTool
+import app.documents.core.utils.CoauthoringChecker
 import io.reactivex.Observable
 import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -79,7 +79,7 @@ class CloudFileProvider @Inject constructor(
     private val roomService: RoomService,
     private val managerRepository: ManagerRepository,
     private val accountRepository: AccountRepository,
-    private val firebaseTool: FirebaseTool
+    private val coauthoringChecker: CoauthoringChecker
 ) : BaseFileProvider, BaseCloudFileProvider, CacheFileHelper {
 
     companion object {
@@ -550,7 +550,7 @@ class CloudFileProvider @Inject constructor(
                 .getBoolean("fillForms"))
 
             val sdkVersion = api.getSettings().response.documentServer
-            val isCoauthoring = firebaseTool.checkCoauthoring(sdkVersion)
+            val isCoauthoring = coauthoringChecker.checkCoauthoring(sdkVersion)
             val mode = fileJson.getJSONObject("editorConfig").getString("mode")
 
             // opening not form pdf locally
@@ -641,7 +641,7 @@ class CloudFileProvider @Inject constructor(
             when {
                 StringUtils.isDocument(cloudFile.fileExst) -> {
 
-                    if (!firebaseTool.isCoauthoring()) {
+                    if (!coauthoringChecker.isCoauthoring()) {
                         emit(
                             FileOpenResult.OpenLocally(
                                 file = suspendGetCachedFile(context, cloudFile, token),
@@ -748,7 +748,7 @@ class CloudFileProvider @Inject constructor(
         return flow {
             emit(FileOpenResult.Loading())
 
-            if (firebaseTool.isCoauthoring()) {
+            if (coauthoringChecker.isCoauthoring()) {
                 val info = openEdit(
                     cloudFile = cloudFile,
                     canShareable = false,

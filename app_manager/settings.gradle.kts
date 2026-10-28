@@ -28,17 +28,22 @@ fun includeEditorModule(path: String, projectPath: String) {
     }
 }
 
+// Native core libraries for Android (built by AndroidEditors/build); libx2t only links once they exist
+val withNativeCore: String? by settings  // parameter -PwithNativeCore=true
+
 if (shouldIncludeEditors() == true) {
-    includeEditorModule("../../core/X2tConverter/build/Android/libx2t", ":libx2t")
-    includeEditorModule("../../core-ext/native_base/android_base/libeditors", ":libeditors")
-    includeEditorModule("../../core-ext/cell_android/libcells", ":libcells")
-    includeEditorModule("../../core-ext/word_android/libdocs", ":libdocs")
-    includeEditorModule("../../core-ext/slide_android/libslides", ":libslides")
-    includeEditorModule("../../document-android-editors/editors_base/libgeditors", ":libgeditors")
-    includeEditorModule("../../document-android-editors/editors_base/libresources", ":libresources")
-    includeEditorModule("../../document-android-editors/editors_cells/libgcells", ":libgcells")
-    includeEditorModule("../../document-android-editors/editors_docs/libgdocs", ":libgdocs")
-    includeEditorModule("../../document-android-editors/editors_slides/libgslides", ":libgslides")
+    if (withNativeCore?.toBoolean() == true) {
+        includeEditorModule("../../core/X2tConverter/build/Android/libx2t", ":libx2t")
+    }
+    includeEditorModule("../../editors-android/libeditors", ":libeditors")
+    includeEditorModule("../../editors-android/libcells", ":libcells")
+    includeEditorModule("../../editors-android/libdocs", ":libdocs")
+    includeEditorModule("../../editors-android/libslides", ":libslides")
+    includeEditorModule("../../editors-android/libgeditors", ":libgeditors")
+    includeEditorModule("../../editors-android/libresources", ":libresources")
+    includeEditorModule("../../editors-android/libgcells", ":libgcells")
+    includeEditorModule("../../editors-android/libgdocs", ":libgdocs")
+    includeEditorModule("../../editors-android/libgslides", ":libgslides")
     includeEditorModule("../libsnapshot", ":libsnapshot")
 }
 
