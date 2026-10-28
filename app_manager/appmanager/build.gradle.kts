@@ -271,11 +271,8 @@ dependencies {
     }
 
     // Google libs
-    implementation(libs.google.playReview)
-    implementation(libs.google.playServiceAuth)
     implementation(libs.google.material)
     implementation(libs.google.gson)
-    implementation(libs.google.update)
 
     // Androidx
     implementation(libs.appcompat)

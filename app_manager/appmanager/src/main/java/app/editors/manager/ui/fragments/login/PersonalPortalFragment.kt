@@ -1,6 +1,5 @@
 package app.editors.manager.ui.fragments.login
 
-import android.accounts.Account
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -9,7 +8,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
-import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import app.documents.core.network.common.contracts.ApiContract
 import app.editors.manager.managers.utils.SocialSignIn
@@ -18,7 +16,6 @@ import app.editors.manager.R
 import app.editors.manager.app.App
 import app.editors.manager.app.appComponent
 import app.editors.manager.databinding.FragmentLoginPersonalPortalBinding
-import app.editors.manager.managers.utils.GoogleUtils
 import app.editors.manager.mvp.presenters.login.PersonalLoginPresenter
 import app.editors.manager.mvp.views.login.CommonSignInView
 import app.editors.manager.ui.activities.login.AuthAppActivity
@@ -35,7 +32,6 @@ import app.editors.manager.ui.views.custom.SocialViews
 import app.editors.manager.ui.views.custom.SocialViews.OnSocialNetworkCallbacks
 import app.editors.manager.ui.views.edits.BaseWatcher
 import app.editors.manager.viewModels.login.RemoteUrlViewModel
-import com.google.android.gms.auth.GoogleAuthUtil
 import lib.toolkit.base.ui.dialogs.common.CommonDialog.Dialogs
 import moxy.presenter.InjectPresenter
 
@@ -111,11 +107,7 @@ class PersonalPortalFragment : BaseAppFragment(), CommonSignInView, OnSocialNetw
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == SocialViews.GOOGLE_PERMISSION) {
-            personalSignInPresenter.signInWithProvider(null, ApiContract.Social.GOOGLE)
-        } else {
-            socialViews?.onActivityResult(requestCode, resultCode, data)
-        }
+        socialViews?.onActivityResult(requestCode, resultCode, data)
     }
 
     override fun onAcceptClick(dialogs: Dialogs?, value: String?, tag: String?) {
@@ -180,10 +172,6 @@ class PersonalPortalFragment : BaseAppFragment(), CommonSignInView, OnSocialNetw
         }
     }
 
-    override fun onGooglePermission(intent: Intent) {
-        requireActivity().startActivityForResult(intent, SocialViews.GOOGLE_PERMISSION)
-    }
-
     override fun onEmailNameError(message: String) {
         hideDialog()
         viewBinding?.loginPersonalPortalEmailLayout?.error = message
@@ -234,21 +222,6 @@ class PersonalPortalFragment : BaseAppFragment(), CommonSignInView, OnSocialNetw
         showSnackBar(R.string.socials_facebook_failed_auth)
     }
 
-    override fun onGoogleSuccess(account: Account) {
-        onWaitingDialog()
-        val scope = requireContext().getString(R.string.google_scope)
-        val accessToken = GoogleAuthUtil.getToken(requireContext(), account, scope)
-        personalSignInPresenter.signInWithProvider(accessToken, ApiContract.Social.GOOGLE)
-    }
-
-    override fun onGoogleFailed() {
-        showSnackBar(R.string.socials_google_failed_auth)
-    }
-
-    override fun onGoogleCancelled() {
-        showSnackBar(R.string.socials_google_cancel_auth)
-    }
-
     override fun onSocialAuth(socialSignIn: SocialSignIn?) = Unit
     override fun onSocialClick(social: String) = Unit
 
@@ -274,7 +247,6 @@ class PersonalPortalFragment : BaseAppFragment(), CommonSignInView, OnSocialNetw
             viewBinding?.loginPersonalSigninButton?.isEnabled =
                 isChecked && viewBinding?.loginPersonalPortalEmailEdit?.text?.isNotEmpty() == true && viewBinding?.loginPersonalPortalPasswordEdit?.text?.isNotEmpty() == true
         }
-        viewBinding?.socialNetworkLayout?.loginSocialGoogleButton?.isVisible = GoogleUtils.isGooglePlayServicesAvailable(requireContext())
     }
 
     private fun initListeners() {

@@ -52,13 +52,8 @@ koin = "4.1.1"
 lifecycle = "2.10.0"
 
 #google
-playServieAuth = "21.4.0"
-playReview = "2.0.2"
 material = "1.13.0"
 gson = "2.13.2"
-app-update = "2.1.0"
-text-recognition = "16.0.1"
-object-detection = "17.0.2"
 
 jackson = "2.18.3"
 
@@ -110,14 +105,8 @@ compose-livedata = { module = "androidx.compose.runtime:runtime-livedata", versi
 compose-constraint-layout = { module = "androidx.constraintlayout:constraintlayout-compose", version.ref = "composeConstrainLayout" }
 
 #google
-google-playServiceAuth = { module = "com.google.android.gms:play-services-auth", version.ref = "playServieAuth" }
-google-playReview = { module = "com.google.android.play:review", version.ref = "playReview" }
 google-material = { module = "com.google.android.material:material", version.ref = "material" }
 google-gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
-google-update = { module = "com.google.android.play:app-update-ktx", version.ref = "app-update" }
-google-ml-text-recognition = { module = "com.google.mlkit:text-recognition", version.ref = "text-recognition" }
-google-ml-text-recognitionchinese = { module = "com.google.mlkit:text-recognition-chinese", version.ref = "text-recognition" }
-google-ml-objects-detection = { module = "com.google.mlkit:object-detection", version.ref = "object-detection" }
 
 #kotlin
 kotlin-core = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8", version.ref = "kotlin" }

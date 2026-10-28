@@ -15,7 +15,6 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts.StartActivityForResult
 import androidx.annotation.StringRes
 import androidx.core.view.isVisible
-import androidx.lifecycle.lifecycleScope
 import androidx.work.WorkManager
 import app.documents.core.model.cloud.Access
 import app.documents.core.model.cloud.PortalProvider
@@ -30,7 +29,6 @@ import app.editors.manager.managers.receivers.DownloadReceiver
 import app.editors.manager.managers.receivers.RoomDuplicateReceiver
 import app.editors.manager.managers.receivers.UploadReceiver
 import app.editors.manager.managers.utils.EditorsUtils
-import app.editors.manager.managers.utils.InAppUpdateUtils
 import app.editors.manager.mvp.models.models.OpenDataModel
 import app.editors.manager.mvp.presenters.main.MainActivityPresenter
 import app.editors.manager.mvp.presenters.main.MainPagerPresenter.Companion.PERSONAL_DUE_DATE
@@ -50,11 +48,6 @@ import app.editors.manager.ui.fragments.main.settings.AppSettingsFragment
 import app.editors.manager.ui.fragments.storages.DocsDropboxFragment
 import app.editors.manager.ui.fragments.storages.DocsGoogleDriveFragment
 import app.editors.manager.ui.fragments.storages.DocsOneDriveFragment
-import com.google.android.gms.tasks.Task
-import com.google.android.play.core.review.ReviewInfo
-import com.google.android.play.core.review.ReviewManagerFactory
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import lib.toolkit.base.managers.utils.CryptUtils
@@ -196,7 +189,6 @@ class MainActivity : BaseAppActivity(), MainActivityView, BaseBottomDialog.OnBot
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        InAppUpdateUtils.handleActivityResult(requestCode, resultCode, this)
         if (resultCode == RESULT_CANCELED) {
             when (requestCode) {
                 REQUEST_ACTIVITY_PORTAL -> {
@@ -261,11 +253,6 @@ class MainActivity : BaseAppActivity(), MainActivityView, BaseBottomDialog.OnBot
         }
 
         checkState(savedInstanceState)
-
-        lifecycleScope.launch {
-            delay(3000)
-            InAppUpdateUtils.checkForUpdate(this@MainActivity)
-        }
 
         if (intent.action == Intent.ACTION_VIEW) {
             onActionView()
@@ -467,17 +454,6 @@ class MainActivity : BaseAppActivity(), MainActivityView, BaseBottomDialog.OnBot
 
     override fun onShowPlayMarket(releaseId: String) {
         showPlayMarket(releaseId)
-    }
-
-    override fun onShowInAppReview(reviewInfo: ReviewInfo) {
-        ReviewManagerFactory.create(this).launchReviewFlow(this, reviewInfo)
-            .addOnCompleteListener { task: Task<Void?> ->
-                if (task.isSuccessful) {
-                    presenter.onRateOff()
-                } else {
-                    presenter.onRateOff()
-                }
-            }
     }
 
     override fun onShowApp(releaseId: String) {

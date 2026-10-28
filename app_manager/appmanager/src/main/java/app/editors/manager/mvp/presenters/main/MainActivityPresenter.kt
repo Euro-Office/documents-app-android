@@ -24,9 +24,6 @@ import app.editors.manager.app.cloudFileProvider
 import app.editors.manager.mvp.models.models.OpenDataModel
 import app.editors.manager.mvp.presenters.base.BasePresenter
 import app.editors.manager.mvp.views.main.MainActivityView
-import com.google.android.gms.tasks.Task
-import com.google.android.play.core.review.ReviewInfo
-import com.google.android.play.core.review.ReviewManagerFactory
 import io.reactivex.disposables.CompositeDisposable
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -67,7 +64,6 @@ class MainActivityPresenter : BasePresenter<MainActivityView>() {
 
     private val disposable = CompositeDisposable()
 
-    private var reviewInfo: ReviewInfo? = null
     var isAppColdStart = true
         private set
 
@@ -149,16 +145,6 @@ class MainActivityPresenter : BasePresenter<MainActivityView>() {
         }
     }
 
-    private fun getReviewInfo() {
-        ReviewManagerFactory.create(context)
-            .requestReviewFlow()
-            .addOnCompleteListener { task: Task<ReviewInfo?> ->
-                if (task.isSuccessful) {
-                    reviewInfo = task.result
-                }
-            }
-    }
-
     fun onAcceptClick(value: String?, tag: String?) {
         tag?.let {
             when (tag) {
@@ -173,7 +159,6 @@ class MainActivityPresenter : BasePresenter<MainActivityView>() {
                 }
 
                 TAG_DIALOG_RATE_FIRST -> {
-                    getReviewInfo()
                     viewState.onQuestionDialog(
                         context.getString(R.string.dialogs_question_rate_second_info), TAG_DIALOG_RATE_SECOND,
                         context.getString(R.string.dialogs_question_accept_sure),
@@ -183,11 +168,7 @@ class MainActivityPresenter : BasePresenter<MainActivityView>() {
 
                 TAG_DIALOG_RATE_SECOND -> {
                     viewState.onDialogClose()
-                    reviewInfo?.let {
-                        viewState.onShowInAppReview(it)
-                    } ?: run {
-                        viewState.onShowPlayMarket(BuildConfig.RELEASE_ID)
-                    }
+                    viewState.onShowPlayMarket(BuildConfig.RELEASE_ID)
                 }
 
                 TAG_DIALOG_RATE_FEEDBACK -> {

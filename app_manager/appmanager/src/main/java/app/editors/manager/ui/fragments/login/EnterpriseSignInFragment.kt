@@ -1,6 +1,5 @@
 package app.editors.manager.ui.fragments.login
 
-import android.accounts.Account
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
@@ -29,7 +28,6 @@ import app.editors.manager.ui.fragments.base.BaseAppFragment
 import app.editors.manager.ui.views.custom.SocialViews
 import app.editors.manager.ui.views.custom.SocialViews.OnSocialNetworkCallbacks
 import app.editors.manager.ui.views.edits.BaseWatcher
-import com.google.android.gms.auth.GoogleAuthUtil
 import lib.toolkit.base.ui.dialogs.common.CommonDialog
 import lib.toolkit.base.ui.dialogs.common.CommonDialog.Dialogs
 import moxy.presenter.InjectPresenter
@@ -157,11 +155,7 @@ class EnterpriseSignInFragment : BaseAppFragment(), CommonSignInView, CommonDial
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == SocialViews.GOOGLE_PERMISSION) {
-            presenter.signInWithProvider(null, ApiContract.Social.GOOGLE)
-        } else {
-            socialViews?.onActivityResult(requestCode, resultCode, data)
-        }
+        socialViews?.onActivityResult(requestCode, resultCode, data)
     }
 
     override fun onAcceptClick(dialogs: Dialogs?, value: String?, tag: String?) {
@@ -254,10 +248,6 @@ class EnterpriseSignInFragment : BaseAppFragment(), CommonSignInView, CommonDial
         }
     }
 
-    override fun onGooglePermission(intent: Intent) {
-        requireActivity().startActivityForResult(intent, SocialViews.GOOGLE_PERMISSION)
-    }
-
     override fun onEmailNameError(message: String) {
         hideDialog()
         viewBinding?.loginEnterprisePortalEmailLayout?.error = message
@@ -309,23 +299,6 @@ class EnterpriseSignInFragment : BaseAppFragment(), CommonSignInView, CommonDial
     override fun onFacebookFailed() {
         hideDialog()
         showSnackBar(R.string.socials_facebook_failed_auth)
-    }
-
-    override fun onGoogleSuccess(account: Account) {
-        onWaitingDialog()
-        val scope = requireContext().getString(R.string.google_scope)
-        val accessToken = GoogleAuthUtil.getToken(requireContext(), account, scope)
-        presenter.signInWithProvider(accessToken, ApiContract.Social.GOOGLE)
-    }
-
-    override fun onGoogleFailed() {
-        hideDialog()
-        showSnackBar(R.string.socials_google_failed_auth)
-    }
-
-    override fun onGoogleCancelled() {
-        hideDialog()
-        showSnackBar(R.string.socials_google_cancel_auth)
     }
 
     private fun init(savedInstanceState: Bundle?) {

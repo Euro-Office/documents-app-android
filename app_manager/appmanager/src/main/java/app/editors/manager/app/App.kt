@@ -35,7 +35,6 @@ import app.editors.manager.di.component.DaggerOneDriveComponent
 import app.editors.manager.di.component.DropboxComponent
 import app.editors.manager.di.component.GoogleDriveComponent
 import app.editors.manager.di.component.OneDriveComponent
-import app.editors.manager.managers.utils.GoogleUtils
 import app.editors.manager.managers.utils.KeyStoreUtils
 import lib.toolkit.base.managers.utils.CrashLog
 import java.util.Locale
@@ -155,7 +154,8 @@ class App : Application(), MessengerServiceApp {
     fun refreshLoginComponent(portal: CloudPortal?) {
         _loginComponent = appComponent
             .loginComponent()
-            .create(portal, GoogleUtils.isGooglePlayServicesAvailable(this))
+            // No push service yet, so the device never registers with portals
+            .create(portal, false)
     }
 
     fun refreshAppComponent(context: Context) {

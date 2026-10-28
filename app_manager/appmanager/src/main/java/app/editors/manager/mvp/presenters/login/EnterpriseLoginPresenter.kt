@@ -1,6 +1,5 @@
 package app.editors.manager.mvp.presenters.login
 
-import android.content.Intent
 import app.documents.core.model.cloud.CloudAccount
 import app.documents.core.model.cloud.CloudPortal
 import app.documents.core.model.login.request.RequestSignIn
@@ -47,10 +46,6 @@ open class EnterpriseLoginPresenter : BaseLoginPresenter<CommonSignInView>() {
     override fun onAccountCreateSuccess(account: CloudAccount) {
         super.onAccountCreateSuccess(account)
         viewState.onSuccessLogin()
-    }
-
-    override fun onGooglePermission(intent: Intent?) {
-        intent?.let { viewState.onGooglePermission(it) }
     }
 
     fun signInPortal(login: String, password: String, portal: CloudPortal) {
