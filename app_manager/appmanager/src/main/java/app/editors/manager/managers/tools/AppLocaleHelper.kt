@@ -1,11 +1,11 @@
 package app.editors.manager.managers.tools
 
+import android.app.LocaleConfig
 import android.app.LocaleManager
 import android.content.Context
 import android.os.Build
 import android.os.LocaleList
 import androidx.annotation.RequiresApi
-import app.editors.manager.R
 import java.util.Locale
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -16,16 +16,10 @@ class AppLocaleHelper @Inject constructor(val context: Context, val preferenceTo
 
     private val localeManager: LocaleManager by lazy { context.getSystemService(LocaleManager::class.java) }
 
+    // The languages of the locale config that AGP generates from the values-* folders
     val locales: List<Locale> by lazy {
-        context.resources.getStringArray(R.array.app_locales).map { stringLocale ->
-            with(stringLocale.split("_")) {
-                if (size > 1) {
-                    Locale(this[0], this[1])
-                } else {
-                    Locale(this[0])
-                }
-            }
-        }
+        val supported = LocaleConfig(context).supportedLocales ?: LocaleList.getEmptyLocaleList()
+        List(supported.size()) { supported[it] }.sortedBy { it.getDisplayName(it).lowercase(it) }
     }
 
     val appLocale: Locale?

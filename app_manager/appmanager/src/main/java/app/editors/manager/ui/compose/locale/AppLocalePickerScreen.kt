@@ -32,6 +32,8 @@ fun AppLocalePickerScreen(
     onChangeLocale: (Locale?, Boolean) -> Unit,
     onBackListener: () -> Unit
 ) {
+    // Prefer the exact locale, so that only one of zh, zh-CN and zh-TW is checked
+    val selected = locales.firstOrNull { it == current } ?: locales.firstOrNull { it.language == current.language }
     ManagerTheme {
         Surface(color = MaterialTheme.colors.background) {
             LazyColumn {
@@ -52,7 +54,7 @@ fun AppLocalePickerScreen(
                                 .fillMaxWidth()
                                 .weight(1f)
                         )
-                        if (current.language == locale.language) {
+                        if (locale == selected) {
                             Icon(
                                 painter = painterResource(id = R.drawable.drawable_ic_done),
                                 contentDescription = null,
