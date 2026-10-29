@@ -220,6 +220,8 @@
     <string name="dialogs_question_delete_all_title">Delete all items?</string>
     <string name="dialogs_question_delete_all_fonts">Delete all fonts?</string>
     <string name="dialogs_question_delete_font">Delete this font?</string>
+    <string name="dialogs_question_delete_dictionary">Remove the dictionary for %1$s?</string>
+    <string name="dialogs_question_delete_dictionary_message">It is downloaded again when you edit a document in this language.</string>
 
     <plurals name="dialogs_question_message_delete">
         <item quantity="one">It will be irretrievably deleted.\nThis action is irreversible.</item>
@@ -300,6 +302,7 @@
     <string name="settings_item_title">Settings</string>
     <string name="settings_item_change_account">Change account</string>
     <string name="settings_clear_cache">Clear cache</string>
+    <string name="settings_dictionaries">Spelling dictionaries</string>
     <string name="settings_title_common">Common</string>
     <string name="setting_wifi">Upload files only using Wi-Fi</string>
     <string name="setting_screen_on">While viewing documents</string>
@@ -467,6 +470,8 @@
     <string name="placeholder_payment_required_desc">Your current tariff plan "Business" expired. Please renew your subscription in the account settings to be able to use your DocSpace. If you have any questions, please contact support</string>
     <string name="placeholder_payment_required_button">Renew Business plan</string>
     <string name="placeholder_no_fonts">No fonts</string>
+    <string name="placeholder_no_dictionaries">No downloaded dictionaries</string>
+    <string name="placeholder_no_dictionaries_desc">English comes with the app. The editors download other languages when a document needs them.</string>
 
     <!-- Time marks-->
     <string name="list_headers_folder">Folders</string>

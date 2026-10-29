@@ -22,6 +22,7 @@ import lib.toolkit.base.managers.tools.BaseEventSender
 import lib.toolkit.base.managers.tools.EventSender
 import lib.toolkit.base.managers.tools.ResourcesProvider
 import lib.toolkit.base.managers.tools.ThemePreferencesTools
+import lib.toolkit.base.managers.utils.EditorDictionaries
 import lib.toolkit.base.managers.utils.FileUtils
 import lib.toolkit.base.managers.utils.mutableStateIn
 import java.io.File
@@ -34,8 +35,12 @@ data class AppSettingsState(
     val keepScreenOn: Boolean = false,
     val passcodeEnabled: Boolean = false,
     val fonts: List<File> = emptyList(),
+    val dictionaries: List<SpellingDictionary> = emptyList(),
     val developerMode: Boolean = false
 )
+
+/** A spelling dictionary the editors downloaded ("de_DE"), its language's name and size in bytes. */
+data class SpellingDictionary(val name: String, val language: String, val size: Long)
 
 sealed interface AppSettingsEffect : BaseEvent {
     data class Progress(val value: Int) : AppSettingsEffect
@@ -75,6 +80,7 @@ class AppSettingsViewModel(
                 passcodeEnabled = preferenceTool.passcodeLock.enabled,
                 themeMode = themePrefs.mode,
                 fonts = File(FileUtils.getFontsDir(resourcesProvider.context)).listFiles()?.toList().orEmpty(),
+                dictionaries = dictionaries,
                 developerMode = preferenceTool.developMode
             )
         )
@@ -88,6 +94,11 @@ class AppSettingsViewModel(
         get() = FileUtils.getSize(resourcesProvider.getCacheDir(true)) +
                 FileUtils.getSize(resourcesProvider.getCacheDir(false)) -
                 FileUtils.getSize(File(resourcesProvider.getCacheDir(false)?.absolutePath + "/assets"))
+
+    private val dictionaries: List<SpellingDictionary>
+        get() = with(EditorDictionaries.of(resourcesProvider.context)) {
+            downloaded().map { SpellingDictionary(it, EditorDictionaries.languageName(it), size(it)) }.sortedBy { it.language }
+        }
 
     private fun fetchFonts() {
         _settingsState.value = _settingsState.value.copy(fonts = fontManager.getFonts())
@@ -131,6 +142,14 @@ class AppSettingsViewModel(
             fontManager.deleteFont(font)
             fetchFonts()
         }
+    }
+
+    // Removed: not downloaded for the device's language any more, only when a document needs it
+    fun deleteDictionary(dictionary: SpellingDictionary) {
+        val context = resourcesProvider.context
+        EditorDictionaries.of(context).remove(dictionary.name)
+        EditorDictionaries.setRemoved(context, dictionary.name, true)
+        _settingsState.value = _settingsState.value.copy(dictionaries = dictionaries)
     }
 
     fun addFont(fonts: List<Uri>?){
