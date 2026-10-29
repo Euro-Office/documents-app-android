@@ -205,6 +205,10 @@ android {
         jvmTarget = "17"
     }
 
+    androidResources {
+        generateLocaleConfig = true
+    }
+
     bundle {
         density {
             enableSplit = true
