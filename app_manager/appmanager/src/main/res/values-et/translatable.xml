@@ -1,3 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    </resources>
+    <string name="app_name">Dokumendid</string>
+    <string name="app_name_full">Euro-Office\'i dokumendid</string>
+    <string name="about_title">Rakenduse teave</string>
+    <string name="about_app_version">Versioon %1$s, kompileerimisjärk %2$s, SDK %3$s</string>
+    <string name="about_terms">Kasutustingimused</string>
+    <string name="about_policy">Andmekaitsepõhimõtted</string>
+    <string name="about_license">Litsentsileping</string>
+    <string name="about_website">Euro-Office\'i veebisait</string>
+    <string name="errors_unknown_error">Ühenduse viga. Proovi hiljem uuesti.</string>
+    <string name="errors_webdav_sign_in">Vale server, kasutajanimi või salasõna</string>
+    <string name="errors_webdav_username_password">Vale kasutajanimi või salasõna</string>
+    <string name="login_enterprise_forgot_password">Kas unustasid oma salasõna?</string>
+    <string name="login_enterprise_password_hint">Salasõna</string>
+    <string name="login_password_recovery_hint">Sisestage e-posti aadress, mida kasutasid portaalis registreerumisel. Salasõna taastamise juhised saadetakse sellele e-posti aadressile.</string>
+    <string name="login_password_recovery_button_text">TAGASI SISESTUSVAATESSE</string>
+    <string name="login_password_recovery_success_hint">Kui leidub kasutaja, kelle e-posti aadress on %1$s, siis salasõna taastamise juhised saadetakse sellele e-posti aadressile.</string>
+    <string name="login_password_recovery_toolbar_title">Salasõna taastamine</string>
+    <string name="login_personal_edit_password_hint">Salasõna</string>
+    <string name="login_create_signin_title">Lisa salasõna</string>
+    <string name="login_create_signin_password">Salasõna</string>
+    <string name="login_create_signin_repeat">Korda salasõna</string>
+    <string name="login_create_signin_passwords_mismatch">Salasõnad peavad olema identsed</string>
+    <string name="login_create_signin_passwords_length">Salasõna pikkus peab olema 8 kuni 30 tähemärki</string>
+    <string name="storage_web_dav_settings_password">Salasõna</string>
+    <string name="rooms_info_copy_link_and_password">Kopeeri link ja salasõna</string>
+    <string name="rooms_info_password_access">Ligipääs salasõnaga</string>
+    <string name="rooms_info_password_allowed_symbols">Lubatud tähemärgid: a–z, A–Z, 0–9, !\"#%&amp;\'()*+,-./:;&lt;=&gt;?@[]^_`{|}</string>
+    <string name="rooms_info_password_minimum_length">Väikseim pikkus on 8 tähemärki</string>
+    <string name="rooms_invalid_password">Vigane salasõna</string>
+</resources>
