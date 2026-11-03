@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="about_app_version">Versión %1$s, build %2$s, SDK %3$s</string>
     <string name="about_license">Contrato de Licencia</string>
@@ -574,20 +575,18 @@
     <string name="room_set_owner_title">Cambiar el propietario de la sala</string>
     <string name="room_search_not_found">No se han encontrado usuarios</string>
     <string name="room_search_not_found_desc">Aquí aparecerá la lista de usuarios previamente invitados a DocSpace o a salas separadas.</string>
-
     <plurals name="rooms_restore_title">
         <item quantity="one">¿Restaurar la sala?</item>
         <item quantity="other">¿Restaurar las salas?</item>
         <item quantity="many">¿Restaurar las salas?</item>
     </plurals>
-
     <plurals name="rooms_restore_desc">
         <item quantity="one">Todos los enlaces compartidos en la sala se activarán, y su contenido estará disponible para todos los que tengan el enlace. ¿Desea restaurar la sala?</item>
         <item quantity="other">Todos los enlaces compartidos en las salas se activarán, y su contenido estará disponible para todos los que tengan el enlace. ¿Desea restaurar las salas?</item>
         <item quantity="many">Todos los enlaces compartidos en las salas se activarán, y su contenido estará disponible para todos los que tengan el enlace. ¿Desea restaurar las salas?</item>
     </plurals>
     <string name="rooms_add_public_room">Sala pública</string>
-    <string name="rooms_add_public_room_des">Invite a los usuarios mediante enlaces compartidos para que vean los documentos sin necesidad de registrarse. También puede incrustar esta sala en cualquier interfaz web.</string>
+    <string name="rooms_add_public_room_des">Invite a los usuarios mediante enlaces compartidos para que vean los documentos sin necesidad de registrarse. También puede embeber esta sala en cualquier interfaz web.</string>
     <string name="rooms_move_to_public_title">Mover a Sala pública</string>
     <string name="rooms_move_to_public_title_desc">Esta sala y todo su contenido están a disposición de cualquier persona con el enlace. ¿Desea continuar?</string>
     <string name="rooms_info_general_link">Enlace general</string>
@@ -745,8 +744,8 @@
     <string name="room_placeholder_created_virtual_room_title">Bienvenido/a a la sala de datos virtuales</string>
     <string name="room_placeholder_created_virtual_room_subtitle">Empiece con acciones rápidas:\nCree un nuevo archivo</string>
     <string name="rooms_info_create_maximum_exceed">Se ha superado el número máximo de enlaces</string>
-    <string name="rooms_info_delete_link_desc">Se eliminarán los enlaces a todos los archivos de la sala. Los enlaces anteriores a los archivos de la sala y a los documentos incrustados dejarán de estar disponibles.\n\nNo se puede deshacer esta acción. ¿Está seguro de que desea continuar?</string>
-    <string name="rooms_info_revoke_link_desc">Se volverán a generar los enlaces a todos los archivos de la sala. Los enlaces anteriores a los archivos de la sala y a los documentos incrustados dejarán de estar disponibles.\n\nNo se puede deshacer esta acción. ¿Está seguro de que desea continuar?</string>
+    <string name="rooms_info_delete_link_desc">Se eliminarán los enlaces a todos los archivos de la sala. Los enlaces anteriores a los archivos de la sala y a los documentos embebidos dejarán de estar disponibles.\n\nNo se puede deshacer esta acción. ¿Está seguro de que desea continuar?</string>
+    <string name="rooms_info_revoke_link_desc">Se volverán a generar los enlaces a todos los archivos de la sala. Los enlaces anteriores a los archivos de la sala y a los documentos embebidos dejarán de estar disponibles.\n\nNo se puede deshacer esta acción. ¿Está seguro de que desea continuar?</string>
     <string name="rooms_info_password_allowed_symbols">Caracteres permitidos: a–z, A–Z, 0–9, !"#%&amp;'()*+,-./:;\u003C=&gt;?@[]^_`{|}</string>
     <string name="rooms_info_password_minimum_length">Longitud mínima: 8 caracteres</string>
     <string name="rooms_filter_type_virtual_room">Sala de datos virtuales</string>
@@ -823,7 +822,6 @@
     <string name="whats_new_3_desc">Encuentra texto más rápido en documentos, hojas de cálculo y presentaciones con la búsqueda actualizada en los editores</string>
     <string name="whats_new_4">Interfaz actualizada</string>
     <string name="whats_new_4_desc">Disfruta de los nuevos iconos del editor y del menú contextual rediseñado para obtener un aspecto más limpio y un acceso más rápido a las acciones clave</string>
-
     <!-- Newly added translations (v9.0.0 - 2025-06-09) -->
     <string name="cloud_create_account">Crear cuenta gratis</string>
     <string name="context_menu_desc">Más</string>
@@ -943,7 +941,6 @@
     <string name="version_restore_loading">Restaurar versión</string>
     <string name="version_restore_subtitle">El archivo actual se guardará en el historial de versiones.</string>
     <string name="version_restore_title">¿Restaurar esta versión?</string>
-
     <!-- Newly added translations (v9.0.2 - 2025-06-25) -->
     <plurals name="dialogs_question_message_template">
         <item quantity="one">¿Realmente desea eliminar la plantilla de sala «%s»? La plantilla no se puede restaurar.</item>
@@ -953,7 +950,6 @@
         <item quantity="one">Eliminar plantilla</item>
         <item quantity="other">Eliminar plantillas</item>
     </plurals>
-
     <!-- Newly added translations (v9.1.0 - 2025-10-24) -->
     <string name="dev_mode_system_logs">Registros de sistema</string>
     <string name="dev_mode_network_requests">Solicitudes de red</string>
@@ -964,7 +960,6 @@
     <string name="start_filling_ready_for_filling">El formulario está listo para rellenarse en la sala</string>
     <string name="start_filling_ready_for_filling_desc">Ya se ha enviado una notificación al usuario del primer rol, invitándole a rellenar el formulario. Puede navegar a la sala o compartir el enlace de rellenado con los participantes.</string>
     <string name="list_context_reset_filling">Reiniciar y empezar a rellenar</string>
-
     <!-- Newly added translations (v9.2.0 - 2025-11-25) -->
     <string name="upload_manager_duplicate_title">Acción requerida</string>
     <string name="upload_manager_duplicate_text">El destino ya contiene un archivo llamado «%s». Por favor, seleccione la acción:</string>
@@ -989,7 +984,6 @@
     <string name="rooms_info_fill_form_desc">Esta sala está disponible para cualquier persona que tenga el enlace. Los usuarios externos tendrán permiso para rellenar formularios en todos los archivos.</string>
     <string name="share_popup_access_editing">Edición</string>
     <string name="share_popup_access_remove">Eliminar</string>
-
     <!-- Newly added translations (v9.3.0 - 2026-02-24) -->
     <string name="placeholder_empty_folder">Aún no hay archivos aquí</string>
     <string name="placeholder_empty_folder_common">Aún no hay documentos aquí</string>
@@ -1028,4 +1022,6 @@
     <string name="room_placeholder_creator_subtitle">Cree o cargue nuevos archivos para comenzar.</string>
     <string name="room_placeholder_collab_room_creator_title">Bienvenido/a a la Sala de colaboración</string>
     <string name="room_placeholder_custom_room_creator_title">Bienvenido/a a la Sala personalizada</string>
+    <string name="cloud_nextcloud_description">Abra, edite y co‐edite los documentos en su Nextcloud</string>
+    <string name="cloud_connect_nextcloud">Conectar a Nextcloud</string>
 </resources>
