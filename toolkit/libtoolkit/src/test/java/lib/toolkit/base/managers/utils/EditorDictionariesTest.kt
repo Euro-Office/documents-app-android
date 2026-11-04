@@ -15,7 +15,7 @@ import java.io.File
 import java.util.Locale
 
 /** A context with [filesDir] and preferences kept in memory. */
-internal fun contextWith(filesDir: File): Context {
+private fun contextWith(filesDir: File): Context {
     var names: Set<String>? = null
     val editor = mockk<SharedPreferences.Editor>(relaxed = true)
     every { editor.putStringSet(any(), any()) } answers {
@@ -32,7 +32,7 @@ internal fun contextWith(filesDir: File): Context {
 }
 
 /** A downloaded dictionary with [size] bytes in its .dic file. */
-internal fun File.addDictionary(name: String, size: Int = 3) {
+private fun File.addDictionary(name: String, size: Int = 3) {
     File(this, name).mkdirs()
     File(this, "$name/$name.dic").writeBytes(ByteArray(size))
 }

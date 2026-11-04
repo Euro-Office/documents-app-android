@@ -101,4 +101,7 @@ dependencies {
     implementation(libs.lifecycle.viewmodel)
     implementation(libs.lifecycle.livedata)
     implementation(libs.lifecycle.runtime)
+
+    testImplementation(libs.junit)
+    testImplementation(libs.mockk)
 }
