@@ -1,14 +1,15 @@
 # SPDX-FileCopyrightText: 2026 Euro-Office contributors
 # SPDX-License-Identifier: AGPL-3.0-only
 
-# Runs the app's unit tests (core, appmanager) on the JVM and checks how much of a PR's changed
-# lines they cover. appmanager builds only with the editors (libsnapshot comes with them), so
-# editors-android is checked out next to this repository, as in MobileEditors. Without
-# -PwithNativeCore their engine is a stub: no core and no NDK are needed.
+# Runs the app's unit tests (core, appmanager, libtoolkit) on the JVM and checks how much of a PR's
+# changed lines they cover. appmanager builds only with the editors (libsnapshot comes with them),
+# so editors-android is checked out next to this repository, as in MobileEditors: its branch of the
+# same name when there is one, so that a change across both repositories is tested together, else
+# main. Without -PwithNativeCore their engine is a stub: no core and no NDK are needed.
 #
 # The screens (ui/) are left out of the coverage check: unit tests can't reach them,
-# MobileEditors' UI tests run the app on an emulator. Modules without tests (libtoolkit,
-# libcompose, core:network, ...) write no coverage report, so their changes are not checked.
+# MobileEditors' UI tests run the app on an emulator. Modules without tests (libcompose,
+# core:network, ...) write no coverage report, so their changes are not checked.
 
 name: Unit tests
 
@@ -25,10 +26,6 @@ concurrency:
   group: unit-tests-${{ github.ref }}
   cancel-in-progress: true
 
-env:
-  # editors-android branch the app builds with
-  EDITORS_ANDROID_REF: main
-
 jobs:
   unit-tests:
     runs-on: ubuntu-24.04
@@ -39,7 +36,16 @@ jobs:
           persist-credentials: false
 
       - name: Check out editors-android
-        run: git clone --quiet --depth 1 --branch "$EDITORS_ANDROID_REF" https://github.com/Euro-Office/editors-android.git ../editors-android
+        env:
+          BRANCH: ${{ github.head_ref || github.ref_name }}
+        run: |
+          url=https://github.com/Euro-Office/editors-android.git
+          # a failing ls-remote fails the job instead of falling back to main
+          heads=$(git ls-remote --heads "$url" "refs/heads/$BRANCH")
+          ref=main
+          if [[ -n "$heads" ]]; then ref=$BRANCH; fi
+          echo "editors-android: $ref"
+          git clone --quiet --depth 1 --branch "$ref" "$url" ../editors-android
 
       - uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad # v6.1.0
         with:
@@ -52,15 +58,15 @@ jobs:
 
       - name: Test
         working-directory: app_manager
-        run: ./gradlew --no-daemon :core:createDebugUnitTestCoverageReport :appmanager:createDebugUnitTestCoverageReport
+        run: ./gradlew --no-daemon :core:createDebugUnitTestCoverageReport :appmanager:createDebugUnitTestCoverageReport :libtoolkit:createDebugUnitTestCoverageReport
 
       - name: Coverage of the changed lines
         if: github.event_name == 'pull_request'
         uses: Euro-Office/.github/actions/diff-coverage@c6be61e1c3cc63761a8a70c71fad268bf9ee434e # main
         with:
-          reports: app_manager/core/build/reports/coverage/test/debug/report.xml app_manager/appmanager/build/reports/coverage/test/debug/report.xml
+          reports: app_manager/core/build/reports/coverage/test/debug/report.xml app_manager/appmanager/build/reports/coverage/test/debug/report.xml toolkit/libtoolkit/build/reports/coverage/test/debug/report.xml
           fail-under: 80
-          args: --src-roots app_manager/core/src/main/java app_manager/appmanager/src/main/java --exclude '*/ui/*'
+          args: --src-roots app_manager/core/src/main/java app_manager/appmanager/src/main/java toolkit/libtoolkit/src/main/java --exclude '*/ui/*'
 
       - if: failure()
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
@@ -69,4 +75,5 @@ jobs:
           path: |
             app_manager/core/build/reports
             app_manager/appmanager/build/reports
+            toolkit/libtoolkit/build/reports
           if-no-files-found: ignore

@@ -28,6 +28,9 @@ android {
         }
         debug {
             isJniDebuggable = true
+            // JaCoCo report of the unit tests (createDebugUnitTestCoverageReport) for the CI's
+            // coverage check
+            enableUnitTestCoverage = true
         }
     }
 
@@ -101,4 +104,7 @@ dependencies {
     implementation(libs.lifecycle.viewmodel)
     implementation(libs.lifecycle.livedata)
     implementation(libs.lifecycle.runtime)
+
+    testImplementation(libs.junit)
+    testImplementation(libs.mockk)
 }

@@ -25,10 +25,10 @@ Unit tests live in each module's `src/test` and run on the JVM. `appmanager` bui
 
 ```sh
 cd app_manager
-./gradlew :core:createDebugUnitTestCoverageReport :appmanager:createDebugUnitTestCoverageReport
+./gradlew :core:createDebugUnitTestCoverageReport :appmanager:createDebugUnitTestCoverageReport :libtoolkit:createDebugUnitTestCoverageReport
 ```
 
-The JaCoCo reports go to `<module>/build/reports/coverage/test/debug/`. On every pull request, `.github/workflows/unit-tests.yml` runs them and fails when less than 80% of the changed lines in `core` and `appmanager` are covered; the screens (`ui/`) are left out. Feat and fix pull requests must also change a test (`.github/workflows/require-tests.yml`), or carry the `no-tests-needed` label with a reason.
+The JaCoCo reports go to `<module>/build/reports/coverage/test/debug/`. On every pull request, `.github/workflows/unit-tests.yml` runs them and fails when less than 80% of the changed lines in `core`, `appmanager` and `libtoolkit` are covered; the screens (`ui/`) are left out. It builds with the editors-android branch of the same name when there is one, else `main`, so a change across both repositories uses one branch name in each. Feat and fix pull requests must also change a test (`.github/workflows/require-tests.yml`), or carry the `no-tests-needed` label with a reason.
 
 ## Issues
 
