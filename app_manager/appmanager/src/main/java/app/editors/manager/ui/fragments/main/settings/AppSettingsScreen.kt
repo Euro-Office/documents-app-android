@@ -15,6 +15,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
@@ -153,13 +154,14 @@ fun AppSettingsScreenHost(
                 }
             }
             composable(AppSettingsScreen.Dictionaries.route) {
+                val resources = LocalResources.current
                 AppSettingsDictionariesScreen(
                     dictionaries = settingsState.value.dictionaries,
                 ) { dictionary ->
                     UiUtils.showQuestionDialog(
                         context = context,
-                        title = context.getString(R.string.dialogs_question_delete_dictionary, dictionary.language),
-                        description = context.getString(R.string.dialogs_question_delete_dictionary_message),
+                        title = resources.getString(R.string.dialogs_question_delete_dictionary, dictionary.language),
+                        description = resources.getString(R.string.dialogs_question_delete_dictionary_message),
                         acceptListener = { viewModel.deleteDictionary(dictionary) }
                     )
                 }

@@ -18,8 +18,15 @@ class EditorDictionaries(val dir: File) {
     /** The size of a downloaded dictionary's files, in bytes. */
     fun size(name: String): Long = File(dir, name).listFiles()?.sumOf { it.length() } ?: 0
 
-    /** Removes a downloaded dictionary; it is downloaded again when a document needs it. */
-    fun remove(name: String): Boolean = name in downloaded() && File(dir, name).deleteRecursively()
+    /**
+     * Removes a downloaded dictionary; it is downloaded again when a document needs it. A download
+     * of it still running (into "de_DE.partial", the editors' Dictionaries) fails without its
+     * folder, so it can't put the dictionary back.
+     */
+    fun remove(name: String): Boolean {
+        File(dir, "$name.partial").deleteRecursively()
+        return name in downloaded() && File(dir, name).deleteRecursively()
+    }
 
     companion object {
 
@@ -32,6 +39,7 @@ class EditorDictionaries(val dir: File) {
         fun removed(context: Context): Set<String> =
             context.getSharedPreferences(PREFERENCES, Context.MODE_PRIVATE).getStringSet(KEY_REMOVED, null).orEmpty()
 
+        @Synchronized
         fun setRemoved(context: Context, name: String, removed: Boolean) {
             val names = removed(context).let { if (removed) it + name else it - name }
             context.getSharedPreferences(PREFERENCES, Context.MODE_PRIVATE).edit().putStringSet(KEY_REMOVED, names).apply()

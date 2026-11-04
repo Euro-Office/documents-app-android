@@ -310,6 +310,7 @@ dependencies {
     implementation(libs.kotlin.core)
     implementation(libs.kotlin.coroutines)
     implementation(libs.kotlin.coroutines.android)
+    testImplementation(libs.kotlin.coroutines.test)
     implementation(libs.kotlin.serialization.json)
 
     // RX
@@ -350,6 +351,9 @@ dependencies {
     implementation(libs.jackson)
     implementation(libs.jackson.annotations)
     implementation(libs.jackson.databind)
+
+    testImplementation(libs.junit)
+    testImplementation(libs.mockk)
 }
 
 //tasks.register("copySamples") {

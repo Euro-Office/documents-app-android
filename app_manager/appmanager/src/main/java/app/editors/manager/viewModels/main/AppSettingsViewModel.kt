@@ -11,12 +11,15 @@ import app.editors.manager.R
 import app.editors.manager.managers.tools.FontManager
 import app.editors.manager.managers.tools.PreferenceTool
 import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import lib.toolkit.base.managers.tools.BaseEvent
 import lib.toolkit.base.managers.tools.BaseEventSender
 import lib.toolkit.base.managers.tools.EventSender
@@ -68,7 +71,8 @@ class AppSettingsViewModel(
     private val themePrefs: ThemePreferencesTools,
     private val resourcesProvider: ResourcesProvider,
     private val preferenceTool: PreferenceTool,
-    private val fontManager: FontManager
+    private val fontManager: FontManager,
+    private val ioDispatcher: CoroutineDispatcher = Dispatchers.IO
 ) : ViewModel(), EventSender by BaseEventSender(resourcesProvider) {
 
     private val _settingsState: MutableStateFlow<AppSettingsState> = flow {
@@ -80,7 +84,7 @@ class AppSettingsViewModel(
                 passcodeEnabled = preferenceTool.passcodeLock.enabled,
                 themeMode = themePrefs.mode,
                 fonts = File(FileUtils.getFontsDir(resourcesProvider.context)).listFiles()?.toList().orEmpty(),
-                dictionaries = dictionaries,
+                dictionaries = fetchDictionaries(),
                 developerMode = preferenceTool.developMode
             )
         )
@@ -95,10 +99,11 @@ class AppSettingsViewModel(
                 FileUtils.getSize(resourcesProvider.getCacheDir(false)) -
                 FileUtils.getSize(File(resourcesProvider.getCacheDir(false)?.absolutePath + "/assets"))
 
-    private val dictionaries: List<SpellingDictionary>
-        get() = with(EditorDictionaries.of(resourcesProvider.context)) {
+    private suspend fun fetchDictionaries(): List<SpellingDictionary> = withContext(ioDispatcher) {
+        with(EditorDictionaries.of(resourcesProvider.context)) {
             downloaded().map { SpellingDictionary(it, EditorDictionaries.languageName(it), size(it)) }.sortedBy { it.language }
         }
+    }
 
     private fun fetchFonts() {
         _settingsState.value = _settingsState.value.copy(fonts = fontManager.getFonts())
@@ -146,10 +151,15 @@ class AppSettingsViewModel(
 
     // Removed: not downloaded for the device's language any more, only when a document needs it
     fun deleteDictionary(dictionary: SpellingDictionary) {
-        val context = resourcesProvider.context
-        EditorDictionaries.of(context).remove(dictionary.name)
-        EditorDictionaries.setRemoved(context, dictionary.name, true)
-        _settingsState.value = _settingsState.value.copy(dictionaries = dictionaries)
+        viewModelScope.launch {
+            val dictionaries = withContext(ioDispatcher) {
+                val context = resourcesProvider.context
+                EditorDictionaries.of(context).remove(dictionary.name)
+                EditorDictionaries.setRemoved(context, dictionary.name, true)
+                fetchDictionaries()
+            }
+            _settingsState.value = _settingsState.value.copy(dictionaries = dictionaries)
+        }
     }
 
     fun addFont(fonts: List<Uri>?){
