@@ -22,6 +22,12 @@ val appId = "eu.eurooffice.documents"
 // Names the APK files
 val appName = "euro-office-documents"
 
+// The same app as Nextcloud Office, the product flavor nextcloud. Its own application ID lets both
+// be installed next to each other
+val nextcloudAppId = "com.nextcloud.office"
+val nextcloudAppName = "nextcloud-office"
+val nextcloudProductName = "Nextcloud Office"
+
 /*
 * Create a variable called keystorePropertiesFile, and initialize it to your
 * keystore.properties file, in the rootProject folder.
@@ -54,6 +60,89 @@ fun getKeystore(filePath: String): Properties {
     }
 
     return keystoreProperties
+}
+
+// The resources of the nextcloud flavor, made at build time from the Euro-Office resources of all
+// modules: the Euro-Office name (not in URLs) and the application ID replaced, in all languages,
+// so new strings and translations need no copy here. The launcher's name becomes the product's
+abstract class BrandResources : DefaultTask() {
+
+    @get:InputFiles
+    @get:PathSensitive(PathSensitivity.RELATIVE)
+    abstract val resources: ConfigurableFileCollection
+
+    @get:Input
+    abstract val productName: Property<String>
+
+    @get:Input
+    abstract val applicationIds: MapProperty<String, String>
+
+    @get:OutputDirectory
+    abstract val outputDir: DirectoryProperty
+
+    @TaskAction
+    fun generate() {
+        val output = outputDir.get().asFile.apply { deleteRecursively() }
+        val (euroOfficeId, brandId) = applicationIds.get().entries.single().toPair()
+        val rebrand = { text: String ->
+            text.replace(Regex("(?<!/)Euro-Office"), productName.get()).replace(euroOfficeId, brandId)
+        }
+        val comment = Regex("<!--.*?-->", RegexOption.DOT_MATCHES_ALL)
+        val element = Regex("""<(string|plurals|string-array)\b[^>]*[^/]>.*?</\1>""", RegexOption.DOT_MATCHES_ALL)
+        val name = Regex("""name="([^"]+)"""")
+        // As in the app, the first module's string of a name wins: the app's own come first
+        val seen = mutableSetOf<String>()
+        val strings = sortedMapOf<String, MutableList<String>>()
+
+        resources.files.forEach { res ->
+            res.listFiles().orEmpty().filter { it.name.startsWith("values") }.forEach { values ->
+                values.listFiles().orEmpty().filter { it.extension == "xml" }.forEach { file ->
+                    element.findAll(file.readText().replace(comment, "")).forEach { match ->
+                        val stringName = name.find(match.value)!!.groupValues[1]
+                        val branded = if (stringName == "app_name") {
+                            match.value.replace(Regex(">.*<"), ">${productName.get()}<")
+                        } else {
+                            rebrand(match.value)
+                        }
+                        if (seen.add("${values.name}/$stringName") && branded != match.value) {
+                            strings.getOrPut(values.name) { mutableListOf() } += branded
+                        }
+                    }
+                }
+            }
+            res.resolve("xml").listFiles().orEmpty().filter { euroOfficeId in it.readText() }.forEach { file ->
+                output.resolve("xml/${file.name}").apply { parentFile.mkdirs() }.writeText(rebrand(file.readText()))
+            }
+        }
+
+        strings.forEach { (values, elements) ->
+            output.resolve("$values/brand.xml").apply { parentFile.mkdirs() }.writeText(
+                elements.joinToString(
+                    separator = "\n",
+                    prefix = "<resources xmlns:tools=\"http://schemas.android.com/tools\" " +
+                        "xmlns:xliff=\"urn:oasis:names:tc:xliff:document:1.2\">\n",
+                    postfix = "\n</resources>\n"
+                )
+            )
+        }
+    }
+}
+
+val nextcloudResources = tasks.register<BrandResources>("generateNextcloudResources") {
+    resources.from(
+        (listOf(project) + (rootProject.subprojects - project)).flatMap { module ->
+            module.file("src").listFiles().orEmpty().map { it.resolve("res") }.filter { it.isDirectory }
+        }
+    )
+    productName.set(nextcloudProductName)
+    applicationIds.put(appId, nextcloudAppId)
+    outputDir.set(layout.buildDirectory.dir("generated/brand/res"))
+}
+
+androidComponents {
+    onVariants(selector().withFlavor("brand" to "nextcloud")) { variant ->
+        variant.sources.res?.addGeneratedSourceDirectory(nextcloudResources, BrandResources::outputDir)
+    }
 }
 
 android {
@@ -109,6 +198,21 @@ android {
         manifestPlaceholders["tasks"] = keystoreProperties["CUSTOM_TASKS"] as String? ?: ""
 
         buildConfigField("String", "PUSH_SCHEME", "\"" + "oodocuments" + "\"")
+    }
+
+    flavorDimensions += "brand"
+
+    productFlavors {
+        create("eurooffice") {
+            dimension = "brand"
+            isDefault = true
+        }
+        create("nextcloud") {
+            dimension = "brand"
+            applicationId = nextcloudAppId
+            buildConfigField("String", "RELEASE_ID", "\"" + nextcloudAppId + "\"")
+            buildConfigField("String", "APP_NAME", "\"" + nextcloudAppName + "\"")
+        }
     }
 
     splits {
@@ -171,8 +275,8 @@ android {
                     // The same name for each build of a variant, so a new build replaces the last one
                     val buildAbi = output.filters.find { it.filterType == "ABI" }?.identifier ?: "universal"
                     val buildType = if (buildType.isDebuggable) "debug" else "release"
-                    val flavor = flavorName.takeIf { it.isNotEmpty() }?.let { "-$it" }.orEmpty()
-                    output.outputFileName = "${appName}-${versionName}${flavor}-${buildAbi}-${buildType}.apk"
+                    val name = if (flavorName == "nextcloud") nextcloudAppName else appName
+                    output.outputFileName = "${name}-${versionName}-${buildAbi}-${buildType}.apk"
                 }
         }
 
