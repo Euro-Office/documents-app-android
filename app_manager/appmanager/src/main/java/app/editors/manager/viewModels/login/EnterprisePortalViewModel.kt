@@ -36,7 +36,7 @@ class EnterprisePortalViewModel : BaseViewModel() {
         @Suppress("KotlinConstantConditions")
         private val BANNED_ADDRESSES: Set<String> = object : TreeSet<String>() {
             init {
-                if (BuildConfig.APPLICATION_ID == "eu.eurooffice.documents") {
+                if (BuildConfig.APPLICATION_ID == BuildConfig.RELEASE_ID) {
                     add(".r7-")
                 }
             }

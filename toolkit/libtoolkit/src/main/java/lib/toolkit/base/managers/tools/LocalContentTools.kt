@@ -115,7 +115,7 @@ class LocalContentTools @Inject constructor(val context: Context) {
         val samplesName = context.assets.list("samples")
         samplesName?.let {
             it.forEach { name ->
-                val file = File(rootDir.absolutePath + "/" + name)
+                val file = File(rootDir, name.replace("Euro-Office", context.getString(R.string.app_title)))
                 if (file.exists()) {
                     MediaScannerConnection.scanFile(context, arrayOf(file.toString()), null, null)
                     return@forEach
