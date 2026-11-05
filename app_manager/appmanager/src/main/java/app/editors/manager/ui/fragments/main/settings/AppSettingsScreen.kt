@@ -15,11 +15,13 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import app.editors.manager.BuildConfig
 import app.editors.manager.R
 import app.editors.manager.app.App
 import app.editors.manager.ui.compose.locale.AppLocalePickerScreen
@@ -46,6 +48,7 @@ sealed class AppSettingsScreen(val route: String) {
     data object Passcode : AppSettingsScreen("passcode")
     data object LocalePicker : AppSettingsScreen("locale")
     data object Fonts : AppSettingsScreen("fonts")
+    data object Dictionaries : AppSettingsScreen("dictionaries")
     data object HelpAndFeedback : AppSettingsScreen("help-and-feedback")
     data object About : AppSettingsScreen("about")
 }
@@ -100,6 +103,7 @@ fun AppSettingsScreenHost(
                     onPasscodeClick = { navController.navigate(AppSettingsScreen.Passcode.route) },
                     onLocaleClick = { navController.navigate(AppSettingsScreen.LocalePicker.route) },
                     onFontsClick = { navController.navigate(AppSettingsScreen.Fonts.route) },
+                    onDictionariesClick = { navController.navigate(AppSettingsScreen.Dictionaries.route) },
                     onAboutClick = { navController.navigate(AppSettingsScreen.About.route) },
                     onHelpAndFeedbackClick = { navController.navigate(AppSettingsScreen.HelpAndFeedback.route) }
                 )
@@ -149,6 +153,19 @@ fun AppSettingsScreenHost(
                     )
                 }
             }
+            composable(AppSettingsScreen.Dictionaries.route) {
+                val resources = LocalResources.current
+                AppSettingsDictionariesScreen(
+                    dictionaries = settingsState.value.dictionaries,
+                ) { dictionary ->
+                    UiUtils.showQuestionDialog(
+                        context = context,
+                        title = resources.getString(R.string.dialogs_question_delete_dictionary, dictionary.language),
+                        description = resources.getString(R.string.dialogs_question_delete_dictionary_message),
+                        acceptListener = { viewModel.deleteDictionary(dictionary) }
+                    )
+                }
+            }
             composable(AppSettingsScreen.About.route) {
                 AboutScreen(
                     onShowBrowser = { url ->
@@ -186,6 +203,7 @@ private fun AppSettingsScreen(
     onScreenOnState: (Boolean) -> Unit,
     onCacheClear: () -> Unit,
     onFontsClick: () -> Unit,
+    onDictionariesClick: () -> Unit,
     onHelpAndFeedbackClick: () -> Unit,
     onAboutClick: () -> Unit,
 ) {
@@ -239,6 +257,14 @@ private fun AppSettingsScreen(
                 onClick = onFontsClick,
                 option = settingsState.fonts.size.toString()
             )
+            if (BuildConfig.WITH_EDITORS) {
+                AppArrowItem(
+                    title = R.string.settings_dictionaries,
+                    dividerVisible = false,
+                    onClick = onDictionariesClick,
+                    option = settingsState.dictionaries.size.toString()
+                )
+            }
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
                 with(LocalContext.current.getSystemService(LocaleManager::class.java)) {
                     val currentAppLocale = applicationLocales.get(0) ?: systemLocales.get(0)
@@ -291,7 +317,8 @@ private fun AppSettingsScreenPreview() {
             onHelpAndFeedbackClick = {},
             onAboutClick = {},
             onCacheClear = {},
-            onFontsClick = {}
+            onFontsClick = {},
+            onDictionariesClick = {}
         )
     }
 }

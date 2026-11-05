@@ -11,17 +11,21 @@ import app.editors.manager.R
 import app.editors.manager.managers.tools.FontManager
 import app.editors.manager.managers.tools.PreferenceTool
 import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import lib.toolkit.base.managers.tools.BaseEvent
 import lib.toolkit.base.managers.tools.BaseEventSender
 import lib.toolkit.base.managers.tools.EventSender
 import lib.toolkit.base.managers.tools.ResourcesProvider
 import lib.toolkit.base.managers.tools.ThemePreferencesTools
+import lib.toolkit.base.managers.utils.EditorDictionaries
 import lib.toolkit.base.managers.utils.FileUtils
 import lib.toolkit.base.managers.utils.mutableStateIn
 import java.io.File
@@ -34,8 +38,12 @@ data class AppSettingsState(
     val keepScreenOn: Boolean = false,
     val passcodeEnabled: Boolean = false,
     val fonts: List<File> = emptyList(),
+    val dictionaries: List<SpellingDictionary> = emptyList(),
     val developerMode: Boolean = false
 )
+
+/** A spelling dictionary the editors downloaded ("de_DE"), its language's name and size in bytes. */
+data class SpellingDictionary(val name: String, val language: String, val size: Long)
 
 sealed interface AppSettingsEffect : BaseEvent {
     data class Progress(val value: Int) : AppSettingsEffect
@@ -63,7 +71,8 @@ class AppSettingsViewModel(
     private val themePrefs: ThemePreferencesTools,
     private val resourcesProvider: ResourcesProvider,
     private val preferenceTool: PreferenceTool,
-    private val fontManager: FontManager
+    private val fontManager: FontManager,
+    private val ioDispatcher: CoroutineDispatcher = Dispatchers.IO
 ) : ViewModel(), EventSender by BaseEventSender(resourcesProvider) {
 
     private val _settingsState: MutableStateFlow<AppSettingsState> = flow {
@@ -75,6 +84,7 @@ class AppSettingsViewModel(
                 passcodeEnabled = preferenceTool.passcodeLock.enabled,
                 themeMode = themePrefs.mode,
                 fonts = File(FileUtils.getFontsDir(resourcesProvider.context)).listFiles()?.toList().orEmpty(),
+                dictionaries = fetchDictionaries(),
                 developerMode = preferenceTool.developMode
             )
         )
@@ -88,6 +98,12 @@ class AppSettingsViewModel(
         get() = FileUtils.getSize(resourcesProvider.getCacheDir(true)) +
                 FileUtils.getSize(resourcesProvider.getCacheDir(false)) -
                 FileUtils.getSize(File(resourcesProvider.getCacheDir(false)?.absolutePath + "/assets"))
+
+    private suspend fun fetchDictionaries(): List<SpellingDictionary> = withContext(ioDispatcher) {
+        with(EditorDictionaries.of(resourcesProvider.context)) {
+            downloaded().map { SpellingDictionary(it, EditorDictionaries.languageName(it), size(it)) }.sortedBy { it.language }
+        }
+    }
 
     private fun fetchFonts() {
         _settingsState.value = _settingsState.value.copy(fonts = fontManager.getFonts())
@@ -130,6 +146,19 @@ class AppSettingsViewModel(
         viewModelScope.launch {
             fontManager.deleteFont(font)
             fetchFonts()
+        }
+    }
+
+    // Removed: not downloaded for the device's language any more, only when a document needs it
+    fun deleteDictionary(dictionary: SpellingDictionary) {
+        viewModelScope.launch {
+            val dictionaries = withContext(ioDispatcher) {
+                val context = resourcesProvider.context
+                EditorDictionaries.of(context).remove(dictionary.name)
+                EditorDictionaries.setRemoved(context, dictionary.name, true)
+                fetchDictionaries()
+            }
+            _settingsState.value = _settingsState.value.copy(dictionaries = dictionaries)
         }
     }
 
