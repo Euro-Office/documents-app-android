@@ -154,6 +154,9 @@ android {
 
         debug {
             isMinifyEnabled = false
+            // JaCoCo report of the unit tests (createDebugUnitTestCoverageReport) for the CI's
+            // coverage check
+            enableUnitTestCoverage = true
             ndk {
                 if (System.getProperty("os.arch") == "aarch64") {
                     abiFilters.add("arm64-v8a")
@@ -348,6 +351,9 @@ dependencies {
     implementation(libs.jackson)
     implementation(libs.jackson.annotations)
     implementation(libs.jackson.databind)
+
+    testImplementation(libs.junit)
+    testImplementation(libs.mockk)
 }
 
 //tasks.register("copySamples") {

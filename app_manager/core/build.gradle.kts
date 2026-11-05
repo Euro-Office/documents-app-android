@@ -52,6 +52,11 @@ android {
             isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
+        debug {
+            // JaCoCo report of the unit tests (createDebugUnitTestCoverageReport) for the CI's
+            // coverage check
+            enableUnitTestCoverage = true
+        }
     }
 
     compileOptions {
