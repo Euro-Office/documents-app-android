@@ -2,7 +2,7 @@
 compileSdk = "36"
 minSdk = "26"
 targetSdk = "35"
-ndk = "28.2.13676358"
+ndk = "30.0.16248370"
 gradle = "8.13.1"
 
 #kotlin
