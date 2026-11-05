@@ -19,6 +19,8 @@ The app is a fork of ONLYOFFICE Documents for Android. Support for other clouds 
 
 See [AndroidEditors](https://github.com/Euro-Office/AndroidEditors): all builds run in Docker.
 
+The app has two brands, one product flavor each, built together by `:appmanager:assembleDebug`: `eurooffice` and `nextcloud` (Nextcloud Office, with its own application ID, so both can be installed). The `nextcloud` flavor's resources are generated from the Euro-Office ones (`BrandResources` in `app_manager/appmanager/build.gradle.kts`): new strings and translations need nothing extra.
+
 ## Issues
 
 Please report problems at [Euro-Office](https://github.com/Euro-Office).

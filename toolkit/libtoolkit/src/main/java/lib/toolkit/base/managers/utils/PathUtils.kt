@@ -11,6 +11,7 @@ import android.os.Environment
 import android.provider.DocumentsContract
 import android.provider.MediaStore
 import android.provider.Settings
+import lib.toolkit.base.managers.tools.LocalContentTools
 import java.io.File
 
 
@@ -55,7 +56,7 @@ object PathUtils {
                                     return path
                                 }
                             }
-                            (Environment.getExternalStorageDirectory().toString() + "/Euro-Office/" + name)?.let { path ->
+                            (LocalContentTools.getExternalDir(context).path + "/" + name)?.let { path ->
                                 if (File(path).exists()) {
                                     return path
                                 }
