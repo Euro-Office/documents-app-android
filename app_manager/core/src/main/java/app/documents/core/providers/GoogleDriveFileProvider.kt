@@ -3,7 +3,6 @@ package app.documents.core.providers
 import android.annotation.SuppressLint
 import android.content.Context
 import android.net.Uri
-import android.os.Environment
 import app.documents.core.network.common.NetworkResult
 import app.documents.core.network.common.asResult
 import app.documents.core.network.common.contracts.ApiContract
@@ -436,7 +435,7 @@ class GoogleDriveFileProvider(
         when (StringUtils.getExtension(file.fileExst)) {
             StringUtils.Extension.UNKNOWN, StringUtils.Extension.EBOOK, StringUtils.Extension.ARCH, StringUtils.Extension.VIDEO, StringUtils.Extension.HTML -> {
                 val parent =
-                    File(Environment.getExternalStorageDirectory().absolutePath + "/Euro-Office")
+                    LocalContentTools.getExternalDir(context)
                 return FileUtils.createFile(parent, file.title)
             }
             else -> {

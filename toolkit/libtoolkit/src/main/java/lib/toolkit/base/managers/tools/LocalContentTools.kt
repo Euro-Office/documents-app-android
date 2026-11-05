@@ -9,7 +9,7 @@ import android.os.Build
 import android.os.Environment
 import android.provider.MediaStore
 import android.util.Log
-import lib.toolkit.base.BuildConfig
+import lib.toolkit.base.R
 import lib.toolkit.base.managers.utils.FileUtils
 import lib.toolkit.base.managers.utils.StringUtils
 import java.io.File
@@ -65,11 +65,16 @@ class LocalContentTools @Inject constructor(val context: Context) {
         private const val PREFS_NAME = "sample_prefs"
         private const val KEY_FIRST_LAUNCH = "first_launch"
 
+        // The app's folder in the shared storage, named after the app's brand
+        fun getExternalDir(context: Context): File {
+            return File(Environment.getExternalStorageDirectory(), context.getString(R.string.app_title))
+        }
+
         fun getDir(context: Context): String {
             return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R && !Environment.isExternalStorageManager()) {
-                "${context.filesDir.path}/${BuildConfig.ROOT_FOLDER}"
+                "${context.filesDir.path}/${context.getString(R.string.app_title)}"
             } else {
-                "${Environment.getExternalStorageDirectory().absolutePath}/${BuildConfig.ROOT_FOLDER}"
+                getExternalDir(context).absolutePath
             }
         }
     }
