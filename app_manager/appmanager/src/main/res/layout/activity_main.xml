@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:theme="@style/AppTheme">
+    android:theme="@style/AppTheme"
+    tools:viewBindingType="android.view.ViewGroup">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar_layout"
@@ -54,7 +55,8 @@
             app:itemPaddingTop="12dp"
             app:labelVisibilityMode="labeled"
             app:layout_behavior="app.editors.manager.ui.views.behaviors.BottomNavigationBehavior"
-            app:menu="@menu/bottom_navigation" />
+            app:menu="@menu/bottom_navigation"
+            tools:viewBindingType="com.google.android.material.navigation.NavigationBarView" />
 
     </LinearLayout>
 
