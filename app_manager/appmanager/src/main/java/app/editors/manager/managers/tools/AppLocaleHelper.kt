@@ -17,10 +17,7 @@ class AppLocaleHelper @Inject constructor(val context: Context, val preferenceTo
     private val localeManager: LocaleManager by lazy { context.getSystemService(LocaleManager::class.java) }
 
     // The languages of the locale config that AGP generates from the values-* folders
-    val locales: List<Locale> by lazy {
-        val supported = LocaleConfig(context).supportedLocales ?: LocaleList.getEmptyLocaleList()
-        List(supported.size()) { supported[it] }.sortedBy { it.getDisplayName(it).lowercase(it) }
-    }
+    val locales: List<Locale> by lazy { sortedLocales(LocaleConfig(context).supportedLocales) }
 
     val appLocale: Locale?
         get() = localeManager.applicationLocales.get(0)
@@ -49,4 +46,10 @@ class AppLocaleHelper @Inject constructor(val context: Context, val preferenceTo
                 && !preferenceTool.skipLocaleConfirmation else true
     }
 
+    companion object {
+
+        // The locales, each sorted by its own name, as the picker lists them
+        fun sortedLocales(supported: LocaleList?): List<Locale> =
+            List(supported?.size() ?: 0) { supported!![it] }.sortedBy { it.getDisplayName(it).lowercase(it) }
+    }
 }
