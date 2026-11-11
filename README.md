@@ -19,16 +19,18 @@ The app is a fork of ONLYOFFICE Documents for Android. Support for other clouds 
 
 See [AndroidEditors](https://github.com/Euro-Office/AndroidEditors): all builds run in Docker.
 
+The app has two brands, one product flavor each, built together by `:appmanager:assembleDebug`: `eurooffice` and `nextcloud` (Nextcloud Office, with its own application ID, so both can be installed). The `nextcloud` flavor's resources are generated from the Euro-Office ones (`BrandResources` in `app_manager/appmanager/build.gradle.kts`): new strings and translations need nothing extra.
+
 ## Tests
 
 Unit tests live in each module's `src/test` and run on the JVM. `appmanager` builds only with the editors, so [editors-android](https://github.com/Euro-Office/editors-android) must be next to this repository (as in MobileEditors); without `-PwithNativeCore` their engine is a stub and neither core nor the NDK is needed:
 
 ```sh
 cd app_manager
-./gradlew :core:createDebugUnitTestCoverageReport :appmanager:createDebugUnitTestCoverageReport :libtoolkit:createDebugUnitTestCoverageReport
+./gradlew :core:createDebugUnitTestCoverageReport :appmanager:createEuroofficeDebugUnitTestCoverageReport :libtoolkit:createDebugUnitTestCoverageReport
 ```
 
-The JaCoCo reports go to `<module>/build/reports/coverage/test/debug/`. On every pull request, `.github/workflows/unit-tests.yml` runs them and fails when less than 80% of the changed lines in `core`, `appmanager` and `libtoolkit` are covered; the screens (`ui/`) are left out. It builds with the editors-android branch of the same name when there is one, else `main`, so a change across both repositories uses one branch name in each. Feat and fix pull requests must also change a test (`.github/workflows/require-tests.yml`), or carry the `no-tests-needed` label with a reason.
+The JaCoCo reports go to `<module>/build/reports/coverage/test/debug/`, for `appmanager` to `test/eurooffice/debug/`: the brands share their code, so the tests run with the Euro-Office one. On every pull request, `.github/workflows/unit-tests.yml` runs them and fails when less than 80% of the changed lines in `core`, `appmanager` and `libtoolkit` are covered; the screens (`ui/`) are left out. It builds with the editors-android branch of the same name when there is one, else `main`, so a change across both repositories uses one branch name in each. Feat and fix pull requests must also change a test (`.github/workflows/require-tests.yml`), or carry the `no-tests-needed` label with a reason.
 
 ## Issues
 

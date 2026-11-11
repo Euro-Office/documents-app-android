@@ -3,7 +3,6 @@ package app.documents.core.providers
 import android.annotation.SuppressLint
 import android.content.Context
 import android.net.Uri
-import android.os.Environment
 import app.documents.core.network.common.NetworkResult
 import app.documents.core.network.common.asResult
 import app.documents.core.network.common.contracts.ApiContract
@@ -29,6 +28,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
+import lib.toolkit.base.managers.tools.LocalContentTools
 import lib.toolkit.base.managers.utils.EditType
 import lib.toolkit.base.managers.utils.FileUtils
 import lib.toolkit.base.managers.utils.StringUtils
@@ -501,7 +501,7 @@ class DropboxFileProvider(
         when (StringUtils.getExtension(file.fileExst)) {
             StringUtils.Extension.UNKNOWN, StringUtils.Extension.EBOOK, StringUtils.Extension.ARCH, StringUtils.Extension.VIDEO, StringUtils.Extension.HTML -> {
                 val parent =
-                    File(Environment.getExternalStorageDirectory().absolutePath + "/Euro-Office")
+                    LocalContentTools.getExternalDir(context)
                 return FileUtils.createFile(parent, file.title)
             }
             else -> {
