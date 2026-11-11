@@ -56,6 +56,7 @@ fun AppListItem(
     dividerVisible: Boolean = true,
     enabled: Boolean = true,
     singleLine: Boolean = true,
+    onClickLabel: String? = null,
     onClick: (() -> Unit)? = null
 ) {
     Column(
@@ -66,7 +67,7 @@ fun AppListItem(
                     Modifier.height(48.dp) else
                     Modifier.height(IntrinsicSize.Max)
             )
-            .addIfNotNull(onClick) { clickable(enabled = enabled, onClick = it) }
+            .addIfNotNull(onClick) { clickable(enabled = enabled, onClickLabel = onClickLabel, onClick = it) }
             .addIfNotNull(background) { background(it) },
         verticalArrangement = Arrangement.SpaceBetween
     ) {

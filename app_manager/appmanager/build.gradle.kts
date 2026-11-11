@@ -81,6 +81,8 @@ android {
         manifestPlaceholders["dropboxKey"] = keystoreProperties["DROP_BOX_COM_CLIENT_ID"] as? String ?: ""
 
         buildConfigField("boolean", "IS_BETA", "false")
+        // The editors are included (their settings: spelling dictionaries)
+        buildConfigField("boolean", "WITH_EDITORS", withEditors.toString())
         buildConfigField("String", "RELEASE_ID", "\"" + appId + "\"")
         buildConfigField("String", "APP_NAME", "\"" + appName + "\"")
         buildConfigField("String", "COMMUNITY_ID", "\"" + keystoreProperties["COMMUNITY_ID"] + "\"")
@@ -311,6 +313,7 @@ dependencies {
     implementation(libs.kotlin.core)
     implementation(libs.kotlin.coroutines)
     implementation(libs.kotlin.coroutines.android)
+    testImplementation(libs.kotlin.coroutines.test)
     implementation(libs.kotlin.serialization.json)
 
     // RX
