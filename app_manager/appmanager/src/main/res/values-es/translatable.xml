@@ -1024,4 +1024,6 @@
     <string name="room_placeholder_custom_room_creator_title">Bienvenido/a a la Sala personalizada</string>
     <string name="cloud_nextcloud_description">Abra, edite y co‐edite los documentos en su Nextcloud</string>
     <string name="cloud_connect_nextcloud">Conectar a Nextcloud</string>
+    <string name="dialogs_question_delete_dictionary">¿Quitar el diccionario para %1$s?</string>
+    <string name="dialogs_question_delete_dictionary_message">Se descargará de nuevo cuando edites un documento en este idioma.</string>
 </resources>
