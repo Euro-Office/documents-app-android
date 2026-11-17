@@ -232,4 +232,14 @@
     <string name="room_placeholder_collab_room_creator_title">Вітаємо у кімнаті для співпраці</string>
     <string name="rooms_filter_type_collaboration">Співпраця</string>
     <string name="whats_new_1_desc">Позначайте в коментарях колег по кімнаті, щоби вони знали поточний статус співпраці</string>
+    <plurals name="dialogs_question_delete_template_title">
+        <item quantity="one">Вилучити шаблон</item>
+        <item quantity="few">Вилучити шаблони</item>
+        <item quantity="many">Вилучити шаблони</item>
+        <item quantity="other">Вилучити шаблони</item>
+    </plurals>
+    <string name="dialogs_warning_title">Увага</string>
+    <plurals name="dialogs_question_delete_title">
+        <item quantity="one">Вилучити цей об\'єкт?</item>
+    </plurals>
 </resources>
