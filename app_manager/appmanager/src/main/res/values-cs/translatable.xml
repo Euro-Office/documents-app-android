@@ -1,7 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Dokumenty</string>
     <string name="app_name_full">Dokumenty Euro-Office</string>
-
     <!-- ======================================================================================= -->
     <!-- Permissions -->
 
@@ -21,11 +21,9 @@
     <string name="app_versions_actual_release_info">
         Děkujeme za účast na beta testování! Byla vydána verze 3.0 aplikace Dokumenty Euro-Office. Beta verze již není nadále podporována. Začněte používat oficiální aplikaci.
     </string>
-
     <!-- ======================================================================================= -->
     <!-- Snackbar common -->
     <string name="snackbar_copied">Zkopírováno</string>
-
     <!-- ======================================================================================= -->
     <!-- About -->
     <string name="about_title">O produktu</string>
@@ -34,7 +32,6 @@
     <string name="about_policy">Zásady ochrany osobních údajů</string>
     <string name="about_license">Licenční smlouva</string>
     <string name="about_website">Webové stránky Euro-Office</string>
-
     <!-- ======================================================================================= -->
     <!-- Common errors -->
     <string name="errors_unknown_error">Chyba připojení. Zkuste to znovu později.</string>
@@ -60,7 +57,6 @@
     <string name="errors_sign_in_splash_error">Přístup k portálu se nezdařil</string>
     <string name="errors_sign_in_account_error">Přihlášení se nezdařilo</string>
     <string name="errors_sign_in_account_already_use">Tento účet už používáte</string>
-
     <!-- ======================================================================================= -->
     <!-- Login -->
     <string name="login_api_init_error">Chyba inicializace</string>
@@ -68,18 +64,13 @@
     <string name="login_api_portal_name">Nesprávný název portálu. Příklad: cloud.example.com</string>
     <string name="login_api_portal_name_length">Název portálu musí obsahovat alespoň 6 znaků</string>
     <string name="login_api_portal_name_content">Název portálu může obsahovat znaky A–Z, a–z, 0–9</string>
-
-
     <string name="login_retry">Opakovat připojení</string>
-
     <!-- Accounts -->
     <string name="login_accounts_select_title">Vybrat účet</string>
-
     <!-- Portal pager -->
     <string name="login_pager_enterprise">PORTÁL</string>
     <string name="login_pager_personal">OSOBNÍ</string>
     <string name="login_pager_title">Připojení ke cloudu Euro-Office</string>
-
     <!-- Portal enterprise-->
     <string name="login_enterprise_edit_hint">Adresa portálu</string>
     <string name="login_enterprise_button_next">DALŠÍ</string>
@@ -96,7 +87,6 @@
     </string>
     <string name="login_not_authorization_info">V %2$s se nepodařilo přihlásit se do %1$s</string>
     <string name="login_not_authorization_button">ZKUSIT ZNOVU</string>
-
     <!-- Portal personal -->
     <string name="login_personal_edit_email_hint">E-mail</string>
     <string name="login_personal_edit_password_hint">Heslo</string>
@@ -109,7 +99,6 @@
         Abyste mohli ukládat soubory do cloudu, připojte se k osobnímu portálu Euro-Office
     </string>
     <string name="login_web_dav_title">Připojit k %1$s</string>
-
     <!-- Portal create-->
     <string name="login_create_portal_title">Vytvořit portál pro organizaci</string>
     <string name="login_create_portal_address_hint">Adresa portálu</string>
@@ -117,7 +106,6 @@
     <string name="login_create_signin_first_name_hint">Jméno</string>
     <string name="login_create_signin_last_name_hint">Příjmení</string>
     <string name="login_create_portal_next_button">DALŠÍ</string>
-
     <!-- Portal create sign in -->
     <string name="login_create_signin_title">Nastavit heslo</string>
     <string name="login_create_signin_password">Heslo</string>
@@ -127,7 +115,6 @@
     <string name="login_create_signin_info">
         Kliknutím na toto tlačítko přijímáte podmínky poskytování služby
     </string>
-
     <!-- Portal SMS -->
     <string name="login_sms_code_label">SMS zpráva s kódem byla odeslána</string>
     <string name="login_sms_send_again">ODESLAT ZNOVU</string>
@@ -141,10 +128,8 @@
     <string name="login_sms_phone_error_format">Nesprávný formát</string>
     <string name="login_sms_phone_send_code">Zašleme vám ověřovací kód prostřednictvím SMS zprávy</string>
     <string name="login_sms_resend_ok">SMS zpráva s kódem byla odeslána</string>
-
     <!-- Countries codes -->
     <string name="countries_codes_title">Vyberte zemi</string>
-
     <!-- ======================================================================================= -->
     <!-- Dialogs -->
     <string name="bottom_sheet_portal_title">Portál</string>
@@ -156,18 +141,15 @@
     <string name="dialog_move_copy_copy">Vytvořit kopii souboru</string>
     <string name="dialog_move_copy_skip">Přeskočit</string>
     <string name="dialog_move_copy_title">Soubor s totožným názvem</string>
-
     <!-- Common -->
     <string name="dialogs_common_ok_button">PŘIJMOUT</string>
     <string name="dialogs_common_cancel_button">ZRUŠIT</string>
     <string name="dialogs_check_portal_header_text">Kontrola možností portálu</string>
     <string name="dialogs_sign_in_portal_header_text">Přihlášení do portálu</string>
     <string name="dialogs_sign_in_register_portal">Registrování portálu</string>
-
     <!-- Waiting -->
     <string name="dialogs_wait_title">Probíhá operace…</string>
     <string name="dialogs_wait_title_storage">Připojování úložiště…</string>
-
     <!-- Question -->
     <string name="dialogs_question_accept_yes">ANO</string>
     <string name="dialogs_question_accept_no">NE</string>
@@ -190,7 +172,6 @@
     <string name="dialogs_question_personal_confirm_accept">POKRAČOVAT</string>
     <string name="dialogs_question_rate_first_info">Líbí se vám aplikace Dokumenty Euro-Office?</string>
     <string name="dialogs_question_rate_second_info">Věnujte prosím chvilku hodnocení aplikace na Google Play.</string>
-
     <!-- Edit -->
     <string name="dialogs_edit_rename_title">Přejmenovat</string>
     <string name="dialogs_edit_hint">Zadejte název</string>
@@ -205,11 +186,9 @@
     <string name="dialogs_edit_feedback_rate_title">Najdete si chvilku na poskytnutí zpětné vazby?</string>
     <string name="dialogs_edit_feedback_rate_hint">Co bychom měli zlepšit</string>
     <string name="dialogs_edit_feedback_rate_accept">ODESLAT</string>
-
     <!-- ======================================================================================= -->
     <!-- Activity chooser -->
     <string name="chooser_web_browser">Zvolte prohlížeč…</string>
-
     <!-- ======================================================================================= -->
     <!-- Main -->
     <!-- Title -->
@@ -222,11 +201,9 @@
     <string name="fragment_recent_title">Nedávné</string>
     <string name="fragment_on_device_title">Na zařízení</string>
     <string name="fragment_profile_title">Profil</string>
-
     <!-- Drawer -->
     <string name="navigation_drawer_open">Otevřít navigační panel</string>
     <string name="navigation_drawer_close">Zavřít navigační panel</string>
-
     <!-- Main drawer menu-->
     <string name="navigation_drawer_menu_shared">Sdílené se mnou</string>
     <string name="navigation_drawer_menu_common">Společné dokumenty</string>
@@ -242,7 +219,6 @@
     <string name="setting_wifi">Nahrávat soubory pouze v případě připojení prostřednictvím Wi-Fi</string>
     <string name="setting_title_wifi">Wi-Fi</string>
     <string name="setting_cache_cleared">Mezipaměť vymazána</string>
-
     <!-- Main toolbar menu -->
     <string name="toolbar_menu_search_result">Výsledek vyhledávání</string>
     <string name="toolbar_menu_search_hint">Hledat…</string>
@@ -265,7 +241,6 @@
     <string name="toolbar_menu_sort_desc">Sestupně</string>
     <string name="toolbar_menu_main_download">Stáhnout</string>
     <string name="toolbar_menu_main_open">Otevřít</string>
-
     <!-- List context menu -->
     <string name="list_context_folder_name">Jméno složky</string>
     <string name="list_context_folder_title">Název složky</string>
@@ -282,7 +257,6 @@
     <string name="list_context_delete_success">Úspěšně odstraněno</string>
     <string name="list_context_remove_from_list">@string/toolbar_menu_main_remove_from_list</string>
     <string name="list_context_delete_recent">Odebrat z nedávných</string>
-
     <!-- List action menu -->
     <string name="list_action_sheet">Tabulka</string>
     <string name="list_action_presentation">Prezentace</string>
@@ -291,7 +265,6 @@
     <string name="list_action_photo">Pořídit fotografii</string>
     <string name="list_action_upload">Nahrát soubor</string>
     <string name="list_action_storage">Připojit úložiště třetí strany</string>
-
     <!-- Dialog info -->
 
     <!-- Pager -->
@@ -299,7 +272,6 @@
     <string name="main_pager_docs_share">Sdílené se mnou</string>
     <string name="main_pager_docs_projects">Projekty</string>
     <string name="main_pager_docs_trash">Koš</string>
-
     <!-- Placeholder -->
     <string name="placeholder_connection">Chyba připojení</string>
     <string name="placeholder_empty">Prázdná složka</string>
@@ -313,7 +285,6 @@
     <string name="placeholder_media_error">Média nelze načíst</string>
     <string name="placeholder_try_again">Zkusit znovu</string>
     <string name="placeholder_loading_files">Načítání souborů…</string>
-
     <!-- Time marks-->
     <string name="list_headers_folder">Složky</string>
     <string name="list_headers_files">Soubory</string>
@@ -324,20 +295,17 @@
     <string name="list_headers_month">Tento měsíc</string>
     <string name="list_headers_year">Tento rok</string>
     <string name="list_headers_more_year">Více než před rokem</string>
-
     <!-- ======================================================================================= -->
     <!-- Share -->
     <string name="share_title_main">Nastavení sdílení</string>
     <string name="share_title_add">Přidat osoby</string>
     <string name="share_title_search">Hledat osoby</string>
-
     <string name="share_goal_user">Uživatelé</string>
     <string name="share_goal_group">Skupiny</string>
     <string name="share_main_external_access">Externí přístup skrze odkaz</string>
     <string name="share_main_external_access_info">K dokumentu bude moct přistupovat každý, kdo bude mít k dispozici odkaz</string>
     <string name="share_main_external_copy_button">KOPÍROVAT ODKAZ</string>
     <string name="list_context_get_external_link">Získat odkaz pro externí přístup</string>
-
     <string name="share_popup_access_full">Plný přístup</string>
     <string name="share_popup_access_review">Přehled</string>
     <string name="share_popup_access_read_only">Pouze ke čtení</string>
@@ -345,26 +313,21 @@
     <string name="share_popup_access_deny_remove">Odebrat</string>
     <string name="share_popup_access_fill_forms">Vyplňování formulářů</string>
     <string name="share_popup_access_comment">Komentování</string>
-
     <!-- External link -->
     <string name="share_access_success">Externí přístup byl úspěšně udělen</string>
     <string name="share_access_denied">Externí přístup byl odepřen</string>
     <string name="share_clipboard_external_copied">Tajný odkaz byl zkopírován do schránky</string>
     <string name="share_clipboard_internal_copied">Odkaz na uživatele portálu byl zkopírován do schránky</string>
     <string name="share_clipboard_external_link_label">Externí odkaz</string>
-
     <!-- Tabs -->
     <string name="share_tab_users">UŽIVATELÉ</string>
     <string name="share_tab_groups">SKUPINY</string>
-
     <!-- List headers -->
     <string name="share_add_common_header_users">Uživatelé</string>
     <string name="share_add_common_header_groups">Skupiny</string>
-
     <!-- Panel -->
     <string name="share_panel_message_notification">Vložte zprávu oznámení</string>
     <string name="share_panel_button_add">PŘIDAT</string>
-
     <!-- ======================================================================================= -->
     <!-- Storage -->
     <string name="storage_select_title">Volba služby</string>
@@ -377,19 +340,15 @@
     <string name="storage_select_share_point">SharePoint</string>
     <string name="storage_select_own_cloud">ownCloud</string>
     <string name="storage_select_web_dav">Jiné úložiště WebDAV</string>
-
     <string name="storage_connect_title">Nastavení složky</string>
     <string name="storage_connect_folder_name">Jméno složky</string>
     <string name="storage_connect_save_button">ULOŽIT</string>
     <string name="storage_connect_empty_title">Název vstupního úložiště</string>
-
     <string name="storage_web_title">Připojení služby </string>
     <string name="storage_connect_button">PŘIPOJIT</string>
-
     <string name="storage_web_dav_settings_login">Přihlásit se</string>
     <string name="storage_web_dav_settings_password">Heslo</string>
     <string name="storage_web_dav_settings_title">Vstupní název služby</string>
-
     <!-- ======================================================================================= -->
     <!-- Operations -->
     <string name="operation_title">Vybrat složku</string>
@@ -404,12 +363,10 @@
     <string name="operation_snackbar_send_link">ODESLAT ODKAZ</string>
     <string name="operation_snackbar_return">VRÁTIT</string>
     <string name="operation_share_send_link">ODESLAT</string>
-
     <!-- ======================================================================================= -->
     <!-- Trash -->
     <string name="trash_dialog_empty_title">Vysypat koš</string>
     <string name="trash_popup_delete">Trvale odstranit</string>
-
     <!-- ======================================================================================= -->
     <!-- Managers load -->
     <string name="download_manager_title">Stažené položky Euro-Office</string>
@@ -424,7 +381,6 @@
     <string name="download_manager_notification_cancel_download">Zrušit stahování</string>
     <string name="download_manager_folders_download">Složky nelze stahovat</string>
     <string name="download_manager_select_files">Vybrat soubory</string>
-
     <string name="upload_manager_file_picker_title">Vyberte soubor k nahrání</string>
     <string name="upload_manager_progress_title">Probíhá nahrávání</string>
     <string name="upload_manager_error">Chyba nahrávání</string>
@@ -438,32 +394,27 @@
     <string name="upload_manager_notification_cancel_upload">Zrušit nahrávání</string>
     <string name="upload_manager_waiting_title">Čeká se na nahrávání</string>
     <string name="upload_error_wifi">Nahrávat lze pouze s povoleným připojením prostřednictvím Wi-Fi</string>
-
     <!-- ======================================================================================= -->
     <!-- Socials -->
     <string name="socials_twitter_failed_auth">Přihlášení pomocí účtu Twitter se nezdařilo</string>
     <string name="socials_facebook_cancel_auth">Zrušit přihlášení pomocí účtu Facebook</string>
     <string name="socials_facebook_failed_auth">Přihlášení pomocí účtu Facebook se nezdařilo</string>
     <string name="socials_google_failed_auth">Přihlášení pomocí účtu Google se nezdařilo</string>
-
     <!-- ======================================================================================= -->
     <!-- On boarding -->
     <string name="on_boarding_skip_button">PŘESKOČIT</string>
     <string name="on_boarding_next_button">DALŠÍ</string>
-
     <!-- ======================================================================================= -->
     <!-- Media -->
     <string name="media_image_share_chooser">Zvolte aplikaci ke sdílení</string>
     <string name="media_image_list_info">Soubory médií: %1$s</string>
     <string name="media_video_error">Neznámá chyba přehrávače: %1$s</string>
-
     <string name="auth_header_screen_1">Nastavení dvoufaktorového ověřování</string>
     <string name="auth_info_screen_1">Nainstalujte si ověřovací aplikaci (např. Google Authenticator nebo Authy), pomocí které budete moct generovat kódy pro práci s portálem</string>
     <string name="auth_header_screen_2">Spuštění ověřovací aplikace</string>
     <string name="auth_info_screen_2">Spusťte aplikaci a klepněte na ikonu nového účtu</string>
     <string name="auth_header_screen_3">Vložení tajného klíče</string>
     <string name="auth_info_screen_3">Zkopírujte klíč a vložte jej do ověřovací aplikace </string>
-
     <string name="rename_file_exist">Existuje soubor s totožným názvem.</string>
     <string name="device_path_file_error">Tento soubor neexistuje.</string>
     <string name="device_trash_files_restore">Obnovit</string>
@@ -475,7 +426,6 @@
     <string name="dialog_clear_cache">Vymazat mezipaměť?</string>
     <string name="error_unsupported_path">Nepodporovaná cesta</string>
     <string name="error_unsupported_format">Nepodporovaný formát</string>
-
     <string name="cloud_account_description">Spolupracujte v bezpečném prostředí a připojujte úložiště třetích stran</string>
     <string name="cloud_account_start_button">Začínáme</string>
     <string name="cloud_account_other_storages_button">Ostatní úložiště</string>
@@ -499,7 +449,6 @@
     <string name="app_settings_analytic">Sdílejte analytiku aplikací</string>
     <string name="app_manage_files_title">Přístup ke správě souborů</string>
     <string name="app_manage_files_description">Chcete-li upravovat a vytvářet dokumenty lokálně, musíte aplikaci povolit přístup k souborům v zařízení.</string>
-
     <string name="app_internal_error">Vnitřní chyba</string>
     <string name="app_fragment_crash_error">Prosím vypněte aplikaci a zkuste to znovu</string>
     <string name="operation_add_to_favorites">Přidáno do Oblíbených</string>
@@ -707,14 +656,12 @@
     <string name="room_set_owner_title">Změna vlastníka místnosti</string>
     <string name="room_search_not_found">Nebyl nalezen žádný uživatel</string>
     <string name="room_search_not_found_desc">Zde se zobrazí seznam uživatelů, kteří byli dříve pozváni do prostoru DocSpace nebo do samostatných místností.</string>
-
     <plurals name="rooms_restore_title">
         <item quantity="few">Obnovit místnosti?</item>
         <item quantity="many">Obnovit místnosti?</item>
         <item quantity="one">Obnovit místnost?</item>
         <item quantity="other">Obnovit místnosti?</item>
     </plurals>
-
     <plurals name="rooms_restore_desc">
         <item quantity="one">Všechny sdílené odkazy v místnosti se stanou aktivními a její obsah bude dostupný všem, kteří mají odkaz. Chcete obnovit místnost?</item>
         <item quantity="few">Všechny sdílené odkazy v místnostech se stanou aktivními a její obsah bude dostupný všem s odkazem. Chcete obnovit místnosti?</item>
@@ -868,10 +815,14 @@
     <string name="share_goal_guest">Hosté</string>
     <plurals name="app_settings_passcode_many_attempt_seconds">
         <item quantity="one">Příliš mnoho pokusů.\nZkuste to znovu za %d sekund</item>
+        <item quantity="few">Příliš mnoho pokusů.\nZkuste to znovu za %d sekundy</item>
+        <item quantity="many">Příliš mnoho pokusů.\nZkuste to znovu za %d sekund</item>
         <item quantity="other">Příliš mnoho pokusů.\nZkuste to znovu za %d sekund</item>
     </plurals>
     <plurals name="app_settings_passcode_many_attempt_minutes">
         <item quantity="one">Příliš mnoho pokusů.\nZkuste to znovu za %d minutu</item>
+        <item quantity="few">Příliš mnoho pokusů.\nZkuste to znovu za %d minuty</item>
+        <item quantity="many">Příliš mnoho pokusů.\nZkuste to znovu za %d minut</item>
         <item quantity="other">Příliš mnoho pokusů.\nZkuste to znovu za %d minut</item>
     </plurals>
     <string name="rooms_error_logo_size_exceed">Je překročena maximální velikost obrázku (1 MB)</string>
@@ -956,7 +907,6 @@
     <string name="whats_new_3_desc">Najděte text v dokumentech, tabulkách a prezentacích rychleji díky aktualizovanému vyhledávání v editoru</string>
     <string name="whats_new_4">Aktualizované rozhraní</string>
     <string name="whats_new_4_desc">Užijte si obnovené ikony editoru a přepracované kontextové menu pro přehlednější vzhled a rychlejší přístup k klíčovým akcím</string>
-
     <!-- Newly added translations (v9.0.0 - 2025-06-09) -->
     <string name="cloud_create_account">Vytvořit bezplatný účet</string>
     <string name="context_menu_desc">Více informací</string>
@@ -1076,17 +1026,19 @@
     <string name="version_restore_loading">Obnovení verze</string>
     <string name="version_restore_subtitle">Aktuální soubor bude uložen v historii verzí.</string>
     <string name="version_restore_title">Obnovit tuto verzi?</string>
-
     <!-- Newly added translations (v9.0.2 - 2025-06-25) -->
     <plurals name="dialogs_question_message_template">
         <item quantity="one">Opravdu chcete smazat šablonu místnosti „%s“? Šablonu nelze obnovit.</item>
+        <item quantity="few">Opravdu chcete smazat vybrané šablony místností? Nelze je obnovit.</item>
+        <item quantity="many">Opravdu chcete smazat vybrané šablony místností? Nelze je obnovit.</item>
         <item quantity="other">Opravdu chcete smazat vybrané šablony místností? Nelze je obnovit.</item>
     </plurals>
     <plurals name="dialogs_question_delete_template_title">
         <item quantity="one">Smazat šablonu</item>
+        <item quantity="few">Smazat šablony</item>
+        <item quantity="many">Smazat šablony</item>
         <item quantity="other">Smazat šablony</item>
     </plurals>
-
     <!-- Newly added translations (v9.1.0 - 2025-10-24) -->
     <string name="dev_mode_system_logs">Systémové protokoly</string>
     <string name="dev_mode_network_requests">Síťové požadavky</string>
@@ -1097,7 +1049,6 @@
     <string name="start_filling_ready_for_filling">Formulář je připraven k vyplnění v místnosti</string>
     <string name="start_filling_ready_for_filling_desc">Uživateli v první roli již bylo zasláno oznámení s výzvou k vyplnění formuláře. Můžete přejít do místnosti nebo sdílet odkaz na vyplnění s účastníky.</string>
     <string name="list_context_reset_filling">Resetovat a začít vyplňovat</string>
-
     <!-- Newly added translations (v9.2.0 - 2025-11-28) -->
     <string name="upload_manager_duplicate_title">Požadovaná akce</string>
     <string name="upload_manager_duplicate_text">Cíl již obsahuje soubor s názvem „%s“. Vyberte akci:</string>
@@ -1122,7 +1073,6 @@
     <string name="rooms_info_fill_form_desc">Tato místnost je přístupná všem, kteří mají odkaz. Externí uživatelé budou mít oprávnění k vyplňování formulářů pro všechny soubory.</string>
     <string name="share_popup_access_editing">Úprava</string>
     <string name="share_popup_access_remove">Odstranit</string>
-
     <!-- Newly added translations (v9.3.0 - 2026-02-24) -->
     <string name="placeholder_empty_folder">Zatím zde nejsou žádné soubory</string>
     <string name="placeholder_empty_folder_common">Zatím zde nejsou žádné dokumenty</string>
