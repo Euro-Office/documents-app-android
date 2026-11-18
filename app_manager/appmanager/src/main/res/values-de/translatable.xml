@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Dokumente</string>
     <string name="app_name_full">Euro-Office Dokumente</string>
@@ -97,8 +98,8 @@
     <string name="countries_codes_title">Land wählen</string>
     <string name="bottom_sheet_portal_title">Portal</string>
     <string name="bottom_sheet_cloud_title">Clouds</string>
-    <string name="dialog_move_copy_title_files">%1$d Dokumente mit demselben Namen sind bereits im Ordner \&quot;%2$s\&quot; vorhanden</string>
-    <string name="dialog_move_copy_title_one_file">Die Datei mit dem Namen \&quot;%1$s\&quot; ist bereits im Ordner \&quot;%2$s\&quot; vorhanden</string>
+    <string name="dialog_move_copy_title_files">%1$d Dokumente mit demselben Namen sind bereits im Ordner \"%2$s\" vorhanden</string>
+    <string name="dialog_move_copy_title_one_file">Die Datei mit dem Namen \"%1$s\" ist bereits im Ordner \"%2$s\" vorhanden</string>
     <string name="dialog_move_copy_overwrite">Überschreiben mit Versionsupdate</string>
     <string name="dialog_move_copy_copy">Dateikopie erstellen</string>
     <string name="dialog_move_copy_skip">Überspringen</string>
@@ -129,7 +130,6 @@
     <string name="dialogs_question_personal_confirm_accept">FORTSETZEN</string>
     <string name="dialogs_question_rate_first_info">Mögen Sie Euro-Office Documents?</string>
     <string name="dialogs_question_rate_second_info">Hätten Sie Lust die App kurz bei Google Play zu bewerten?</string>
-
     <!-- Edit -->
     <string name="dialogs_edit_rename_title">Umbenennen</string>
     <string name="dialogs_edit_hint">Titel eingeben</string>
@@ -234,7 +234,8 @@
     <string name="placeholder_no_users_groups">Keine Benutzer und Gruppen</string>
     <string name="placeholder_media_error">Medien können nicht geladen werden</string>
     <string name="placeholder_try_again">Erneut versuchen</string>
-    <string name="placeholder_loading_files">Dateien werden geladen…</string> <!-- Time marks-->
+    <string name="placeholder_loading_files">Dateien werden geladen…</string>
+    <!-- Time marks-->
     <string name="list_headers_folder">Ordner</string>
     <string name="list_headers_files">Dateien</string>
     <string name="list_headers_created">Gerade erstellt</string>
@@ -243,7 +244,8 @@
     <string name="list_headers_week">Diese Woche</string>
     <string name="list_headers_month">Diesen Monat</string>
     <string name="list_headers_year">Dieses Jahr</string>
-    <string name="list_headers_more_year">Vor mehr als einem Jahr</string> <!-- ======================================================================================= --> <!-- Share -->
+    <string name="list_headers_more_year">Vor mehr als einem Jahr</string>
+    <!-- ======================================================================================= --> <!-- Share -->
     <string name="share_title_main">Einstellungen teilen</string>
     <string name="share_title_add">Personen hinzufügen</string>
     <string name="share_title_search">Personen suchen</string>
@@ -259,18 +261,23 @@
     <string name="share_popup_access_deny_access">Zugriff verweigern</string>
     <string name="share_popup_access_deny_remove">Entfernen</string>
     <string name="share_popup_access_fill_forms">Ausfüllen von Formularen</string>
-    <string name="share_popup_access_comment">Kommentar</string> <!-- External link -->
+    <string name="share_popup_access_comment">Kommentar</string>
+    <!-- External link -->
     <string name="share_access_success">Externer Zugriff erfolgreich</string>
     <string name="share_access_denied">Externer Zugriff verweigert</string>
     <string name="share_clipboard_external_copied">Geheimer Link wird in die Zwischenablage kopiert</string>
     <string name="share_clipboard_internal_copied">Link für Portalbenutzer in die Zwischenablage kopiert</string>
-    <string name="share_clipboard_external_link_label">Externer Link</string> <!-- Tabs -->
+    <string name="share_clipboard_external_link_label">Externer Link</string>
+    <!-- Tabs -->
     <string name="share_tab_users">BENUTZER</string>
-    <string name="share_tab_groups">GRUPPEN</string> <!-- List headers -->
+    <string name="share_tab_groups">GRUPPEN</string>
+    <!-- List headers -->
     <string name="share_add_common_header_users">Benutzer</string>
-    <string name="share_add_common_header_groups">Gruppen</string> <!-- Panel -->
+    <string name="share_add_common_header_groups">Gruppen</string>
+    <!-- Panel -->
     <string name="share_panel_message_notification">Text für die Benachrichtigung eingeben</string>
-    <string name="share_panel_button_add">HINZUFÜGEN</string> <!-- ======================================================================================= --> <!-- Storage -->
+    <string name="share_panel_button_add">HINZUFÜGEN</string>
+    <!-- ======================================================================================= --> <!-- Storage -->
     <string name="storage_select_title">Service auswählen</string>
     <string name="storage_select_google_drive">Google Drive</string>
     <string name="storage_select_drop_box">Dropbox</string>
@@ -378,15 +385,11 @@
     <string name="app_settings_analytic">Analysedaten der App teilen</string>
     <string name="app_manage_files_title">Zugriff auf die Dateiverwaltung</string>
     <string name="app_manage_files_description">Um Dokumente lokal zu bearbeiten und zu erstellen, müssen Sie der App den Zugriff auf Dateien auf Ihrem Gerät erlauben.</string>
-
     <string name="app_internal_error">Interner Fehler</string>
     <string name="app_fragment_crash_error">Bitte App schließen und erneut versuchen</string>
-
     <string name="operation_add_to_favorites">Als Favorit markiert</string>
     <string name="operation_remove_from_favorites">Aus Favoriten entfernt</string>
-
     <string name="main_pager_docs_favorites">Favoriten</string>
-
     <string name="list_context_add_to_favorite">Als Favorit markieren</string>
     <string name="list_context_delete_from_favorite">Aus Favoriten entfernen</string>
     <string name="login_enterprise_single_sign_button_login">Sich mit %1$s anmelden</string>
@@ -577,12 +580,10 @@
     <string name="room_set_owner_title">Verantwortlichen ändern</string>
     <string name="room_search_not_found">Keine Benutzer gefunden</string>
     <string name="room_search_not_found_desc">Hier wird die Liste der Benutzer angezeigt, die zuvor in DocSpace oder in andere Räume eingeladen wurden.</string>
-
     <plurals name="rooms_restore_title">
         <item quantity="one">Raum wiederherstellen?</item>
         <item quantity="other">Räume wiederherstellen?</item>
     </plurals>
-
     <plurals name="rooms_restore_desc">
         <item quantity="one">Alle freigegebenen Links im Raum werden aktiv, und der Inhalt ist für alle Benutzer mit dem Link verfügbar. Möchten Sie den Raum wiederherstellen?</item>
         <item quantity="other">Alle gemeinsamen Verknüpfungen in Räumen werden aktiv, und ihre Inhalte sind für alle Personen mit der Verknüpfung verfügbar. Möchten Sie Räume wiederherstellen?</item>
@@ -823,7 +824,6 @@ Wir empfehlen Ihnen, auf die kostenlose Euro-Office DocSpace Cloud umzusteigen.<
     <string name="whats_new_3_desc">Finden Sie Texte in Dokumenten, Tabellen und Präsentationen schneller mit der aktualisierten Suchfunktion im Editor.</string>
     <string name="whats_new_4">Aktualisierte Benutzeroberfläche</string>
     <string name="whats_new_4_desc">Profitieren Sie von aktualisierten Editor-Symbolen und einem neu gestalteten Kontextmenü für eine übersichtlichere Darstellung und einen schnelleren Zugriff auf wichtige Aktionen.</string>
-
     <!-- Newly added translations (v9.0.0 - 2025-06-09) -->
     <string name="cloud_create_account">Kostenloses Konto erstellen</string>
     <string name="context_menu_desc">Mehr</string>
@@ -943,7 +943,6 @@ Wir empfehlen Ihnen, auf die kostenlose Euro-Office DocSpace Cloud umzusteigen.<
     <string name="version_restore_loading">Version wird wiederhergestellt</string>
     <string name="version_restore_subtitle">Die aktuelle Datei wird im Versionsverlauf gespeichert.</string>
     <string name="version_restore_title">Diese Version wiederherstellen?</string>
-
     <!-- Newly added translations (v9.0.2 - 2025-06-25) -->
     <plurals name="dialogs_question_message_template">
         <item quantity="one">Möchten Sie die Raumvorlage «%s» wirklich löschen? Die Vorlage kann nicht wiederhergestellt werden.</item>
@@ -953,7 +952,6 @@ Wir empfehlen Ihnen, auf die kostenlose Euro-Office DocSpace Cloud umzusteigen.<
         <item quantity="one">Vorlage löschen</item>
         <item quantity="other">Vorlagen löschen</item>
     </plurals>
-
     <!-- Newly added translations (v9.1.0 - 2025-10-24) -->
     <string name="dev_mode_system_logs">Systemprotokolle</string>
     <string name="dev_mode_network_requests">Netzwerkanfragen</string>
@@ -964,7 +962,6 @@ Wir empfehlen Ihnen, auf die kostenlose Euro-Office DocSpace Cloud umzusteigen.<
     <string name="start_filling_ready_for_filling">Formular liegt zum Ausfüllen im Raum bereit</string>
     <string name="start_filling_ready_for_filling_desc">Dem Benutzer in der ersten Rolle wurde bereits eine Benachrichtigung gesendet, die ihn zum Ausfüllen des Formulars auffordert. Sie können zum Raum navigieren oder den Ausfülllink mit den Teilnehmern teilen.</string>
     <string name="list_context_reset_filling">Zurücksetzen und Ausfüllen starten</string>
-
     <!-- Newly added translations (v9.2.0 - 2025-11-25) -->
     <string name="upload_manager_duplicate_title">Aktion erforderlich</string>
     <string name="upload_manager_duplicate_text">Im Zielverzeichnis befindet sich bereits eine Datei mit dem Namen «%s». Bitte wählen Sie die Aktion aus:</string>
@@ -989,7 +986,6 @@ Wir empfehlen Ihnen, auf die kostenlose Euro-Office DocSpace Cloud umzusteigen.<
     <string name="rooms_info_fill_form_desc">Dieser Raum ist für alle mit dem Link zugänglich. Externe Benutzer haben die Berechtigung, Formulare auszufüllen, für alle Dateien.</string>
     <string name="share_popup_access_editing">Bearbeiten</string>
     <string name="share_popup_access_remove">Entfernen</string>
-
     <!-- Newly added translations (v9.3.0 - 2026-02-24) -->
     <string name="placeholder_empty_folder">Hier gibt es noch keine Dateien</string>
     <string name="placeholder_empty_folder_common">Hier gibt es noch keine Dokumente</string>
@@ -1028,4 +1024,12 @@ Wir empfehlen Ihnen, auf die kostenlose Euro-Office DocSpace Cloud umzusteigen.<
     <string name="room_placeholder_creator_subtitle">Erstellen oder laden Sie neue Dateien hoch, um loszulegen.</string>
     <string name="room_placeholder_collab_room_creator_title">Willkommen im Raum für Zusammenarbeit</string>
     <string name="room_placeholder_custom_room_creator_title">Willkommen im benutzerdefinierten Raum</string>
+    <string name="cloud_nextcloud_description">Dokumente in Ihrer Nextcloud öffnen, bearbeiten und gemeinsam bearbeiten</string>
+    <string name="cloud_connect_nextcloud">Nextcloud verbinden</string>
+    <string name="dialogs_question_delete_dictionary">Das Wörterbuch für %1$s entfernen?</string>
+    <string name="dialogs_question_delete_dictionary_message">Es wird erneut heruntergeladen, wenn Sie ein Dokument in dieser Sprache bearbeiten.</string>
+    <string name="settings_dictionaries">Rechtschreibwörterbücher</string>
+    <string name="settings_dictionaries_remove">Wörterbuch entfernen</string>
+    <string name="placeholder_no_dictionaries">Keine heruntergeladenen Wörterbücher</string>
+    <string name="placeholder_no_dictionaries_desc">Englisch ist in der App enthalten. Andere Sprachen laden die Editoren herunter, sobald ein Dokument sie benötigt.</string>
 </resources>
