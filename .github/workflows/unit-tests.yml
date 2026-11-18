@@ -58,13 +58,13 @@ jobs:
 
       - name: Test
         working-directory: app_manager
-        run: ./gradlew --no-daemon :core:createDebugUnitTestCoverageReport :appmanager:createDebugUnitTestCoverageReport :libtoolkit:createDebugUnitTestCoverageReport
+        run: ./gradlew --no-daemon :core:createDebugUnitTestCoverageReport :appmanager:createEuroofficeDebugUnitTestCoverageReport :libtoolkit:createDebugUnitTestCoverageReport
 
       - name: Coverage of the changed lines
         if: github.event_name == 'pull_request'
         uses: Euro-Office/.github/actions/diff-coverage@c6be61e1c3cc63761a8a70c71fad268bf9ee434e # main
         with:
-          reports: app_manager/core/build/reports/coverage/test/debug/report.xml app_manager/appmanager/build/reports/coverage/test/debug/report.xml toolkit/libtoolkit/build/reports/coverage/test/debug/report.xml
+          reports: app_manager/core/build/reports/coverage/test/debug/report.xml app_manager/appmanager/build/reports/coverage/test/eurooffice/debug/report.xml toolkit/libtoolkit/build/reports/coverage/test/debug/report.xml
           fail-under: 80
           args: --src-roots app_manager/core/src/main/java app_manager/appmanager/src/main/java toolkit/libtoolkit/src/main/java --exclude '*/ui/*'
 

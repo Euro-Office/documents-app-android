@@ -207,7 +207,7 @@ class EnterprisePortalFragment : BaseAppFragment(),
         @Suppress("KotlinConstantConditions")
         override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
             viewBinding?.loginEnterprisePortalLayout?.isErrorEnabled = false
-            if (BuildConfig.APPLICATION_ID == "eu.eurooffice.documents") {
+            if (BuildConfig.APPLICATION_ID == BuildConfig.RELEASE_ID) {
                 viewBinding?.loginEnterpriseNextButton?.isEnabled =
                     s.isNotEmpty() && viewBinding?.terms?.termsCheckbox?.isChecked == true
             } else {

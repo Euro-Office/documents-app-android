@@ -3,7 +3,6 @@ package app.documents.core.providers
 import android.annotation.SuppressLint
 import android.content.Context
 import android.net.Uri
-import android.os.Environment
 import app.documents.core.manager.ProgressRequestBody
 import app.documents.core.network.common.NetworkResult
 import app.documents.core.network.common.asResult
@@ -29,7 +28,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
-import lib.toolkit.base.BuildConfig
+import lib.toolkit.base.managers.tools.LocalContentTools
 import lib.toolkit.base.managers.utils.ContentResolverUtils.getName
 import lib.toolkit.base.managers.utils.ContentResolverUtils.getSize
 import lib.toolkit.base.managers.utils.EditType
@@ -70,7 +69,6 @@ class WebDavFileProvider @Inject constructor(
         private val FILE_ID = Regex("<oc:fileid>(\\d+)</oc:fileid>")
         private const val TOTAL_PROGRESS = 100
         private const val PATH_TEMPLATES = "templates/"
-        private val PATH_DOWNLOAD = Environment.getExternalStorageDirectory().absolutePath + "/${BuildConfig.ROOT_FOLDER}"
     }
 
     private var batchItems: List<Item>? = null
@@ -402,7 +400,7 @@ class WebDavFileProvider @Inject constructor(
         val file = item as CloudFile
         when (getExtension(file.fileExst)) {
             StringUtils.Extension.UNKNOWN, StringUtils.Extension.EBOOK, StringUtils.Extension.ARCH, StringUtils.Extension.VIDEO, StringUtils.Extension.HTML -> {
-                val parent = File(Environment.getExternalStorageDirectory().absolutePath + "/Euro-Office")
+                val parent = LocalContentTools.getExternalDir(context)
                 return createFile(parent, file.title)
             }
             else -> {
@@ -442,7 +440,7 @@ class WebDavFileProvider @Inject constructor(
     private fun startDownload(item: Item): Observable<Int> {
         return Observable.create { emitter: ObservableEmitter<Int> ->
             val response = webDavService.download(item.id).blockingGet()
-            val outputFile = File(PATH_DOWNLOAD, item.title)
+            val outputFile = File(LocalContentTools.getExternalDir(context), item.title)
             if (response.body() != null) {
                 try {
                     response.body()!!.byteStream().use { inputStream ->
