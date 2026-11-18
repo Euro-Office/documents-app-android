@@ -944,10 +944,12 @@
     <!-- Newly added translations (v9.0.2 - 2025-06-25) -->
     <plurals name="dialogs_question_message_template">
         <item quantity="one">¿Realmente desea eliminar la plantilla de sala «%s»? La plantilla no se puede restaurar.</item>
+        <item quantity="many">¿Realmente desea eliminar las plantillas de sala seleccionadas? No se pueden restaurar.</item>
         <item quantity="other">¿Realmente desea eliminar las plantillas de sala seleccionadas? No se pueden restaurar.</item>
     </plurals>
     <plurals name="dialogs_question_delete_template_title">
         <item quantity="one">Eliminar plantilla</item>
+        <item quantity="many">Eliminar plantillas</item>
         <item quantity="other">Eliminar plantillas</item>
     </plurals>
     <!-- Newly added translations (v9.1.0 - 2025-10-24) -->
