@@ -241,5 +241,8 @@
     <string name="dialogs_warning_title">Увага</string>
     <plurals name="dialogs_question_delete_title">
         <item quantity="one">Вилучити цей об\'єкт?</item>
+        <item quantity="few">Вилучити %1$d об\'єкти?</item>
+        <item quantity="many">Вилучити %1$d об\'єктів?</item>
+        <item quantity="other">Вилучити %1$d об\'єктів?</item>
     </plurals>
 </resources>
