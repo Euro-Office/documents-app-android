@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="about_app_version">Версия %1$s, сборка %2$s, SDK %3$s</string>
     <string name="about_license">Лицензионное соглашение</string>
@@ -241,7 +242,7 @@
     <string name="operation_complete_message">Операция завершена</string>
     <string name="operation_delete_impossible">Невозможно удалить файл. Файл открыт на портале.</string>
     <string name="operation_delete_multiple">. Один или несколько файлов не были удалены, так как открыты на портале</string>
-    >
+    &gt;
     <string name="operation_empty_lists_data">Выберите элементы для выполнения операции</string>
     <string name="operation_error_move_to_same">Нельзя переносить в ту же самую папку</string>
     <string name="operation_error_move_to_same_subfolder">Нельзя переносить в ту же самую подпапку</string>
@@ -385,13 +386,11 @@
     <string name="profile_type_user">Пользователь</string>
     <string name="profile_thirdparty_title">Подключенные сервисы</string>
     <string name="error_unsupported_format">Неподдерживаемый формат</string>
-
     <string name="errors_create_local_file">Ошибка создания файла</string>
     <string name="app_settings_analytic_title">Помогите улучшить продукт</string>
     <string name="app_settings_analytic">Поделиться аналитикой приложения</string>
     <string name="app_manage_files_title">Доступ к управлению файлами</string>
     <string name="app_manage_files_description">Чтобы редактировать и создавать документы локально, вам необходимо разрешить приложению доступ к файлам на вашем устройстве.</string>
-
     <string name="app_internal_error">Внутренняя ошибка</string>
     <string name="app_fragment_crash_error">Закройте приложение и попробуйте снова</string>
     <string name="login_enterprise_single_sign_button_login">Вход через %1$s</string>
@@ -748,10 +747,14 @@
     <string name="share_goal_guest">Гости</string>
     <plurals name="app_settings_passcode_many_attempt_seconds" tools:ignore="MissingQuantity">
         <item quantity="one">Слишком много попыток.\nПопробуйте снова через %d секунду</item>
+        <item quantity="few">Слишком много попыток.\nПопробуйте снова через %d секунды</item>
+        <item quantity="many">Слишком много попыток.\nПопробуйте снова через %d секунд</item>
         <item quantity="other">Слишком много попыток.\nПопробуйте снова через %d секунд</item>
     </plurals>
     <plurals name="app_settings_passcode_many_attempt_minutes" tools:ignore="MissingQuantity">
         <item quantity="one">Слишком много попыток.\nПопробуйте снова через %d минуту</item>
+        <item quantity="few">Слишком много попыток.\nПопробуйте снова через %d минуты</item>
+        <item quantity="many">Слишком много попыток.\nПопробуйте снова через %d минут</item>
         <item quantity="other">Слишком много попыток.\nПопробуйте снова через %d минут</item>
     </plurals>
     <string name="rooms_error_logo_size_exceed">Превышен максимальный размер изображения (1 MB)</string>
@@ -836,7 +839,6 @@
     <string name="whats_new_3_desc">Быстрее находите текст в документах, таблицах и презентациях с помощью обновленного поиска</string>
     <string name="whats_new_4">Обновленный интерфейс</string>
     <string name="whats_new_4_desc">Наслаждайтесь обновленными значками редактора и переработанным контекстным меню, которые обеспечивают более чистый вид и быстрый доступ к ключевым действиям</string>
-
     <!-- Newly added translations (v9.0.0 - 2025-06-09) -->
     <string name="cloud_create_account">Создать бесплатную учетную запись</string>
     <string name="context_menu_desc">Больше</string>
@@ -956,17 +958,19 @@
     <string name="version_restore_loading">Восстановление версии</string>
     <string name="version_restore_subtitle">Текущий файл будет сохранен в истории версий.</string>
     <string name="version_restore_title">Восстановить эту версию?</string>
-
     <!-- Newly added translations (v9.0.2 - 2025-06-25) -->
     <plurals name="dialogs_question_message_template">
         <item quantity="one">Вы действительно хотите удалить шаблон комнаты «%s»? Шаблон нельзя будет восстановить.</item>
+        <item quantity="few">Вы действительно хотите удалить выбранные шаблоны комнат? Их нельзя будет восстановить.</item>
+        <item quantity="many">Вы действительно хотите удалить выбранные шаблоны комнат? Их нельзя будет восстановить.</item>
         <item quantity="other">Вы действительно хотите удалить выбранные шаблоны комнат? Их нельзя будет восстановить.</item>
     </plurals>
     <plurals name="dialogs_question_delete_template_title">
         <item quantity="one">Удалить шаблон</item>
+        <item quantity="few">Удалить шаблоны</item>
+        <item quantity="many">Удалить шаблоны</item>
         <item quantity="other">Удалить шаблоны</item>
     </plurals>
-
     <!-- Newly added translations (v9.1.0 - 2025-10-24) -->
     <string name="dev_mode_system_logs">Системные журналы</string>
     <string name="dev_mode_network_requests">Сетевые запросы</string>
@@ -977,7 +981,6 @@
     <string name="start_filling_ready_for_filling">Форма готова к заполнению в комнате</string>
     <string name="start_filling_ready_for_filling_desc">Пользователю с первой ролью отправлено уведомление с предложением заполнить форму. Вы можете перейти в комнату или поделиться ссылкой для заполнения с участниками.</string>
     <string name="list_context_reset_filling">Сбросить и начать заполнение</string>
-
     <!-- Newly added translations (v9.2.0 - 2025-11-25) -->
     <string name="upload_manager_duplicate_title">Требуется действие</string>
     <string name="upload_manager_duplicate_text">В папке назначения уже есть файл с именем «%s». Выберите действие:</string>
@@ -1002,7 +1005,6 @@
     <string name="rooms_info_fill_form_desc">Эта комната доступна всем, у кого есть ссылка. Внешние пользователи получат разрешение на заполнение форм для всех файлов.</string>
     <string name="share_popup_access_editing">Редактирование</string>
     <string name="share_popup_access_remove">Удалить</string>
-
     <!-- Newly added translations (v9.3.0 - 2026-02-24) -->
     <string name="placeholder_empty_folder">Здесь пока нет файлов</string>
     <string name="placeholder_empty_folder_common">Здесь пока нет документов</string>
