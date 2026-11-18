@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="about_app_version">Wersja %1$s, zbudowana %2$s, SDK %3$s</string>
     <string name="about_license">Umowa Licencyjna</string>
@@ -518,16 +519,21 @@
     <string name="switch_account_description">Zaloguj się na konto %1$s w portalu, aby otworzyć dokument.</string>
     <plurals name="dialogs_question_message_delete" tools:ignore="MissingQuantity">
         <item quantity="one">Zostanie on bezpowrotnie usunięty.\nDane działanie jest nieodwracalne.</item>
+        <item quantity="few">Zostaną one bezpowrotnie usunięte.\nDane działanie jest nieodwracalne.</item>
+        <item quantity="many">Zostaną one bezpowrotnie usunięte.\nDane działanie jest nieodwracalne.</item>
         <item quantity="other">Zostaną one bezpowrotnie usunięte.\nDane działanie jest nieodwracalne.</item>
     </plurals>
-
     <plurals name="dialogs_question_message_to_trash" tools:ignore="MissingQuantity">
         <item quantity="one">Zostanie on przeniesiony do Kosza.</item>
+        <item quantity="few">Zostaną one przeniesione do Kosza.</item>
+        <item quantity="many">Zostaną one przeniesione do Kosza.</item>
         <item quantity="other">Zostaną one przeniesione do Kosza.</item>
     </plurals>
     <string name="dialogs_question_delete_all_title">Usunąć wszystkie pozycje?</string>
     <plurals name="dialogs_question_delete_title" tools:ignore="MissingQuantity">
         <item quantity="one">Usunąć tę pozycję?</item>
+        <item quantity="few">Usunąć %1$d pozycje?</item>
+        <item quantity="many">Usunąć %1$d pozycji?</item>
         <item quantity="other">Usunąć %1$d pozycji?</item>
     </plurals>
     <string name="storage_dropbox_email_not_verified_error">E-mail nie został zweryfikowany</string>
@@ -535,10 +541,14 @@
     <string name="settings_language">Język</string>
     <plurals name="operation_moved_to_trash" tools:ignore="MissingQuantity">
         <item quantity="one">Pozycja została przeniesiona do Kosza</item>
+        <item quantity="few">Pozycje zostały przeniesione do Kosza</item>
+        <item quantity="many">Pozycje zostały przeniesione do Kosza</item>
         <item quantity="other">Pozycje zostały przeniesione do Kosza</item>
     </plurals>
     <plurals name="operation_delete_irretrievably" tools:ignore="MissingQuantity">
         <item quantity="one">Pozycja została nieodwracalnie usunięta</item>
+        <item quantity="few">Pozycje zostały nieodwracalnie usunięte</item>
+        <item quantity="many">Pozycje zostały nieodwracalnie usunięte</item>
         <item quantity="other">Pozycje zostały nieodwracalnie usunięte</item>
     </plurals>
     <string name="share_expected_member">Oczekiwanie na członków</string>
@@ -571,14 +581,12 @@
     <string name="room_set_owner_title">Zmień właściciela pokoju</string>
     <string name="room_search_not_found">Nie znaleziono użytkowników</string>
     <string name="room_search_not_found_desc">Tutaj pojawi się lista użytkowników zaproszonych wcześniej do DocSpace lub poszczególnych pokoi.</string>
-
     <plurals name="rooms_restore_title">
         <item quantity="one">Przywrócić pokój?</item>
         <item quantity="few">Przywrócić pokoje?</item>
         <item quantity="many">Przywrócić pokoje?</item>
         <item quantity="other">Przywrócić pokoje?</item>
     </plurals>
-
     <plurals name="rooms_restore_desc">
         <item quantity="one">Wszystkie udostępnione przez Ciebie linki w pokoju staną się aktywne, a jego zawartość będzie dostępna dla wszystkich użytkowników posiadających link. Czy chcesz przywrócić pokój?</item>
         <item quantity="few">Wszystkie udostępnione przez Ciebie linki w pokojach staną się aktywne, a ich zawartość będzie dostępna dla wszystkich użytkowników posiadających link. Czy chcesz przywrócić pokoje?</item>
@@ -817,7 +825,6 @@ Aplikacja korzysta teraz z języka angielskiego, ponieważ zmieniono język syst
     <string name="rooms_invite_access_description">Nie można przypisać roli menedżera pokoju gościom, użytkownikom ani grupom. Tylko administratorzy pokoi i DocSpace mogą pełnić daną funkcję.</string>
     <string name="whats_new_title">Co nowego?</string>
     <string name="whats_new_next">Rozpocznij</string>
-
     <!-- Newly added translations (v9.0.0 - 2025-06-09) -->
     <string name="cloud_create_account">Załóż darmowe konto</string>
     <string name="context_menu_desc">Więcej</string>
@@ -945,17 +952,19 @@ Aplikacja korzysta teraz z języka angielskiego, ponieważ zmieniono język syst
     <string name="whats_new_3_desc">Dodaj nowe typy wykresów, aby wizualizować dane na potrzeby szczegółowych prezentacji i analiz.</string>
     <string name="whats_new_4">Wyświetlanie plików Apple Pages i HWP</string>
     <string name="whats_new_4_desc">Otwieranie i wyświetlanie dokumentów w formatach Apple Pages i Hangul Word.</string>
-
     <!-- Newly added translations (v9.0.2 - 2025-06-25) -->
     <plurals name="dialogs_question_message_template">
         <item quantity="one">Czy na pewno chcesz usunąć szablon pokoju «%s»? Szablon nie może zostać przywrócony.</item>
-        <item quantity="other">Czy na pewno chcesz usunąć wybrane szablony pokoi? Nie można ich przywrócić.</item>
+        <item quantity="few">Czy na pewno chcesz usunąć wybrane szablony pokoi? Nie mogą zostać przywrócone.</item>
+        <item quantity="many">Czy na pewno chcesz usunąć wybrane szablony pokoi? Nie mogą zostać przywrócone.</item>
+        <item quantity="other">Czy na pewno chcesz usunąć wybrane szablony pokoi? Nie mogą zostać przywrócone.</item>
     </plurals>
     <plurals name="dialogs_question_delete_template_title">
         <item quantity="one">Usuń szablon</item>
+        <item quantity="few">Usuń szablony</item>
+        <item quantity="many">Usuń szablony</item>
         <item quantity="other">Usuń szablony</item>
     </plurals>
-
     <!-- Newly added translations (v9.1.0 - 2025-10-24) -->
     <string name="dev_mode_system_logs">Logi systemowe</string>
     <string name="dev_mode_network_requests">Żądania sieciowe</string>
@@ -967,7 +976,6 @@ Aplikacja korzysta teraz z języka angielskiego, ponieważ zmieniono język syst
     <string name="start_filling_ready_for_filling">Formularz jest gotowy do wypełnienia pokoju</string>
     <string name="start_filling_ready_for_filling_desc">Powiadomienie z prośbą o wypełnienie formularza zostało już wysłane do użytkownika w pierwszej roli. Możesz przejść do pokoju lub udostępnić uczestnikom link umożliwiający wypełnienie formularza.</string>
     <string name="list_context_reset_filling">Zresetuj i rozpocznij wypełnianie</string>
-
     <!-- Newly added translations (v9.2.0 - 2025-11-26) -->
     <string name="upload_manager_duplicate_title">Wymagane działanie</string>
     <string name="upload_manager_duplicate_text">Lokalizacja docelowa zawiera już plik o nazwie «%s». Wybierz działanie:</string>
@@ -992,7 +1000,6 @@ Aplikacja korzysta teraz z języka angielskiego, ponieważ zmieniono język syst
     <string name="rooms_info_fill_form_desc">Ten pokój jest dostępny dla każdego, kto ma link. Użytkownicy zewnętrzni będą mieli uprawnienie umożliwiające wypełnienie formularza dla wszystkich plików.</string>
     <string name="share_popup_access_editing">Edycja</string>
     <string name="share_popup_access_remove">Usuń</string>
-
     <!-- Newly added translations (v9.3.0 - 2026-02-24) -->
     <string name="placeholder_empty_folder">Nie ma tu jeszcze żadnych plików</string>
     <string name="placeholder_empty_folder_common">Nie ma tu jeszcze żadnych dokumentów</string>
