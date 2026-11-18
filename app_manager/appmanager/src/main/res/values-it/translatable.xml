@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="about_app_version">Versione %1$s, build %2$s, SDK %3$s</string>
     <string name="about_license">Contratto di licenza</string>
@@ -732,10 +733,12 @@
     <string name="share_goal_guest">Ospiti</string>
     <plurals name="app_settings_passcode_many_attempt_seconds">
         <item quantity="one">Troppi tentativi.\nRiprova tra %d secondo</item>
+        <item quantity="many">Troppi tentativi.\nRiprova tra %d secondi</item>
         <item quantity="other">Troppi tentativi.\nRiprova tra %d secondi</item>
     </plurals>
     <plurals name="app_settings_passcode_many_attempt_minutes">
         <item quantity="one">Troppi tentativi.\nRiprova tra %d minuto</item>
+        <item quantity="many">Troppi tentativi.\nRiprova tra %d minuti</item>
         <item quantity="other">Troppi tentativi.\nRiprova tra %d minuti</item>
     </plurals>
     <string name="rooms_error_logo_size_exceed">La dimensione massima dell\'immagine è stata superata (1 MB)</string>
@@ -820,7 +823,6 @@
     <string name="whats_new_3_desc">Trova testo più rapidamente in documenti, fogli di calcolo e presentazioni grazie alla ricerca aggiornata nell\'editor</string>
     <string name="whats_new_4">Interfaccia aggiornata</string>
     <string name="whats_new_4_desc">Goditi icone dell\'editor rinnovate e un menù contestuale ridisegnato per un aspetto più pulito e un accesso più veloce alle azioni principali</string>
-
     <!-- Newly added translations (v9.0.0 - 2025-06-09) -->
     <string name="cloud_create_account">Create free account</string>
     <string name="context_menu_desc">More</string>
@@ -940,17 +942,17 @@
     <string name="version_restore_loading">Restoring version</string>
     <string name="version_restore_subtitle">Current file will be saved in version history.</string>
     <string name="version_restore_title">Restore this version?</string>
-
     <!-- Newly added translations (v9.0.2 - 2025-06-25) -->
     <plurals name="dialogs_question_message_template">
         <item quantity="one">Vuoi davvero eliminare la stanza modello «%s»? Il modello non può essere ripristinato.</item>
+        <item quantity="many">Vuoi davvero eliminare i modelli di stanza selezionati? Non possono essere ripristinati.</item>
         <item quantity="other">Vuoi davvero eliminare i modelli di stanza selezionati? Non possono essere ripristinati.</item>
     </plurals>
     <plurals name="dialogs_question_delete_template_title">
         <item quantity="one">Elimina modello</item>
+        <item quantity="many">Elimina modelli</item>
         <item quantity="other">Elimina modelli</item>
     </plurals>
-
     <!-- Newly added translations (v9.1.0 - 2025-10-24) -->
     <string name="dev_mode_system_logs">Registri di sistema</string>
     <string name="dev_mode_network_requests">Richieste di rete</string>
@@ -961,7 +963,6 @@
     <string name="start_filling_ready_for_filling">Il modulo è pronto per la compilazione nella stanza.</string>
     <string name="start_filling_ready_for_filling_desc">È già stata inviata una notifica all\'utente con il primo ruolo, invitandolo a compilare il modulo. Puoi accedere alla stanza o condividere il link di compilazione con i partecipanti.</string>
     <string name="list_context_reset_filling">Reimposta e avvia la compilazione</string>
-
     <!-- Newly added translations (v9.2.0 - 2025-12-01) -->
     <string name="upload_manager_duplicate_title">Azione richiesta</string>
     <string name="upload_manager_duplicate_text">La destinazione contiene già un file chiamato «%s». Seleziona l\'azione:</string>
@@ -986,7 +987,6 @@
     <string name="rooms_info_fill_form_desc">Questa stanza è disponibile a chiunque abbia il link. Gli utenti esterni avranno il permesso di Compilazione Moduli per tutti i file.</string>
     <string name="share_popup_access_editing">Modifica</string>
     <string name="share_popup_access_remove">Rimuovi</string>
-
     <!-- Newly added translations (v9.3.0 - 2026-02-24) -->
     <string name="placeholder_empty_folder">Ancora nessun file qui</string>
     <string name="placeholder_empty_folder_common">Ancora nessun documento qui</string>
