@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="about_app_version">Versão %1$s, build %2$s, SDK %3$s</string>
     <string name="about_license">Acordo de licença</string>
@@ -574,13 +575,11 @@
     <string name="room_set_owner_title">Alterar o proprietário da sala</string>
     <string name="room_search_not_found">Usuários não encontrados</string>
     <string name="room_search_not_found_desc">A lista de usuários previamente convidados para o DocSpace ou salas separadas aparecerá aqui.</string>
-
     <plurals name="rooms_restore_title">
         <item quantity="one" tools:ignore="ImpliedQuantity">Restaurar a sala?</item>
         <item quantity="many">Restaurar as salas?</item>
         <item quantity="other">Restaurar as salas?</item>
     </plurals>
-
     <plurals name="rooms_restore_desc">
         <item quantity="one" tools:ignore="ImpliedQuantity">Todos os links compartilhados na sala ficarão ativos e seu conteúdo estará disponível para todos que possuem o link. Você quer restaurar a sala?</item>
         <item quantity="many">Todos os links compartilhados nas salas ficarão ativos e seu conteúdo estará disponível para todos que possuem o link. Você quer restaurar as salas?</item>
@@ -733,10 +732,12 @@
     <string name="share_goal_guest">Convidados</string>
     <plurals name="app_settings_passcode_many_attempt_seconds">
         <item quantity="one">Muitas tentativas.\nTente novamente em %d segundos</item>
+        <item quantity="many">Tantas tentativas.\nTente novamente em %d segundos</item>
         <item quantity="other">Tantas tentativas.\nTente novamente em %d segundos</item>
     </plurals>
     <plurals name="app_settings_passcode_many_attempt_minutes">
         <item quantity="one">Muitas tentativas.\nTente novamente em %d minuto</item>
+        <item quantity="many">Muitas tentativas.\nTente novamente em %d minutos</item>
         <item quantity="other">Muitas tentativas.\nTente novamente em %d minutos</item>
     </plurals>
     <string name="rooms_error_logo_size_exceed">O tamanho máximo da imagem foi excedido (1 MB)</string>
@@ -821,7 +822,6 @@
     <string name="whats_new_3_desc">Encontre texto mais rapidamente em documentos, planilhas e apresentações com a pesquisa atualizada integrada ao editor.</string>
     <string name="whats_new_4">Interface atualizada</string>
     <string name="whats_new_4_desc">Aproveite os ícones do editor renovados e o menu de contexto redesenhado para uma aparência mais limpa e acesso mais rápido às ações principais.</string>
-
     <!-- Newly added translations (v9.0.0 - 2025-06-09) -->
     <string name="cloud_create_account">Criar conta gratuita</string>
     <string name="context_menu_desc">Mais</string>
@@ -941,17 +941,17 @@
     <string name="version_restore_loading">Restaurando a versão</string>
     <string name="version_restore_subtitle">O arquivo atual será salvo no histórico de versões.</string>
     <string name="version_restore_title">Restaurar esta versão?</string>
-
     <!-- Newly added translations (v9.0.2 - 2025-06-25) -->
     <plurals name="dialogs_question_message_template">
         <item quantity="one">Deseja realmente excluir o modelo de sala «%s»? O modelo não pode ser restaurado.</item>
+        <item quantity="many">Deseja realmente excluir os modelos de sala selecionados? Eles não podem ser restaurados.</item>
         <item quantity="other">Deseja realmente excluir os modelos de sala selecionados? Eles não podem ser restaurados.</item>
     </plurals>
     <plurals name="dialogs_question_delete_template_title">
         <item quantity="one">Excluir modelo</item>
+        <item quantity="many">Excluir modelos</item>
         <item quantity="other">Excluir modelos</item>
     </plurals>
-
     <!-- Newly added translations (v9.1.0 - 2025-10-24) -->
     <string name="dev_mode_system_logs">Logs do sistema</string>
     <string name="dev_mode_network_requests">Solicitações de rede</string>
@@ -962,7 +962,6 @@
     <string name="start_filling_ready_for_filling">Formulário está pronto para preenchimento na sala</string>
     <string name="start_filling_ready_for_filling_desc">Uma notificação já foi enviada ao usuário na primeira função, solicitando que preencha o formulário. Você pode navegar até a sala ou compartilhar o link de preenchimento com os participantes.</string>
     <string name="list_context_reset_filling">Redefinir e iniciar preenchimento</string>
-
     <!-- Newly added translations (v9.2.0 - 2025-11-25) -->
     <string name="upload_manager_duplicate_title">Ação necessária</string>
     <string name="upload_manager_duplicate_text">O destino já contém um arquivo chamado «%s». Selecione a ação:</string>
@@ -987,7 +986,6 @@
     <string name="rooms_info_fill_form_desc">Esta sala está disponível para qualquer pessoa com o link. Os usuários externos terão permissão para preencher formulários em todos os arquivos..</string>
     <string name="share_popup_access_editing">Edição</string>
     <string name="share_popup_access_remove">Remover</string>
-
     <!-- Newly added translations (v9.3.0 - 2026-02-24) -->
     <string name="placeholder_empty_folder">Ainda não há arquivos aqui</string>
     <string name="placeholder_empty_folder_common">Ainda não há documentos aqui</string>
