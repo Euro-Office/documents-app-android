@@ -16,11 +16,11 @@
     <string name="app_versions_update_accept">Actualizar aplicación oficial</string>
     <string name="app_versions_update_info">¡Gracias por realizar pruebas beta! Hemos lanzado Euro-Office Documentos 3.0, la versión beta ya no es soportada. Por favor, actualice la aplicación oficial, donde todas las funciones nuevas y correcciones de bugs serán disponibles.</string>
     <string name="app_versions_without_release_accept">Instalar aplicación oficial</string>
-    <string name="app_versions_without_release_info">¡Gracias por realizar pruebas beta! Hemos lanzado Euro-Office Documentos 3.0, la versión beta ya no es soportada. Cambie a la aplicación oficial para recibir nuevas actualizaciones</string>
+    <string name="app_versions_without_release_info">¡Gracias por realizar pruebas beta! Hemos lanzado Euro-Office Documentos 3.0, la versión beta ya no es soportada. Cambie a la aplicación oficial para recibir nuevas actualizaciones.</string>
     <string name="auth_header_screen_1">Establezca la autenticación de dos factores</string>
     <string name="auth_header_screen_2">Lance una aplicación de autenticación</string>
     <string name="auth_header_screen_3">Añada una clave secreta</string>
-    <string name="auth_info_screen_1">Instale una aplicación de autenticación para generar códigos de acceso (por ejemplo, Google Authenticator, Authy) para seguir trabajando con su portal.</string>
+    <string name="auth_info_screen_1">Instale una aplicación de autenticación para generar códigos de acceso (por ejemplo, Google Authenticator, Authy) para seguir trabajando con su portal</string>
     <string name="auth_info_screen_2">Ejecute la aplicación y toca el icono de la nueva cuenta</string>
     <string name="auth_info_screen_3">Copie la clave y péguela en su aplicación de autentificación</string>
     <string name="bottom_sheet_cloud_title">Nubes</string>
@@ -30,7 +30,7 @@
     <string name="countries_codes_title">Seleccione país</string>
     <string name="device_path_file_error">Este archivo no existe.</string>
     <string name="device_trash_files_restore">Restaurar</string>
-    <string name="dialog_clear_cache">¿Borrar caché?</string>
+    <string name="dialog_clear_cache">¿Borrar caché?\nEsta operación liberará espacio en su dispositivo borrando archivos temporales. Sus archivos desconectados y los datos personales no serían eliminados.</string>
     <string name="dialog_move_copy_copy">Crear una copia de archivo</string>
     <string name="dialog_move_copy_overwrite">Sobrescribir con actualización de la versión</string>
     <string name="dialog_move_copy_skip">Saltar</string>
@@ -42,7 +42,7 @@
     <string name="dialogs_common_ok_button">ACEPTAR</string>
     <string name="dialogs_edit_accept_create">CREAR</string>
     <string name="dialogs_edit_accept_rename">RENOMBRAR</string>
-    <string name="dialogs_edit_create_docs">Crear documento de texto.</string>
+    <string name="dialogs_edit_create_docs">Crear documento de texto</string>
     <string name="dialogs_edit_create_folder">Crear carpeta</string>
     <string name="dialogs_edit_create_presentation">Crear presentación</string>
     <string name="dialogs_edit_create_sheet">Crear hoja de cálculo</string>
@@ -85,7 +85,7 @@
     <string name="download_manager_notification_cancel_download">Cancelar descarga</string>
     <string name="download_manager_open">Abrir</string>
     <string name="download_manager_progress_title">Descarga en progreso</string>
-    <string name="download_manager_repeat">El archivo ya se está descargando…</string>
+    <string name="download_manager_repeat">El archivo ya se está descargando</string>
     <string name="download_manager_select_files">Seleccionar archivos</string>
     <string name="download_manager_title">descargas de Euro-Office</string>
     <string name="error_recent_account">Se ha eliminado el archivo o no está disponible en esta cuenta.</string>
@@ -96,11 +96,11 @@
     <string name="errors_client_payment_required">Pago requerido</string>
     <string name="errors_client_portal_exist">Oficina en nube con el mismo nombre ya existe</string>
     <string name="errors_client_portal_sms">Usted ya ha enviado demasiados mensajes de texto. Inténtelo de nuevo más tarde.</string>
-    <string name="errors_client_unauthorized">Solicitud no autorizada.</string>
+    <string name="errors_client_unauthorized">Solicitud no autorizada</string>
     <string name="errors_connection_error">Compruebe la conexión a Internet</string>
     <string name="errors_email_already_registered">Ya se ha registrado un usuario con este correo electrónico</string>
     <string name="errors_email_syntax_error">Correo electrónico no válido</string>
-    <string name="errors_path_url">URL no válida:</string>
+    <string name="errors_path_url">URL no válida</string>
     <string name="errors_redirect_error">Error de redirección desconocido con código:\u0020</string>
     <string name="errors_server_auth_error">Error de autenticación</string>
     <string name="errors_server_error">Error desconocido de servidor con código:\u0020</string>
@@ -110,7 +110,7 @@
     <string name="errors_ssl_error">Error de handshake SSL</string>
     <string name="errors_unknown_error">Error de conexión. Vuelva a intentarlo más tarde.</string>
     <string name="errors_unknown_host_error">Host desconocido</string>
-    <string name="errors_viewer_download_name">Error en la descarga</string>
+    <string name="errors_viewer_download_name">Descarga incorrecta</string>
     <string name="fragment_clouds_eurooffice_item">Euro-Office</string>
     <string name="fragment_clouds_portal_title">Conectar al portal</string>
     <string name="fragment_clouds_storage_title">Conectar al almacenamiento</string>
@@ -171,11 +171,11 @@
     <string name="login_enterprise_button_create">Crear oficina en nube</string>
     <string name="login_enterprise_button_next">SIGUIENTE</string>
     <string name="login_enterprise_button_select">CUENTAS</string>
-    <string name="login_enterprise_edit_error_hint">Introduzca una dirección válida.</string>
+    <string name="login_enterprise_edit_error_hint">Introduzca una dirección válida</string>
     <string name="login_enterprise_edit_hint">Dirección de oficina en nube</string>
     <string name="login_enterprise_email_hint">Correo electrónico</string>
     <string name="login_enterprise_forgot_password">¿Olvidó su contraseña o email?</string>
-    <string name="login_enterprise_info">Oficina corporativa en nube permite guardar archivos en almacenamiento, compartirlos con compañeros de trabajo y co-editar documentos en tiempo real</string>
+    <string name="login_enterprise_info">Oficina corporativa en nube permite guardar archivos en almacenamiento, compartirlos con compañeros de trabajo y co‐editar documentos en tiempo real.</string>
     <string name="login_enterprise_password_hint">Contraseña</string>
     <string name="login_enterprise_signin_button">REGISTRARSE</string>
     <string name="login_enterprise_single_sign_button">Un solo registro</string>
@@ -194,15 +194,15 @@
     <string name="login_personal_signup_title">Registro de la nube personal</string>
     <string name="login_retry">Reintentar conectar</string>
     <string name="login_sms_change_number">CAMBIAR NÚMERO</string>
-    <string name="login_sms_code_label">Enviamos un SMS con el código al número</string>
+    <string name="login_sms_code_label">Enviamos un mensaje de texto con el código al número</string>
     <string name="login_sms_phone_country_label">País</string>
     <string name="login_sms_phone_error_format">Formato de error</string>
     <string name="login_sms_phone_header">Poner el número de teléfono</string>
     <string name="login_sms_phone_number_label">Número de teléfono</string>
     <string name="login_sms_phone_number_verification">Verificación del número de teléfono</string>
     <string name="login_sms_phone_send_button">ENVIAR CÓDIGO</string>
-    <string name="login_sms_phone_send_code">Hemos enviado un código de verificación vía SMS</string>
-    <string name="login_sms_resend_ok">Código SMS enviado</string>
+    <string name="login_sms_phone_send_code">Hemos enviado un código de verificación vía mensaje de texto</string>
+    <string name="login_sms_resend_ok">Código de mensaje de texto enviado</string>
     <string name="login_sms_send_again">ENVIAR OTRA VEZ</string>
     <string name="login_sms_send_again_after">ENVIAR OTRA VEZ DESPUÉS</string>
     <string name="login_web_dav_title">Conectar a %1$s</string>
@@ -352,9 +352,7 @@
     <string name="cloud_eurooffice_description">Guarde documentos en la nube y colabore en ellos</string>
     <string name="cloud_accounts_title">Cuentas</string>
     <string name="error_long_file_name">El nombre del archivo es demasiado largo</string>
-    <string name="dialog_remove_account_description">
-        La cuenta con el correo electrónico %1$s del portal %2$s será desconectada y eliminada de la lista de cuentas. \¡Aviso! Tendrá que introducir la dirección del portal, el correo y la contraseña. ¡Todos los archivos estarán seguros!
-    </string>
+    <string name="dialog_remove_account_description">La cuenta con el correo electrónico %1$s del portal %2$s será desconectada y eliminada de la lista de cuentas.\n\nPor favor, nota: para iniciar sesión, necesitará introducir la dirección del portal, el correo-e y la contraseña. Todos los archivos estarán seguros.</string>
     <string name="dialog_logout_account_title">¿Está seguro de cerrar la sesión?</string>
     <string name="dialog_logout_account_description">
         Después de cerrar la sesión no necesitará introducir la dirección del portal y el correo, ¡sólo la contraseña! ¡No se preocupe! Todos los archivos estarán seguros en la nube.
@@ -666,7 +664,7 @@
     <string name="rooms_share_shared_to_anyone">Cualquiera con el enlace</string>
     <string name="rooms_share_expires_after">Expira después de %s</string>
     <string name="rooms_share_valid_unlimited">El enlace es válido sin límite</string>
-    <string name="rooms_share_access_rights">Permisos de acceso</string>
+    <string name="rooms_share_access_rights">Derechos de acceso</string>
     <string name="rooms_share_regenerate_link">Volver a generar enlace</string>
     <string name="rooms_share_general_header">General</string>
     <string name="rooms_share_link_life_time">Duración del enlace</string>
@@ -811,7 +809,7 @@
     <string name="rooms_protected_room">Sala protegida</string>
     <string name="rooms_invalid_password">Contraseña no válida</string>
     <string name="rooms_invite_access_description">Los invitados, usuarios y grupos no pueden ser asignados como administradores de sala. Solo los administradores de sala y de DocSpace son adecuados para el rol especificado.</string>
-    <string name="whats_new_title">¿Qué hay de nuevo?</string>
+    <string name="whats_new_title">Novedades</string>
     <string name="whats_new_next">Empiece a usar</string>
     <string name="whats_new">Novedades en la v9.3</string>
     <string name="whats_new_1">Menciones en comentarios</string>
@@ -896,7 +894,7 @@
     <string name="operation_disable_custom_filter">Filtro personalizado para el archivo seleccionado desactivado</string>
     <string name="operation_enable_custom_filter">Filtro personalizado para el archivo seleccionado activado</string>
     <string name="placeholder_connection_button">Recargar</string>
-    <string name="placeholder_connection_desc">No se ha detectado ninguna conexión de red. Por favor, compruebe su conexión e inténtelo de nuevo.</string>
+    <string name="placeholder_connection_desc">No se ha detectado ninguna conexión de red. Por favor, compruebe su conexión e inténtelo de nuevo</string>
     <string name="placeholder_empty_templates_folder">Aquí todavía no hay plantillas</string>
     <string name="room_access_via_link_title">Acceso mediante enlace</string>
     <string name="room_created_successfully">Sala creada correctamente</string>
@@ -914,7 +912,7 @@
     <string name="setting_tags_desc">Las etiquetas se aplican a la sala que se creará basándose en esta plantilla.</string>
     <string name="setting_title_sreen_on">Mantener pantalla encendida</string>
     <string name="settings_saved_successfully">Ajustes de plantilla guardados</string>
-    <string name="share_clipboard_external_custom_filter_copied">El enlace al archivo con el filtro personalizado activado se copia correctamente en el portapapeles.</string>
+    <string name="share_clipboard_external_custom_filter_copied">El enlace al archivo con el filtro personalizado activado se copia correctamente en el portapapeles</string>
     <string name="share_user_type_room_portal_owner">Propietario del portal</string>
     <string name="share_user_type_room_workspace_owner">Propietario de Workspace</string>
     <string name="template_created_successfully">Plantilla «%s» guardada</string>
@@ -1028,4 +1026,8 @@
     <string name="cloud_connect_nextcloud">Conectar a Nextcloud</string>
     <string name="dialogs_question_delete_dictionary">¿Quitar el diccionario para %1$s?</string>
     <string name="dialogs_question_delete_dictionary_message">Se descargará de nuevo cuando edites un documento en este idioma.</string>
+    <string name="settings_dictionaries">Diccionario de deletreo</string>
+    <string name="settings_dictionaries_remove">Retirar diccionario</string>
+    <string name="placeholder_no_dictionaries">Diccionarios no descargados</string>
+    <string name="placeholder_no_dictionaries_desc">El inglés viene con la aplicación. Los editores descargan otros idiomas cuando un documento los necesita.</string>
 </resources>
